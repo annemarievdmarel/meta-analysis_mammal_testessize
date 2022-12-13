@@ -1,0 +1,249 @@
+---
+title: "mammal testes data"
+author: "Annemarie van der Marel"
+date: '2022-11-24'
+output: html_document
+---
+
+# load library 
+```{r setup, include=FALSE}
+
+library(tidyverse)
+```
+
+#November
+# load data
+
+```{r}
+soulsraw <- read.csv("../data/Soulsbury2010.csv") # from Soulsbury 2010, some species have 2 entries, so we pick the first of these. 
+
+data <- read.csv("../data/combined dataset.csv") # life history data from Cappellini et al 2015 with testes data from Breed & Taylor 2000 and Gage & Freckleton 2003
+
+squirrelraw <- read.csv("../data/squirrel_data.csv")
+
+```
+
+# combine data
+```{r}
+souls <- soulsraw %>%
+  separate(Species, c("genus", "species")) %>%
+  unite(Binomial, genus,species, sep = "_") %>%
+  group_by(Binomial) %>%
+  slice_head() %>%
+  rename(BM_g_Souls=MBM_g_Souls)
+
+
+squirrel <- squirrelraw %>%
+  unite(Binomial, Genus,Species, sep = "_") %>%
+  dplyr::select(Binomial, BM_g_squirrel, testesM_g_squirrel, rel_testes_size, Mating_system, LS, LY) %>%
+  rename(TestesM_g_squirrel=testesM_g_squirrel)
+  
+```
+
+```{r}
+data_all <- data %>%
+  left_join(souls, by="Binomial") %>%
+  left_join(squirrel, by="Binomial") %>%
+  mutate(TestesM_g_GF03=TestesM_mg_GF03/1000) 
+
+
+```
+
+# select data
+keep body mass and testes mass/rel testes size for all sources
+
+```{r}
+data_select <- data_all  %>% 
+  filter_at(vars(TestesM_g_squirrel,TestesM_g_BT, TestesM_g_GF03, TestesM_g_Souls, 
+                 rel_testes_size),any_vars(!is.na(.))) %>%
+  dplyr::select(-TestesM_mg_GF03) %>%
+  rename(BM_g_Cap15=BM_Cap15)
+```
+
+# create long format
+source referrring to 
+BT= Breed & Taylor 2000 data
+Souls = Soulsbury 2010
+GF03= Gage and Freckleton 2003
+squirrel= self-assembled data for squirrel species over the span of ~20 years
+Cap15= Cappelini et al 2015
+```{r}
+testes_long <- data_select %>%
+  pivot_longer( cols =  c(TestesM_g_squirrel, TestesM_g_BT,TestesM_g_GF03,TestesM_g_Souls),
+                names_to = "source",
+                names_prefix = "TestesM_g_",
+                values_to = "testes_g",
+                values_drop_na = TRUE) %>% 
+  dplyr::select(Binomial,  testes_g, source)
+
+# how many species with at least 1 testes size data point
+testes_summ <- testes_long %>%
+  group_by(Binomial) %>%
+  tally()
+```
+
+```{r}
+
+bm_long <- data_select %>%
+  dplyr::select(-TestesM_g_squirrel, -TestesM_g_BT,-TestesM_g_GF03,-TestesM_g_Souls) %>%
+  pivot_longer( cols =  c(BM_g_squirrel, BM_g_BT, BM_g_GF03,BM_g_Souls, BM_g_Cap15),
+                names_to = "source",
+                names_prefix = "BM_g_",
+                values_to = "BM_g",
+                values_drop_na = TRUE)
+```
+
+# combine filtered data
+```{r}
+testes_df <- bm_long %>% 
+  left_join(testes_long, by=c("Binomial")) %>% 
+  rename(source_BM=source.x, 
+         source_testes=source.y) %>%
+  dplyr::select(Binomial, BM_g, testes_g, source_BM, source_testes, everything()) %>%
+  filter(!is.na(testes_g))
+
+write.csv(testes_df, "../data/testes_lifehistory.csv")
+```
+
+
+# add paternal care data
+```{r import data}
+testes_df <- read.csv("../data/testes_lifehistory.csv") %>%
+  dplyr::select(-X)
+
+check_df <- testes_df %>%
+  group_by(Binomial) %>%
+  tally() %>%
+  group_by(n) %>%
+  tally()
+
+held19raw <- read.csv("../data/Heldstab et al 2019_parental care.csv")
+
+lh15raw <- read.csv("../data/dieter_lukas.20.1-DATA.csv")
+
+```
+
+```{r get data ready}
+held19 <- held19raw %>%
+  separate(Genus.species, c("genus", "species")) %>%
+  unite(Binomial, genus,species, sep = "_") %>%
+   dplyr::select(Order, Binomial, paternal.care.binary, paternal.care.continuous, paternal.care.only.binary, paternal.care.only.continuous, combined.care.binary, combined.care.continuous, Ref..allomaternal.care.behaviours ) %>%
+  mutate(source="Held19")
+
+lh15 <- lh15raw %>%
+  dplyr::select(animal, socialsystem_paternalcare) %>%
+  rename(Binomial=animal) %>%
+  mutate(paternalcare_source="LH15")
+
+```
+
+```{r combine data}
+testes_care <- testes_df %>%
+  left_join(held19, by="Binomial") 
+
+testes_care <- testes_care %>%
+  left_join(lh15, by="Binomial") 
+
+```
+
+```{r write dataframe}
+
+testes_care <- testes_care %>%
+  dplyr::select(Order, Binomial, BM_g, source_BM, testes_g, source_testes, 
+                LG_Cap15, GT_Cap15, WA_Cap15, NBM_Cap15, LS_Cap15,LS,LS_Souls, LY_Cap15, LY, AFB_Cap15,                 RL_Cap15, OV_Cap15, 
+                mating_system, Mating_system, source_MS, 
+                everything())
+
+write.csv(testes_care, "../data/testes_lifehistory_mating_care.csv")
+
+```
+
+```{r}
+df_summ <- testes_care %>%
+  group_by(Binomial) %>%
+  slice_head() %>%
+  filter(paternal.care.binary!="NA"| parental_care_Sin20!="" |socialsystem_paternalcare!="NA")  # LS_Cap15  ;  LY_Cap15; mating_system!="NA"| Mating_system!="NA"
+```
+
+
+
+
+# calculate relative testes size
+WE have multiple values from different sources, here I just choose the top row for each species that either corresponds to data from the same source or if there is only one entry data from potentially multiple sources. 
+
+```{r}
+reltestes_df <- testes_df %>%
+  group_by(Binomial) %>%
+  slice_head() %>%
+  mutate(rel.testes = testes_g/BM_g) # does not match the relative testes size from the squirrel dataframe
+
+check <- reltestes_df %>%
+  dplyr::select(Binomial, rel.testes, rel_testes_size) %>%
+  filter(rel_testes_size!="NA")
+
+```
+
+
+ add data from Ammospermophilus_leucurus back in as we only have relative testes size for this species and not testes mass. 
+ 
+```{r}
+# add data from Ammospermophilus_leucurus back in as we only have relative testes size for this species and not testes mass. 
+amleu <- data_long %>%
+  filter(Binomial=="Ammospermophilus_leucurus") %>%
+  slice_head()
+
+```
+
+
+# species names to use
+
+```{r}
+species <- testes_df %>%
+  distinct(Binomial) %>%
+  add_row(Binomial = c("Atlantoxerus getulus", "Ammospermophilus_leucurus")) # these squirrel species are at the moment missing but we have testes data
+
+species <- species[order(species$Binomial),]
+
+# for http://vertlife.org/phylosubsets/ we need species name in one column without underscore
+
+species <- species %>%
+  separate(Binomial, c("species", "genus"), remove = F) %>%
+  unite("species", species, genus, sep = " ", remove = F) %>%
+  dplyr::select(-genus)
+
+write.csv(species, "../data/species.csv")
+
+
+
+
+```
+# December 
+# Import all data from google sheet
+```{r}
+
+
+# testes and life history data
+testes_df <- read.csv("./data/testes_lifehistory_mating_care_Dec12.csv") %>%
+  dplyr::select(Order, Binomial, BM_g, source_BM, testes_g, source_testes, 
+                rel_testes_size, LG_Cap15,LY_Cap15, LS_Cap15, source_lifehistory,
+                paternal_care, source_paternal_care, mating_system, source_MS)
+
+
+```
+
+add order name to all species of dataset
+```{r}
+myr <- read.csv("./data/Amniote_Database_Aug_2015.csv") %>%
+  dplyr::select(order, family, genus, species, common_name, 
+                litter_or_clutch_size_n, litters_or_clutches_per_y, 
+                inter_litter_or_interbirth_interval_y,
+                longevity_y) %>%
+  unite(Binomial, genus,species, sep = "_")
+
+df <- testes_df %>%
+  left_join(myr, by="Binomial") %>%
+  dplyr::select(order, family, common_name, Binomial, everything() , -Order)
+
+write.csv(df, "./data/testes_lifehistory_mating_care_Dec12.csv")
+```
+

@@ -1,0 +1,240 @@
+,order,family,common_name,Binomial,BM_g,source_BM,testes_g,source_testes,rel_testes_size,LG,LY,LS,source_lifehistory,paternal_care,source_paternal_care,mating_system,source_MS,litters_or_clutches_per_y,inter_litter_or_interbirth_interval_y,longevity_y,litter_or_clutch_size_n,litters_or_clutches_per_y,inter_litter_or_interbirth_interval_y
+1,Rodentia,Muridae,Papuan Abeomelomys,Abeomelomys_sevia,52,BT,0.854,BT,NA,NA,NA,1,Cap15,,,NA,,-999,-999,NA,1,-999,-999
+2,Rodentia,Muridae,Northeast African Spiny Mouse,Acomys_cahirinus,27,BT,0.224,BT,NA,5.9,7.6,2.43,Cap15,no,LH19; Held19,promiscuous,Sin20,3.5,0.093086927,5.45,2.47,3.5,0.093086927
+3,Artiodactyla,Bovidae,Impala,Aepyceros_melampus,62500,GF03,120,GF03,NA,25.6,0.95,0.98,Cap15,no,LH19; Held19,NA,,1,0.999315537,17.75,1,1,0.999315537
+4,Rodentia,Muridae,Red Veld Aethomys,Aethomys_chrysophilus,85,BT,0.862,BT,NA,0.75,NA,3.09,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,0.75,3.345,-999,-999
+5,Rodentia,Muridae,Hinde's Aethomys,Aethomys_hindei,143,BT,2.768,BT,NA,1.75,NA,2.05,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,1.745833333,2.9,-999,-999
+6,Rodentia,Muridae,Tete Veld Aethomys,Aethomys_ineptus,140,BT,0.72,BT,NA,0.75,2,2.7,Cap15; Chimimba & Linzey 2008; Myrhvold et al 2015,,,NA,,-999,-999,0.75,3.345,-999,-999
+7,Artiodactyla,Bovidae,Hartebeest,Alcelaphus_buselaphus,132000,GF03,107,GF03,NA,22.5,1.065,1,Cap15; Myrhvold et al 2015,no,Held19,NA,,1.065,0.972621492,20,1,1.065,0.972621492
+8,Artiodactyla,Cervidae,Eurasian Elk,Alces_alces,789000,GF03,106,GF03,NA,27,1.7,1.25,Cap15,no,LH19; Held19,monogamous,Ballenberghe & Miquelle 1993,1.235,0.999315537,27,1.29,1.235,0.999315537
+9,Rodentia,Sciuridae,White-tailed Antelope Squirrel,Ammospermophilus_leucurus,111.1,squirrel,NA,NA,2.24,11.2,1.25,8,Cap15,no,Held19,promiscuous,Sin20,1.315,-999,5.833333333,8,1.315,-999
+10,Rodentia,Muridae,Uneven-toothed Rat,Anisomys_imitator,508,BT,4.167,BT,NA,NA,NA,NA,NA,,,NA,,-999,-999,NA,-999,-999,-999
+11,Chiroptera,Vespertilionidae,Pallid Bat,Antrozous_pallidus,23,GF03,0.1812,GF03,NA,14.8,NA,1.78,Cap15,no,LH19,NA,,-999,-999,9.1,2,-999,-999
+12,Rodentia,Muridae,Striped Field Mouse,Apodemus_agrarius,35,BT,1.232,BT,NA,4,3.5,5.64,Cap15,,,promiscuous,Sin20,3.335,0.05338809,4,5.68,3.335,0.05338809
+13,Rodentia,Muridae,Striped Field Mouse,Apodemus_agrarius,21.8,GF03; Souls,0.994,GF03; Souls,NA,4,3.5,5.64,Cap15,,,promiscuous,Sin20,3.335,0.05338809,4,5.68,3.335,0.05338809
+14,Rodentia,Muridae,Small Japanese Field Mouse,Apodemus_argenteus,21,BT,0.651,BT,NA,5,3.8,4.12,Cap15; Myrhvold et al 2015,,,promiscuous/monogamous,Sin20,3.8,0.112635181,4.695833333,5.16,3.8,0.112635181
+15,Rodentia,Muridae,Yellow-necked Field Mouse,Apodemus_flavicollis,29.1,BT; GF03; Souls,0.891,BT; GF03; Souls,NA,4.5,3,4.94,Cap15,,,promiscuous,Sin20,2.8,0.106433949,4.245833333,5.5,2.8,0.106433949
+16,Rodentia,Muridae,Taiwan Field Mouse,Apodemus_semotus,28,BT,1.378,BT,NA,4.4,3.8,3.56,Cap15; Myrhvold et al 2015,,,NA,,3.8,0.112635181,4.4,5.17,3.8,0.112635181
+17,Rodentia,Muridae,Large Japanese Field Mouse,Apodemus_speciosus,46,BT,1.233,BT,NA,5.3,NA,4.47,Cap15,,,promiscuous,Sin20,-999,-999,5.3,4.47,-999,-999
+18,Rodentia,Muridae,Long-tailed Field Mouse,Apodemus_sylvaticus,23.1,BT; GF03; Souls,0.788,BT; GF03; Souls,NA,6.3,3.75,5.16,Cap15,no,LH19,promiscuous,Souls; Sin20,3.8,0.112635181,4.4,5.18,3.8,0.112635181
+19,Rodentia,Muridae,Herb Field Mouse,Apodemus_uralensis,19.2,Souls,0.326,Souls,NA,4.4,3.8,5.72,Cap15; Myrhvold et al 2015,,,promiscuous,Souls; Sin20,3.8,0.112635181,,5.2,3.8,0.112635181
+20,Rodentia,Sciuridae,Barbary Ground Squirrel,Atlantoxerus_getulus,221.1,Marel,6.46,Anjos,3.03,5,1,2.9,Cap15,no,"van der Marel, pers. comm.",promiscuous,"van der Marel, pers. comm.",-999,-999,8.283333333,-999,-999,-999
+21,Rodentia,Muridae,Lesser Bandicoot Rat,Bandicota_bengalensis,289,BT,2.121,BT,NA,NA,5.9,7.29,Cap15,,,NA,,5.9,0.169472964,-999,7.625,5.9,0.169472964
+22,Rodentia,Muridae,Greater Bandicoot Rat,Bandicota_indica,613,BT,2.035,BT,NA,4.2,5.1228,6.12,Myrhvold et al. 2015,,,NA,,4.015,0.098562628,4.2,6.12,4.015,0.098562628
+23,Rodentia,Muridae,Savile's Bandicoot Rat,Bandicota_savilei,274,BT,1.263,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+24,Rodentia,Muridae,Mindanao Batomys,Batomys_salomonseni,194,BT,1.556,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+25,Rodentia,Muridae,Bower's Berylmys,Berylmys_bowersi,431,BT,14.431,BT,NA,2.9,NA,3.88,Cap15,,,NA,,-999,-999,2.9,3.88,-999,-999
+26,Artiodactyla,Bovidae,Aurochs,Bos_taurus,630400,GF03,681,GF03,NA,20,1,1,Cap15,no,Held19,NA,,1,1,20,1,1,1
+27,Rodentia,Muridae,Mindanao Bullimus,Bullimus_bagobus,380,BT,4.08,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+28,Rodentia,Muridae,Common Bunomys,Bunomys_chrysocomus,117,BT,3.523,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+29,Rodentia,Muridae,Northeastern Peninsula Bunomys,Bunomys_fratrorum,137,BT,0.407,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+30,Primates,Cebidae,Common Marmoset,Callithrix_jacchus,320,GF03,1.3,GF03,NA,22.8,2,2.31,Cap15,yes,LH19; Held19,monogamous,Lupold2014,2,0.450102669,16.25,2.24,2,0.450102669
+31,Carnivora,Otariidae,Northern Fur Seal,Callorhinus_ursinus,29000,GF03,63.6,GF03,NA,30,0.5,1.04,Cap15,no,LH19; Held19,monogamous,Kiyota et al. 2008,0.695,0.999315537,26,1,0.695,0.999315537
+32,Carnivora,Canidae,Coyote,Canis_latrans,10600,Souls,15.4,Souls,NA,21.8,1,5.72,Cap15,yes,LH19; Held19,monogamous,Souls,1,0.999315537,21.79583333,5.605,1,0.999315537
+33,Artiodactyla,Cervidae,European Roe,Capreolus_capreolus,20500,Souls,45,Souls,NA,17.5,1,1.79,Cap15,no,LH19; Held19,polygynous,Souls,1.05,0.999315537,17.23333333,1.785,1.05,0.999315537
+34,Rodentia,Caviidae,Brazilian Guinea Pig,Cavia_aperea,567,Souls,3.73,Souls,NA,6,5,2.14,Cap15,no,LH19; Held19; Sin20,polygynous,Souls; Sin20,5,-999,6,2.48,5,-999
+35,Rodentia,Caviidae,Domesticated Guinea Pig,Cavia_porcellus,813,GF03,4.1,GF03,NA,14.8,5,3.45,Cap15,no,LH19,polygynous,Sin20,5,0.262833676,12,3.45,5,0.262833676
+36,Primates,Cebidae,Tufted Capuchin,Cebus_apella,2600,GF03,9.1,GF03,NA,46,0.55,1.05,Cap15,yes,LH19; Held19,promiscuous,Lupold2014,0.6,1.817932923,45.08333333,1.05,0.6,1.817932923
+37,Artiodactyla,Cervidae,Red Deer (see comments,Cervus_elaphus,122000,GF03,218,GF03; Souls,NA,31.5,0.91,1.09,Cap15,no,LH19; Held19,polygynous,Souls,0.905,-999,26.9,1.035,0.905,-999
+38,Artiodactyla,Cervidae,Red Deer (see comments,Cervus_elaphus,121800,Souls,218,GF03; Souls,NA,31.5,0.91,1.09,Cap15,no,LH19; Held19,polygynous,Souls,0.905,-999,26.9,1.035,0.905,-999
+39,Chiroptera,Vespertilionidae,Gould's Wattled Bat,Chalinolobus_gouldii,14,GF03; Cap15,0.0145,GF03,NA,7.6,1,1.41,Cap15; Myrhvold et al 2015,no,LH19,NA,,0.75,-999,7.566666667,1.705,0.75,-999
+40,Rodentia,Chinchillidae,Long-tailed Chinchilla,Chinchilla_lanigera,422,GF03,5.2,GF03,NA,17.2,2,1.87,Cap15,no,Held19,NA,,2,-999,17.16666667,1.685,2,-999
+41,Rodentia,Muridae,Indomalayan Pencil-tailed Tree Mouse,Chiropodomys_gliroides,22,BT,0.38,BT,NA,3.6,NA,1.65,Cap15,,,NA,,-999,-999,3.583333333,2.17,-999,-999
+42,Rodentia,Muridae,Lesser Chiruromys,Chiruromys_vates,48,BT,1.744,BT,NA,NA,NA,1.07,,,,NA,,-999,-999,-999,1.035,-999,-999
+43,Primates,Cercopithecidae,Grivet,Chlorocebus_aethiops,4950,GF03,13,GF03,NA,31.6,1,1,Cap15,no,LH19; Held19,promiscuous,Lupold2018,1,1.189185489,30.69166667,1,1,1.189185489
+44,Rodentia,Muridae,Brush-tailed Conilurus,Conilurus_penicillatus,184,BT,4.388,BT,NA,5,NA,2,Cap15,,,NA,,-999,-999,4.5,2,-999,-999
+45,Artiodactyla,Bovidae,Blue Wildebeest,Connochaetes_taurinus,227000,GF03,306,GF03,NA,24.3,1,0.98,Cap15,no,LH19; Held19,NA,,1,0.999315537,22.9,1,1,0.999315537
+46,Chiroptera,Vespertilionidae,Rafinesque's Big-eared Bat,Corynorhinus_rafinesquii,9,GF03; Cap15,0.377,GF03,NA,10.1,1,1,Cap15,,,NA,,1,-999,10.1,1,1,-999
+47,Soricomorpha,Soricidae,Greater White-toothed Shrew,Crocidura_russula,14.2,Souls,0.04,Souls,NA,4,3.5,4.04,Cap15,no,LH19,monogamous,Souls,3.5,0.077344285,3.2,4.04,3.5,0.077344285
+48,Carnivora,Hyaenidae,Spotted Hyena,Crocuta_crocuta,45000,Souls,9.85,Souls,NA,41.1,1,1.91,Cap15,no,LH19; Held19,promiscuous,Souls,1,1.218398357,41.1,2,1,1.218398357
+49,Rodentia,Bathyergidae,Southern African Mole-rat,Cryptomys_hottentotus,104,Souls,0.58,Souls,NA,11,2,2.48,Cap15,,,monogamous,Souls,1.5,0.361396304,10.975,2.86,1.5,0.361396304
+50,Rodentia,Ctenomyidae,Los Talas Tuco-tuco,Ctenomys_talarum,136,Souls,0.3,Souls,NA,3,1.5,4.34,Cap15,no,Held19,polygynous,Souls; Sin20,1.75,-999,3,4.17,1.75,-999
+51,Carnivora,Herpestidae,Yellow Mongoose,Cynictis_penicillata,900,Souls,1.98,Souls,NA,15.2,2,2.15,Cap15,yes,LH19; Held19,polygynous,Souls,2,0.999315537,15.18333333,2,2,0.999315537
+52,Rodentia,Sciuridae,Black-tailed Prairie Dog,Cynomys_ludovicianus,803.4,squirrel,4,squirrel; Souls,0.023,11,1,4.43,Cap15,no,LH19; Held19,polygynous,Souls; Sin20,1,2.248459959,15,4.43,1,2.248459959
+53,Rodentia,Sciuridae,Black-tailed Prairie Dog,Cynomys_ludovicianus,1050,Souls,4,squirrel; Souls,0.023,11,1,4.43,Cap15,no,LH19; Held19,polygynous,Souls; Sin20,1,2.248459959,15,4.43,1,2.248459959
+54,Rodentia,Sciuridae,Utah Prairie Dog,Cynomys_parvidens,899.98,Cap15,26.5,squirrel,NA,6.1,1,4.89,Cap15; Myrhvold et al 2015,no,LH19,promiscuous,Souls; Sin20,1,-999,6.1,4.875,1,-999
+55,Artiodactyla,Cervidae,Fallow Deer,Dama_dama,63700,GF03,133,GF03,NA,25,1,1,Cap15,no,Held19,NA,,1,0.999315537,21.1,1.07,1,0.999315537
+56,Artiodactyla,Bovidae,Bontebok (see comments,Damaliscus_pygargus,72500,GF03,160,GF03,NA,23,1.1,1.41,Cap15; Myrhvold et al 2015,,,NA,,1.1,0.999315537,21.53333333,1.25,1.1,0.999315537
+57,Rodentia,Muridae,Common Dasymys,Dasymys_incomtus,242,BT,3.048,BT,NA,1,NA,2.67,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,1,2.585,-999,-999
+58,Proboscidea,Elephantidae,Asian Elephant,Elephas_maximus,4545000,GF03,4000,GF03,NA,78,0.23,1.41,Cap15,no,Held19,promiscuous,Poole1989,0.23,3.185831622,73.5,1,0.23,3.185831622
+59,Perissodactyla,Equidae,Horse,Equus_caballus,450000,GF03,416,GF03,NA,62,1,1,Cap15,no,LH19; Held19,monogamous,Linklater1999,1,1.499657769,57,1,1,1.499657769
+60,Perissodactyla,Equidae,Grevy's Zebra,Equus_grevyi,386000,GF03,1150,GF03,NA,31,0.5,1,Cap15,,,promiscuous,Ginsberg and Rubenstein 1990,0.5,1.574264203,27.375,1,0.5,1.574264203
+61,Erinaceomorpha,Erinaceidae,West European Hedgehog,Erinaceus_europaeus,665,GF03,2.31,GF03,NA,14,1.5,4.64,Cap15,no,Held19,NA,,1.58,-999,11.64166667,4.22,1.58,-999
+62,Primates,Cercopithecidae,Patas Monkey,Erythrocebus_patas,10000,GF03,7.2,GF03,NA,28.3,0.97,1.01,Cap15,no,LH19; Held19,monogamous,Lupold2014,1,0.988364134,23.9,1,1,0.988364134
+63,Carnivora,Felidae,Domestic Cat,Felis_catus,4770,Souls,3.61,Souls,NA,34,1.5,4,Cap15,no,LH19,polygynous,Souls,2.02,0.359000684,19,3.69,2.02,0.359000684
+64,Rodentia,Sciuridae,Indian Palm Squirrel,Funambulus_palmarum,136.4,Cap15,2.26,squirrel,NA,5.5,NA,2.62,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,5.5,2.62,-999,-999
+65,Rodentia,Sciuridae,Congo Rope Squirrel,Funisciurus_congicus,112,Cap15,30.92,squirrel,NA,9.5,2,2.44,Cap15,,,NA,,2,0.164271047,9.5,2,2,0.164271047
+66,Artiodactyla,Giraffidae,Giraffe,Giraffa_camelopardalis,1201000,GF03,1074,GF03,NA,39.5,1,1.29,Cap15,no,LH19; Held19,NA,,0.54,1.681492129,36.3,1.12,0.54,1.681492129
+67,Primates,Hominidae,Western Gorilla,Gorilla_gorilla,169000,GF03,29.6,GF03,NA,55.4,0.26,1.05,Cap15,yes,LH19; Held19,monogamous,Lupold2014,0.3,3.871047228,50.2,1.005,0.3,3.871047228
+68,Rodentia,Muridae,Macmillan's Grammomys,Grammomys_macmillani,40,BT; Cap15,0.662,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+69,Carnivora,Mustelidae,Wolverine,Gulo_gulo,14500,Souls,17,Souls,NA,19.5,0.5,2.84,Cap15,no,Held19,promiscuous,Souls,0.5,1.998973306,18,2.84,0.5,1.998973306
+70,Carnivora,Herpestidae,Common Dwarf Mongoose,Helogale_parvula,455,Souls,0.45,Souls,NA,18,2.25,3.49,Cap15,yes,LH19; Held19,promiscuous,Souls,2.25,0.388610541,14.44166667,3.19,2.25,0.388610541
+71,Artiodactyla,Hippopotamidae,Common Hippopotamus,Hippopotamus_amphibius,1600000,GF03,650,GF03,NA,61.2,1,1,Cap15,no,LH19; Held19,NA,,0.61,1.72421629,54.5,1,0.61,1.72421629
+72,Primates,Hominidae,Human,Homo_sapiens,65650,GF03,40.5,GF03,NA,122.5,0.485,1,Cap15; Myrhvold et al 2015,,,monogamous,Lupold2014,0.485,2.186338125,122.5,1,0.485,2.186338125
+73,Rodentia,Muridae,Common Water Rat,Hydromys_chrysogaster,745,BT,11.765,BT,NA,7.3,2.5,3.51,Cap15,,,NA,,2.12,0.165407255,7.233333333,3.8,2.12,0.165407255
+74,Primates,Hylobatidae,Lar Gibbon,Hylobates_lar,5500,GF03; Cap15,5.5,GF03,NA,56,0.45,1.01,Cap15,yes,LH19; Held19,monogamous,Lupold2014,0.5,2.845544148,40,1,0.5,2.845544148
+75,Rodentia,Muridae,Eastern Hyomys,Hyomys_goliath,1000,BT,3.751,BT,NA,0.42,NA,1,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,0.42,1,-999,-999
+76,Rodentia,Muridae,Forrest's Leggadina,Leggadina_forresti,30,BT,0.545,BT,NA,0.25,NA,3.5,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,0.25,3.5,-999,-999
+77,Rodentia,Muridae,Indomalayan Leopoldamys,Leopoldamys_sabanus,373,BT,9.035,BT,NA,2,NA,3.33,Cap15,,,NA,,-999,-999,1.208333333,3.33,-999,-999
+78,Rodentia,Muridae,Greater Stick-nest Rat,Leporillus_conditor,187,BT,4,BT,NA,5.3,NA,2.95,Cap15,,,NA,,-999,-999,5.3125,2.2,-999,-999
+79,Rodentia,Muridae,Elegant Leptomys,Leptomys_elegans,69,BT,1.24,BT,NA,NA,NA,1.88,Cap15,,,NA,,-999,-999,-999,1.88,-999,-999
+80,Lagomorpha,Leporidae,Snowshoe Hare,Lepus_americanus,1300,Souls,11.8,Souls,NA,8,2.5,3.54,Cap15,no,LH19; Held19,promiscuous,Souls,2.55,0.101300479,5.408333333,3.41,2.55,0.101300479
+81,Rodentia,Muridae,Ethiopian Buff-spotted Brush-furred Rat,Lophuromys_flavopunctatus,60,BT; Cap15,1.138,BT,NA,0.75,NA,2.3,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,0.75,2.305,-999,-999
+82,Rodentia,Muridae,Long-footed Tree Mouse,Lorentzimys_nouhuysi,16,BT; Cap15,0.357,BT,NA,NA,NA,2.75,Cap15,,,NA,,-999,-999,-999,2.75,-999,-999
+83,Proboscidea,Elephantidae,African Bush Elephant,Loxodonta_africana,4365000,GF03,4530,GF03,NA,80,0.21,0.84,Cap15,no,LH19; Held19,NA,,0.21,4.673511294,65,1,0.21,4.673511294
+84,Primates,Cercopithecidae,Stump-tailed Macaque,Macaca_arctoides,10510,GF03,48.15,GF03,NA,30,0.61,1.01,Cap15,no,LH19; Held19,NA,,0.61,1.509377139,29.44583333,1,0.61,1.509377139
+85,Primates,Cercopithecidae,Crab-eating Macaque,Macaca_fascicularis,4420,GF03,35.2,GF03; Souls,NA,39,1,1,Cap15,no,LH19; Held19,promiscuous,Souls,0.93,1.135455168,37.55,1,0.93,1.135455168
+86,Primates,Cercopithecidae,Crab-eating Macaque,Macaca_fascicularis,4400,Souls,35.2,GF03; Souls,NA,39,1,1,Cap15,no,LH19; Held19,promiscuous,Souls,0.93,1.135455168,37.55,1,0.93,1.135455168
+87,Primates,Cercopithecidae,Japanese Macaque,Macaca_fuscata,12300,Souls,70,Souls,NA,38.5,1,1.02,Cap15,no,LH19; Held19,promiscuous,Souls,0.5,1.369828884,33,1.415,0.5,1.369828884
+88,Primates,Cercopithecidae,Rhesus Monkey,Macaca_mulatta,9200,GF03,46.2,GF03,NA,40,1,1.01,Cap15,yes,LH19; Held19,promiscuous,Lupold2014,1,1.135523614,34.63333333,1,1,1.135523614
+89,Primates,Cercopithecidae,Southern Pig-tailed Macaque,Macaca_nemestrina,9980,GF03,66.7,GF03,NA,37.6,0.85,1.01,Cap15,no,LH19; Held19,promiscuous,Lupold2014,0.85,1.108925394,34.3,1,0.85,1.108925394
+90,Rodentia,Muridae,Rothschild's Mallomys,Mallomys_rothschildi,1087,BT,14.35,BT,NA,NA,NA,1.02,Cap15,,,NA,,-999,-999,-999,1.02,-999,-999
+91,Rodentia,Muridae,Highland Mammelomys,Mammelomys_lanosus,123,BT,3.004,BT,NA,NA,NA,2.68,Cap15,,,NA,,-999,-999,-999,2.09,-999,-999
+92,Rodentia,Sciuridae,Woodchuck,Marmota_monax,2350,squirrel,7.4,squirrel,0.52,14,1,4.1,Cap15,no,LH19; Held19; Sin20,monogamous,Sin20,1,-999,11.27916667,4.5,1,-999
+93,Rodentia,Sciuridae,Woodchuck,Marmota_monax,2350,squirrel,7.4,squirrel,0.52,14,1,4.1,Cap15,no,LH19; Held19,polygynous,,1,-999,11.27916667,4.5,1,-999
+94,Rodentia,Muridae,Broad-toothed Mastacomys,Mastacomys_fuscus,117,BT,3.725,BT,NA,NA,NA,1.41,Cap15,,,NA,,-999,-999,-999,1.595,-999,-999
+95,Rodentia,Muridae,Southern African Mastomys,Mastomys_coucha,70,BT,0.741,BT,NA,2.91,3.56,7.96,Cap15; Myrhvold et al 2015,,,NA,,3.56,0.097850787,2.91,7.96,3.56,0.097850787
+96,Rodentia,Muridae,Natal Mastomys,Mastomys_natalensis,59,BT; Souls,0.972,BT; Souls,NA,2.74,2,9.23,Cap15; Myrhvold et al 2015,,,promiscuous,Souls,2,0.087255305,2.74,8.595,2,0.087255305
+97,Rodentia,Muridae,Bartels's Javan Maxomys,Maxomys_bartelsii,93,BT,4.205,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+98,Rodentia,Muridae,Indomalayan Maxomys,Maxomys_surifer,155,BT,3.328,BT,NA,NA,NA,3.54,Cap15,,,NA,,-999,-999,-999,3.54,-999,-999
+99,Rodentia,Muridae,Whitehead's Sundaic Maxomys,Maxomys_whiteheadi,64,BT,0.952,BT,NA,1.5,NA,3,Myrhvold et al 2015,,,NA,,-999,-999,1.5,3,-999,-999
+100,Cetacea,Balaenopteridae,Humpback Whale,Megaptera_novaeangliae,32658500,GF03,1729,GF03,NA,95,0.37,1,Cap15,,,NA,,0.5,1.898699521,86,1,0.5,1.898699521
+101,Carnivora,Mustelidae,European Badger,Meles_meles,14515,GF03; Souls,14.4,GF03; Souls,NA,18.6,0.75,3.11,Cap15,no,LH19; Held19,promiscuous,Souls,1,0.999315537,16.2,3.11,1,0.999315537
+102,Rodentia,Muridae,Grassland Melomys,Melomys_burtoni,78,BT,1.91,BT,NA,NA,NA,2.5,Cap15,,,NA,,-999,-999,-999,2.5,-999,-999
+103,Rodentia,Muridae,Fawn-footed Melomys,Melomys_cervinipes,139,BT,2.782,BT,NA,NA,1.3,2.2,Cap15,,,NA,,1.3,-999,-999,2.35,1.3,-999
+104,Rodentia,Muridae,White-bellied Melomys,Melomys_leucogaster,104,BT; Cap15,1.102,BT,NA,NA,NA,2.15,Cap15,,,NA,,-999,-999,-999,2.075,-999,-999
+105,Rodentia,Muridae,Black-tailed Melomys,Melomys_rufescens,68,BT,1.342,BT,NA,NA,NA,2.17,Cap15,,,NA,,-999,-999,-999,2.085,-999,-999
+106,Rodentia,Muridae,Black-footed Mesembriomys,Mesembriomys_gouldii,545,BT,5.498,BT,NA,7.8,4,1.87,Cap15,,,NA,,4,-999,3.916666667,1.96,4,-999
+107,Rodentia,Muridae,Golden-backed Mesembriomys,Mesembriomys_macrurus,341,BT,8.28,BT,NA,7.1,NA,2,Cap15,,,NA,,-999,-999,7.083333333,2,-999,-999
+108,Rodentia,Cricetidae,Golden Hamster,Mesocricetus_auratus,108,GF03,3.17,GF03,NA,3,4,8.79,Cap15,no,LH19,NA,,3.75,-999,3.9,8.69,3.75,-999
+109,Primates,Cheirogaleidae,Gray Mouse Lemur,Microcebus_murinus,71.66,Souls,1.83,Souls,NA,18.2,1,2,Cap15,no,LH19; Held19,promiscuous,Souls,1,0.599589322,15.5,2.41,1,0.599589322
+110,Rodentia,Muridae,Harvest Mouse,Micromys_minutus,10,BT,0.15,BT,NA,5,2.5,4.92,Cap15,no,Held19,NA,,2.6,0.057494867,4.5,5.15,2.6,0.057494867
+111,Rodentia,Muridae,Harvest Mouse,Micromys_minutus,7.8,GF03,0.178,GF03,NA,5,2.5,4.92,Cap15,no,Held19,NA,,2.6,0.057494867,4.5,5.15,2.6,0.057494867
+112,Rodentia,Cricetidae,Field Vole,Microtus_agrestis,46.4,GF03,0.804,GF03,NA,4.8,3.5,4.65,Cap15,no,LH19,NA,,3.6,0.055112936,3.3,4.42,3.6,0.055112936
+113,Rodentia,Cricetidae,Root Vole,Microtus_oeconomus,35,Souls,0.42,Souls,NA,1.8,3.5,5.62,Cap15,,,promiscuous,Souls; Sin20,3.44,0.063381246,1.8,5.76,3.44,0.063381246
+114,Rodentia,Cricetidae,Meadow Vole,Microtus_pennsylvanicus,54.6,Souls,1.17,Souls,NA,1.333333333,2.7,5.16,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,2.64,0.058015058,1.333333333,5.06,2.64,0.058015058
+115,Rodentia,Muridae,Common Metad,Millardia_meltada,72,BT,1.078,BT,NA,NA,6.89,5.72,Cap15,,,NA,,5.695,-999,-999,5.67,5.695,-999
+116,Rodentia,Muridae,Ryukyu Mouse,Mus_caroli,15,BT; Cap15,0.108,BT,NA,4,4.57,5.805,Myhrvold et al 2015,,,NA,,4.57,0.082135524,4,5.805,4.57,0.082135524
+117,Rodentia,Muridae,Southern African Pygmy Mouse,Mus_minutoides,8,BT,0.068,BT,NA,4.3,4,4.18,Cap15,,,monogamous,Sin20,4,0.085147159,3.1,4.18,4,0.085147159
+118,Rodentia,Muridae,House Mouse,Mus_musculus,15,BT; GF03; Souls,0.119,BT; GF03; Souls,NA,6,4.5,5.54,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,4.57,0.082135524,5,6.07,4.57,0.082135524
+119,Rodentia,Muridae,House Mouse,Mus_musculus,22,Souls,0.159,Souls,NA,6,4.5,5.54,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,4.57,0.082135524,5,6.07,4.57,0.082135524
+120,Rodentia,Muridae,House Mouse,Mus_musculus,21,Souls,0.144,Souls,NA,6,4.5,5.54,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,4.57,0.082135524,5,6.07,4.57,0.082135524
+121,Rodentia,Muridae,House Mouse,Mus_musculus,19.4,Souls,0.126,Souls,NA,6,4.5,5.54,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,4.57,0.082135524,5,6.07,4.57,0.082135524
+122,Rodentia,Muridae,House Mouse,Mus_musculus,15.9,Souls,0.116,Souls,NA,6,4.5,5.54,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,4.57,0.082135524,5,6.07,4.57,0.082135524
+123,Rodentia,Muridae,House Mouse,Mus_musculus,18.2,Souls,0.112,Souls,NA,6,4.5,5.54,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,4.57,0.082135524,5,6.07,4.57,0.082135524
+124,Rodentia,Muridae,House Mouse,Mus_musculus,16,Souls,0.123,Souls,NA,6,4.5,5.54,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,4.57,0.082135524,5,6.07,4.57,0.082135524
+125,Rodentia,Muridae,House Mouse,Mus_musculus,15,Souls,0.122,Souls,NA,6,4.5,5.54,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,4.57,0.082135524,5,6.07,4.57,0.082135524
+126,Carnivora,Mustelidae,Ermine,Mustela_erminea,324,Souls,2.64,Souls,NA,12.5,1,6.74,Cap15,no,LH19; Held19,polygynous,Souls,1,0.999315537,11.14166667,6.755,1,0.999315537
+127,Rodentia,Cricetidae,Bank Vole,Myodes_glareolus,20.73,Cap15,0.646,GF03,NA,4.917,3.5,4.31,Cap15,no,LH19; Held19,NA,,3.2,0.058521561,4.9,4.295,3.2,0.058521561
+128,Rodentia,Cricetidae,Gray Red-backed Vole,Myodes_rufocanus,39,Souls,0.161,Souls,NA,3.325,3,5.01,Cap15; Myrhvold et al 2015,no,Held19,promiscuous,Souls,2.92,0.089253936,3.325,4.57,2.92,0.089253936
+129,Chiroptera,Vespertilionidae,Little Brown Myotis,Myotis_lucifugus,6.8,GF03,0.0541,GF03,NA,34,1,1,Cap15,,,promiscuous,McCracken2000,1,0.999315537,29,1,1,0.999315537
+130,Rodentia,Cricetidae,Southern Plains Woodrat,Neotoma_micropus,265,Souls,2.5,Souls,NA,3.33,2,2.5,Cap15,,,promiscuous; polygynous,Souls; Sin20,2,0.134154689,7.683333333,2.15,2,0.134154689
+131,Rodentia,Muridae,Sundaic Arboreal<b> </b>Niviventer,Niviventer_cremoriventer,75,BT,1.222,BT,NA,0.83,NA,3.7,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,0.833333333,3.7,-999,-999
+132,Rodentia,Muridae,Soft-furred Taiwan Niviventer,Niviventer_culturatus,103,BT,1.876,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+133,Rodentia,Muridae,Spinifex Hopping Mouse,Notomys_alexis,30,BT,0.041,BT,NA,6.4,3.73,4.01,Cap15; Myrhvold et al 2015,yes,Held19; Sin20,monogamous,Sin20,3.73,0.090006845,5.2,3.9,3.73,0.090006845
+134,Rodentia,Muridae,Spinifex Hopping Mouse,Notomys_alexis,34,GF03,0.05,GF03,NA,6.4,3.73,4.01,Cap15; Myrhvold et al 2015,yes,Held19; Sin20,monogamous,Sin20,3.73,0.090006845,5.2,3.9,3.73,0.090006845
+135,Rodentia,Muridae,Fawn Hopping Mouse,Notomys_cervinus,37,BT,0.224,BT,NA,0.42,NA,2.95,Cap15; Myrhvold et al 2015,,,promiscuous,Sin20,-999,-999,0.416666667,2.89,-999,-999
+136,Rodentia,Muridae,Fawn Hopping Mouse,Notomys_cervinus,33,GF03,0.198,GF03,NA,0.42,NA,2.95,Cap15; Myrhvold et al 2015,,,promiscuous,Sin20,-999,-999,0.416666667,2.89,-999,-999
+137,Rodentia,Muridae,Dusky Hopping Mouse,Notomys_fuscus,45,BT; GF03,0.068,BT; GF03,NA,2.91,3.3,3.07,Cap15; Myrhvold et al 2015,,,monogamous,Sin20,3.3,0.113620808,2.908333333,2.985,3.3,0.113620808
+138,Rodentia,Muridae,Dusky Hopping Mouse,Notomys_fuscus,39.28,Cap15,0.068,BT; GF03,NA,2.91,3.3,3.07,Cap15; Myrhvold et al 2015,,,monogamous,Sin20,3.3,0.113620808,2.908333333,2.985,3.3,0.113620808
+139,Rodentia,Muridae,Mitchell's Hopping Mouse,Notomys_mitchellii,45,BT,0.075,BT,NA,5.3,3.53,3.28,Cap15; Myrhvold et al 2015,,,promiscuous,Sin20,3.53,0.100616016,5.229166667,3.28,3.53,0.100616016
+140,Rodentia,Muridae,Mitchell's Hopping Mouse,Notomys_mitchellii,39,GF03,0.062,GF03,NA,5.3,3.53,3.28,Cap15; Myrhvold et al 2015,,,promiscuous,Sin20,3.53,0.100616016,5.229166667,3.28,3.53,0.100616016
+141,Chiroptera,Vespertilionidae,Greater Long-eared Bat,Nyctophilus_timoriensis,13.5,GF03,0.03,GF03,NA,NA,NA,2,Cap15,,,NA,,-999,-999,-999,2,-999,-999
+142,Lagomorpha,Ochotonidae,Plateau Pika,Ochotona_curzoniae,147.5,Souls,1.62,Souls,NA,2.5,3.5,4.39,Cap15; Myrhvold et al 2015,no,LH19,polygynous,Souls,2.25,-999,2.495833333,5.15,2.25,-999
+143,Artiodactyla,Cervidae,White-tailed Deer,Odocoileus_virginianus,71000,GF03,76,GF03,NA,23,1,1.57,Cap15,no,LH19; Held19,NA,,1,0.832525667,21.6,1.71,1,0.832525667
+144,Rodentia,Cricetidae,Common Muskrat,Ondatra_zibethicus,1295,GF03,5.06,GF03,NA,10,2.43,6.55,Cap15,yes,Held19; Sin20,polygynous,Sin20,2.555,0.082135524,10,6.415,2.555,0.082135524
+145,Lagomorpha,Leporidae,European Rabbit,Oryctolagus_cuniculus,2880,GF03,6.06,GF03,NA,18,4.5,5.24,Cap15,no,LH19; Held19,promiscuous,Souls,4.415,0.079397673,10,5.24,4.415,0.079397673
+146,Lagomorpha,Leporidae,European Rabbit,Oryctolagus_cuniculus,2888,Souls,6.06,Souls,NA,18,4.5,5.24,Cap15,no,LH19; Held19,promiscuous,Souls,4.415,0.079397673,10,5.24,4.415,0.079397673
+147,Rodentia,Cricetidae,Marsh Oryzomys,Oryzomys_palustris,56,GF03,0.4,GF03,NA,2.375,5.5,4.08,Cap15,no,Held19,NA,,5.5,-999,1.895833333,3.925,5.5,-999
+148,Artiodactyla,Bovidae,Red Sheep,Ovis_aries,35000,GF03; Souls,318.8,GF03; Souls,NA,22.8,1,1.19,Cap15,no,LH19,promiscuous,Souls,1,0.999315537,16.96666667,1.22,1,0.999315537
+149,Primates,Hominidae,Bonobo,Pan_paniscus,45000,Souls,250,Souls,NA,55,0.22,1.01,Cap15,yes,LH19; Held19,promiscuous,Souls,0.22,4.846680356,48,1,0.22,4.846680356
+150,Primates,Hominidae,Common Chimpanzee,Pan_troglodytes,44340,GF03; Cap15; Souls,118.8,GF03; Souls,NA,60.5,0.2,1.05,Cap15,yes,LH19; Held19,promiscuous,Souls,0.2,3.648186174,59.35,1.075,0.2,3.648186174
+151,Carnivora,Felidae,Lion,Panthera_leo,188000,Souls,55,Souls,NA,30,0.66,2.75,Cap15,no,LH19; Held19,polygynous,Souls,1,1.887748118,27,2.825,1,1.887748118
+152,Primates,Cercopithecidae,Olive Baboon,Papio_anubis,26400,GF03,93.5,GF03,NA,25.2,0.8,1.01,Cap15; Myrhvold et al 2015,yes,LH19; Held19,promiscuous,Lupold2014,0.8,1.748788501,37.2125,1.005,0.8,1.748788501
+153,Primates,Cercopithecidae,Yellow Baboon,Papio_cynocephalus,28610,GF03,76.6,GF03,NA,45,0.805,1.01,Cap15; Myrhvold et al 2015,yes,LH19; Held19,promiscuous,Souls,0.805,1.665516769,37.5,1,0.805,1.665516769
+154,Primates,Cercopithecidae,Yellow Baboon,Papio_cynocephalus,243200,Souls,52,Souls,NA,45,0.805,1.01,Cap15; Myrhvold et al 2015,yes,LH19; Held19,promiscuous,Souls,0.805,1.665516769,37.5,1,0.805,1.665516769
+155,Rodentia,Muridae,Giant Sulawesi Rat,Paruromys_dominator,342,BT,1.601,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+156,Artiodactyla,Tayassuidae,Collared Peccary,Pecari_tajacu,12300,GF03,11,GF03,NA,31.5,2,1.56,Cap15,no,LH19; Held19,promiscuous,Lewis2022,2,0.424366872,24.7,1.82,2,0.424366872
+157,Rodentia,Cricetidae,California Deermouse,Peromyscus_californicus,52.3,Souls,9.6,Souls,NA,5.5,4.37,1.94,Cap15,yes,LH19; Held19; Sin20,monogamous,Souls; Sin20,4.56,0.065708419,5.454166667,2,4.56,0.065708419
+158,Rodentia,Cricetidae,White-footed Deermouse,Peromyscus_leucopus,22.2,Souls,0.46,Souls,NA,7.9,4.5,4.27,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,3.9,0.072005476,7.9,4.345,3.9,0.072005476
+159,Rodentia,Cricetidae,North American Deermouse,Peromyscus_maniculatus,19.5,GF03; Souls; Cap15,0.393,GF03; Souls,NA,8.333,2.6,4.76,Cap15,no,LH19; Held19; Sin20,promiscuous,Souls; Sin20,3.55,0.073374401,7.95,4.615,3.55,0.073374401
+160,Rodentia,Sciuridae,Red Giant Flying Squirrel,Petaurista_petaurista,1260,squirrel,7,squirrel,NA,16,NA,1.04,Cap15,,,NA,,-999,-999,16,1.08,-999,-999
+161,Rodentia,Cricetidae,Striped Desert Hamster,Phodopus_sungorus,42.4,GF03,0.93,GF03,NA,3.9,3,5.48,Cap15,no,LH19; Sin20,promiscuous,Sin20,3.5,0.087611225,3.2,5.24,3.5,0.087611225
+162,Chiroptera,Vespertilionidae,Eastern Pipistrelle,Pipistrellus_subflavus,5,GF03; Cap15,0.0286,GF03,NA,15,1,1.96,Cap15,,,NA,,1,0.999315537,14.8,1.98,1,0.999315537
+163,Rodentia,Muridae,Loria's Pogonomys,Pogonomys_loriae,105,BT,3.474,BT,NA,NA,NA,2.68,Cap15,,,NA,,-999,-999,-999,2.175,-999,-999
+164,Rodentia,Muridae,Chestnut Pogonomys,Pogonomys_macrourus,49,BT,2.462,BT,NA,3.1,NA,2.81,Cap15,,,NA,,-999,-999,2.416666667,2.4,-999,-999
+165,Primates,Hominidae,Bornean Orangutan,Pongo_pygmaeus,74640,GF03,35.3,GF03,NA,60,0.22,1.07,Cap15,no,LH19; Held19,monogamous,"Delgado Jr, R. A., & Van Schaik 2000",0.22,4.683778234,58.9,1.14,0.22,4.683778234
+166,Rodentia,Muridae,Jackson's Praomys,Praomys_jacksoni,40,BT; Cap15,0.888,BT,NA,5.18,4,3.67,Cap15; Myrhvold et al 2015,,,NA,,4,0.065708419,5.183333333,3.5,4,0.065708419
+167,Carnivora,Procyonidae,Raccoon,Procyon_lotor,5130,Souls,13.72,Souls,NA,21,1,3.06,Cap15,no,Held19,promiscuous,Souls,1,0.999315537,20.58333333,3.39,1,0.999315537
+168,Rodentia,Muridae,Silky Pseudomys,Pseudomys_apodemoides,25,BT,0.141,BT; GF03,NA,NA,3,4.9,Cap15,,,promiscuous,Sin20,3,-999,-999,4.7,3,-999
+169,Rodentia,Muridae,Silky Pseudomys,Pseudomys_apodemoides,31,GF03,0.141,BT; GF03,NA,NA,3,4.9,Cap15,,,promiscuous,Sin20,3,-999,-999,4.7,3,-999
+170,Rodentia,Muridae,Plains Pseudomys,Pseudomys_australis,59,BT,2,BT,NA,7.9,NA,3,Cap15,no,Held19,promiscuous,Sin20,-999,-999,5.6,3.1,-999,-999
+171,Rodentia,Muridae,Plains Pseudomys,Pseudomys_australis,59,GF03,2.242,GF03,NA,7.9,NA,3,Cap15,no,Held19,promiscuous,Sin20,-999,-999,5.6,3.1,-999,-999
+172,Rodentia,Muridae,Delicate Pseudomys,Pseudomys_delicatulus,8,BT,0.043,BT,NA,4.16,NA,3.19,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,4.158333333,3.095,-999,-999
+173,Rodentia,Muridae,Delicate Pseudomys,Pseudomys_delicatulus,9,GF03,0.043,GF03,NA,4.16,NA,3.19,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,4.158333333,3.095,-999,-999
+174,Rodentia,Muridae,Desert Pseudomys,Pseudomys_desertor,39,BT; Cap15,0.558,BT,NA,1,3.91,3,Cap15; Myrhvold et al 2015,no,Sin20,promiscuous,Sin20,3.91,0.081451061,1,3,3.91,0.081451061
+175,Rodentia,Muridae,Smoky Pseudomys,Pseudomys_fumeus,71,BT; Cap15,2.426,BT,NA,6.5,1.5,3.5,Cap15,,,NA,,1.5,-999,6.495833333,3.5,1.5,-999
+176,Rodentia,Muridae,Eastern Chestnut Pseudomys,Pseudomys_gracilicaudatus,105,BT; GF03,1.084,BT; GF03,NA,NA,NA,2.91,Cap15,,,NA,,-999,-999,-999,2.955,-999,-999
+177,Rodentia,Muridae,Sandy Inland Pseudomys,Pseudomys_hermannsburgensis,15,BT,0.14,BT,NA,0.92,NA,2,Cap15; Myrhvold et al 2015,,,promiscuous,Sin20,-999,-999,0.916666667,2.375,-999,-999
+178,Rodentia,Muridae,Sandy Inland Pseudomys,Pseudomys_hermannsburgensis,18,GF03,0.163,GF03,NA,0.92,NA,2,Cap15; Myrhvold et al 2015,,,promiscuous,Sin20,-999,-999,0.916666667,2.375,-999,-999
+179,Rodentia,Muridae,Western Chestnut Pseudomys,Pseudomys_nanus,74,BT,1.9,BT,NA,NA,NA,3,Cap15,,,NA,,-999,-999,-999,3,-999,-999
+180,Rodentia,Muridae,Western Chestnut Pseudomys,Pseudomys_nanus,78,GF03,1.874,GF03,NA,NA,NA,3,Cap15,,,NA,,-999,-999,-999,3,-999,-999
+181,Rodentia,Muridae,New Holland Pseudomys,Pseudomys_novaehollandiae,19,BT; GF03,0.071,BT; GF03,NA,4,4,4.43,Cap15; Myrhvold et al 2015,,,promiscuous,Sin20,3.75,0.091718001,3.991666667,4.05,3.75,0.091718001
+182,Rodentia,Muridae,Pilliga Pseudomys,Pseudomys_pilligaensis,11,BT; Cap15,0.052,BT,NA,1.5,NA,3,Cap15; Myrhvold et al 2015,,,NA,,-999,-999,1.5,3,-999,-999
+183,Rodentia,Muridae,Heath Pseudomys,Pseudomys_shortridgei,78,BT; GF03,0.345,BT; GF03,NA,6,1,3,Cap15,no,Sin20,promiscuous,Sin20,1,-999,5.995833333,3,1,-999
+184,Chiroptera,Pteropodidae,Black Flying Fox,Pteropus_alecto,800,GF03,5.1,GF03,NA,19.7,1,1,Cap15,,,NA,,1,-999,19.66666667,1.1,1,-999
+185,Chiroptera,Pteropodidae,Gray-headed Flying Fox,Pteropus_poliocephalus,677,GF03,6.75,GF03,NA,23.6,1,1,Cap15,,,promiscuous,McCracken2000,1,-999,23.57083333,1,1,-999
+186,Chiroptera,Pteropodidae,Little Red Flying Fox,Pteropus_scapulatus,400,GF03,5.3,GF03,NA,15.8,NA,1,Cap15,,,NA,,-999,-999,15.75833333,1,-999,-999
+187,Artiodactyla,Cervidae,Reindeer,Rangifer_tarandus,145000,GF03,132,GF03,NA,21.8,0.91,2,Cap15,no,LH19; Held19,promiscuous,Souls,1,0.999315537,20.2,1.1,1,0.999315537
+188,Artiodactyla,Cervidae,Reindeer,Rangifer_tarandus,110500,Souls,47.6,Souls,NA,21.8,0.91,2,Cap15,no,LH19; Held19,promiscuous,Souls,1,0.999315537,20.2,1.1,1,0.999315537
+189,Rodentia,Muridae,Ricefield Rat,Rattus_argentiventer,217,BT,3.051,BT,NA,4.2,4.29,9.85,Myhrvold et al 2015,,,promiscuous,Sin20,4.29,0.085557837,4.2,6.94,4.29,0.085557837
+190,Rodentia,Muridae,Australian Dusky Rat,Rattus_colletti,154,BT,1.938,BT,NA,1.5,4,5.995,Myhrvold et al 2015,,,NA,,4,0.078028747,1.5,5.995,4,0.078028747
+191,Rodentia,Muridae,Pacific Rat,Rattus_exulans,49,BT,1.249,BT,NA,1.125,3.9,3.7,Cap15,,,promiscuous,Sin20,3.635,0.202600958,3.908333333,3.665,3.635,0.202600958
+192,Rodentia,Muridae,Pacific Rat,Rattus_exulans,60,GF03,2.6,GF03,NA,1.125,3.9,3.7,Cap15,,,promiscuous,Sin20,3.635,0.202600958,3.908333333,3.665,3.635,0.202600958
+193,Rodentia,Muridae,Australian Bush Rat,Rattus_fuscipes,110,BT,4.262,BT,NA,5.3,3.3,4.58,Cap15,no,Held19,promiscuous,Sin20,3.3,-999,3.416666667,4.58,3.3,-999
+194,Rodentia,Muridae,Cape York Rat,Rattus_leucopus,170,BT,4.149,BT,NA,NA,NA,3.45,Cap15,,,NA,,-999,-999,-999,3.475,-999,-999
+195,Rodentia,Muridae,Losea Rat,Rattus_losea,110,BT,2.175,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+196,Rodentia,Muridae,Australian Swamp Rat,Rattus_lutreolus,163,BT,4.434,BT,NA,4.4,2.4,4.45,Cap15,no,Held19,promiscuous,Sin20,2.53,-999,3.408333333,4.91,2.53,-999
+197,Rodentia,Muridae,Eastern New Guinea Mountain Rat,Rattus_niobe,49,BT,1.893,BT,NA,NA,NA,2.15,Cap15,,,NA,,-999,-999,-999,2.15,-999,-999
+198,Rodentia,Muridae,Brown Rat,Rattus_norvegicus,500,GF03,4,GF03,NA,3.8,3.5,8.99,Cap15,no,LH19; Held19,promiscuous,Sin20,3.68,-999,5,8.855,3.68,-999
+199,Rodentia,Muridae,Roof Rat,Rattus_rattus,134,BT,3.467,BT,NA,4.2,3.75,5.88,Cap15,no,Held19,NA,,4.28,0.092060233,4.2,5.95,4.28,0.092060233
+200,Rodentia,Muridae,Roof Rat,Rattus_rattus,169,GF03,7.2,GF03,NA,4.2,3.75,5.88,Cap15,no,Held19,NA,,4.28,0.092060233,4.2,5.95,4.28,0.092060233
+201,Rodentia,Muridae,Canefield Rat,Rattus_sordidus,158,BT; Cap15,3.522,BT,NA,NA,4,5.99,Myrhvold et al 2015,,,NA,,4,0.078028747,-999,5.995,4,0.078028747
+202,Rodentia,Muridae,Stein's New Guinea Rat,Rattus_steini,93,BT,1.109,BT,NA,NA,NA,3.65,Myrhvold et al 2015,,,NA,,-999,-999,-999,3.575,-999,-999
+203,Rodentia,Muridae,Malaysian Field Rat,Rattus_tiomanicus,89,BT,3.473,BT,NA,4.2,4.28,3.87,Myrhvold et al 2015,,,NA,,4.28,0.092060233,4.2,5.88,4.28,0.092060233
+204,Rodentia,Muridae,Australian Pale Field Rat,Rattus_tunneyi,243,BT,4.865,BT,NA,1,NA,5.34,Myrhvold et al 2015,,,NA,,-999,-999,1,5.545,-999,-999
+205,Rodentia,Muridae,Australian Long-haired Rat,Rattus_villosissimus,207,BT,2.15,BT,NA,NA,4,5.995,Myrhvold et al 2015,,,NA,,4,0.078028747,-999,5.995,4,0.078028747
+206,Rodentia,Muridae,Xeric Four-striped Grass Rat,Rhabdomys_pumilio,55,BT,0.909,BT,NA,4.5,7,5.28,Cap15,no,LH19; Held19; Sin20,monogamous; polygynous,Sin20,4,0.079493498,2.916666667,6,4,0.079493498
+207,Primates,Cebidae,Common Squirrel Monkey,Saimiri_sciureus,780,GF03,3.2,GF03,NA,30.2,1.33,1,Cap15,yes,LH19; Held19,promiscuous,Lupold2018,1.07,1.024298426,27,1,1.07,1.024298426
+208,Rodentia,Sciuridae,Caucasian Squirrel,Sciurus_anomalus,240,squirrel,1.38,squirrel,NA,5.7,NA,4,Myrhvold et al 2015,,,NA,,-999,-999,5.741666667,4,-999,-999
+209,Rodentia,Sciuridae,Eastern Gray Squirrel,Sciurus_carolinensis,536,squirrel,5.18,squirrel,1.63,24,2,2.98,Cap15,no,LH19; Held19,promiscuous,Sin20,2,-999,23.58333333,3,2,-999
+210,Rodentia,Sciuridae,Eastern Fox Squirrel,Sciurus_niger,836,squirrel,6.9,squirrel,1.29,16,1.64,2.71,Cap15,no,Held19,promiscuous,Sin20,1.64,-999,14.90416667,3,1.64,-999
+211,Rodentia,Sciuridae,Eurasian Red Squirrel,Sciurus_vulgaris,333,Cap15,2.81,squirrel,1.18,14.8,2,4.5,Cap15,no,Held19,promiscuous,Sin20,2,0.249486653,12,4.43,2,0.249486653
+212,Primates,Cercopithecidae,Northern Plains Gray Langur,Semnopithecus_entellus,19200,Souls,11.5,Souls,NA,29,0.67,1.02,Cap15,no,LH19,promiscuous,Souls,0.7,1.398973306,27,1.02,0.7,1.398973306
+213,Rodentia,Cricetidae,Hispid Cotton Rat,Sigmodon_hispidus,223,GF03,1.73,GF03,NA,5.2,2,5.44,Cap15,no,Held19,promiscuous,Sin20,2,-999,5.2,5.44,2,-999
+214,Soricomorpha,Soricidae,Common Shrew,Sorex_araneus,11.9,Souls,0.17,Souls,NA,3.2,2,6.56,Cap15,no,Held19,promiscuous,Souls,1.9,0.115756331,2,6.56,1.9,0.115756331
+215,Rodentia,Sciuridae,California Ground Squirrel,Spermophilus_beecheyi,840,Souls,9.05,Souls,NA,5,1,6.71,Cap15,no,LH19; Held19,polygynous,Souls,1,-999,5.204166667,6.71,1,-999
+216,Rodentia,Sciuridae,Belding's Ground Squirrel,Spermophilus_beldingi,370,Souls,3.5,Souls,NA,11,1,5.71,Cap15,no,LH19; Held19,promiscuous,Souls; Sin20,1,-999,11,5.57,1,-999
+217,Rodentia,Muridae,Mueller's Sundamys,Sundamys_muelleri,400,BT,7.44,BT,NA,2,NA,3.8,Cap15,,,NA,NA,-999,-999,2,3.8,-999,-999
+218,Carnivora,Herpestidae,Meerkat,Suricata_suricatta,731,Souls; Cap15,1.3,Souls,NA,20.6,1,3.86,Cap15,yes,LH19; Held19,monogamous,Souls,1,0.999315537,12.66666667,3.86,1,0.999315537
+219,Artiodactyla,Suidae,Wild Boar,Sus_scrofa,172000,GF03,36,GF03,NA,27,1.5,4.52,Cap15,no,LH19; Held19,polygynous,Souls,1.5,0.629705681,21,5.5675,1.5,0.629705681
+220,Rodentia,Sciuridae,Yellow-pine Chipmunk,Tamias_amoenus,51,Souls; Cap15,1.22,Souls,NA,5.166666667,1,4.99,Cap15,no,Held19,promiscuous,Souls,1,0.999315537,5.166666667,5.19,1,0.999315537
+221,Rodentia,Sciuridae,Red Squirrel,Tamiasciurus_hudsonicus,193.7,squirrel,2.92,squirrel,0.9,12,1.75,3.93,Cap15,no,Held19,promiscuous,Souls; Sin20,1.725,-999,9.816666667,4.2,1.725,-999
+222,Rodentia,Sciuridae,Red Squirrel,Tamiasciurus_hudsonicus,186,Souls,2.92,Souls,0.9,12,1.75,3.93,Cap15,no,Held19,promiscuous,Souls; Sin20,1.725,-999,9.816666667,4.2,1.725,-999
+223,Primates,Cercopithecidae,Gelada,Theropithecus_gelada,20400,GF03,17.1,GF03,NA,36,0.5,1.01,Cap15,yes,LH19; Held19,NA,,0.5,2.062286105,28,1,0.5,2.062286105
+224,Rodentia,Muridae,Amami-oshima Island Spiny Rat,Tokudaia_osimensis,89,BT,0.213,BT,NA,NA,NA,NA,,,,NA,,-999,-999,-999,-999,-999,-999
+225,Artiodactyla,Bovidae,Greater Kudu,Tragelaphus_strepsiceros,248000,GF03,92,GF03,NA,23.5,1,1,Cap15,no,Held19,NA,,1,0.999315537,23,1,1,0.999315537
+226,Rodentia,Muridae,Rudd's Bristle-furred Rat,Uranomys_ruddi,40,BT,0.348,BT,NA,NA,NA,4.07,Cap15,,,NA,,-999,-999,-999,3.825,-999,-999
+227,Rodentia,Sciuridae,Richardson's ground squirrel,Urocitellus_richardsonii,325.1,Cap15,NA,Anjos,0.61,6,1,7.59,Cap15,no,LH19; Held19; Waterman pers. comm.,promiscuous,Michener and Locklear 1990; Hare et al 2004,NA,NA,NA,NA,NA,NA
+228,Carnivora,Canidae,Gray Fox,Urocyon_cinereoargenteus,3700,Souls,5.17,Souls,NA,16.2,0.98,3.71,Cap15,yes,Held19,monogamous,Souls,1,0.999315537,15.56666667,3.895,1,0.999315537
+229,Rodentia,Muridae,Black-tailed Uromys,Uromys_anak,879,BT,11.592,BT,NA,NA,NA,4.3,Cap15,,,NA,,-999,-999,-999,4.3,-999,-999
+230,Rodentia,Muridae,Giant White-tailed Uromys,Uromys_caudimaculatus,820,BT,7.197,BT,NA,NA,NA,1.46,Cap15,,,NA,,-999,-999,-999,1.76,-999,-999
+231,Carnivora,Ursidae,American Black Bear,Ursus_americanus,102287,Souls,38.9,Souls,NA,34,0.38,2.39,Cap15,no,LH19; Held19,promiscuous,Souls,0.4,2.123545517,31.72083333,2.465,0.4,2.123545517
+232,Carnivora,Ursidae,Brown Bear,Ursus_arctos,312000,Souls,153.4,Souls,NA,50,0.36,2.24,Cap15,no,LH19; Held19,promiscuous,Souls,0.4,2.415468857,43.5,2.27,0.4,2.415468857
+233,Carnivora,Canidae,Arctic Fox,Vulpes_lagopus,4800,Souls,4.06,Souls,NA,16.3,1,7.65,Cap15,yes,LH19; Held19,monogamous,Souls,1,0.999315537,15,8.12,1,0.999315537
+234,Carnivora,Canidae,Red Fox,Vulpes_vulpes,5069,GF03,9,GF03,NA,21.3,0.91,4.59,Cap15,yes,LH19; Held19,polygynous,Souls,1,0.999315537,15,4.7325,1,0.999315537
+235,Carnivora,Canidae,Red Fox,Vulpes_vulpes,6260,Souls,12.36,Souls,NA,21.3,0.91,4.59,Cap15,yes,LH19; Held19,polygynous,Souls,1,0.999315537,15,4.7325,1,0.999315537
+236,Rodentia,Muridae,Rock-dwelling Giant Rat,Xenuromys_barbatus,950,BT,18.94,BT,NA,NA,NA,1.76,Myrhvold et al 2015,,,NA,,-999,-999,-999,1.76,-999,-999
+237,Rodentia,Sciuridae,Striped Ground Squirrel,Xerus_erythropus,637,squirrel,2.2,squirrel,0.999,10.3,NA,3.45,Myrhvold et al 2015,no,Held19,promiscuous,Sin20,-999,-999,6,3.615,-999,-999
+238,Rodentia,Sciuridae,South African Ground Squirrel,Xerus_inauris,572.6,Cap15,10.3,squirrel,2.8,13,1,2.06,Cap15,no,LH19,promiscuous,Sin20,1,-999,11.475,2.12,1,-999
+239,Rodentia,Muridae,Common Australian Rock Rat,Zyzomys_argurus,45,BT,0.434,BT,NA,4.16,1.42,2.76,Myrhvold et al 2015,,,NA,,1.42,0.599589322,4.158333333,2.63,1.42,0.599589322

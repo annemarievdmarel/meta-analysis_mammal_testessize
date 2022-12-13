@@ -1,0 +1,548 @@
+---
+title: "mcmcGLMM"
+author: "Annemarie van der Marel"
+date: "10/08/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+Load libraries
+```{r setup, include=FALSE}
+library(TreeTools)
+library(tidyverse)
+library(ape)
+library(MCMCglmm)
+library(brms)
+library(phytools)
+sessionInfo()
+```
+
+# Import  data
+```{r}
+# species names (to include in tree)
+species <- read.csv("./data/species.csv") %>%
+  dplyr::select(-X)
+head(species)
+
+
+all_df <- read.csv("./data/testes_lifehistory_mating_care_all.csv") %>%
+  dplyr::select(order, family, common_name, Binomial, BM_g, source_BM, testes_g, source_testes, 
+                rel_testes_size, LG, LY, LS, source_lifehistory,
+                paternal_care, source_paternal_care, mating_system, source_MS)
+
+check_df <- all_df %>% 
+  group_by(Binomial) %>%
+  tally() %>%
+  filter(n>1)
+
+```
+
+## number of species per trait
+```{r}
+n_testes <- all_df %>%
+  filter(is.na(testes_g)) 
+n_distinct(all_df$Binomial)
+
+n_ls <- all_df %>%
+  filter(is.na(LS)) 
+n_distinct(n_ls$Binomial)
+length(unique(check_df$Binomial))
+
+n_ly <- all_df %>%
+  filter(is.na(LY))
+n_distinct(n_ly$Binomial)
+
+n_lg <- all_df %>%
+  filter(is.na(LG))
+n_distinct(n_lg$Binomial)
+
+n_ms <- all_df %>%
+  filter(is.na(mating_system))
+n_distinct(n_ms$Binomial)
+
+n_pc <- all_df %>%
+  filter( paternal_care=="")
+n_distinct(n_pc$Binomial)
+
+n_all <- na.omit(all_df) 
+n_distinct(n_all)
+
+```
+
+in total, we have a dataset of 210 species with testes size or relative testes size information. 
+Of these 210 species, we are missing litter size data for 12 species, litters per year data for 63 species, longevity data for 40 species, mating system data for 102 species, and paternal care data for 102 species. We have 12 species that are all squirrels with data for all variables. 
+
+
+
+
+# import phylogenetic tree
+
+-	a mammalian phylogenetic tree
+o	Upham et al. 2019 https://doi.org/10.1371/journal.pbio.3000494 
+o	http://vertlife.org/phylosubsets/ website to select species or taxonomic groups or complete tree 
+
+or mammalian supertree from Rolland et al. 2014, see also Lukas & Clutton-brock 2020. 
+
+```{r}
+# Upham et al. 2019
+#mammaltree <- read.nexus("./data/output.nex")
+mammaltree <- ape::read.nexus("./data/output.nex")
+
+# randomly choose 1 tree out of 1000
+set.seed(42)
+sample(1000,1)
+
+tree <- mammaltree[[74]]
+tree
+
+
+# rolland et al 2014
+Rollandtree <- phytools::read.newick("Rolland et al tree.txt")
+#plot(Rollandtree)
+str(Rollandtree)
+tree<-Rollandtree
+```
+
+
+# check tree
+```{r}
+# species names in tree
+sort(tree$tip.label)
+
+
+pdf(file = "./figures/sampletree.pdf", width = 9, height = 30)
+plot(tree)
+dev.off()
+
+
+
+mammaltree
+str(mammaltree)
+
+# only 204 species in tree instead 210
+# species that have trait data
+TipsWant <- rts_df$Binomial
+# keep only the taxa we are interested on
+tree.tr = drop.tip(tree, setdiff(tree$tip.label, TipsWant))
+plot(tree.tr); axisPhylo()
+
+# list of taxa with traits that are not in the phylogeny
+remove.table = setdiff(TipsWant, tree$tip.label)
+remove.table 
+# remove from table all species that are not in phylogeny
+pruned_df = all_df[!(TipsWant %in% remove.table), ]
+
+
+```
+
+Change:
+Spermophilus_beecheyi -> Otospermophilus_beecheyi
+Spermophilus_beldingi -> Urocitellus_beldingi
+
+
+
+# relative testes size
+Kenagy & Trombulak 1986
+Testes mass = 0.035 x body mass^0.72
+
+Y = -0.031X^0.77 for rodents 
+rts of Capes is 2.83 (Anjos thesis)
+Richardson's ground squirrels = 0.61 ± 0.06
+
+```{r}
+rts_df <- pruned_df %>% 
+  filter(!is.na(testes_g)) %>%
+  group_by(Binomial) %>%
+  slice(1) 
+
+cor.test(log(rts_df$BM_g), log(rts_df$testes_g), method=c("pearson"))
+
+lm.rts <- lm(log(testes_g) ~ log(BM_g) , data=rts_df)
+summary(lm.rts)
+
+rts_df$rts <- lm.rts$residuals 
+
+ggplot(all_df, aes( y= log(testes_g),x =log(BM_g))) +
+  geom_point() +
+  theme_classic() +
+  geom_smooth(method = "lm") +
+  labs(x="log body mass (g)", y = "log testes mass (g)")
+  
+
+
+
+```
+
+We found a significant linear correlation of log of testes mass against log body mass (R2 = 0.91, p < 0.001). 
+
+-3.1 +- 0.69, F1, 235 = 1156, p < 0.001
+https://pavelmatos.files.wordpress.com/2019/10/comparativephylogenetics_r_tutorial-1.pdf
+```{r}
+rts_df[["BM_g"]] = log(rts_df[["BM_g"]]) # log convert body sizes
+rts_df[["testes_g"]] = log(rts_df[["testes_g"]]) # log convert testes size
+mass = rts_df[["BM_g"]] # data on body sizes
+testes = rts_df[["testes_g"]] # data on testes sizes
+
+# compare body mass and testes size -> not working! Error in pic(mass, tree) : length of phenotypic and of phylogenetic data do not match
+pic.mass = pic(mass, tree)
+pic.testes = pic(testes, tree)
+plot(pic.testes, pic.mass)
+fit.pic.MT = lm(pic.testes~pic.mass -1)
+abline(fit.pic.MT, col = "red")
+summary(fit.pic.MT)
+
+
+```
+
+
+# PGLMM 
+brms can examine correlations between continuous and discrete traits, and can incorporate multiple measurements per species.
+
+
+## Collinearity of variables
+Prepare data
+```{r}
+## Collinearity of the explanatory variables ----
+library(psych) #Calls: pairs.panels
+library(car) #Calls: vif
+library(plyr) #Calls: rbind.fill
+library(usdm)
+
+df<- all_df
+
+# global, without relative testes size but with body mass and testes mass
+Z <- cbind(df$BM_g,df$testes_g, df$LG, df$LS , df$LY )
+colnames(Z) <- c("bm","testes" ,"lg","ls","ly")
+pairs.panels(Z) # Generate scatterplots with Pearson correlations
+dfz = data.frame(Z) # Data Frame with predictor variables
+vif(dfz) # no variable with VIF > 3
+
+# global
+Z <- cbind(df$RTS, df$LG, df$LS , df$LY , df$paternal_care , df$mating_system)
+colnames(Z) <- c("rts", "lg","ls","ly", "pc","ms")
+pairs.panels(Z) # Generate scatterplots with Pearson correlations
+dfz = data.frame(Z) # Data Frame with predictor variables
+vif(dfz) # VIF > 3
+
+# check with dependent and random factor
+Z.all <- cbind(df$RTS, df$LG, df$LS , df$LY , df$Binomial )
+colnames(Z.all) <- c("rts", "lg","ls","ly", "species")
+pairs.panels(Z.all) # Generate scatterplots with Pearson correlations
+dfz = data.frame(Z.all) 
+vif(dfz) # VIF > 3
+
+
+```
+
+
+
+Plot
+```{r}
+# plots
+
+figA<- ggplot(df, aes(x=LS, y=RTS)) + 
+  geom_point() +
+  theme_classic() +
+  labs(x= "litter size", y = "relative testes size") #+
+  geom_point(aes(group = Binomial)) +
+  geom_line(aes(group = Binomial),
+            alpha = 0.5, colour = "darkgrey")
+  
+figB<- ggplot(df, aes(x=LY, y=RTS)) + 
+  geom_point() +
+  theme_classic() +
+  labs(x= "litters per year", y = "relative testes size") 
+
+figC<- ggplot(df, aes(x=LG, y=RTS)) + 
+  geom_point() +
+  theme_classic() +
+  labs(x= "longevity (years)", y = "relative testes size") 
+
+figD<- ggplot(df, aes(x=mating_system, y=RTS)) + 
+  geom_boxplot() +
+  theme_classic() +
+  labs(x= "mating system", y = "relative testes size")
+
+figE<- ggplot(df, aes(x=paternal_care, y=RTS)) + 
+  geom_boxplot() +
+  theme_classic() +
+  labs(x= "paternal care", y = "relative testes size")
+
+library(ggpubr) 
+plot.rts<-ggarrange(figA, figB, figC, figD,figE, labels = "auto")
+ggexport(plot.rts, filename = "plot.rts.pdf")
+```
+
+
+# Phylogenetic mixed model
+
+standardize values
+```{r}
+
+df_scaled<-df %>% mutate_if(is.numeric, scale) #scale(x, center = TRUE, scale = TRUE)
+head(st)
+
+```
+
+
+Phylogenetic tree doesn't include "Callosciurus_erythreus" & "Sciurus_aberti",
+therefore exclude resulting in 11 species instead of 13 for our analysis. 
+
+```{r}
+st$Binomial<-as.factor(st$Binomial)
+unique(st$Binomial)
+st<- st %>% filter(!Binomial %in% c("Callosciurus_erythreus", "Sciurus_aberti")) %>% droplevels()
+unique(st$Binomial)
+
+
+```
+
+
+Only include the species that are present in our dataset.
+```{r}
+pruned.tree<-drop.tip(mammaltree, setdiff(mammaltree$tip.label, species)) 
+str(pruned.tree)
+plot.phylo(pruned.tree)
+pruned.tree$tip.label
+```
+
+
+Reorder data according to tips
+```{r}
+species<-pruned.tree$tip.label
+st_tree_select<-dplyr::select(st, Phylo, Binomial,spread, Founders, WA, LY, AFB) 
+st_tree_select$Binomial
+
+traits<-  st_tree_select %>% arrange(factor(Binomial, levels = species))
+traits$Binomial
+```
+
+# repeated measures brms
+
+```{r}
+A <- ape::vcv.phylo(pruned.tree) # covariance matrix
+A <- ape::vcv.phylo(tree.tr) # covariance matrix
+```
+
+
+We only have repeated measures of testes mass and body mass of 23 species, so we will get rts data for 23 species. Are we taking the mean of 
+
+```{r}
+# get mean of repeated measures 
+st_select_mean<-df
+st_select_mean$Binomial
+st_select_mean$mean_RTS <- 
+  with(df, sapply(split(RTS, Binomial), mean)[Binomial])
+
+st_select_mean$mean_BM <- 
+  with(df, sapply(split(BM_g, Binomial), mean)[Binomial])
+st_select_mean$mean_TM <- 
+  with(df, sapply(split(testes_g, Binomial), mean)[Binomial])
+
+head(st_select_mean)
+```
+
+get prior
+```{r}
+brms::get_prior(mean_TM ~ mean_BM  + 
+            (1|gr(Binomial, cov = A))+ + (1|Phylo), 
+          data = st_select_mean, 
+          family = gaussian())
+
+
+brms::get_prior(RTS ~ LS  + 
+            (1|gr(Binomial, cov = A))+ + (1|Phylo), 
+          data = st_select_mean, 
+          family = gaussian())
+get_prior(spread ~ mean_founders + mean_WA + mean_LY + mean_AFB + 
+            (1|gr(Binomial, cov = A))+ + (1|Phylo), 
+          data = st_select_mean, 
+          family = bernoulli())
+```
+
+# model
+
+```{r}
+## model
+model_repeat <- brm(
+  spread ~ mean_founders + mean_WA + mean_LY + mean_AFB + 
+    (1|gr(Binomial, cov = A))+ (1|Phylo), 
+  data = st_select_mean, 
+  family = bernoulli(), 
+  data2 = list(A = A),
+  prior = c(
+    prior(student_t(3, 0, 2.5))), 
+  sample_prior = TRUE, chains = 3, cores = 2, # results
+  iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99)
+)
+
+# checkout results: parameter settings
+#sample_prior = TRUE, chains = 2, cores = 2, # checkout results
+#  iter = 4000, warmup = 1000,
+#  control = list(adapt_delta = 0.99)
+
+
+pairs(model_repeat)
+summary(model_repeat, waic = TRUE)
+head(predict(model_repeat)) # predict responses based on the fitted model
+plot(conditional_effects(model_repeat), ask = FALSE) # plot conditional effects for each predictor
+
+# investigate model fit
+loo(model_repeat) 
+pp_check(model_repeat) 
+
+
+# get variables
+#get_variables(model_repeat)
+```
+
+
+
+## add variability of the independent variables (predictor) within species
+```{r}
+# as only founders change within species, we only have to add founders
+st_select_mean$within_founders <- st_select_mean$Founders - st_select_mean$mean_founders
+
+model_repeat_within <- brm(
+  spread ~ within_founders + mean_founders + mean_WA +  mean_LY + mean_AFB + 
+    (1|gr(Binomial, cov = A))+ (1|Phylo), 
+  data = st_select_mean, 
+  family = bernoulli(), 
+  data2 = list(A = A),
+  #prior = c(
+  #  prior(student_t(3, 0, 2.5))),
+  sample_prior = TRUE, chains = 3, cores = 2, #  results
+  iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.999, max_treedepth = 15),
+  save_all_pars = TRUE
+) 
+
+ sample_prior = TRUE, chains = 2, cores = 2, # checkout results
+  iter = 4000, warmup = 1000,
+  control = list(adapt_delta = 0.99, max_treedepth = 15),
+  save_all_pars = TRUE
+
+# optional
+  sample_prior = TRUE, chains = 3, cores = 2, 
+  iter = 1500000, warmup = 500000, thin = 10,
+  control = list(adapt_delta = 0.999, max_treedepth = 15)
+)
+
+summary(model_repeat_within)
+plot(model_repeat_within)
+pairs(model_repeat_within)
+summary(model_repeat_within, waic = TRUE)
+head(predict(model_repeat_within)) # predict responses based on the fitted model
+plot(conditional_effects(model_repeat_within), ask = FALSE) # plot conditional effects for each predictor
+
+# investigate model fit
+loo(model_repeat_within) 
+pp_check(model_repeat_within) 
+```
+
+
+# model selection
+```{r}
+loo(model_repeat_within, model_repeat) # model repeat lowest looic
+loo_compare(model_repeat_within, model_repeat, criterion = "waic")
+waic(model_repeat_within, model_repeat) # loo better for the models
+```
+
+# plot posterior distribution
+
+plotting posterior distributions
+see https://mran.microsoft.com/snapshot/2020-02-15/web/packages/ggdistribute/vignettes/geom_posterior.html 
+https://cran.r-project.org/web/packages/bayesplot/vignettes/plotting-mcmc-draws.html
+```{r}
+plot.model<- plot(model_repeat)
+ggexport(plot.model, filename = "plot.phylogenetic.model.pdf")
+# geom_vline(x=0, linetype = "dashed")
+     #pars = "^b_", combo = c("dens", "trace")
+
+# plotting posterior distributions
+library(ggdistribute)
+install.packages("ggdistribute")
+
+# option bayesplot
+library("bayesplot")
+
+posterior <- as.array(model_repeat)
+dim(posterior)
+dimnames(posterior)
+
+color_scheme_set("red")
+mcmc_intervals(posterior)
+
+color_scheme_set("teal")
+post.plot<-mcmc_intervals(posterior, pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"), point_est="none")
+post.plot
+
+#The default is to show 50% intervals (the thick segments) and 90% intervals (the thinner outer lines). These defaults can be changed using the prob and prob_outer arguments, respectively. The points in the above plot are posterior medians. 
+mcmc_areas(
+  posterior, 
+  pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"),
+  prob = 0.8, # 0.8 = 80% intervals
+  prob_outer = 0.99, # 99%
+  point_est = "none"
+)
+
+mcmc_areas_ridges(
+  posterior, 
+  pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"),
+  prob = 0.5, # 0.8 = 80% intervals
+  prob_outer = 0.95, # 99%
+  point_est = "median"
+)
+
+#The mcmc_hist function plots marginal posterior distributions (combining all chains) via histograms
+color_scheme_set("green")
+mcmc_hist(posterior, pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"))
+
+color_scheme_set("brightblue")
+mcmc_hist_by_chain(posterior, pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"))
+
+#  plots kernel density estimates 
+color_scheme_set("teal")
+mcmc_dens(posterior, pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"))
+
+mcmc_dens_overlay(posterior, pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"))
+
+# violin density plots
+color_scheme_set("teal")
+mcmc_violin(posterior, pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"), probs = c(0.1, 0.5, 0.9))
+
+# 
+color_scheme_set("pink")
+mcmc_pairs(posterior, pars = c("b_Intercept", "b_mean_founders", "b_mean_WA", "b_mean_LY", "b_mean_AFB"),
+           off_diag_args = list(size = 1.5))
+
+
+## option 
+library(ggmcmc)
+
+S<- ggs(model_repeat)
+S
+str(S)
+ggmcmc(S)
+ggsggs_caterpillar(model_repeat)
+```
+
+
+
+# explanation model output
+Solutions for warning messages
+    - control = list(max_treedepth = 15) # <x> a positive integer  > default of 10
+    - control = list(adapt_delta = 0.99) # <x> > default of 0.8 (require 0<delta<1)
+    
+Rhat: If Rhat is considerably greater than 1 (i.e., > 1.1), the chains have not yet 
+converged and it is necessary to run more iterations and/or set stronger priors.
+
+(1|gr(Binomial, cov = A)) : accounts for phylogenetic relationship between species
+(1|Phylo) : accounts for any specific effect that would be independent of the phylogenetic relationship between species (e.g., environmental or niche effects).
+
+There is a significant effect when credibility interval does not contain 0. 
+
+Investigate model fit
+ - loo(model_repeat); leave-one-out cross-validation for direct numerical comparison of model fit, smaller values of loo indicate better fit
+ - pp_check(model_repeat); posterior predictive check.

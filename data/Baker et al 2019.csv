@@ -1,0 +1,622 @@
+Binomial,log(testes),ref_testes,log(bm),ref_bm,comment,mating_system_Baker,ref_mating_system
+Acerodon_jubatus,0.512,Pitnick 2006,2.714,Pitnick 2006,Original data is for Acerodon_mackloti - taxa included by genus matching.,,
+Axis_axis,1.129,Anderson 2004,4.735,Anderson 2004,Original data is for Axis_calamianensis - taxa included by genus matching.,PA/PGA,Anderson 2004
+Bunomys_andrewsi,-0.39,Breed 2000,2.137,Breed 2000,Original data is for Bunomys_fratrorum - taxa included by genus matching.,,
+Epomophorus_crypturus,-0.046,Pitnick 2006,1.903,Pitnick 2006,Original data is for Epomophorus_labiatus - taxa included by genus matching.,,
+Epomops_franqueti,-0.524,Pitnick 2006,2.204,Pitnick 2006,Original data is for Epomops_buettikoferi - taxa included by genus matching.,PG,Hosken 2001
+Saccolaimus_flaviventris,-0.24,Pitnick 2006,2,Pitnick 2006,Original data is for Saccolaimus_peli - taxa included by genus matching.,M,Hosken 2001; Pitnick 2006
+Abeomelomys_sevia,-0.069,Breed 2000,1.716,Breed 2000,,,
+Acinonyx_jubatus,1.041,Iossa 2008,4.64,Iossa 2008,,PA/PGA,Iossa 2008; Soulsbury 2010
+Acomys_cahirinus,-0.291,Ramm 2005,1.878,Ramm 2005,,,
+Acrobates_pygmaeus,-0.75,Birkhead 1998,1.09,Birkhead 1998,,PA/PGA,Pantheria
+Addax_nasomaculatus,1.635,Anderson 2004,4.929,Anderson 2004,,PA/PGA,Anderson 2004
+Aepyceros_melampus,1.461,Anderson 2004,4.76,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Aepyprymnus_rufescens,0.67,Birkhead 1998,3.38,Birkhead 1998,,,
+Aethomys_chrysophilus,-0.064,Breed 2000,1.929,Breed 2000,,M,Lukas 2012; Lukas 2013
+Aethomys_ineptus,-0.143,Breed 2000,2.146,Breed 2000,,,
+Ailuropoda_melanoleuca,2.487,Iossa 2008,5.071,Iossa 2008,,PA/PGA,Iossa 2008
+Akodon_molinae,-0.351,Ramm 2005,1.618,Ramm 2005,,,
+Alcelaphus_buselaphus,2.029,Anderson 2004,5.204,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Alces_alces,2.025,Ginsberg 1990,5.897,Ginsberg 1990,,PG,Ginsberg 1990; Pantheria; Lukas 2012; Lukas 2013
+Allenopithecus_nigroviridis,1.229,Harcourt 1995,3.699,Harcourt 1995,,,
+Alouatta_palliata,1.43,Hayward 2011,3.864,Hayward 2011,,PA/PGA,Kenagy 1986; Harcourt 1995
+Ammospermophilus_leucurus,0.33,Hayward 2011,1.994,Hayward 2011,,PG,Waterman 2007
+Ammotragus_lervia,1.275,Anderson 2004,4.833,Anderson 2004,,PA/PGA,Anderson 2004
+Anisomys_imitator,0.62,Ramm 2007,2.706,Ramm 2007,,,
+Anoura_cultrata,-1.004,Pitnick 2006,1.233,Pitnick 2006,,,
+Anoura_geoffroyi,-1.301,Pitnick 2006,1.179,Pitnick 2006,,,
+Antechinus_flavipes,-0.785,Birkhead 1998,1.697,Birkhead 1998,,PA/PGA,Rose 1997; Pantheria
+Antechinus_stuartii,-0.456,Hayward 2011,1.591,Hayward 2011,,PA/PGA,Pantheria; Rose 1997
+Antechinus_swainsonii,-0.441,Birkhead 1998,2.02,Birkhead 1998,,PA/PGA,Pantheria; Rose 1997
+Antidorcas_marsupialis,1.851,Anderson 2004,4.607,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Antilocapra_americana,1.881,Ginsberg 1990,4.79,Ginsberg 1990,,PA/PGA,Soulsbury 2010; Ginsberg 1990; Lukas 2013; Lukas 2012
+Antrozous_pallidus,-0.77,Ramm 2007,1.346,Ramm 2007,,,
+Aotus_trivirgatus,0.079,Hayward 2011,3.009,Hayward 2011,,M,Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012
+Apodemus_agrarius,-0.003,Hayward 2011,1.338,Hayward 2011,,PA/PGA,Soulsbury 2010
+Apodemus_argenteus,-0.207,Hayward 2011,1.322,Hayward 2011,,,
+Apodemus_flavicollis,-0.05,Hayward 2011,1.464,Hayward 2011,,PA/PGA,Soulsbury 2010
+Apodemus_semotus,0.139,Breed 2000,1.447,Breed 2000,,,
+Apodemus_speciosus,0.091,Breed 2000,1.663,Breed 2000,,,
+Apodemus_sylvaticus,-0.103,Hayward 2011,1.364,Hayward 2011,,PA/PGA,Soulsbury 2010; Waterman 2007
+Apodemus_uralensis,-0.487,Hayward 2011,1.283,Hayward 2011,,PA/PGA,Soulsbury 2010
+Arctocephalus_forsteri,1.462,Fitzpatrick 2012,4.999,Fitzpatrick 2012,,PG,Pantheria
+Arctocephalus_pusillus,1.645,Fitzpatrick 2012,5.097,Fitzpatrick 2012,,PG,Pantheria
+Arctocephalus_tropicalis,1.462,Fitzpatrick 2012,4.985,Fitzpatrick 2012,,PG,Pantheria
+Ardops_nichollsi,-1.004,Pitnick 2006,1.228,Pitnick 2006,,,
+Artibeus_jamaicensis,-1.292,Pitnick 2006,1.602,Pitnick 2006,,PG,Hosken 2001; Soulsbury 2010
+Artibeus_lituratus,-0.64,Pitnick 2006,1.898,Pitnick 2006,,,
+Artibeus_phaeotis,-1.292,Pitnick 2006,1.079,Pitnick 2006,,,
+Arvicola_amphibius,0.326,Hayward 2011,2.432,Hayward 2011,,,
+Atelerix_albiventris,0.369,Anderson 2004,2.716,Anderson 2004,,PA/PGA,Anderson 2004
+Ateles_fusciceps,0.959,Moller 1988,3.687,Moller 1988,,PA/PGA,Moller 1988
+Ateles_geoffroyi,1.127,Hayward 2011,3.9,Hayward 2011,,PA/PGA,Pantheria; Kenagy 1986; Moller 1988; Harcourt 1995
+Avahi_laniger,0.32,Harcourt 1995,3.114,Harcourt 1995,,M,Pantheria; Lukas 2013; Lukas 2012; Harcourt 1995
+Axis_porcinus,1.694,Anderson 2004,4.712,Anderson 2004,,PG,Anderson 2004; Pantheria; Lukas 2012; Lukas 2013
+Balaena_mysticetus,5.212,Macleod 2010,7.708,Macleod 2010,,,
+Balaenoptera_acutorostrata,3.944,Dines 2015,7.079,Dines 2015,,PA/PGA,Skaugh 2008
+Balaenoptera_borealis,4.215,Macleod 2010,7.255,Macleod 2010,,,
+Balaenoptera_edeni,4.301,Macleod 2010,7.255,Macleod 2010,,,
+Balaenoptera_musculus,4.845,Macleod 2010,8.029,Macleod 2010,,,
+Balaenoptera_physalus,3.217,Hayward 2011,7.581,Hayward 2011,,,
+Bandicota_bengalensis,0.327,Breed 2000,2.461,Breed 2000,,,
+Bandicota_indica,0.309,Hayward 2011,2.787,Hayward 2011,,,
+Bandicota_savilei,0.101,Breed 2000,2.438,Breed 2000,,,
+Bathyergus_suillus,0.343,Ramm 2005,2.875,Ramm 2005,,,
+Batomys_salomonseni,0.192,Breed 2000,2.288,Breed 2000,,,
+Berardius_bairdii,4,Macleod 2010,7.056,Macleod 2010,,,
+Berylmys_bowersi,1.159,Breed 2000,2.634,Breed 2000,,,
+Bettongia_gaimardi,0.759,Rose 1997,3.226,Rose 1997,,,
+Bettongia_penicillata,0.222,Birkhead 1998,2.941,Birkhead 1998,,,
+Bison_bonasus,2.707,Ginsberg 1990,5.829,Ginsberg 1990,,PA/PGA,Ginsberg 1990
+Bos_taurus,2.297,Anderson 2004,5.954,Anderson 2004,,PG,Anderson 2004; Lazo 1995; Bailey 2003
+Brachyphylla_cavernarum,-1.194,Pitnick 2006,1.603,Pitnick 2006,,,
+Budorcas_taxicolor,1.97,Anderson 2004,5.398,Anderson 2004,,PA/PGA,Anderson 2004
+Bullimus_bagobus,0.611,Breed 2000,2.58,Breed 2000,,,
+Bunomys_chrysocomus,0.547,Breed 2000,2.068,Breed 2000,,,
+Burramys_parvus,-1.429,Birkhead 1998,1.591,Birkhead 1998,,,
+Cacajao_calvus,0.763,Harcourt 1995,3.538,Harcourt 1995,,PA/PGA,Harcourt 1995
+Callithrix_argentata,0.262,Harcourt 1995,2.556,Harcourt 1995,,M,Lukas 2012; Lukas 2013
+Callithrix_geoffroyi,-0.26,Anderson 2004,2.58,Anderson 2004,,M,Lukas 2013; Lukas 2012
+Callithrix_jacchus,0.114,Hayward 2011,2.505,Hayward 2011,,M,Kenagy 1986; Lukas 2013; Lukas 2012
+Callithrix_pygmaea,-0.481,Harcourt 1995,2.114,Harcourt 1995,,M,Pantheria; Lukas 2012; Lukas 2013
+Callorhinus_ursinus,1.803,Hayward 2011,4.462,Hayward 2011,,PG,Ferguson 2004
+Callospermophilus_lateralis,0.512,Hayward 2011,2.273,Hayward 2011,,PA/PGA,Kenagy 1986; Waterman 2007
+Callospermophilus_saturatus,0.362,Hayward 2011,2.356,Hayward 2011,,,
+Calomys_musculinus,-0.704,Ramm 2005,1.549,Ramm 2005,,,
+Camelus_dromedarius,2.085,Anderson 2004,5.903,Anderson 2004,,PG,Anderson 2004; Nowak 1983
+Canis_aureus,1.124,Iossa 2008,4,Iossa 2008,,M,Iossa 2008; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004
+Canis_latrans,1.188,Soulsbury 2010,4.025,Soulsbury 2010,,M,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004
+Canis_lupus,1.437,Iossa 2008,4.516,Iossa 2008,,M,Iossa 2008; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004
+Caperea_marginata,3.279,Macleod 2010,6.462,Macleod 2010,,,
+Capra_falconeri,1.321,Anderson 2004,4.58,Anderson 2004,,PA/PGA,Anderson 2004
+Capra_ibex,1.584,Anderson 2004,4.875,Anderson 2004,,PA/PGA,Anderson 2004
+Capreolus_capreolus,1.653,Hayward 2011,4.31,Hayward 2011,,PG,Soulsbury 2010; Kenagy 1986; Pantheria
+Capricornis_crispus,1.806,Ginsberg 1990,5.079,Ginsberg 1990,,PA/PGA,Ginsberg 1990; Lukas 2013
+Cardioderma_cor,-1.398,Ramm 2007,1.462,Ramm 2007,,M,Hosken 2001; Pitnick 2006; Pantheria; Lukas 2013
+Carollia_perspicillata,-0.903,Pitnick 2006,1.267,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006; Pantheria
+Castor_canadensis,0.968,Hayward 2011,4.28,Hayward 2011,,M,Soulsbury 2010; Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012
+Castor_fiber,1.241,Hayward 2011,4.26,Hayward 2011,,M,Lukas 2013; Lukas 2012; Waterman 2007
+Cavia_aperea,0.572,Soulsbury 2010,2.754,Soulsbury 2010,,PG,Soulsbury 2010; Waterman 2007
+Cavia_porcellus,0.613,Hayward 2011,2.91,Hayward 2011,,,
+Cebus_apella,0.959,Ramm 2007,3.415,Ramm 2007,,PA/PGA,Moller 1988; Harcourt 1995
+Centurio_senex,-1.097,Pitnick 2006,1.36,Pitnick 2006,,,
+Cephalophus_silvicultor,1.522,Anderson 2004,4.884,Anderson 2004,,PG,Anderson 2004; Pantheria; Lukas 2012; Lukas 2013
+Cephalorhynchus_commersonii,3.086,Macleod 2010,4.892,Macleod 2010,,,
+Cephalorhynchus_heavisidii,2.728,Dines 2015,4.872,Dines 2015,,,
+Cephalorhynchus_hectori,2.948,Macleod 2010,4.614,Macleod 2010,,,
+Cercartetus_concinnus,-1.208,Birkhead 1998,1.155,Birkhead 1998,,,
+Cercartetus_nanus,-1.174,Birkhead 1998,1.29,Birkhead 1998,,,
+Cercocebus_atys,1.4,Harcourt 1995,3.939,Harcourt 1995,,PA/PGA,Lukas 2013; Harcourt 1995
+Cercocebus_torquatus,1.4,Hayward 2011,3.939,Hayward 2011,,,
+Cercopithecus_ascanius,0.477,Harcourt 1995,3.729,Harcourt 1995,,PA/PGA,Harcourt 1995
+Cervus_elaphus,1.848,Anderson 2004,5.505,Anderson 2004,,PA/PGA,Soulsbury 2010; Kenagy 1986
+Chaerephon_pumilus,-1.42,Pitnick 2006,1.033,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Chaetodipus_formosus,-0.678,Hayward 2011,1.294,Hayward 2011,,PA/PGA,Waterman 2007
+Chalinolobus_gouldii,-2,Ramm 2007,1.13,Ramm 2007,,,
+Cheirogaleus_major,0.362,Harcourt 1995,2.531,Harcourt 1995,,PG,Pantheria; Lukas 2013; Lukas 2012
+Chinchilla_lanigera,0.716,Hayward 2011,2.626,Hayward 2011,,,
+Chiropodomys_gliroides,-0.42,Breed 2000,1.342,Breed 2000,,,
+Chiruromys_vates,0.242,Breed 2000,1.681,Breed 2000,,,
+Chlorocebus_aethiops,1.314,Hayward 2011,3.723,Hayward 2011,,PA/PGA,Kenagy 1986; Moller 1988; Harcourt 1995
+Chrotopterus_auritus,-0.74,Pitnick 2006,1.964,Pitnick 2006,,M,Hosken 2001; Pitnick 2006; Lukas 2013
+Chrysocyon_brachyurus,1.103,Iossa 2008,4.498,Iossa 2008,,M,Iossa 2008; Pantheria; Lukas 2013
+Coendou_prehensilis,0.389,Anderson 2004,3.481,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Coleura_afra,-1.523,Pitnick 2006,1,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Colobus_guereza,0.474,Harcourt 1995,4.017,Harcourt 1995,,PA/PGA,Harcourt 1995
+Colobus_polykomos,1.137,Hayward 2011,3.993,Hayward 2011,,PA/PGA,Kenagy 1986; Harcourt 1995
+Conilurus_penicillatus,0.642,Ramm 2007,2.265,Ramm 2007,,,
+Connochaetes_gnou,2.137,Ginsberg 1990,5.134,Ginsberg 1990,,PA/PGA,Ginsberg 1990
+Connochaetes_taurinus,2.486,Ginsberg 1990,5.356,Ginsberg 1990,,PA/PGA,Ginsberg 1990
+Crocidura_russula,-1.398,Soulsbury 2010,1.152,Soulsbury 2010,,M,Soulsbury 2010
+Crocidura_suaveolens,-1,Hayward 2011,0.875,Hayward 2011,,,
+Crocuta_crocuta,0.993,Soulsbury 2010,4.653,Soulsbury 2010,,PA/PGA,Iossa 2008; Soulsbury 2010
+Cryptomys_hottentotus,-0.237,Soulsbury 2010,2.017,Soulsbury 2010,,M,Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012
+Cryptoprocta_ferox,1.047,Anderson 2004,4.029,Anderson 2004,,PA/PGA,Ferguson 2004; Iossa 2008
+Ctenomys_talarum,-0.5,Hayward 2011,2.127,Hayward 2011,,PG,Soulsbury 2010; Waterman 2007
+Cuon_alpinus,0.803,Anderson 2004,4.252,Anderson 2004,,M,Lukas 2013; Lukas 2012
+Cynictis_penicillata,0.297,Soulsbury 2010,2.954,Soulsbury 2010,,PG,Iossa 2008; Soulsbury 2010; Lukas 2013; Lukas 2012
+Cynomops_abrasus,-0.733,Pitnick 2006,0.903,Pitnick 2006,,,
+Cynomys_ludovicianus,0.602,Soulsbury 2010,3.021,Soulsbury 2010,,PG,Soulsbury 2010; Waterman 2007
+Cynopterus_brachyotis,-0.921,Ramm 2007,1.498,Ramm 2007,,,
+Cynopterus_sphinx,-0.745,Ramm 2007,1.57,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Cystophora_cristata,2.034,Fitzpatrick 2012,5.409,Fitzpatrick 2012,,M,Lukas 2012; Ferguson 2004
+Dactylopsila_trivirgata,-0.602,Birkhead 1998,2.669,Birkhead 1998,,,
+Dama_dama,1.602,Anderson 2004,4.775,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Damaliscus_pygargus,2.204,Ginsberg 1990,4.86,Ginsberg 1990,,PA/PGA,Ginsberg 1990
+Dasykaluta_rosamondae,-0.9,Birkhead 1998,1.548,Birkhead 1998,,,
+Dasymys_incomtus,0.484,Hayward 2011,2.384,Hayward 2011,,,
+Dasyuroides_byrnei,0.14,Birkhead 1998,2.092,Birkhead 1998,,,
+Dasyurus_hallucatus,0.13,Birkhead 1998,2.973,Birkhead 1998,,,
+Dasyurus_viverrinus,0.372,Birkhead 1998,3.183,Birkhead 1998,,,
+Delphinapterus_leucas,3.221,Dines 2015,6.098,Dines 2015,,,
+Delphinus_capensis,3.807,Dines 2015,5.104,Dines 2015,,,
+Delphinus_delphis,3.207,Hayward 2011,4.924,Hayward 2011,,,
+Desmodus_rotundus,-1.081,Pitnick 2006,1.528,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Dicrostonyx_groenlandicus,-0.86,Hayward 2011,1.792,Hayward 2011,,,
+Didelphis_albiventris,0.246,Birkhead 1998,3.111,Birkhead 1998,,,
+Didelphis_virginiana,0.477,Anderson 2004,3.574,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Dipodomys_merriami,-0.347,Hayward 2011,1.587,Hayward 2011,,PA/PGA,Waterman 2007
+Dipodomys_microps,-0.398,Hayward 2011,1.789,Hayward 2011,,,
+Dipodomys_ordii,-0.276,Hayward 2011,1.751,Hayward 2011,,,
+Dipodomys_panamintinus,-0.284,Hayward 2011,1.883,Hayward 2011,,,
+Ectophylla_alba,-1.102,Pitnick 2006,0.74,Pitnick 2006,,PG,Hosken 2001
+Eidolon_helvum,0.452,Ramm 2007,2.413,Ramm 2007,,PA/PGA,Hosken 2001
+Elaphurus_davidianus,1.759,Anderson 2004,5.33,Anderson 2004,,PA/PGA,Anderson 2004
+Elephas_maximus,3.458,Anderson 2004,6.658,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990; Rasmussen 1998
+Eonycteris_spelaea,-0.398,Ramm 2007,1.792,Ramm 2007,,PG,Hosken 2001; Lukas 2013
+Eptesicus_furinalis,-1.222,Ramm 2007,0.877,Ramm 2007,,,
+Equus_asinus,2.306,Anderson 2004,5.462,Anderson 2004,,PA/PGA,Anderson 2004
+Equus_burchellii,2.48,Ginsberg 1990,5.377,Ginsberg 1990,,PG,Pantheria; Lukas 2012; Lukas 2013
+Equus_caballus,2.531,Anderson 2004,5.398,Anderson 2004,,PA/PGA,Linklater 1999; Anderson 2004; Ginsberg 1990
+Equus_grevyi,3.061,Ginsberg 1990,5.587,Ginsberg 1990,,PA/PGA,Ginsberg 1990
+Equus_kiang,2.21,Anderson 2004,5.544,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Equus_zebra,2.146,Anderson 2004,5.536,Anderson 2004,,PG,Anderson 2004; Lukas 2013; Lukas 2012; Ginsberg 1990
+Erignathus_barbatus,2.109,Fitzpatrick 2012,5.431,Fitzpatrick 2012,,PA/PGA,Ferguson 2004
+Erinaceus_europaeus,0.494,Anderson 2004,2.845,Anderson 2004,,PA/PGA,Anderson 2004; Soulsbury 2010
+Erythrocebus_patas,0.857,Ramm 2007,4,Ramm 2007,,PA/PGA,Moller 1988; Harcourt 1995
+Eschrichtius_robustus,4.829,Macleod 2010,7.398,Macleod 2010,,,
+Eubalaena_japonica,5.988,Dines 2015,7.895,Dines 2015,,,
+Euderma_maculatum,-1.18,Pitnick 2006,1.176,Pitnick 2006,,,
+Eudorcas_rufifrons,0.898,Anderson 2004,4.428,Anderson 2004,,PA/PGA,Anderson 2004
+Eulemur_fulvus,0.891,Soulsbury 2010,3.398,Soulsbury 2010,,PG,Soulsbury 2010; Ostner 1999
+Eulemur_macaco,1.221,Harcourt 1995,3.398,Harcourt 1995,,PA/PGA,Harcourt 1995
+Eumetopias_jubatus,2.25,Ramm 2007,5.986,Ramm 2007,,PG,Ferguson 2004
+Felis_catus,0.558,Soulsbury 2010,3.679,Soulsbury 2010,,PG,Iossa 2008; Soulsbury 2010
+Felis_chaus,0.665,Iossa 2008,3.907,Iossa 2008,,,
+Felis_nigripes,0.325,Iossa 2008,3.297,Iossa 2008,,PG,Iossa 2008
+Felis_silvestris,0.438,Anderson 2004,3.438,Anderson 2004,,PA/PGA,Anderson 2004; Iossa 2008; Ferguson 2004
+Feresa_attenuata,2.877,Dines 2015,5.356,Dines 2015,,,
+Funambulus_palmarum,0.354,Hayward 2011,2.157,Hayward 2011,,,
+Galago_alleni,0.21,Anderson 2004,2.497,Anderson 2004,,PA/PGA,Anderson 2004
+Galago_senegalensis,0.22,Anderson 2004,2.322,Anderson 2004,,PA/PGA,Anderson 2004
+Galagoides_demidoff,-0.009,Anderson 2004,1.908,Anderson 2004,,PA/PGA,Anderson 2004
+Galidia_elegans,0.229,Iossa 2008,2.997,Iossa 2008,,M,Iossa 2008; Pantheria; Lukas 2013; Lukas 2012
+Gazella_cuvieri,1.595,Anderson 2004,4.423,Anderson 2004,,PG,Anderson 2004; Alados 1994
+Gazella_dorcas,1.498,Anderson 2004,4.165,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013; Pantheria
+Gazella_leptoceros,0.823,Anderson 2004,4.061,Anderson 2004,,PA/PGA,Anderson 2004
+Gazella_subgutturosa,0.916,Anderson 2004,4.398,Anderson 2004,,PA/PGA,Anderson 2004
+Genetta_genetta,-0.018,Iossa 2008,3.276,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004; Lukas 2013; Lukas 2012
+Gerbilliscus_afra,0.889,Hayward 2011,1.964,Hayward 2011,,,
+Gerbilliscus_brantsii,0.725,Hayward 2011,1.973,Hayward 2011,,,
+Giraffa_camelopardalis,2.362,Anderson 2004,5.953,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Globicephala_macrorhynchus,4.158,Dines 2015,6.556,Dines 2015,,,
+Globicephala_melas,3.699,Hayward 2011,6.289,Hayward 2011,,,
+Glossophaga_leachii,-1.538,Pitnick 2006,0.924,Pitnick 2006,,,
+Glossophaga_morenoi,-2,Hosken 2001,0.924,Hosken 2001,,,
+Gorilla_beringei,1.556,Soulsbury 2010,5.301,Soulsbury 2010,,PA/PGA,Soulsbury 2010; Lukas 2013
+Gorilla_gorilla,1.365,Hayward 2011,5.127,Hayward 2011,,PG,Pantheria; Kenagy 1986; Moller 1988; Harcourt 1995
+Grammomys_macmillani,-0.179,Breed 2000,1.602,Breed 2000,,,
+Grampus_griseus,4.104,Dines 2015,5.699,Dines 2015,,,
+Gulo_gulo,1.23,Soulsbury 2010,4.161,Soulsbury 2010,,PA/PGA,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004
+Gymnobelideus_leadbeateri,-0.951,Birkhead 1998,2.063,Birkhead 1998,,PG,Lukas 2012; Lukas 2013; Rose 1997
+Halichoerus_grypus,2.204,Fitzpatrick 2012,5.399,Fitzpatrick 2012,,PG,Lukas 2012; Ferguson 2004; Pantheria
+Haplonycteris_fischeri,-0.092,Pitnick 2006,1.255,Pitnick 2006,,,
+Helogale_parvula,-0.347,Anderson 2004,2.658,Anderson 2004,,M,Lukas 2013; Lukas 2012; Pantheria; Allaine 2000
+Hemitragus_jemlahicus,1.427,Anderson 2004,4.881,Anderson 2004,,PA/PGA,Anderson 2004
+Herpailurus_yaguarondi,0.519,Iossa 2008,3.771,Iossa 2008,,PG,Iossa 2008
+Herpestes_javanicus,0.593,Iossa 2008,2.841,Iossa 2008,,PA/PGA,Iossa 2008
+Heterohyrax_brucei,1.114,Hayward 2011,3.176,Hayward 2011,,PG,Pantheria
+Hippopotamus_amphibius,2.813,Ginsberg 1990,6.204,Ginsberg 1990,,PG,Pantheria; Lukas 2012; Lukas 2013
+Hipposideros_galeritus,-0.523,Ramm 2007,0.813,Ramm 2007,,M,Hosken 2001; Pitnick 2006; Lukas 2013
+Hipposideros_speoris,-1.398,Ramm 2007,1,Ramm 2007,,,
+Homo_sapiens,1.701,Anderson 2004,4.803,Anderson 2004,,PG,Anderson 2004; Kenagy 1986; Moller 1988; Harcourt 1995
+Hyaena_hyaena,0.891,Iossa 2008,4.525,Iossa 2008,,PA/PGA,Iossa 2008; Soulsbury 2010
+Hydrochoerus_hydrochaeris,1.611,Anderson 2004,4.77,Anderson 2004,,PA/PGA,Anderson 2004
+Hydromys_chrysogaster,1.071,Ramm 2007,2.872,Ramm 2007,,,
+Hylobates_agilis,0.801,Harcourt 1995,3.778,Harcourt 1995,,M,Lukas 2013; Lukas 2012; Harcourt 1995
+Hylobates_lar,0.74,Hayward 2011,3.74,Hayward 2011,,M,Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012; Moller 1988; Harcourt 1995
+Hylobates_moloch,0.756,Hayward 2011,3.749,Hayward 2011,,M,Kenagy 1986; Lukas 2013; Lukas 2012; Moller 1988; Harcourt 1995
+Hylochoerus_meinertzhageni,2.699,Ginsberg 1990,5.305,Ginsberg 1990,,PA/PGA,Ginsberg 1990; Lukas 2013
+Hyomys_goliath,0.574,Hayward 2011,3,Hayward 2011,,,
+Hyperoodon_ampullatus,3.078,Macleod 2010,6.845,Macleod 2010,,,
+Hypsignathus_monstrosus,-0.62,Ramm 2007,2.549,Ramm 2007,,PG,Hosken 2001
+Hystrix_africaeaustralis,0.823,Ramm 2005,4.072,Ramm 2005,,M,Lukas 2013; Lukas 2012; Waterman 2007
+Inia_geoffrensis,3.16,Hayward 2011,5.086,Hayward 2011,,,
+Isoodon_macrourus,0.373,Hayward 2011,3.106,Hayward 2011,,PG,Nowak 1983
+Isoodon_obesulus,0.23,Hayward 2011,3.024,Hayward 2011,,PG,Rose 1997; Lukas 2013
+Kobus_ellipsiprymnus,1.867,Anderson 2004,5.306,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Kobus_kob,1.62,Anderson 2004,5.164,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Kobus_leche,1.832,Anderson 2004,5.037,Anderson 2004,,PA/PGA,Anderson 2004
+Kobus_megaceros,1.716,Anderson 2004,5.015,Anderson 2004,,PA/PGA,Anderson 2004
+Kogia_breviceps,4.021,Dines 2015,5.657,Dines 2015,,,
+Kogia_sima,3.692,Dines 2015,5.481,Dines 2015,,,
+Lagenorhynchus_acutus,2.521,Macleod 2010,5.301,Macleod 2010,,,
+Lagenorhynchus_obliquidens,3.048,Dines 2015,5.297,Dines 2015,,,
+Lagenorhynchus_obscurus,3.427,Macleod 2010,4.903,Macleod 2010,,,
+Lagothrix_lagotricha,1.049,Hayward 2011,3.718,Hayward 2011,,PA/PGA,Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012; Harcourt 1995
+Lasiorhinus_latifrons,1.208,Anderson 2004,4.407,Anderson 2004,,PA/PGA,Anderson 2004
+Lasiurus_ega,-1.699,Ramm 2007,1.077,Ramm 2007,,,
+Lasiurus_seminolus,-1.886,Pitnick 2006,0.968,Pitnick 2006,,,
+Leggadina_forresti,-0.264,Ramm 2007,1.477,Ramm 2007,,,
+Leontopithecus_rosalia,-0.319,Anderson 2004,2.716,Anderson 2004,,M,Lukas 2013; Lukas 2012; Harcourt 1995
+Leopardus_colocolo,0.489,Iossa 2008,3.525,Iossa 2008,,PG,Iossa 2008
+Leopardus_geoffroyi,0.782,Iossa 2008,3.681,Iossa 2008,,PG,Iossa 2008
+Leopardus_pardalis,1.547,Iossa 2008,4.155,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Leopardus_tigrinus,0.665,Iossa 2008,3.477,Iossa 2008,,PG,Iossa 2008; Lukas 2013
+Leopardus_wiedii,0.834,Iossa 2008,3.531,Iossa 2008,,PG,Iossa 2008
+Leopoldamys_sabanus,0.956,Breed 2000,2.572,Breed 2000,,,
+Leporillus_conditor,0.602,Ramm 2007,2.272,Ramm 2007,,,
+Leptomys_elegans,0.093,Ramm 2007,1.839,Ramm 2007,,,
+Leptonycteris_curasoae,-0.58,Pitnick 2006,1.462,Pitnick 2006,,,
+Lepus_americanus,1.072,Soulsbury 2010,3.114,Soulsbury 2010,,PA/PGA,Soulsbury 2010
+Lepus_timidus,1.222,Hayward 2011,3.421,Hayward 2011,,,
+Lipotes_vexillifer,1.778,Dines 2015,5.097,Dines 2015,,,
+Lissodelphis_borealis,3.189,Dines 2015,5.055,Dines 2015,,,
+Lontra_canadensis,1.255,Iossa 2008,3.792,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Lophocebus_aterrimus,1.139,Harcourt 1995,4,Harcourt 1995,,PA/PGA,Lukas 2013; Harcourt 1995
+Lophostoma_carrikeri,-0.388,Pitnick 2006,1.362,Pitnick 2006,,,
+Lophuromys_flavopunctatus,0.056,Breed 2000,1.778,Breed 2000,,,
+Lorentzimys_nouhuysi,-0.447,Hayward 2011,1.204,Hayward 2011,,,
+Loris_tardigradus,0.31,Hayward 2011,2.442,Hayward 2011,,PA/PGA,Gupta 2007 (and therein)
+Loxodonta_africana,3.486,Anderson 2004,6.702,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990; Rasmussen 1998
+Lutra_lutra,0.607,Anderson 2004,3.893,Anderson 2004,,PG,Anderson 2004; Iossa 2008
+Lycalopex_culpaeus,1.274,Iossa 2008,3.957,Iossa 2008,,M,Iossa 2008
+Lycalopex_griseus,1.049,Iossa 2008,3.398,Iossa 2008,,M,Iossa 2008
+Lycaon_pictus,1.583,Iossa 2008,4.498,Iossa 2008,,PA/PGA,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012
+Lynx_lynx,0.857,Iossa 2008,4.292,Iossa 2008,,PA/PGA,Iossa 2008
+Lynx_rufus,0.706,Iossa 2008,4.079,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Macaca_arctoides,1.683,Hayward 2011,4.022,Hayward 2011,,PA/PGA,Kenagy 1986; Moller 1988
+Macaca_fascicularis,1.547,Anderson 2004,3.653,Anderson 2004,,PA/PGA,Soulsbury 2010; Kenagy 1986; Moller 1988
+Macaca_fuscata,1.845,Soulsbury 2010,4.09,Soulsbury 2010,,PA/PGA,Soulsbury 2010; Moller 1988
+Macaca_mulatta,1.69,Anderson 2004,4.049,Anderson 2004,,PA/PGA,Kenagy 1986; Moller 1988; Harcourt 1995
+Macaca_nemestrina,1.824,Hayward 2011,3.999,Hayward 2011,,PA/PGA,Kenagy 1986; Moller 1988
+Macaca_radiata,1.76,Hayward 2011,3.924,Hayward 2011,,PA/PGA,Kenagy 1986; Moller 1988
+Macroderma_gigas,-0.775,Pitnick 2006,2.033,Pitnick 2006,,,
+Macroglossus_minimus,-0.854,Ramm 2007,1.18,Ramm 2007,,,
+Macroglossus_sobrinus,-0.796,Ramm 2007,1.362,Ramm 2007,,,
+Macropus_agilis,1.409,Birkhead 1998,4.057,Birkhead 1998,,PA/PGA,Rose 1997; Pantheria
+Macropus_eugenii,1.792,Birkhead 1998,3.767,Birkhead 1998,,PA/PGA,Rose 1997; Pantheria
+Macropus_fuliginosus,1.713,Birkhead 1998,4.533,Birkhead 1998,,PA/PGA,Rose 1997; Pantheria
+Macropus_giganteus,1.623,Birkhead 1998,4.61,Birkhead 1998,,PA/PGA,Pantheria; Rose 1997
+Macropus_robustus,1.602,Rose 1997,4.477,Rose 1997,,PA/PGA,Rose 1997; Pantheria
+Macropus_rufogriseus,1.737,Birkhead 1998,4.267,Birkhead 1998,,PA/PGA,Rose 1997; Pantheria
+Macropus_rufus,1.582,Birkhead 1998,4.6,Birkhead 1998,,PA/PGA,Pantheria
+Macrotus_waterhousii,-1.432,Pitnick 2006,1.204,Pitnick 2006,,,
+Madoqua_guentheri,0.498,Anderson 2004,3.512,Anderson 2004,,M,Anderson 2004; Lukas 2013
+Madoqua_kirkii,0.924,Hayward 2011,3.699,Hayward 2011,,M,Soulsbury 2010; Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012
+Mallomys_rothschildi,1.157,Hayward 2011,3.036,Hayward 2011,,,
+Mammelomys_lanosus,0.478,Breed 2000,2.09,Breed 2000,,,
+Mandrillus_leucophaeus,1.436,Anderson 2004,4.455,Anderson 2004,,PA/PGA,Anderson 2004
+Mandrillus_sphinx,1.833,Harcourt 1995,4.544,Harcourt 1995,,PG,Harcourt 1995
+Marmota_monax,0.869,Hayward 2011,3.62,Hayward 2011,,PA/PGA,Kenagy 1986; Waterman 2007
+Martes_pennanti,0.916,Hayward 2011,3.724,Hayward 2011,,PA/PGA,Iossa 2008; Ferguson 2004
+Mastacomys_fuscus,0.571,Ramm 2007,2.068,Ramm 2007,,,
+Mastomys_coucha,-0.13,Breed 2000,1.845,Breed 2000,,,
+Mastomys_natalensis,0.204,Hayward 2011,1.91,Hayward 2011,,PA/PGA,Soulsbury 2010
+Maxomys_bartelsii,0.624,Breed 2000,1.968,Breed 2000,,,
+Maxomys_surifer,0.522,Breed 2000,2.19,Breed 2000,,,
+Maxomys_whiteheadi,-0.021,Breed 2000,1.806,Breed 2000,,,
+Megaderma_lyra,-1.097,Ramm 2007,1.806,Ramm 2007,,,
+Megaderma_spasma,-0.947,Pitnick 2006,1.354,Pitnick 2006,,,
+Megaptera_novaeangliae,3.091,Hayward 2011,7.502,Hayward 2011,,PA/PGA,Pantheria
+Meles_meles,1.158,Hayward 2011,4.162,Hayward 2011,,PA/PGA,Iossa 2008; Soulsbury 2010; Kenagy 1986
+Mellivora_capensis,1.732,Iossa 2008,3.987,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Melomys_burtoni,0.281,Breed 2000,1.892,Breed 2000,,,
+Melomys_cervinipes,0.444,Breed 2000,2.143,Breed 2000,,,
+Melomys_leucogaster,0.042,Breed 2000,2.017,Breed 2000,,,
+Melomys_rufescens,0.128,Ramm 2007,1.833,Ramm 2007,,,
+Mephitis_mephitis,0.703,Iossa 2008,3.703,Iossa 2008,,PG,Iossa 2008; Ferguson 2004
+Mesembriomys_gouldii,0.74,Ramm 2007,2.736,Ramm 2007,,,
+Mesembriomys_macrurus,0.918,Breed 2000,2.533,Breed 2000,,,
+Mesocricetus_auratus,0.501,Hayward 2011,2.033,Hayward 2011,,,
+Mesoplodon_carlhubbsi,2.699,Dines 2015,6.176,Dines 2015,,,
+Mesoplodon_europaeus,2.505,Dines 2015,6.079,Dines 2015,,,
+Mesoplodon_ginkgodens,2.447,Dines 2015,6.079,Dines 2015,,,
+Mesoplodon_mirus,2.515,Dines 2015,6.009,Dines 2015,,,
+Mesoplodon_perrini,2.301,Dines 2015,6.079,Dines 2015,,,
+Micaelamys_namaquensis,0.169,Breed 2000,1.857,Breed 2000,,,
+Microcebus_murinus,0.262,Soulsbury 2010,1.855,Soulsbury 2010,,PA/PGA,Soulsbury 2010
+Micromys_minutus,-0.75,Hayward 2011,0.892,Hayward 2011,,,
+Micropteropus_pusillus,-0.921,Ramm 2007,1.511,Ramm 2007,,PG,Hosken 2001
+Microtus_agrestis,-0.095,Hayward 2011,1.667,Hayward 2011,,,
+Microtus_arvalis,-0.373,Hayward 2011,1.455,Hayward 2011,,,
+Microtus_californicus,-0.569,Hayward 2011,1.818,Hayward 2011,,PG,Lukas 2012; Waterman 2007; Pantheria
+Microtus_montanus,-0.42,Ramm 2007,1.633,Ramm 2007,,PA/PGA,Lukas 2012; Waterman 2007; Pantheria
+Microtus_ochrogaster,-0.056,Soulsbury 2010,1.58,Soulsbury 2010,,M,Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012
+Microtus_oeconomus,-0.378,Hayward 2011,1.542,Hayward 2011,,PA/PGA,Soulsbury 2010; Waterman 2007
+Microtus_pennsylvanicus,0.068,Soulsbury 2010,1.737,Soulsbury 2010,,PA/PGA,Soulsbury 2010; Waterman 2007
+Microtus_pinetorum,-1.155,Ramm 2007,1.303,Ramm 2007,,PA/PGA,Waterman 2007; Lukas 2012; Lukas 2013
+Microtus_subterraneus,-0.625,Hayward 2011,1.233,Hayward 2011,,,
+Millardia_meltada,0.033,Breed 2000,1.857,Breed 2000,,,
+Miniopterus_australis,-1.398,Pitnick 2006,0.875,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Miniopterus_minor,-1.301,Pitnick 2006,0.875,Pitnick 2006,,PA/PGA,Hosken 2001; Pitnick 2006
+Miniopterus_schreibersii,-1.097,Pitnick 2006,1.114,Pitnick 2006,,,
+Miopithecus_talapoin,0.716,Harcourt 1995,3.097,Harcourt 1995,,PA/PGA,Harcourt 1995
+Monodelphis_domestica,-0.244,Birkhead 1998,2.041,Birkhead 1998,,,
+Monodon_monoceros,3.082,Dines 2015,6.329,Dines 2015,,,
+Monophyllus_plethodon,-1.377,Pitnick 2006,1.19,Pitnick 2006,,,
+Mops_condylurus,-0.921,Pitnick 2006,1.602,Pitnick 2006,,,
+Mormopterus_planiceps,-1.046,Ramm 2007,0.978,Ramm 2007,,,
+Mungos_mungo,0.246,Anderson 2004,2.176,Anderson 2004,,PA/PGA,Anderson 2004; Ferguson 2004
+Muntiacus_muntjak,0.813,Anderson 2004,4.243,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Mus_caroli,-0.967,Hayward 2011,1.176,Hayward 2011,,,
+Mus_minutoides,-1.167,Hayward 2011,0.903,Hayward 2011,,M,Lukas 2012
+Mus_musculus,-0.924,Hayward 2011,1.185,Hayward 2011,,PA/PGA,Soulsbury 2010; Kenagy 1986
+Mustela_erminea,0.422,Hayward 2011,2.511,Hayward 2011,,PA/PGA,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004
+Mustela_eversmannii,0.485,Iossa 2008,3.312,Iossa 2008,,PA/PGA,Iossa 2008
+Mustela_frenata,0.274,Iossa 2008,2.458,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Mustela_nigripes,0.473,Iossa 2008,3.009,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Mustela_nivalis,-0.377,Hayward 2011,2.064,Hayward 2011,,PA/PGA,Iossa 2008; Ferguson 2004
+Mustela_putorius,0.516,Hayward 2011,3.02,Hayward 2011,,PA/PGA,Iossa 2008; Ferguson 2004
+Mustela_sibirica,0.22,Iossa 2008,2.62,Iossa 2008,,PG,Iossa 2008
+Myodes_glareolus,-0.19,Hayward 2011,1.338,Hayward 2011,,PA/PGA,Soulsbury 2010; Waterman 2007
+Myodes_rufocanus,-0.793,Soulsbury 2010,1.591,Soulsbury 2010,,PA/PGA,Soulsbury 2010; Lukas 2013
+Myotis_adversus,-0.845,Pitnick 2006,1,Pitnick 2006,,PA/PGA,Hosken 2001; Pitnick 2006
+Myotis_albescens,-0.434,Pitnick 2006,0.74,Pitnick 2006,,PA/PGA,Hosken 2001; Pitnick 2006
+Myotis_bocagii,-1.097,Pitnick 2006,0.903,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Myotis_evotis,-0.717,Pitnick 2006,0.833,Pitnick 2006,,,
+Myotis_lucifugus,-1.301,Ramm 2007,0.854,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Myotis_nigricans,-1.585,Pitnick 2006,0.602,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Naemorhedus_goral,1.562,Anderson 2004,4.439,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013; Pantheria
+Nanger_dama,1.197,Anderson 2004,4.648,Anderson 2004,,,
+Nasalis_larvatus,1.167,Hayward 2011,4.336,Hayward 2011,,PA/PGA,Kenagy 1986; Harcourt 1995
+Nasua_nasua,0.714,Iossa 2008,3.751,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Neofelis_nebulosa,1.48,Anderson 2004,4.398,Anderson 2004,,PA/PGA,Ferguson 2004
+Neomys_fodiens,-0.678,Hayward 2011,1.301,Hayward 2011,,,
+Neophocaena_phocaenoides,3.248,Macleod 2010,4.856,Macleod 2010,,,
+Neoromicia_nanus,-1.509,Pitnick 2006,0.544,Pitnick 2006,,PA/PGA,Hosken 2001; Pitnick 2006
+Neotoma_micropus,0.398,Soulsbury 2010,2.423,Soulsbury 2010,,PA/PGA,Soulsbury 2010
+Neotragus_moschatus,1.77,Anderson 2004,3.813,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Neovison_vison,0.695,Soulsbury 2010,3.233,Soulsbury 2010,,PA/PGA,Iossa 2008; Soulsbury 2010; Ferguson 2004
+Niviventer_cremoriventer,0.087,Breed 2000,1.875,Breed 2000,,,
+Niviventer_culturatus,0.273,Breed 2000,2.013,Breed 2000,,,
+Noctilio_albiventris,-1.194,Pitnick 2006,1.494,Pitnick 2006,,,
+Noctilio_leporinus,-0.752,Pitnick 2006,1.812,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Notomys_alexis,-1.301,Hayward 2011,1.531,Hayward 2011,,M,Lukas 2012
+Notomys_cervinus,-0.703,Hayward 2011,1.519,Hayward 2011,,,
+Notomys_fuscus,-1.174,Hayward 2011,1.643,Hayward 2011,,,
+Notomys_mitchellii,-1.208,Hayward 2011,1.591,Hayward 2011,,,
+Nyctalus_noctula,-0.569,Ramm 2007,1.455,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Nyctereutes_procyonoides,0.963,Iossa 2008,3.54,Iossa 2008,,M,Iossa 2008; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004
+Nycticebus_coucang,0.079,Anderson 2004,3.024,Anderson 2004,,PA/PGA,Anderson 2004
+Nyctophilus_geoffroyi,-1.523,Ramm 2007,0.806,Ramm 2007,,,
+Nyctophilus_gouldi,-0.959,Ramm 2007,0.903,Ramm 2007,,,
+Ochotona_curzoniae,0.21,Soulsbury 2010,2.169,Soulsbury 2010,,PG,Soulsbury 2010
+Odobenus_rosmarus,2.696,Fitzpatrick 2012,5.936,Fitzpatrick 2012,,PG,Ferguson 2004
+Odocoileus_hemionus,1.939,Hayward 2011,5.05,Hayward 2011,,M,Kenagy 1986
+Odocoileus_virginianus,1.932,Hayward 2011,4.651,Hayward 2011,,PA/PGA,Soulsbury 2010; Kenagy 1986
+Okapia_johnstoni,1.856,Anderson 2004,5.398,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Ondatra_zibethicus,0.704,Hayward 2011,3.112,Hayward 2011,,M,Kenagy 1986; Lukas 2013; Lukas 2012
+Onychomys_torridus,0.17,Hayward 2011,1.307,Hayward 2011,,,
+Orcinus_orca,4.013,Macleod 2010,6.867,Macleod 2010,,PA/PGA,Pilot 2009
+Ornithorhynchus_anatinus,1.23,Birkhead 1998,3.176,Birkhead 1998,,,
+Oryctolagus_cuniculus,0.741,Anderson 2004,3.279,Anderson 2004,,PA/PGA,Anderson 2004; Soulsbury 2010
+Oryx_dammah,1.728,Anderson 2004,5.111,Anderson 2004,,PA/PGA,Anderson 2004
+Oryx_gazella,1.579,Anderson 2004,5.152,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013; Pantheria
+Oryzomys_palustris,-0.398,Hayward 2011,1.748,Hayward 2011,,,
+Otaria_byronia,1.842,Fitzpatrick 2012,5.477,Fitzpatrick 2012,,PG,Pantheria
+Otocolobus_manul,0.342,Iossa 2008,3.738,Iossa 2008,,PG,Iossa 2008
+Otomops_martiensseni,-0.77,Pitnick 2006,1.556,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Otospermophilus_beecheyi,0.957,Hayward 2011,2.924,Hayward 2011,,PG,Soulsbury 2010; Waterman 2007
+Ovis_aries,2.504,Hayward 2011,4.544,Hayward 2011,,PA/PGA,Soulsbury 2010; Kenagy 1986
+Ovis_canadensis,2.529,Anderson 2004,5.076,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Ovis_nivicola,1.909,Anderson 2004,4.881,Anderson 2004,,PA/PGA,Anderson 2004
+Pan_paniscus,2.398,Soulsbury 2010,4.653,Soulsbury 2010,,PA/PGA,Soulsbury 2010; Moller 1988
+Pan_troglodytes,2.075,Hayward 2011,4.647,Hayward 2011,,PA/PGA,Soulsbury 2010; Kenagy 1986; Moller 1988; Harcourt 1995; Pantheria
+Panthera_leo,1.74,Soulsbury 2010,5.274,Soulsbury 2010,,PA/PGA,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004
+Panthera_onca,1.931,Anderson 2004,4.892,Anderson 2004,,PA/PGA,Ferguson 2004; Iossa 2008
+Panthera_tigris,1.387,Anderson 2004,5.532,Anderson 2004,,PA/PGA,Ferguson 2004
+Papio_anubis,1.971,Ramm 2007,4.422,Ramm 2007,,,
+Papio_cynocephalus,1.716,Soulsbury 2010,5.386,Soulsbury 2010,,PA/PGA,Soulsbury 2010; Moller 1988; Harcourt 1995
+Papio_hamadryas,1.859,Hayward 2011,4.384,Hayward 2011,,PG,Kenagy 1986; Harcourt 1995
+Papio_papio,1.949,Harcourt 1995,4.505,Harcourt 1995,,,
+Papio_ursinus,1.857,Harcourt 1995,4.502,Harcourt 1995,,,
+Paramelomys_platyops,0.223,Ramm 2007,1.954,Ramm 2007,,,
+Paramelomys_rubex,0.272,Breed 2000,1.699,Breed 2000,,,
+Parastrellus_hesperus,-1.301,Ramm 2007,0.544,Ramm 2007,,,
+Paruromys_dominator,0.204,Breed 2000,2.534,Breed 2000,,,
+Pecari_tajacu,1.053,Hayward 2011,4.09,Hayward 2011,,PA/PGA,Ginsberg 1990
+Pedetes_capensis,1.261,Ramm 2005,3.509,Ramm 2005,,M,Lukas 2012
+Peponocephala_electra,3.254,Macleod 2010,5.314,Macleod 2010,,,
+Perameles_nasuta,0.602,Rose 1997,3,Rose 1997,,PA/PGA,Rose 1997; Lee 1985
+Perognathus_longimembris,-1.155,Hayward 2011,0.892,Hayward 2011,,,
+Perognathus_parvus,-0.745,Hayward 2011,1.274,Hayward 2011,,,
+Peromyscus_californicus,-2.018,Soulsbury 2010,1.719,Nelson 1995,,M,Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012
+Peromyscus_leucopus,-0.337,Soulsbury 2010,1.346,Soulsbury 2010,,PA/PGA,Soulsbury 2010; Waterman 2007
+Peromyscus_maniculatus,-0.406,Hayward 2011,1.29,Hayward 2011,,PA/PGA,Soulsbury 2010; Kenagy 1986; Waterman 2007
+Petauroides_volans,0.199,Hayward 2011,3.096,Hayward 2011,,PG,Pantheria; Lukas 2012; Lukas 2013; Rose 1997
+Petaurus_breviceps,-0.699,Birkhead 1998,2.076,Birkhead 1998,,PG,Pantheria; Lukas 2012; Lukas 2013; Rose 1997
+Petaurus_norfolcensis,-0.79,Birkhead 1998,2.255,Birkhead 1998,,,
+Phacochoerus_aethiopicus,1.968,Anderson 2004,4.863,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990; Somers 1995
+Phascolarctos_cinereus,1.175,Anderson 2004,3.674,Anderson 2004,,PA/PGA,Anderson 2004; Pantheria
+Philander_opossum,0.176,Rose 1997,2.581,Rose 1997,,,
+Phoca_groenlandica,2.107,Fitzpatrick 2012,5.011,Fitzpatrick 2012,,PA/PGA,Ferguson 2004
+Phoca_vitulina,1.978,Fitzpatrick 2012,4.875,Fitzpatrick 2012,,PA/PGA,Ferguson 2004
+Phocarctos_hookeri,1.821,Fitzpatrick 2012,5.35,Fitzpatrick 2012,,PG,Pantheria
+Phocoena_phocoena,3.365,Hayward 2011,4.763,Hayward 2011,,,
+Phocoena_sinus,3.048,Macleod 2010,4.589,Macleod 2010,,,
+Phocoena_spinipinnis,2.692,Macleod 2010,4.786,Macleod 2010,,,
+Phocoenoides_dalli,2.582,Macleod 2010,5.162,Macleod 2010,,,
+Phodopus_sungorus,-0.032,Hayward 2011,1.627,Hayward 2011,,,
+Phyllostomus_discolor,-0.188,Pitnick 2006,1.652,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Phyllostomus_hastatus,-0.511,Pitnick 2006,1.963,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006
+Physeter_catodon,4.08,Macleod 2010,7.569,Macleod 2010,,,
+Pipistrellus_kuhlii,-1.301,Ramm 2007,0.765,Ramm 2007,,,
+Pipistrellus_pipistrellus,-0.959,Ramm 2007,0.729,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Pipistrellus_rusticus,-0.796,Ramm 2007,0.602,Ramm 2007,,,
+Pipistrellus_subflavus,-1.523,Ramm 2007,0.747,Ramm 2007,,,
+Pipistrellus_tenuis,-1.523,Ramm 2007,0.556,Ramm 2007,,,
+Pithecia_pithecia,-0.036,Harcourt 1995,3.204,Harcourt 1995,,PA/PGA,Pantheria; Moller 1988; Lukas 2013; Lukas 2012
+Platanista_gangetica,3.045,Dines 2015,4.959,Dines 2015,,,
+Plecotus_auritus,-1.046,Ramm 2007,0.89,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Plecotus_rafinesquii,-0.42,Ramm 2007,0.959,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Pogonomys_loriae,0.54,Breed 2000,2.021,Breed 2000,,,
+Pogonomys_macrourus,0.391,Breed 2000,1.69,Breed 2000,,,
+Pongo_pygmaeus,1.548,Anderson 2004,5,Anderson 2004,,PA/PGA,Anderson 2004; Kenagy 1986; Moller 1988
+Pontoporia_blainvillei,1.301,Dines 2015,4.618,Dines 2015,,,
+Potorous_tridactylus,0.641,Birkhead 1998,3.107,Birkhead 1998,,PA/PGA,Pantheria
+Praomys_jacksoni,-0.052,Breed 2000,1.602,Breed 2000,,,
+Presbytis_rubicunda,0.556,Hayward 2011,3.792,Hayward 2011,,PG,Pantheria
+Prionailurus_viverrinus,1.196,Anderson 2004,4.061,Anderson 2004,,PA/PGA,Ferguson 2004; Iossa 2008
+Procavia_capensis,1.236,Anderson 2004,3.306,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Procyon_lotor,1.137,Soulsbury 2010,3.71,Soulsbury 2010,,PA/PGA,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004
+Proteles_cristatus,1.003,Iossa 2008,4.053,Iossa 2008,,M,Iossa 2008; Lukas 2013; Lukas 2012
+Przewalskium_albirostris,2.066,Anderson 2004,5.334,Anderson 2004,,PA/PGA,Anderson 2004
+Pseudantechinus_macdonnellensis,-0.959,Birkhead 1998,1.433,Birkhead 1998,,,
+Pseudocheirus_peregrinus,0.734,Birkhead 1998,2.835,Birkhead 1998,,PG,Pantheria; Lukas 2012; Lukas 2013; Rose 1997
+Pseudochirops_archeri,0.097,Birkhead 1998,2.679,Birkhead 1998,,,
+Pseudohydromys_ellermani,-0.268,Breed 2000,1.255,Breed 2000,,,
+Pseudomys_apodemoides,-0.851,Hayward 2011,1.491,Hayward 2011,,,
+Pseudomys_australis,0.351,Hayward 2011,1.771,Hayward 2011,,,
+Pseudomys_delicatulus,-1.367,Hayward 2011,0.903,Hayward 2011,,,
+Pseudomys_desertor,-0.253,Hayward 2011,1.591,Hayward 2011,,,
+Pseudomys_fumeus,0.385,Ramm 2007,1.851,Ramm 2007,,,
+Pseudomys_gracilicaudatus,0.035,Hayward 2011,2.021,Hayward 2011,,,
+Pseudomys_hermannsburgensis,-0.788,Hayward 2011,1.255,Hayward 2011,,,
+Pseudomys_nanus,0.273,Hayward 2011,1.892,Hayward 2011,,,
+Pseudomys_novaehollandiae,-1.149,Hayward 2011,1.279,Hayward 2011,,,
+Pseudomys_pilligaensis,-1.284,Breed 2000,1.041,Breed 2000,,,
+Pseudomys_shortridgei,-0.462,Hayward 2011,1.892,Hayward 2011,,,
+Pseudorca_crassidens,4.17,Dines 2015,6.134,Dines 2015,,,
+Pteronotus_davyi,-0.759,Pitnick 2006,0.964,Pitnick 2006,,,
+Pteropus_alecto,0.407,Ramm 2007,2.903,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Pteropus_giganteus,0.342,Anderson 2004,3.161,Anderson 2004,,PA/PGA,Anderson 2004; Hosken 2001
+Pteropus_poliocephalus,0.829,Ramm 2007,2.925,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Pteropus_scapulatus,0.423,Ramm 2007,2.69,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Pteropus_tonganus,0.58,Hayward 2011,3.011,Hayward 2011,,PG,Hosken 2001
+Puma_concolor,1.173,Soulsbury 2010,4.653,Soulsbury 2010,,PA/PGA,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004
+Pusa_hispida,1.677,Fitzpatrick 2012,4.839,Fitzpatrick 2012,,PG,Smith 1981
+Pygathrix_nemaeus,0.924,Anderson 2004,4.269,Anderson 2004,,PA/PGA,Anderson 2004
+Rangifer_tarandus,1.678,Anderson 2004,5.043,Anderson 2004,,PA/PGA,Soulsbury 2010
+Rattus_argentiventer,0.484,Breed 2000,2.336,Breed 2000,,,
+Rattus_colletti,0.287,Ramm 2007,2.188,Ramm 2007,,,
+Rattus_exulans,0.415,Hayward 2011,1.778,Hayward 2011,,,
+Rattus_fuscipes,0.63,Ramm 2007,2.041,Ramm 2007,,PA/PGA,Waterman 2007
+Rattus_hoffmanni,0.373,Breed 2000,2.146,Breed 2000,,,
+Rattus_leucopus,0.618,Breed 2000,2.23,Breed 2000,,,
+Rattus_losea,0.337,Breed 2000,2.041,Breed 2000,,,
+Rattus_lutreolus,0.647,Ramm 2007,2.212,Ramm 2007,,PA/PGA,Waterman 2007
+Rattus_niobe,0.277,Ramm 2007,1.69,Ramm 2007,,,
+Rattus_norvegicus,0.58,Anderson 2004,2.748,Anderson 2004,,PA/PGA,Anderson 2004
+Rattus_rattus,0.857,Hayward 2011,2.21,Hayward 2011,,,
+Rattus_sordidus,0.547,Breed 2000,2.199,Breed 2000,,,
+Rattus_steini,0.045,Ramm 2007,1.968,Ramm 2007,,,
+Rattus_tiomanicus,0.541,Breed 2000,1.949,Breed 2000,,,
+Rattus_tunneyi,0.687,Ramm 2007,2.386,Ramm 2007,,,
+Rattus_villosissimus,0.332,Ramm 2007,2.316,Ramm 2007,,,
+Rhabdomys_pumilio,-0.041,Breed 2000,1.74,Breed 2000,,M,Lukas 2012
+Rhinolophus_clivosus,-0.745,Ramm 2007,1.149,Ramm 2007,,,
+Rhinolophus_hipposideros,-1.699,Ramm 2007,0.64,Ramm 2007,,,
+Rhinolophus_megaphyllus,-0.921,Ramm 2007,0.978,Ramm 2007,,,
+Rhinonicteris_aurantia,-1.921,Pitnick 2006,0.991,Pitnick 2006,,,
+Rhinopoma_hardwickii,-0.886,Ramm 2007,1.279,Ramm 2007,,,
+Rhinopoma_microphyllum,-0.201,Ramm 2007,1.507,Ramm 2007,,,
+Rhogeessa_tumida,-1.114,Pitnick 2006,0.708,Pitnick 2006,,,
+Rhynchonycteris_naso,-2,Ramm 2007,0.627,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Rousettus_aegyptiacus,0.243,Ramm 2007,2.18,Ramm 2007,,,
+Rousettus_amplexicaudatus,-0.432,Ramm 2007,1.921,Ramm 2007,,,
+Rusa_timorensis,1.438,Anderson 2004,4.875,Anderson 2004,,PA/PGA,Anderson 2004
+Rusa_unicolor,1.889,Anderson 2004,5.303,Anderson 2004,,PG,Anderson 2004; Lukas 2013
+Saccopteryx_bilineata,-1.959,Pitnick 2006,0.869,Pitnick 2006,,PG,Hosken 2001; Pitnick 2006; Soulsbury 2010; Pantheria
+Saccopteryx_leptura,-1.602,Pitnick 2006,0.613,Pitnick 2006,,M,Pitnick 2006; Pantheria
+Saguinus_midas,0.262,Harcourt 1995,2.756,Harcourt 1995,,PA/PGA,Pantheria; Lukas 2012; Lukas 2013
+Saguinus_nigricollis,0.58,Harcourt 1995,2.672,Harcourt 1995,,PA/PGA,Lukas 2012; Lukas 2013; Harcourt 1995; Moller 1988
+Saguinus_oedipus,0.17,Hayward 2011,2.7,Hayward 2011,,M,Kenagy 1986; Lukas 2013; Lukas 2012
+Saimiri_sciureus,0.505,Anderson 2004,2.879,Anderson 2004,,PA/PGA,Kenagy 1986; Moller 1988; Harcourt 1995
+Sarcophilus_harrisii,0.716,Anderson 2004,3.795,Anderson 2004,,PA/PGA,Anderson 2004; Lukas 2012; Lukas 2013; Gooley 2018
+Scalopus_aquaticus,0.342,Hayward 2011,2.097,Hayward 2011,,,
+Sciurus_carolinensis,0.714,Hayward 2011,2.719,Hayward 2011,,PA/PGA,Kenagy 1986; Waterman 2007
+Sciurus_vulgaris,0.449,Hayward 2011,2.544,Hayward 2011,,PG,Waterman 2007
+Scotophilus_borbonicus,-0.854,Ramm 2007,1.342,Ramm 2007,,,
+Scotophilus_heathii,-0.77,Ramm 2007,1.574,Ramm 2007,,PG,Hosken 2001
+Semnopithecus_entellus,1.047,Anderson 2004,4.232,Anderson 2004,,PA/PGA,Anderson 2004; Soulsbury 2010; Harcourt 1995
+Sigmodon_hispidus,0.238,Hayward 2011,2.348,Hayward 2011,,,
+Sminthopsis_crassicaudata,-0.861,Birkhead 1998,1.19,Birkhead 1998,,PG,Rose 1997; Pantheria
+Sminthopsis_macroura,-0.608,Birkhead 1998,1.405,Birkhead 1998,,,
+Sminthopsis_virginiae,-0.599,Birkhead 1998,1.491,Birkhead 1998,,,
+Sorex_araneus,-0.553,Hayward 2011,1.124,Hayward 2011,,PA/PGA,Soulsbury 2010
+Sorex_cinereus,-1,Hayward 2011,0.724,Hayward 2011,,,
+Sorex_minutus,-1,Hayward 2011,0.708,Hayward 2011,,,
+Sorex_palustris,-0.824,Hayward 2011,1.246,Hayward 2011,,,
+Sotalia_fluviatilis,2.679,Hayward 2011,4.515,Hayward 2011,,,
+Sotalia_guianensis,3.356,Hayward 2011,4.958,Hayward 2011,,,
+Speothos_venaticus,0.916,Iossa 2008,3.869,Iossa 2008,,M,Iossa 2008; Lukas 2013; Lukas 2012
+Spilogale_gracilis,0.401,Iossa 2008,2.728,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Spilogale_putorius,0.732,Iossa 2008,2.859,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Stenella_attenuata,3.012,Hayward 2011,4.906,Hayward 2011,,,
+Stenella_coeruleoalba,2.653,Dines 2015,5.193,Dines 2015,,,
+Stenella_frontalis,3.234,Dines 2015,5.155,Dines 2015,,,
+Stenella_longirostris,3.227,Dines 2015,4.871,Dines 2015,,PA/PGA,Perrin 2003
+Steno_bredanensis,3.477,Dines 2015,5.19,Dines 2015,,,
+Stenonycteris_lanosus,0.279,Anderson 2004,2,Anderson 2004,,PA/PGA,Anderson 2004
+Sturnira_bidens,-1.237,Pitnick 2006,1.243,Pitnick 2006,,,
+Sturnira_lilium,-0.917,Pitnick 2006,1.31,Pitnick 2006,,,
+Sundamys_muelleri,0.872,Breed 2000,2.602,Breed 2000,,,
+Suricata_suricatta,0.114,Soulsbury 2010,2.864,Soulsbury 2010,,M,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012
+Sus_scrofa,2.857,Anderson 2004,5.29,Anderson 2004,,PG,Soulsbury 2010; Poteaux 2009
+Sylvicapra_grimmia,1.327,Anderson 2004,4.267,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Sylvilagus_floridanus,1.223,Hayward 2011,3.058,Hayward 2011,,,
+Tachyglossus_aculeatus,1.699,Birkhead 1998,3.699,Birkhead 1998,,,
+Tadarida_aegyptiaca,-1.155,Ramm 2007,1.207,Ramm 2007,,,
+Tadarida_brasiliensis,-1.301,Ramm 2007,1.107,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Tamias_amoenus,-0.208,Hayward 2011,1.629,Hayward 2011,,PA/PGA,Soulsbury 2010; Waterman 2007
+Tamias_minimus,-0.143,Hayward 2011,1.502,Hayward 2011,,,
+Tamias_townsendii,-0.086,Hayward 2011,1.833,Hayward 2011,,,
+Tamiasciurus_hudsonicus,0.465,Soulsbury 2010,2.27,Soulsbury 2010,,PA/PGA,Soulsbury 2010; Waterman 2007
+Taphozous_georgianus,-1.398,Ramm 2007,1.477,Ramm 2007,,,
+Taphozous_longimanus,-1.114,Pitnick 2006,1.556,Pitnick 2006,,PG,Hosken 2001; Lukas 2013
+Tarsipes_rostratus,-0.438,Birkhead 1998,0.949,Birkhead 1998,,,
+Tasmacetus_shepherdi,3.13,Dines 2015,6.329,Dines 2015,,,
+Tatera_vicina,0.807,Hayward 2011,2.303,Hayward 2011,,,
+Taurotragus_derbianus,2.016,Anderson 2004,5.646,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Taxidea_taxus,1.551,Iossa 2008,3.895,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Tenrec_ecaudatus,0.491,Anderson 2004,3.301,Anderson 2004,,PA/PGA,Anderson 2004
+Theropithecus_gelada,1.332,Hayward 2011,4.31,Hayward 2011,,PA/PGA,Kenagy 1986; Moller 1988; Harcourt 1995
+Thomomys_bottae,0.551,Hayward 2011,2.279,Hayward 2011,,PA/PGA,Kenagy 1986; Waterman 2007
+Thylogale_billardierii,1.671,Rose 1997,3.901,Rose 1997,,PA/PGA,Rose 1997; Pantheria
+Tokudaia_osimensis,-0.672,Hayward 2011,1.949,Hayward 2011,,,
+Trachypithecus_cristatus,0.799,Hayward 2011,3.826,Hayward 2011,,PG,Kenagy 1986
+Trachypithecus_francoisi,0.6,Anderson 2004,3.881,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013
+Trachypithecus_obscurus,0.681,Hayward 2011,3.872,Hayward 2011,,PG,Kenagy 1986
+Tragelaphus_angasii,1.583,Anderson 2004,4.971,Anderson 2004,,PA/PGA,Anderson 2004
+Tragelaphus_eurycerus,1.723,Anderson 2004,5.291,Anderson 2004,,PG,Anderson 2004; Lukas 2012; Lukas 2013; Pantheria
+Tragelaphus_strepsiceros,1.964,Anderson 2004,5.285,Anderson 2004,,PA/PGA,Anderson 2004; Ginsberg 1990
+Trichechus_manatus,2.789,Reynolds 2004,5.65,Reynolds 2004,,PA/PGA,Reynolds 2004
+Trichosurus_vulpecula,0.602,Anderson 2004,3.562,Anderson 2004,,PA/PGA,Anderson 2004; Pantheria
+Tursiops_aduncus,3.312,Dines 2015,5.362,Dines 2015,,PA/PGA,Pantheria
+Tursiops_truncatus,3.09,Dines 2015,5.393,Dines 2015,,PA/PGA,Pantheria
+Tylonycteris_pachypus,-1.155,Ramm 2007,0.613,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Tylonycteris_robustula,-1,Ramm 2007,0.924,Ramm 2007,,PA/PGA,Hosken 2001; Pitnick 2006
+Uncia_uncia,1.098,Iossa 2008,4.699,Iossa 2008,,PA/PGA,Iossa 2008
+Uranomys_ruddi,-0.458,Breed 2000,1.602,Breed 2000,,,
+Urocitellus_beldingi,0.544,Soulsbury 2010,2.568,Soulsbury 2010,,PG,Soulsbury 2010; Waterman 2007
+Urocyon_cinereoargenteus,0.713,Soulsbury 2010,3.568,Soulsbury 2010,,M,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004
+Uroderma_bilobatum,-1.009,Pitnick 2006,1.173,Pitnick 2006,,PG,Hosken 2001; Lukas 2013
+Uromys_anak,1.064,Breed 2000,2.944,Breed 2000,,,
+Uromys_caudimaculatus,0.857,Hayward 2011,2.914,Hayward 2011,,,
+Ursus_americanus,1.59,Soulsbury 2010,5.01,Soulsbury 2010,,PA/PGA,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004
+Ursus_arctos,2.186,Soulsbury 2010,5.494,Soulsbury 2010,,PA/PGA,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004
+Ursus_maritimus,2.119,Iossa 2008,5.63,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Ursus_thibetanus,1.824,Iossa 2008,5.001,Iossa 2008,,PA/PGA,Iossa 2008; Ferguson 2004
+Vampyrodes_caraccioli,-0.479,Pitnick 2006,1.43,Pitnick 2006,,PG,Hosken 2001; Lukas 2013
+Vampyrum_spectrum,-0.693,Pitnick 2006,2.201,Pitnick 2006,,M,Hosken 2001; Pitnick 2006; Pantheria; Lukas 2013; Lukas 2012
+Varecia_variegata,0.42,Anderson 2004,3.54,Anderson 2004,,PG,Anderson 2004; Harcourt 1995; Lukas 2012; Lukas 2013
+Vombatus_ursinus,1.265,Birkhead 1998,4.603,Birkhead 1998,,,
+Vulpes_lagopus,0.609,Soulsbury 2010,3.681,Soulsbury 2010,,M,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004
+Vulpes_vulpes,0.954,Hayward 2011,3.705,Hayward 2011,,PG,Iossa 2008; Soulsbury 2010; Kenagy 1986; Lukas 2013; Lukas 2012; Ferguson 2004
+Vulpes_zerda,0.736,Iossa 2008,3.176,Iossa 2008,,M,Iossa 2008; Pantheria; Ferguson 2004
+Wallabia_bicolor,1.169,Birkhead 1998,4.498,Birkhead 1998,,PA/PGA,Rose 1997
+Zaglossus_bruijni,1.908,Birkhead 1998,3.839,Birkhead 1998,,,
+Ziphius_cavirostris,3.903,Macleod 2010,6.477,Macleod 2010,,,
+Zyzomys_argurus,-0.363,Ramm 2007,1.653,Ramm 2007,,,
+Zyzomys_woodwardi,0.238,Ramm 2007,2.009,Ramm 2007,,,
