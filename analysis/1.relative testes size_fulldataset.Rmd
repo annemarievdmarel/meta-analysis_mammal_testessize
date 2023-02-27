@@ -1,0 +1,492 @@
+---
+title: "Relative testes size"
+author: "Annemarie van der Marel"
+date: "2022-12-15"
+output: html_document
+---
+
+
+```{r}
+sessionInfo()
+```
+
+remove marine mammals (cetacea & sirenia) and humans, as they are outliers
+
+
+# Load libraries
+```{r setup, include=FALSE}
+# data cleaning
+library(tidyverse) 
+
+#plotting
+library(viridis)
+library(RColorBrewer)
+
+```
+
+
+# Import  data
+```{r}
+
+# data with Baker 2019 dataset and crossreffed with vertlife
+full_df <- read.csv("../data/testes_lifehistory_mating_care_Dec17.csv") %>%
+  arrange(Binomial)
+
+length(unique(full_df$Binomial)) 
+multiple_entries <- full_df %>% 
+  group_by(Binomial) %>%
+  tally() %>%
+  filter(n>1) # 43 species with > 1 entry
+
+# species for phylogenetic tree
+species631 <- unique(full_df$Binomial)
+#write.csv(species631, "../data/631species.csv")
+
+```
+## remove outliers
+remove marine mammals (cetacea & sirenia) and humans, as they are outliers
+```{r}
+
+unique(full_df$order)
+
+df <- full_df %>%
+  filter(!order %in% c("Cetacea", "Sirenia"), 
+         Binomial!="Homo_sapiens")
+  
+unique(df$order)
+```
+
+
+
+## number of species per trait
+
+dataset to use (excludes marine mammal orders such as Cetacea and Sirenia and humans):
+In total, we have 571 terrestrial mammal species in 17 orders for which we can calculate relative testes size. Of these 571, we have 541 species with litter size data, 460 with litters per year, 469 with longevity, 373 with mating system, and 263 with paternal care data. We have 220 species where we have data for all our predictor variables.
+
+
+```{r species with data}
+all_df <- df
+
+n_distinct(all_df$Binomial) # number of species with testes data
+n_distinct(all_df$order)
+
+n_ls <- all_df %>%
+  filter(!is.na(litter_size)) 
+n_distinct(n_ls$Binomial)
+
+n_ly <- all_df %>%
+  filter(!is.na(litter_year))
+n_distinct(n_ly$Binomial)
+
+n_lg <- all_df %>%
+  filter(!is.na(longevity))
+n_distinct(n_lg$Binomial)
+
+n_ms <- all_df %>%
+  filter(!is.na(mating_system))
+n_distinct(n_ms$Binomial)
+
+n_pc <- all_df %>%
+  filter( paternal_care!="")
+n_distinct(n_pc$Binomial)
+
+n_all <- na.omit(all_df) 
+n_distinct(n_all$Binomial)
+
+```
+
+
+full dataset includng Baker et al 2019 dataset:
+In total, we have 631 species for which we can calculate relative testes size. Of these 631, we have 593 species with litter size data, 504 with litters per year, 517 with longevity, 381 with mating system, and 264 with paternal care data. We have 257 species where we have data for all our predictor variables.
+```{r species with data}
+all_df <- full_df
+
+n_distinct(all_df$Binomial) # number of species with testes data
+
+n_testes <- all_df %>%
+  filter(is.na(testes_g)) 
+
+n_ls <- all_df %>%
+  filter(!is.na(litter_size)) 
+n_distinct(n_ls$Binomial)
+
+n_ly <- all_df %>%
+  filter(!is.na(litter_year))
+n_distinct(n_ly$Binomial)
+
+n_lg <- all_df %>%
+  filter(!is.na(longevity))
+n_distinct(n_lg$Binomial)
+
+n_ms <- all_df %>%
+  filter(!is.na(mating_system))
+n_distinct(n_ms$Binomial)
+
+n_pc <- all_df %>%
+  filter( paternal_care!="")
+n_distinct(n_pc$Binomial)
+
+n_all <- na.omit(all_df) 
+n_distinct(n_all$Binomial)
+
+```
+
+
+
+Small dataset excludng Baker et al 2019 dataset:
+In total, we have 210 species for which we can calculate relative testes size. Of these 210, we have 198 species with litter size data, 147 with litters per year, 170 with longevity, 108 with mating system, and 108 with paternal care data. We only have 8 species (all squirrels) where we have data for all our predictor variables. 
+
+```{r missing species}
+n_testes <- all_df %>%
+  filter(is.na(testes_g)) 
+n_distinct(all_df$Binomial)
+
+n_ls <- all_df %>%
+  filter(is.na(LS)) 
+n_distinct(n_ls$Binomial)
+length(unique(check_df$Binomial))
+
+n_ly <- all_df %>%
+  filter(is.na(LY))
+n_distinct(n_ly$Binomial)
+
+n_lg <- all_df %>%
+  filter(is.na(LG))
+n_distinct(n_lg$Binomial)
+
+n_ms <- all_df %>%
+  filter(is.na(mating_system))
+n_distinct(n_ms$Binomial)
+
+n_pc <- all_df %>%
+  filter( paternal_care=="")
+n_distinct(n_pc$Binomial)
+
+n_all <- na.omit(all_df) 
+n_distinct(n_all)
+n_order <- n_all %>%
+  group_by(order) %>%
+  tally()
+
+
+```
+
+ 
+
+# plot testes ~ bm
+
+```{r set colors by order}
+
+n_distinct(all_df$order)
+
+# 26 qualitatively different colors from Dave Keenan
+colors26 <-  c("#00B7FF", "#004DFF", "#00FFFF", "#826400", "#580041", "#FF00FF", "#00FF00",
+               "#C500FF", "#B4FFD7", "#FFCA00", "#969600", "#B4A2FF", "#C20078", "#0000C1",
+               "#FF8B00", "#FFC8FF", "#666666", "#FF0000", "#CCCCCC", "#009E8F", "#D7A870", 
+               "#8200FF", "#960000", "#BBFF00",  "#006F00", "#1f78b4", "#8E0152") # "#1f78b4", "#8E0152", "#FFFF00", are the extr 2 colors
+
+set.seed(42)
+colorXorder <-  sample(colors26, n_distinct(all_df$order))
+
+```
+
+
+```{r}
+ggplot(all_df, aes(x=log(BM_g), y=log(testes_g))) +
+  geom_point(aes(color=order)) +
+  labs(x="log body mass (g)", y="log testes mass (g)") +
+  theme_classic() +
+  scale_colour_manual(values = colorXorder) 
+
+ggsave("../figures/log_testes_bm.pdf") 
+
+# without legend
+ggplot(all_df, aes(x=log(BM_g), y=log(testes_g))) +
+  geom_point(aes(color=order)) +
+  labs(x="log body mass (g)", y="log testes mass (g)") +
+  theme_classic() +
+  theme(legend.position = "none") +
+  scale_colour_manual(values = colorXorder) 
+
+ggsave("../figures/log_testes_bm_nolegend.pdf") 
+```
+
+How many species by order?
+```{r}
+
+n_order <- all_df %>%
+  group_by(order) %>%
+  tally()
+```
+
+
+
+# Relative testes size
+Kenagy & Trombulak 1986
+Testes mass = 0.035 x body mass^0.72
+The equation is Y=0.035X to the power of 0.72, Where the mass of the testes is Y.  The body mass is X.
+
+The relative testes size is the ratio of observed testes size to the testes size predicted by this equation
+
+from thesis Anjos: 
+Richardson's ground squirrels = 0.61 ± 0.06
+```{r rts function}
+
+check_outliers <- all_df %>%
+  summarize(checkmass= ifelse(testes_g==BM_g, "same", "no"))
+# testes mass incorrect: should be 1.2 instead of 1021; already corrected
+# all_df %>%   filter(Binomial=="Aotus_trivirgatus") 
+# all_df$testes_g[all_df$Binomial=="Aotus_trivirgatus"] <- 1.2
+
+
+rts_df <- all_df %>%
+  mutate(exp.testes=0.035*(BM_g^0.72),
+         rts=testes_g/exp.testes) %>%
+  dplyr::select(X, order, family, common_name, Binomial, rts, 
+                exp.testes, testes_g,log.testes., ref_testes, everything())
+
+
+head(rts_df)
+
+# include rts for which we only had relative testes size and not testes_mass
+missingrts <- rts_df %>% 
+  filter(is.na(rts))
+# rts_df %>%
+#   filter(Binomial=="Ammospermophilus_leucurus")
+# rts_df$rts[rts_df$Binomial=="Ammospermophilus_leucurus"] <- 2.24
+
+rts_df %>%
+  filter(Binomial=="Urocitellus_richardsonii")
+rts_df$rts[rts_df$Binomial=="Urocitellus_richardsonii"] <- 0.61
+
+# rts_df <- rts_df %>%
+#   dplyr::select(-rel_testes_size) 
+
+
+#write.csv(rts_df, "../data/rts_life_mating_care.csv")
+```
+
+
+## Check for outliers in relative testes size data
+```{r}
+
+#rts_df <- read.csv("../data/rts_life_mating_care.csv")
+
+
+
+check_outliers <- rts_df %>%
+  summarize(checkmass= ifelse(testes_g>BM_g, "same", "no"))
+unique(check_outliers$checkmass)
+
+range(rts_df$rts) #order cetacea has very large rts, excluded them from analysis
+median(rts_df$rts)
+mean(rts_df$rts)
+
+ggplot(rts_df, aes(rts)) +
+  geom_histogram() +
+  theme_classic()
+
+# already removed species with incorrectly provided testes mass
+#remove_species <- c("Cynomys_parvidens", "Funisciurus_congicus")
+
+
+
+
+
+```
+
+
+
+
+
+# Collinearity of variables
+Prepare data
+```{r}
+## Collinearity of the explanatory variables ----
+library(psych) #Calls: pairs.panels
+library(car) #Calls: vif
+library(plyr) #Calls: rbind.fill
+#library(usdm)
+
+# global, without relative testes size but with body mass and testes mass
+# Z <- cbind(traits$BM_g,traits$testes_g, traits$LG, traits$LS , traits$LY )
+# colnames(Z) <- c("bm","testes" ,"lg","ls","ly")
+# pairs.panels(Z) # Generate scatterplots with Pearson correlations
+# dfz = data.frame(Z) # Data Frame with predictor variables
+# vif(dfz) # no variable with VIF > 3
+
+# 
+Z <- cbind(rts_df$rts, rts_df$longevity, rts_df$litter_size , rts_df$litter_year ) #, df$paternal_care , df$mating_system
+colnames(Z) <- c("rts", "lg","ls","ly") #, "pc","ms"
+pairs.panels(Z) # Generate scatterplots with Pearson correlations
+dfz = data.frame(Z) # Data Frame with predictor variables
+vif(dfz) # VIF > 3 : no variables
+
+
+# global
+Z <- cbind(rts_df$rts,rts_df$longevity, rts_df$litter_size , rts_df$litter_year,
+           rts_df$paternal_care , rts_df$mating_system ) 
+colnames(Z) <- c("rts", "lg","ls","ly","pc", "mc") #, "pc","ms"
+pairs.panels(Z) # Generate scatterplots with Pearson correlations
+dfz = data.frame(Z) # Data Frame with predictor variables
+vif(dfz) # VIF > 3 : no variables
+
+vif(lm(rts ~ litter_size + litter_year + longevity + mating_system + paternal_care, data=rts_df)) # no problems with collinearity
+
+
+
+```
+No problem with collinearity
+
+# Plots
+
+```{r}
+speciesXorder <- rts_df %>%
+  group_by(order) %>%
+  tally()
+```
+
+
+```{r litter size}
+
+range(rts_df$litter_size, na.rm = T)
+fig.ls <- ggplot(rts_df, aes(x=litter_size, y=rts)) + 
+  geom_point(aes(color=order)) +
+  #geom_smooth( method = "lm") + 
+  theme_classic() +
+  scale_x_continuous(limits = c(0.5,10.0), 
+                     breaks = 0:10) + 
+  labs(x= "litter size", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+  # geom_point(aes(color=order)) +
+  # scale_color_brewer(palette = "Set1")
+
+fig.ls
+```
+
+```{r litters/year}
+range(rts_df$LY, na.rm = T)
+
+fig.ly<- ggplot(rts_df, aes(x=litter_year, y=rts)) + 
+  geom_point(aes(color=order)) +
+  theme_classic() +
+  scale_x_continuous(limits = c(0.0,8.0), 
+                     breaks = 1:8) + 
+  labs(x= "litters per year", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+fig.ly
+```
+
+
+```{r longevity}
+
+range(rts_df$LG, na.rm = T)
+fig.lg<- ggplot(rts_df, aes(x=longevity, y=rts)) + 
+  geom_point(aes(color=order)) +
+  theme_classic() +
+  # scale_x_continuous(limits = c(0.0,8.0), 
+  #                    breaks = 0:8) + 
+  labs(x= "longevity (years)", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+fig.lg
+```
+
+```{r mating system}
+unique(rts_df$mating_system)
+check <- rts_df %>%
+  filter(mating_system=="monogamous; polygynous")
+#change to most complex one
+rts_df$mating_system[rts_df$mating_system=="monogamous; polygynous"] <- "polygynous"
+
+matingsys <- c("monogamous", "polygynous", "promiscuous")
+
+# switch to raincloud plot
+fig.ms <- rts_df %>%
+  filter(mating_system %in% matingsys) %>%
+  ggplot( aes(x=mating_system, y=rts)) + 
+  geom_boxplot() + 
+  #geom_jitter(aes(color=order))+
+  theme_classic() +
+  labs(x= "mating system", y = "relative testes size")+
+  scale_colour_manual(values = colorXorder) 
+fig.ms
+```
+
+
+```{r paternal care}
+unique(rts_df$paternal_care)
+
+fig.pc<- rts_df %>%
+  filter(!is.na(paternal_care)) %>%
+  ggplot( aes(x=paternal_care, y=rts)) + 
+  geom_boxplot() +
+  #geom_jitter(aes(color=order))+
+  theme_classic() +
+  labs(x= "paternal care", y = "relative testes size")+
+  scale_colour_manual(values = colorXorder) 
+fig.pc
+```
+
+
+
+
+```{r combine}
+# plots
+unique(df$order)
+
+# scale_color_viridis(discrete = TRUE, option = "D")+
+#   scale_fill_viridis(discrete = TRUE) 
+
+
+library(ggpubr) 
+plot.rts<-ggarrange(figA, figB, figC, figD,figE, labels = "auto")
+plot.rts
+ggexport(plot.rts, filename = "plot.rts.pdf")
+```
+
+
+# other rts analyses
+
+```{r}
+# log-transformed body and testes mass
+rts_log <- pruned_df %>%
+  mutate(
+         exp.testes=0.035*log(BM_g)^0.72,
+         rts=log(testes_g)/exp.testes) %>%
+  dplyr::select(order, family, common_name, Binomial, rts, rel_testes_size, 
+                exp.testes, testes_g, source_testes, everything())
+```
+
+
+
+
+
+```{r residuals of linear regression}
+
+
+cor.test(log(rts_df$BM_g), log(rts_df$testes_g), method=c("pearson"))
+
+lm.rts <- lm(log(testes_g) ~ log(BM_g) , data=rts_df)
+summary(lm.rts)
+
+rts_df$rts <- lm.rts$residuals 
+
+ggplot(all_df, aes( y= log(testes_g),x =log(BM_g))) +
+  geom_point() +
+  theme_classic() +
+  geom_smooth(method = "lm") +
+  labs(x="log body mass (g)", y = "log testes mass (g)")
+  
+
+
+
+```
+
+We found a significant linear correlation of log of testes mass against log body mass (R2 = 0.91, p < 0.001). 
+
+-3.1 +- 0.69, F1, 235 = 1156, p < 0.001
+
+
+
+
+

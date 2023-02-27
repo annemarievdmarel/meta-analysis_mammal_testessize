@@ -1,0 +1,417 @@
+---
+title: "model results"
+author: "Annemarie van der Marel"
+date: "2023-01-09"
+output:
+  word_document: default
+  html_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, include=FALSE, message=FALSE, warning=FALSE)
+library(knitr)
+library(rethinking)
+```
+
+
+```{r loading}
+ ## load relevant packages, set working directory, load saved model posteriors
+library(brms)
+library(rstan)
+library(rethinking) # funtion HDPI to obtain confidence intervals
+memory.limit(size=100000)
+
+load("../results/post.intercept.looped_run1-100.robj")
+load("../results/post.global.looped_run1-100.robj")
+load("../results/post.interaction.looped.robj")
+
+
+intercept.looic <- read.csv("../results/loo.intercept.looped.csv" )
+global.looic <- read.csv("../results/loo.global.looped.csv")
+inter.looic <- read.csv("../results/loo.interaction.looped.csv")
+
+```
+
+# model fit
+LooIC
+
+```{r}
+# intercept only model
+round(mean(intercept.looic$looic),1)
+round(HPDI(intercept.looic$looic, prob=0.95),1)
+```
+
+
+##Dataset 224 species + all litter sizes + mating system
+```{r}
+
+# global model
+round(mean(global.looic$looic),1)
+round(HPDI(global.looic$looic, prob=0.95),1)
+
+
+# interaction model
+round(mean(inter.looic$looic),1)
+round(HPDI(inter.looic$looic, prob=0.95),1)
+
+```
+
+
+
+
+
+**Table 1**. Loo Information Criterion (LooIC) of the models describing relative testes size in terrestrial mammals. We provided the mean and 95% credible interval (“lwr95CI” - “upr95CI”) of the LooIC of all the models run across the 100 phylogenetic trees to account for phylogenetic uncertainty.  
+```{r}
+
+table1 <- data.frame(
+  Model = c("Intercept only model",
+            "Global model",
+            "Interaction model"
+            ),
+  Predictor.variables = 
+    c("1",
+      "Litter size + litters/year + longevity + mating system + paternal care",
+      "Litter size * litters/year * mating system + longevity + paternal care"),
+  Mean = c(round(mean(intercept.looic$looic),2),
+           round(mean(global.looic$looic),2),
+           round(mean(inter.looic$looic),2)
+           ),
+  lwr95CI = c(round(HPDI(intercept.looic$looic, prob=0.95)[1],2),
+              round(HPDI(global.looic$looic, prob=0.95)[1],2),
+              round(HPDI(inter.looic$looic, prob=0.95)[1],2)
+              ),
+  upr95CI = c(round(HPDI(intercept.looic$looic, prob=0.95)[2],2),
+              round(HPDI(global.looic$looic, prob=0.95)[2],2),
+              round(HPDI(inter.looic$looic, prob=0.95)[2],2)
+              )
+)
+kable(table1)
+
+write.csv(table1, "../results/model_fit_summary.csv")
+
+```
+
+## subset litter size of  1 
+Litter size 1 subset
+```{r}
+round(mean(ls1.looic$looic),1)
+round(HPDI(ls1.looic$looic, prob=0.95),1)
+```
+
+Litter size 1 subset global model
+```{r}
+round(mean(fmm.ls1.looic$looic),1)
+round(HPDI(fmm.ls1.looic$looic, prob=0.95),1)
+```
+
+Litter size 1 interaction model
+```{r}
+round(mean(int.ls1.looic$looic),1)
+round(HPDI(int.ls1.looic$looic, prob=0.95),1)
+```
+
+# post-processing posteriors
+## full dataset intercept model
+**Table SM1**: Full summary of the factors affecting relative testes size in terrestrial mammals (global model). All estimates are on the log-odds scale and summarized by the mean and 95% credible
+interval (“lwr95CI” - “upr95CI”) of the posterior distribution.
+```{r table sm1}
+
+tables.intercept<- data.frame(
+                Parameter = c("Intercept",
+                "Phylo SD", 
+                "Species SD"),
+                Mean = 
+                  c(round(mean(post.intercept.looped$b_Intercept),2), 
+
+                    round(mean(post.intercept.looped$sd_phylo__Intercept),2),
+                    round(mean(post.intercept.looped$sd_Binomial__Intercept),2)), 
+                
+                lwr95CI = 
+                  c(round(HPDI(post.intercept.looped$b_Intercept, prob=0.95)[1],2), 
+        
+                    round(HPDI(post.intercept.looped$sd_phylo__Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.intercept.looped$sd_Binomial__Intercept, prob=0.95)[1],2)), 
+                    
+                upr95CI = 
+                  c(round(HPDI(post.intercept.looped$b_Intercept, prob=0.95)[2],2), 
+
+                    round(HPDI(post.intercept.looped$sd_phylo__Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.intercept.looped$sd_Binomial__Intercept, prob=0.95)[2],2)))
+                    
+kable(tables.intercept)
+
+write.csv(tables.intercept, "../results/global.intercept.summary.csv")
+```
+
+
+
+
+## Interaction model values
+```{r}
+intercept <- c(round(mean(post.inter.looped$b_Intercept),2))
+```
+
+**Table 2**: Full summary of the factors affecting relative testes size in terrrestrial mammals (interaction model). All estimates are on the log-odds scale and summarized by the mean and 95% credible
+interval (“lwr95CI” - “upr95CI”) of the posterior distribution.
+```{r table s4}
+#load("../results/post.inter.looped.robj")
+
+table2<- data.frame(
+  Parameter = c("Intercept", 
+                "Litter size", 
+                "Litters per year", 
+                "Mating system (polygynous)",
+                "Mating system (promiscuous)",
+                "Longevity", 
+                "Paternal care present",
+                "Litter size:litters/year",
+                "Litter size:polygynous mating system",
+                "Litter size:promiscuous mating system",
+                "Litters/year:polygynous mating system",
+                "Litters/year:promiscuous mating system",
+                "Litter size:litters/year:polygynous mating system",
+                "Litter size:litters/year:promiscuous mating system",
+                "Phylo SD", 
+                "Species SD"), 
+                Mean = 
+                  c(round(mean(post.inter.looped$b_Intercept),2), 
+                    round(mean(post.inter.looped$b_litter_size),2), 
+                    round(mean(post.inter.looped$b_litter_year),2), 
+                    round(mean(post.inter.looped$b_mating_systempolygynous),2), 
+                    round(mean(post.inter.looped$b_mating_systempromiscuous),2), 
+                    round(mean(post.inter.looped$b_longevity),2),
+                    round(mean(post.inter.looped$b_paternal_careyes),2),
+                    round(mean(post.inter.looped$`b_litter_size:litter_year`),2),
+                    round(mean(post.inter.looped$`b_litter_size:mating_systempolygynous`),2),
+                    round(mean(post.inter.looped$`b_litter_size:mating_systempromiscuous`),2),
+                    round(mean(post.inter.looped$`b_litter_year:mating_systempolygynous`),2),
+                    round(mean(post.inter.looped$`b_litter_year:mating_systempromiscuous`),2),
+                    round(mean(post.inter.looped$`b_litter_size:litter_year:mating_systempolygynous`),2),
+                    round(mean(post.inter.looped$`b_litter_size:litter_year:mating_systempromiscuous`),2),
+                    round(mean(post.inter.looped$sd_phylo__Intercept),2),
+                    round(mean(post.inter.looped$sd_Binomial__Intercept),2)), 
+                
+                lwr95CI = 
+                  c(round(HPDI(post.inter.looped$b_Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_litter_size, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_litter_year, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_mating_systempolygynous, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_mating_systempromiscuous, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_longevity, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_paternal_careyes, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:mating_systempolygynous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:mating_systempromiscuous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_year:mating_systempolygynous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_year:mating_systempromiscuous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year:mating_systempolygynous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year:mating_systempromiscuous`, prob=0.95)[1],2),
+                    
+                    round(HPDI(post.inter.looped$sd_phylo__Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$sd_Binomial__Intercept, prob=0.95)[1],2)), 
+                    
+                upr95CI = 
+                  c(round(HPDI(post.inter.looped$b_Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_litter_size, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_litter_year, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_mating_systempolygynous, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_mating_systempromiscuous, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_longevity, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_paternal_careyes, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:mating_systempolygynous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:mating_systempromiscuous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_year:mating_systempolygynous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_year:mating_systempromiscuous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year:mating_systempolygynous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year:mating_systempromiscuous`, prob=0.95)[2],2),
+                    
+                    round(HPDI(post.inter.looped$sd_phylo__Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$sd_Binomial__Intercept, prob=0.95)[2],2)))
+                    
+kable(table2)
+
+write.csv(table2, "../results/interaction.model.summary.csv")
+```
+**Table SM1**: Full summary of the factors affecting relative testes size in terrestrial mammals (global model). All estimates are on the log-odds scale and summarized by the mean and 95% credible
+interval (“lwr95CI” - “upr95CI”) of the posterior distribution.
+```{r table s4}
+#load("../results/post.global.looped.robj")
+
+tablesm1<- data.frame(
+  Parameter = c("Intercept", 
+                "Litter size", 
+                "Litters per year", 
+                "Mating system (polygynous)",
+                "Mating system (promiscuous)",
+                "Longevity", 
+                "Paternal care present",
+                "Phylo SD", 
+                "Species SD"), 
+                Mean = 
+                  c(round(mean(post.global.looped$b_Intercept),2), 
+                    round(mean(post.global.looped$b_litter_size),2), 
+                    round(mean(post.global.looped$b_litter_year),2), 
+                    round(mean(post.global.looped$b_mating_systempolygynous),2), 
+                    round(mean(post.global.looped$b_mating_systempromiscuous),2), 
+                    round(mean(post.global.looped$b_longevity),2),
+                    round(mean(post.global.looped$b_paternal_careyes),2),
+              
+                    round(mean(post.global.looped$sd_phylo__Intercept),2),
+                    round(mean(post.global.looped$sd_Binomial__Intercept),2)), 
+                
+                lwr95CI = 
+                  c(round(HPDI(post.global.looped$b_Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.global.looped$b_litter_size, prob=0.95)[1],2), 
+                    round(HPDI(post.global.looped$b_litter_year, prob=0.95)[1],2), 
+                    round(HPDI(post.global.looped$b_mating_systempolygynous, prob=0.95)[1],2), 
+                    round(HPDI(post.global.looped$b_mating_systempromiscuous, prob=0.95)[1],2), 
+                    round(HPDI(post.global.looped$b_longevity, prob=0.95)[1],2), 
+                    round(HPDI(post.global.looped$b_paternal_careyes, prob=0.95)[1],2), 
+        
+                    round(HPDI(post.global.looped$sd_phylo__Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.global.looped$sd_Binomial__Intercept, prob=0.95)[1],2)), 
+                    
+                upr95CI = 
+                  c(round(HPDI(post.global.looped$b_Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.global.looped$b_litter_size, prob=0.95)[2],2), 
+                    round(HPDI(post.global.looped$b_litter_year, prob=0.95)[2],2), 
+                    round(HPDI(post.global.looped$b_mating_systempolygynous, prob=0.95)[2],2), 
+                    round(HPDI(post.global.looped$b_mating_systempromiscuous, prob=0.95)[2],2), 
+                    round(HPDI(post.global.looped$b_longevity, prob=0.95)[2],2), 
+                    round(HPDI(post.global.looped$b_paternal_careyes, prob=0.95)[2],2), 
+
+                    round(HPDI(post.global.looped$sd_phylo__Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.global.looped$sd_Binomial__Intercept, prob=0.95)[2],2)))
+                    
+kable(tablesm1)
+
+write.csv(tablesm1, "../results/global.model.summary.csv")
+```
+
+## Litter size 1
+### intercept
+
+### global
+
+**Table **: Full summary of the factors affecting relative testes size in terrestrial mammals with a litter size of 1 or less (global model). All estimates are on the log-odds scale and summarized by the mean and 95% credible interval (“lwr95CI” - “upr95CI”) of the posterior distribution.
+```{r table sm1}
+
+tables.ls1.global<- data.frame(
+                Parameter = c("Intercept",
+                              "Litters per year",
+                              "Longevity",
+                              "females multiple mating present",
+                "Phylo SD", 
+                "Species SD"),
+                Mean = 
+                  c(round(mean(post.ls1.looped$b_Intercept),2), 
+                    round(mean(post.ls1.looped$b_litter_year),2),
+                    round(mean(post.ls1.looped$b_longevity),2)), 
+                    round(mean(post.ls1.looped$b_females_mate_multiplyyes),2)), 
+                    round(mean(post.ls1.looped$sd_phylo__Intercept),2),
+                    round(mean(post.ls1.looped$sd_Binomial__Intercept),2)), 
+                
+                lwr95CI = 
+                  c(round(HPDI(post.ls1.looped$b_Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.ls1.looped$b_litter_year, prob=0.95)[1],2), 
+                    round(HPDI(post.ls1.looped$b_longevity, prob=0.95)[1],2), 
+                    round(HPDI(post.ls1.looped$b_females_mate_multiplyyes, prob=0.95)[1],2), 
+                    round(HPDI(post.ls1.looped$sd_phylo__Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.ls1.looped$sd_Binomial__Intercept, prob=0.95)[1],2)), 
+                    
+                upr95CI = 
+                  c(round(HPDI(post.ls1.looped$b_Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.ls1.looped$b_litter_year, prob=0.95)[2],2), 
+                    round(HPDI(post.ls1.looped$b_longevity, prob=0.95)[2],2), 
+                    round(HPDI(post.ls1.looped$b_females_mate_multiplyyes, prob=0.95)[2],2), 
+                    round(HPDI(post.ls1.looped$sd_phylo__Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.ls1.looped$sd_Binomial__Intercept, prob=0.95)[2],2)))
+                    
+kable(tables.ls1.global)
+
+write.csv(tables.ls1.global, "../results/global.ls1.summary.csv")
+```
+
+### interaction
+**Table **: Full summary of the factors affecting relative testes size in terrestrial mammals with a litter size of 1 or less (global model). All estimates are on the log-odds scale and summarized by the mean and 95% credible interval (“lwr95CI” - “upr95CI”) of the posterior distribution.
+```{r table sm1}
+
+tables.ls1.global<- data.frame(
+                Parameter = c("Intercept",
+                              "Litters per year",
+                              "Longevity",
+                              "females multiple mating present",
+                              "litters per year X females multiple mating present",
+                "Phylo SD", 
+                "Species SD"),
+                Mean = 
+                  c(round(mean(post.int.ls1.looped$b_Intercept),2), 
+                    round(mean(post.int.ls1.looped$b_litter_year),2),
+                    round(mean(post.int.ls1.looped$b_longevity),2)), 
+                    round(mean(post.int.ls1.looped$b_females_mate_multiplyyes),2)), 
+                    round(mean(post.int.ls1.looped$b_litter_year:females_mate_multiplyyes),2)), 
+                    round(mean(post.int.ls1.looped$sd_phylo__Intercept),2),
+                    round(mean(post.int.ls1.looped$sd_Binomial__Intercept),2)), 
+                
+                lwr95CI = 
+                  c(round(HPDI(post.int.ls1.looped$b_Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.int.ls1.looped$b_litter_year, prob=0.95)[1],2), 
+                    round(HPDI(post.int.ls1.looped$b_longevity, prob=0.95)[1],2), 
+                    round(HPDI(post.int.ls1.looped$b_females_mate_multiplyyes, prob=0.95)[1],2), 
+                round(HPDI(post.int.ls1.looped$b_litter_year:females_mate_multiplyyes, prob=0.95)[1],2), 
+                    round(HPDI(post.int.ls1.looped$sd_phylo__Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.int.ls1.looped$sd_Binomial__Intercept, prob=0.95)[1],2)), 
+                    
+                upr95CI = 
+                  c(round(HPDI(post.int.ls1.looped$b_Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.int.ls1.looped$b_litter_year, prob=0.95)[2],2), 
+                    round(HPDI(post.int.ls1.looped$b_longevity, prob=0.95)[2],2), 
+                    round(HPDI(post.int.ls1.looped$b_females_mate_multiplyyes, prob=0.95)[2],2), 
+                    round(HPDI(post.int.ls1.looped$b_litter_year:females_mate_multiplyyes, prob=0.95)[2],2), 
+                    round(HPDI(post.int.ls1.looped$sd_phylo__Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.int.ls1.looped$sd_Binomial__Intercept, prob=0.95)[2],2)))
+                    
+kable(tables.ls1.interaction)
+
+write.csv(tables.ls1.interaction, "../results/interaction.ls1.summary.csv")
+```
+
+
+
+
+# phylogenetic signal
+“This non-independence can be measured by the ‘phylogenetic signal’, hereafter defined as the ‘tendency for related species to resemble each other more than they resemble species drawn at random from the tree’ (Blomberg & Garland 2002, p. 905).” ([Münkemüller et al., 2012, p. 744](zotero://select/library/items/9P3VGIWX)) ([pdf](zotero://open-pdf/library/items/M5WY9B8D?page=2&annotation=TVSN8KYS))
+
+ weak (closer to 0; phylogenetic independence) vs strong (closer to 1; phylogenetic dependence) phylogenetic signal
+
+```{r phylogenetic signal global model}
+# calculate phylogenetic signal for global model
+VarPhy <- post.global.looped$sd_phylo__Intercept
+VarSpec <- post.global.looped$sd_Binomial__Intercept # to account for multiple measures per species
+VarDistro<- pi^2/3
+
+lambda.global_looped<- (VarPhy)/(VarPhy+VarSpec+VarDistro)
+
+lambda_mean <- round(mean(lambda.intercept_looped),2)
+lambda_CImin <-round(HPDI(lambda.intercept_looped, prob=0.95)[1],2) 
+lambda_CImax <- round(HPDI(lambda.intercept_looped, prob=0.95)[2],2)
+
+```
+
+
+```{r phylogenetic signal interaction model}
+# calculate phylogenetic signal for global model
+VarPhy.inter <- post.inter.looped$sd_phylo__Intercept
+VarSpec.inter <- post.inter.looped$sd_Binomial__Intercept # to account for multiple measures per species
+VarDistro<- pi^2/3
+
+lambda.intercept_inter<- (VarPhy.inter)/(VarPhy.inter+VarSpec.inter+VarDistro)
+
+lambda.inter_mean <- round(mean(lambda.intercept_inter),2)
+lambda.inter_CImin <-round(HPDI(lambda.intercept_inter, prob=0.95)[1],2) 
+lambda.inter_CImax <- round(HPDI(lambda.intercept_inter, prob=0.95)[2],2)
+
+```
+
+Our results showed weak phylogenetic signal across terrestrial mammals (mean Pagel's λ and 95% CI = `r round(mean(lambda.intercept_inter),2)`, `r round(HPDI(lambda.intercept_inter, prob=0.95)[1],2)` – `r round(HPDI(lambda.intercept_inter, prob=0.95)[2],2)`). 
+

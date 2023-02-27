@@ -1,0 +1,271 @@
+---
+title: "visualize results"
+author: "Annemarie van der Marel"
+date: "2023-01-15"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+
+# Load libraries
+```{r setup, include=FALSE}
+# data cleaning
+library(tidyverse) 
+
+#plotting
+library(viridis)
+library(RColorBrewer)
+
+```
+
+
+# import data
+ full dataset
+```{r}
+rts_df <- read.csv("../data/rts_life_mating_care.csv") %>%
+  dplyr::select(-X)
+
+unique(rts_df$mating_system)
+rts_df$mating_system[rts_df$mating_system=="monogamous; polygynous"] <- "polygynous"
+unique(rts_df$order)
+
+df <- rts_df
+select_df <- na.omit(df) 
+```
+
+litter size 1
+```{r}
+df.ls1 <- rts_df %>%
+  select(order, family, common_name, Binomial, 
+         rts, 
+         litter_size, litter_year, longevity, 
+         mating_system) %>%
+  mutate(females_mate_multiply = if_else(mating_system=="monogamous", "no",
+                                         if_else(mating_system=="polygynous", "no","yes")))
+
+
+select_dfls1 <- na.omit(df.ls1) 
+dfls1 <- select_dfls1  %>% 
+  filter(litter_size==1) %>%
+  mutate(across(c("litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(dfls1)
+```
+
+
+
+# Plots full dataset
+
+```{r set colors by order}
+
+n_distinct(select_df$order)
+
+# 26 qualitatively different colors from Dave Keenan
+colors26 <-  c("#00B7FF", "#004DFF", "#00FFFF", "#826400", "#580041", "#FF00FF", "#00FF00",
+               "#C500FF", "#B4FFD7", "#FFCA00", "#969600", "#B4A2FF", "#C20078", "#0000C1",
+               "#FF8B00", "#FFC8FF", "#666666", "#FF0000", "#CCCCCC", "#009E8F", "#D7A870", 
+               "#8200FF", "#960000", "#BBFF00",  "#006F00", "#1f78b4", "#8E0152") # "#1f78b4", "#8E0152", "#FFFF00", are the extr 2 colors
+
+set.seed(42)
+colorXorder <-  sample(colors26, n_distinct(select_df$order))
+
+```
+## litters/year
+```{r litters/year}
+range(select_df$litter_year, na.rm = T)
+
+fig.ly<- ggplot(select_df, aes(x=litter_year, y=rts)) + 
+  geom_point(aes(color=order)) +
+  theme_classic() +
+  scale_x_continuous(limits = c(0.0,8.0), 
+                     breaks = 1:8) + 
+  labs(x= "litters per year", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) +
+  geom_abline(intercept=-1.08, slope= -0.93)
+fig.ly
+
+ggsave("../figures/rts~ly.pdf", width = 7, height = 5) 
+```
+
+
+## mating system
+```{r mating system}
+unique(select_df$mating_system)
+
+# switch to raincloud plot
+fig.ms <- 
+  ggplot(select_df, aes(x=mating_system, y=rts)) + 
+  geom_boxplot() + 
+  #geom_jitter(aes(color=order))+
+  theme_classic() +
+  labs(x= "mating system", y = "relative testes size")+
+  scale_colour_manual(values = colorXorder) 
+fig.ms
+
+ggsave( "../figures/rts~mating_system.pdf", width = 7, height = 5) 
+```
+## litters/year X mating system
+
+```{r interaction}
+
+unique(select_df$mating_system)
+
+# 26 qualitatively different colors from Dave Keenan
+colors_ms <-  c("#C20078", "#004DFF",   "#FFCA00") #,  "#006F00" "#1f78b4", "#8E0152", "#FFFF00", are the extr 2 colors
+
+
+
+fig.ls.ms <- ggplot(select_df, aes(x=litter_year, y=rts)) + 
+  geom_point(aes(color=mating_system)) +
+  #geom_smooth( method = "lm") + 
+  theme_classic() +
+  scale_x_continuous(limits = c(0.5,10.0), 
+                     breaks = 0:10) + 
+  labs(x= "litters per year", y = "relative testes size") +
+  scale_colour_manual(values = colors_ms) 
+  # geom_point(aes(color=order))
+fig.ls.ms
+
+ggsave("../figures/rts~lyXms.pdf", width = 7, height = 5)
+
+
+# just rodents
+ggplot(filter(select_df, order=="Rodentia"), aes(x=litter_year, y=rts)) + 
+  geom_point(aes(color=mating_system)) +
+  #geom_smooth( method = "lm") + 
+  theme_classic() +
+  scale_x_continuous(limits = c(0.5,10.0), 
+                     breaks = 0:10) + 
+  labs(x= "litters per year", y = "relative testes size") +
+  scale_colour_manual(values = colors_ms) 
+
+```
+
+# Plots litter size 1
+Here we subsetted the dataset by species that have a litter size of 1
+```{r}
+
+fig.ls1.fmm <- ggplot(dfls1, aes(x=females_mate_multiply, y=rts)) +
+  geom_boxplot() +
+  theme_classic() +
+  labs(x= "female multiple mating present", y = "relative testes size")
+fig.ls1.fmm
+
+ggsave( "../figures/ls1.rts~fmm.png", width = 7, height = 5) 
+
+```
+
+
+# plots not included in manuscript
+These factors had a negligible effect on relative testes size as the posterior distribution of the parameter crossed zero. 
+
+## litter size
+
+Potentially rerun models without the Tenrec_ecaudatus which have litter size of 16 
+```{r litter size}
+
+
+
+range(select_df$litter_size, na.rm = T)
+fig.ls <- ggplot(select_df, aes(x=litter_size, y=rts)) + 
+  geom_point(aes(color=order)) +
+  #geom_smooth( method = "lm") + 
+  theme_classic() +
+  # scale_x_continuous(limits = c(0.5,10.0), 
+  #                    breaks = 0:10) + 
+  labs(x= "litter size", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+  # geom_point(aes(color=order)) +
+  # scale_color_brewer(palette = "Set1")
+
+fig.ls
+
+ggplot(filter(select_df, order=="Rodentia"), aes(x=litter_size, y=rts)) + 
+  geom_point(aes(color=order)) +
+  #geom_smooth( method = "lm") + 
+  theme_classic() +
+  # scale_x_continuous(limits = c(0.5,10.0), 
+  #                    breaks = 0:10) + 
+  labs(x= "litter size", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+  # geom_point(aes(color=order)) +
+  # scale_color_brewer(palette = "Set1")
+
+
+ggsave("../figures/rts~ls.pdf", width = 7, height = 5)
+```
+## longevity
+```{r longevity}
+
+range(select_df$longevity, na.rm = T)
+fig.lg<- ggplot(select_df, aes(x=longevity, y=rts)) + 
+  geom_point(aes(color=order)) +
+  theme_classic() +
+  # scale_x_continuous(limits = c(0.0,8.0), 
+  #                    breaks = 0:8) + 
+  labs(x= "longevity (years)", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+fig.lg
+ggsave("../figures/rts~lg.pdf", width = 7, height = 5)
+```
+## parental care
+```{r paternal care}
+unique(select_df$paternal_care)
+
+fig.pc<- 
+  ggplot(select_df, aes(x=paternal_care, y=rts)) + 
+  geom_boxplot() +
+  #geom_jitter(aes(color=order))+
+  theme_classic() +
+  labs(x= "paternal care", y = "relative testes size")+
+  scale_colour_manual(values = colorXorder) 
+fig.pc
+ggsave("../figures/rts~pc.pdf", width = 7, height = 5)
+```
+## litter size by litter/year
+
+```{r}
+fig.lsXly <- ggplot(select_df, aes(x = litter_size, y = rts, size = litter_year))+
+  geom_point()+
+  labs(x = 'litter size', y = 'relative testes size')+
+  scale_size_continuous() +
+  theme_classic()
+  
+  # geom_abline(aes(intercept=33.965, slope=-4.3985, linetype='-1SD litters per year'))+
+  # geom_abline(aes(intercept=38.1208, slope=-5.854, linetype='Mean litters per year'))+
+  # geom_abline(aes(intercept=42.2767, slope=-7.3095, linetype='+1SD litters per year'))+
+  # scale_linetype_manual(values=c('dotted','dashed','solid'),
+  #                       breaks=c('-1SD litters per year','Mean litters per year','+1SD litters per year'),
+  #                       name='Simple\nSlope')+
+
+fig.lsXly
+
+ggsave('lsXly.png', width=6, height=6, unit='in', dpi=300)
+```
+
+
+## litter size by mating system
+
+```{r litter size X mating system}
+
+unique(select_df$mating_system)
+
+# 26 qualitatively different colors from Dave Keenan
+colors_ms <-  c("#C20078", "#004DFF",   "#FFCA00",  "#006F00") # "#1f78b4", "#8E0152", "#FFFF00", are the extr 2 colors
+
+
+
+lsXms <- ggplot(select_df, aes(x=litter_size, y=rts)) + 
+  geom_point(aes(color=mating_system)) +
+  #geom_smooth( method = "lm") + 
+  theme_classic() +
+  scale_x_continuous(limits = c(0.5,10.0), 
+                     breaks = 0:10) + 
+  labs(x= "litter size", y = "relative testes size") +
+  scale_colour_manual(values = colors_ms) 
+  # geom_point(aes(color=order))
+lsXms
+
+ggsave('lsXms.png', width=6, height=6, unit='in', dpi=300)
+```
