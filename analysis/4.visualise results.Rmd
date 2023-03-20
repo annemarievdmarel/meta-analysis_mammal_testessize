@@ -144,7 +144,7 @@ ggplot(filter(select_df, order=="Rodentia"), aes(x=litter_year, y=rts)) +
 
 # Plots litter size 1
 Here we subsetted the dataset by species that have a litter size of 1
-```{r}
+```{r females multiple mating}
 
 fig.ls1.fmm <- ggplot(dfls1, aes(x=females_mate_multiply, y=rts)) +
   geom_boxplot() +
@@ -152,7 +152,25 @@ fig.ls1.fmm <- ggplot(dfls1, aes(x=females_mate_multiply, y=rts)) +
   labs(x= "female multiple mating present", y = "relative testes size")
 fig.ls1.fmm
 
-ggsave( "../figures/ls1.rts~fmm.png", width = 7, height = 5) 
+ggsave( "../figures/ls1.rts~fmm.pdf", width = 7, height = 5) 
+
+```
+
+
+```{r litters/uear}
+
+
+fig.ls1.ly <- ggplot(dfls1, aes(x=litter_year, y=rts)) +
+  geom_point(aes(color=order)) +
+  theme_classic() +
+  labs(x= "litters per year", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+  #scale_x_continuous(limits = c(0.0,8.0), breaks = 1:8)
+
+fig.ls1.ly
+
+ggsave( "../figures/ls1.rts~ly.png", width = 7, height = 5) 
+
 
 ```
 
@@ -269,3 +287,4 @@ lsXms
 
 ggsave('lsXms.png', width=6, height=6, unit='in', dpi=300)
 ```
+

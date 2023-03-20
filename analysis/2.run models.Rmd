@@ -102,6 +102,15 @@ df <- rts_df %>%
 
 ```
 
+# select species trait data
+We select species with data for all our predictor variables
+
+```{r}
+select_df <- na.omit(df) 
+n_distinct(select_df$Binomial)
+n_distinct(select_df$order)
+```
+
 
 ## distribution
 
@@ -200,14 +209,6 @@ pp_check(model_lnorm, ndraws = 1e2) # lognormal best fitting distribution
 pp_check(model_weib, ndraws = 1e2) 
 ```
 
-# select species trait data
-We select species with data for all our predictor variables
-
-```{r}
-select_df <- na.omit(df) 
-n_distinct(select_df$Binomial)
-n_distinct(select_df$order)
-```
 
 
 # Import phylogenetic tree
@@ -928,6 +929,193 @@ end.time - start.time
 nrow(post.inter.looped)/2000 # check all 100 models added 
 
 #save(interactioni, file="interactionmodel.looped.robj")
+```
+
+
+## exclude potential outlier
+
+Rerun interaction model without potential outlier Tenrec_ecaudatus with litter size of 16 offspring. 
+
+
+#### set up model
+
+standardize values and exclude potential outlier
+```{r}
+st<-  select_df %>% 
+  filter(Binomial!="Tenrec_ecaudatus") %>%
+  mutate(across(c("litter_size", "litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(st)
+```
+
+```{r}
+# duplicate species list for mixed-effects model
+st$phylo<- st$Binomial
+```
+
+
+filter species with trait data from phylogeny
+```{r}
+TipsWant <- unique(st$Binomial) # 223 species that have all trait data
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWant))
+}
+#sort(pruned.tree[[1]]$tip.label)
+```
+
+
+Covariance matrix
+```{r}
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+```
+
+
+Get prior 
+https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations
+http://www.stat.columbia.edu/~gelman/research/published/entropy-19-00555-v2.pdf
+https://discourse.mc-stan.org/t/help-understanding-and-setting-informative-priors-in-brms/9574/12
+sample_prior = "only" and then creating prior predictive plots via pp_check.
+```{r}
+prior.interaction<- brms::get_prior(rts ~ litter_size * litter_year * mating_system +
+                                  longevity + paternal_care +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data = st, 
+          data2 = list(A = A[[1]]),
+          family = lognormal())
+prior.interaction
+
+```
+
+#### model
+
+model convergence diagnositcs:
+"We may also investigate convergence numerically by means of the
+scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et al. 2019), which should be close to one (i.e., R < b 1.05), 
+and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
+```{r}
+
+job::job({
+m.int <- brm(rts ~ litter_size * litter_year * mating_system +
+              longevity + paternal_care +
+              (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A[[1]]),
+  prior = prior.interaction, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+})
+
+# check summary, plot for diagnostics --> all good
+#rhat(global)
+#neff_ratio(global)
+pairs(m.int)
+summary(m.int, waic = TRUE)
+#head(predict(global)) # predict responses based on the fitted model
+
+# investigate model fit
+pp_check(m.int) 
+plot(m.int, ask=FALSE)
+
+loo(m.int) #, moment_match = TRUE
+loo.interaction <- loo(m.int)$estimate[3]
+
+# extract samples
+inter.samples<- posterior_samples(m.int)
+inter.draws <- as_draws(m.int)
+inter.looic <- loo(m.int)$estimate[3]
+#inter.loo <- rbind(1, inter.looic)
+#inter.loo <- loo(m.int, save_psis = TRUE)
+#inter.looic <- loo(m.int)[["looic"]] -> deprecated
+
+#loo
+# print(inter.loo)
+# plot(inter.loo)
+# if (any(pareto_k_values(inter.loo) > 0.7)) {
+#   inter.loo1 <- loo(m.int, save_psis = TRUE, k_threshold = 0.7)#, moment_match = T
+# }
+# print(inter.loo1)
+# 
+# loo_compare(loo, inter.loo)
+
+```
+
+
+
+
+#### loop for all 100 trees
+
+```{r}
+start.time <- Sys.time()
+
+#job::job({
+i=1
+list <- c(1:100)
+
+# make empty data frame to put data in
+## loo
+inter.looic_tenrec <- data.frame(runby=character(),
+                          looic=numeric())
+## posterior samples
+  samples <-  colnames(inter.samples) 
+  inter.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samples)))
+  colnames(inter.samples1) <- samples # assign column names
+
+for(i in 1:100){
+  runby <- list[i]
+  print(runby)
+
+  pruned.tree <- drop.tip(trees[[runby]], setdiff(trees[[runby]]$tip.label, TipsWant))
+  A <- vcv.phylo(pruned.tree)
+
+  
+  interactioni <- brm(rts ~ litter_size * litter_year * mating_system +
+              longevity + paternal_care +
+              (1|gr(Binomial, cov = A)) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A),
+  prior = prior.interaction, 
+  chains = 4, cores = mycores, 
+  iter = 5000, warmup = 3000,  
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  )
+
+  # model fit
+  #inter.looi <- loo(interactioni)[["looic"]]
+  looic <- loo(interactioni)$estimate[3]
+  pool <- cbind.data.frame(runby, 
+                           looic)
+  inter.looic_tenrec <-rbind(inter.looic, pool )
+  write.csv(inter.looic_tenrec,"../results/loo.interaction.looped-tenrec.csv" )
+  #save(inter.looi, file="loo.interaction.looped.robj")
+  
+  # extract samples
+  inter.samplesi<- posterior_samples(interactioni)
+  post.inter.looped_tenrec<- rbind(inter.samples1, inter.samplesi)
+  save(post.inter.looped_tenrec, file="../results/post.interaction.looped-tenrec.robj")
+  
+  # # have to combine lists
+  # inter.drawsi <- as_draws(interactioni)
+  # post.inter.draw.looped<- rbind(sample.draws, inter.drawsi)
+  # save(post.inter.draw.looped, file="post.inter.draw.looped_run1-100.robj")
+}
+#})
+end.time <- Sys.time()
+
+#Time to run:
+end.time - start.time
+  
+
 ```
 
 

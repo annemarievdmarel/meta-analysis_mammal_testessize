@@ -110,6 +110,120 @@ select_dfls1 <- na.omit(df.ls1)
 n_distinct(select_dfls1$Binomial)
 n_distinct(select_dfls1$order)
 ```
+## set up model species with trait data
+
+Litter size of 1 for all species and only 1 species with paternal care, so exclude litter size and paternal care from model
+
+standardize values
+```{r}
+dfls1 <- select_dfls1  %>% 
+  filter(litter_size<=1) %>%  # should probably do <1, then 9 species extra
+  mutate(across(c("litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(dfls1)
+
+length(unique(dfls1$Binomial))
+
+```
+
+# distribution
+
+```{r}
+ggplot(select_dfls1, aes(rts)) +
+  geom_histogram()
+
+# shapiro test p >0.05, data normally distributed
+#ggqqplot(rts_df, "rts")
+shapiro.test(select_dfls1$rts)
+
+range(select_dfls1$rts)
+
+
+m <- lm(rts ~ litter_size, data = select_dfls1)
+summary(m)
+d <- data.frame(residuals = residuals(m),         # Residuals
+                std_residuals = rstudent(m), # Studentized Residuals
+                fitted = fitted(m),          # Fitted values
+                cooks = cooks.distance(m))   # Cook's D
+d <- mutate(d, observation = 1:nrow(d))           # Observation number
+
+# histogram of residuals
+ggplot(data = d, aes(x = std_residuals)) +
+  geom_histogram(bins = 10)
+
+# Check for Normality: QQ Normality plot of residuals
+ggplot(data = d, aes(sample = std_residuals)) +
+  stat_qq() +
+  stat_qq_line()
+
+# Check heteroscedasticity or constant variance
+ggplot(d, aes(x = fitted, y = std_residuals)) +
+  geom_point() +
+  geom_hline(yintercept = 0)
+
+# Cook's D
+ggplot(d, aes(x = observation, y = cooks)) +
+  geom_point() +
+  geom_hline(yintercept = 1, linetype = "dotted") +
+  geom_hline(yintercept = 4/nrow(d), linetype = "dashed")
+# outliers
+d_outliers <- filter(d, cooks > 4/nrow(d))  # observation 86
+#rts_df[59,]
+rts_df[550,] # Sorex_araneus largest Cook's distance
+
+#d_outliers # no outliers when log-transformed; 2,31,33,34
+
+
+# distribution
+fitdistrplus::plotdist(select_dfls1$rts)
+fitdistrplus::descdist(select_dfls1$rts, discrete = FALSE)
+fit.gamma <- fitdistrplus::fitdist(df$rts, 'gamma')
+plot(fit.gamma)
+fit.gamma$aic
+fit.weibull <- fitdistrplus::fitdist(df$rts, "weibull")
+plot(fit.weibull)
+fit.weibull$aic
+fit.norm <- fitdistrplus::fitdist(df$rts, "norm")
+plot(fit.norm)
+fit.norm$aic
+fit.lnorm <- fitdistrplus::fitdist(df$rts, "lnorm")
+plot(fit.lnorm)
+fit.lnorm$aic
+
+# (gamlss)
+library(gamlss)
+fit <- fitDist(select_dfls1$rts, k = 2, type = "realline", trace = FALSE, try.gamlss = TRUE)
+summary(fit)
+fit$fits  # best fit: c("SHASHo", "Sinh-Arcsinh")  
+fit$failed
+
+
+
+# brms
+# fitting a brms model with a Gaussian likelihood
+job::job({
+model_normal <- brm(rts ~ 1, family = gaussian(), data = select_dfls1)
+
+# fitting a brms model with a gamma
+model_gamma <- brm(rts ~ 1, family = Gamma(), data =select_dfls1)
+
+# fitting a brms model with a skew normal likelihood
+model_skew <- brm(rts ~ 1, family = skew_normal(), data = select_dfls1)
+
+# fitting a brms model with a log normal likelihood
+model_lnorm <- brm(rts ~ 1, family = lognormal(), data = select_dfls1)
+
+# fitting a brms model with a weibull likelihood
+model_weib <- brm(rts ~ 1, family = weibull(), data = select_dfls1)
+})
+
+# posterior predictive checking
+pp_check(model_normal, ndraws = 1e2)  
+pp_check(model_gamma, ndraws = 1e2)
+pp_check(model_skew, ndraws = 1e2)
+pp_check(model_lnorm, ndraws = 1e2) # lognormal best fitting distribution
+pp_check(model_weib, ndraws = 1e2) 
+```
 
 
 # Import phylogenetic tree
@@ -167,121 +281,8 @@ remove.table # no species missing in phylogeny
 ```
 
 
+
 # intercept only model
-
-## distribution
-
-```{r}
-ggplot(df, aes(rts)) +
-  geom_histogram()
-
-# shapiro test p >0.05, data normally distributed
-#ggqqplot(rts_df, "rts")
-shapiro.test(df$rts)
-
-
-m <- lm(rts ~ litter_size, data = rts_df)
-summary(m)
-d <- data.frame(residuals = residuals(m),         # Residuals
-                std_residuals = rstudent(m), # Studentized Residuals
-                fitted = fitted(m),          # Fitted values
-                cooks = cooks.distance(m))   # Cook's D
-d <- mutate(d, observation = 1:nrow(d))           # Observation number
-
-# histogram of residuals
-ggplot(data = d, aes(x = std_residuals)) +
-  geom_histogram(bins = 10)
-
-# Check for Normality: QQ Normality plot of residuals
-ggplot(data = d, aes(sample = std_residuals)) +
-  stat_qq() +
-  stat_qq_line()
-
-# Check heteroscedasticity or constant variance
-ggplot(d, aes(x = fitted, y = std_residuals)) +
-  geom_point() +
-  geom_hline(yintercept = 0)
-
-# Cook's D
-ggplot(d, aes(x = observation, y = cooks)) +
-  geom_point() +
-  geom_hline(yintercept = 1, linetype = "dotted") +
-  geom_hline(yintercept = 4/nrow(d), linetype = "dashed")
-# outliers
-d_outliers <- filter(d, cooks > 4/nrow(d))  # observation 86
-#rts_df[59,]
-rts_df[550,] # Sorex_araneus largest Cook's distance
-
-#d_outliers # no outliers when log-transformed; 2,31,33,34
-
-
-# distribution
-fitdistrplus::plotdist(df$rts)
-fitdistrplus::descdist(df$rts, discrete = FALSE)
-fit.gamma <- fitdistrplus::fitdist(df$rts, 'gamma')
-plot(fit.gamma)
-fit.gamma$aic
-fit.weibull <- fitdistrplus::fitdist(df$rts, "weibull")
-plot(fit.weibull)
-fit.weibull$aic
-fit.norm <- fitdistrplus::fitdist(df$rts, "norm")
-plot(fit.norm)
-fit.norm$aic
-fit.lnorm <- fitdistrplus::fitdist(df$rts, "lnorm")
-plot(fit.lnorm)
-fit.lnorm$aic
-
-# (gamlss)
-library(gamlss)
-fit <- fitDist(df$rts, k = 2, type = "realline", trace = FALSE, try.gamlss = TRUE)
-summary(fit)
-fit$fits  # best fit: c("SHASHo", "Sinh-Arcsinh")  
-fit$failed
-
-
-
-# brms
-# fitting a brms model with a Gaussian likelihood
-job::job({
-model_normal <- brm(rts ~ 1, family = gaussian(), data = df)
-
-# fitting a brms model with a gamma
-model_gamma <- brm(rts ~ 1, family = Gamma(), data = df)
-
-# fitting a brms model with a skew normal likelihood
-model_skew <- brm(rts ~ 1, family = skew_normal(), data = df)
-
-# fitting a brms model with a log normal likelihood
-model_lnorm <- brm(rts ~ 1, family = lognormal(), data = df)
-
-# fitting a brms model with a weibull likelihood
-model_weib <- brm(rts ~ 1, family = weibull(), data = df)
-})
-
-# posterior predictive checking
-pp_check(model_normal, ndraws = 1e2)  
-pp_check(model_gamma, ndraws = 1e2)
-pp_check(model_skew, ndraws = 1e2)
-pp_check(model_lnorm, ndraws = 1e2) # lognormal best fitting distribution
-pp_check(model_weib, ndraws = 1e2) 
-```
-
-
-### set up model species with trait data
-
-Litter size of 1 for all species and only 1 species with paternal care, so exclude litter size and paternal care from model
-
-standardize values
-```{r}
-dfls1 <- select_dfls1  %>% 
-  filter(litter_size<=1) %>%  # should probably do <1, then 9 species extra
-  mutate(across(c("litter_year", "longevity"), scale)) # standardize values
-#st$Binomial
-head(dfls1)
-
-length(unique(dfls1$Binomial))
-
-```
 
 ```{r}
 # duplicate species list for mixed-effects model
@@ -335,7 +336,7 @@ scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et
 and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
 ```{r}
 
-job::job({
+#job::job({
  
 m.intercept.ls1 <- brm(rts ~ 1 +
               (1|gr(Binomial, cov = A.ls1[[1]])) + (1|phylo), 
@@ -348,7 +349,7 @@ m.intercept.ls1 <- brm(rts ~ 1 +
   control = list(adapt_delta = 0.99, max_treedepth = 15)
   #, save_pars = save_pars(all = TRUE)
   )
-})
+#})
 
 # check summary, plot for diagnostics --> all good
 #rhat(global)
@@ -381,12 +382,12 @@ i=1
 list <- c(1:100)
 
 ## loo
-  intercept.looic  <- data.frame(runby=character(),
-                                 looic=numeric())
+  ls1.intercept.looic  <- data.frame(runby=character(),
+                                     looic=numeric())
 ## posterior samples
-  samplesi <-  colnames(intercept.samples) 
-  intercept.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samplesi)))
-  colnames(intercept.samples1) <- samplesi # assign column names
+  samplesi <-  colnames(ls1.intercept.samples) 
+  ls1.intercept.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samplesi)))
+  colnames(ls1.intercept.samples1) <- samplesi # assign column names
 
 
 for(i in 1:100){
@@ -394,16 +395,16 @@ for(i in 1:100){
   print(runby)
 
   pruned.tree <- drop.tip(trees[[runby]], 
-                          setdiff(trees[[runby]]$tip.label, TipsWant)) # TipsWantAll
+                          setdiff(trees[[runby]]$tip.label, TipsWant.ls1)) 
   A <- vcv.phylo(pruned.tree)
 
   
   m.intercepti <- brm(rts ~ 1 +
               (1|gr(Binomial, cov = A)) + (1|phylo), 
-  data = st, #st_intercept, 
+  data = dfls1, 
   family = lognormal(), 
   data2 = list(A = A),
-  prior = prior.intercept, 
+  prior = prior.intercept.ls1, 
   chains = 4, cores = mycores, 
   iter = 5000, warmup = 3000,  
   control = list(adapt_delta = 0.99, max_treedepth = 15)
@@ -413,13 +414,13 @@ for(i in 1:100){
   looic <- loo(m.intercepti)$estimate[3]
   pool <- cbind.data.frame(runby, 
                            looic)
-  intercept.looic <-rbind(intercept.looic , pool )
-  write.csv(intercept.looic,"../results/loo.intercept.looped.csv" )
+  ls1.intercept.looic <-rbind(ls1.intercept.looic , pool )
+  write.csv(ls1.intercept.looic,"../results/ls1.loo.intercept.looped.csv" )
   
   # extract samples
-  intercept.samplesi<- posterior_samples(m.intercepti)
-  post.intercept.looped<- rbind(intercept.samples1, intercept.samplesi)
-  save(post.intercept.looped, file="../results/post.intercept.looped_run1-100.robj")
+  ls1.intercept.samplesi<- posterior_samples(m.intercepti)
+  ls1.post.intercept.looped<- rbind(ls1.intercept.samples1, ls1.intercept.samplesi)
+  save(ls1.post.intercept.looped, file="../results/ls1.post.intercept.looped.robj")
   
   # extract samples
   # intercept.samplesi<- posterior_samples(m.intercepti)
@@ -500,7 +501,7 @@ scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et
 and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
 ```{r}
 
-job::job({
+#job::job({
 global.fmm.ls1 <- brm(rts ~ litter_year + longevity +
                      females_mate_multiply + 
                      (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
@@ -513,7 +514,7 @@ global.fmm.ls1 <- brm(rts ~ litter_year + longevity +
   control = list(adapt_delta = 0.99, max_treedepth = 15)
   #, save_pars = save_pars(all = TRUE)
   )
-})
+#})
 
 # check summary, plot for diagnostics --> all good
 #rhat(global)
@@ -582,12 +583,12 @@ for(i in 1:100){
   pool <- cbind.data.frame(runby, 
                            looic)
   fmm.ls1.looic <-rbind(fmm.ls1.looic , pool )
-  write.csv(fmm.ls1.looic ,"../results/loo.littersize1.looped.csv" )
+  write.csv(fmm.ls1.looic ,"../results/ls1.loo.global.looped.csv" )
   
   # extract samples
   ls1.samplesi<- posterior_samples(global.fmm.ls1i)
   post.ls1.looped<- rbind(ls1.samples1 , ls1.samplesi)
-  save(post.ls1.looped, file="../results/post.ls1.looped.robj")
+  save(post.ls1.looped, file="../results/post.ls1.global.looped.robj")
   
 }
 
@@ -644,7 +645,7 @@ http://www.stat.columbia.edu/~gelman/research/published/entropy-19-00555-v2.pdf
 https://discourse.mc-stan.org/t/help-understanding-and-setting-informative-priors-in-brms/9574/12
 sample_prior = "only" and then creating prior predictive plots via pp_check.
 ```{r}
-prior.int.ls1.fmm <- brms::get_prior(rts ~  litter_year * females_mate_multiply +
+prior.interaction.ls1 <- brms::get_prior(rts ~  litter_year * females_mate_multiply +
                                   longevity + 
             (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
           data = dfls1, 
@@ -669,7 +670,7 @@ m.int.ls1.fmm <- brm(rts ~  litter_year * females_mate_multiply +
   data = dfls1, 
   family = lognormal(), 
   data2 = list(A = A[[1]]),
-  prior = prior.int.ls1.fmm, #c(prior(student_t(3, 0, 2.5))) 
+  prior = prior.interaction.ls1, #c(prior(student_t(3, 0, 2.5))) 
   chains = 4, cores = mycores, # sample_prior = TRUE / "only"
   iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
   control = list(adapt_delta = 0.99, max_treedepth = 15)
@@ -708,7 +709,7 @@ list <- c(1:100)
 
 # make empty data frame to put data in
 ## loo
-ls1.looic  <- data.frame(runby=character(),
+ls1.interaction.looic  <- data.frame(runby=character(),
                             looic=numeric())
 ## posterior samples
   int.samplesls1 <-  colnames(m.int.ls1.fmm.samples) 
@@ -729,7 +730,7 @@ for(i in 1:100){
   data = dfls1, 
   family = lognormal(), 
   data2 = list(A = A),
-  prior = prior.int.ls1.fmm, #c(prior(student_t(3, 0, 2.5))) 
+  prior = prior.interaction.ls1, #c(prior(student_t(3, 0, 2.5))) 
   chains = 4, cores = mycores, # sample_prior = TRUE / "only"
   iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
   control = list(adapt_delta = 0.99, 
@@ -741,13 +742,13 @@ for(i in 1:100){
   looic <- loo(int.ls1i)$estimate[3]
   pool <- cbind.data.frame(runby, 
                            looic)
-  int.ls1.looic <-rbind(looic , pool )
-  write.csv(int.ls1.looic ,"../results/loo.littersize1.interaction.looped.csv" )
+  ls1.interaction.looic  <-rbind(ls1.interaction.looic , pool )
+  write.csv(ls1.interaction.looic  ,"../results/ls1.loo.interaction.looped.csv" )
   
   # extract samples
   int.ls1.samplesi<- posterior_samples(int.ls1i)
   post.int.ls1.looped<- rbind(int.ls1.samples1 , int.ls1.samplesi)
-  save(post.int.ls1.looped, file="../results/post.ls1.interaction.looped.robj")
+  save(post.int.ls1.looped, file="../results/ls1.post.interaction.looped.robj")
   
 }
 
