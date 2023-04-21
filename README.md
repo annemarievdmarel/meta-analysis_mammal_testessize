@@ -12,26 +12,26 @@ The Rmarkdown file called '2_run models(littersize1).Rmd' contains all the code 
 
 We compiled the terrestrial mammalian data into one data frame called "rts_life_mating_care.csv"
 
-order        = order of the species
-family       = family of the species
-common_name  = common name of the species
-Binomial     = scientific name of the species
-rts          = relative testes size calculated using the equation y = 0.035x^0.72, where the mass of the testes is y and the body mass is x. The relative testes size is the ratio of observed testes size to the testes size predicted by this equation (Kenagy & Trombulak, 1986).  
-exp.testes   = expected testes size
-testes_g     = testes size in g
-log.testes.  = log testes size
-ref_testes   = the source from where we got testes size data
-BM_g         = body mass in g
-log.bm.      = log body mass
-ref_bm       = the source from where we got body mass data
-litter_size  = number of offspring in a single litter
-litter_year  = number of litters per year
-longevity    = maximum lifespan
-ref_lifehistory    = the source from where we got life history data
-mating_system      = primary mating system recorded, either monogamous, polygynous, or promiscuous
-ref_mating_system  = the source from where we got mating system data
-paternal_care      = whether paternal care is present or absent
-ref_paternal_care  = the source from where we got paternal care data
+    order        = order of the species
+    family       = family of the species
+    common_name  = common name of the species
+    Binomial     = scientific name of the species
+    rts          = relative testes size calculated using the equation y = 0.035x^0.72, where the mass of the testes is y and the body mass is x. The relative testes    size is the ratio of observed testes size to the testes size predicted by this equation (Kenagy & Trombulak, 1986).  
+    exp.testes   = expected testes size
+    testes_g     = testes size in g
+    log.testes.  = log testes size
+    ref_testes   = the source from where we got testes size data
+    BM_g         = body mass in g
+    log.bm.      = log body mass
+    ref_bm       = the source from where we got body mass data
+    litter_size  = number of offspring in a single litter
+    litter_year  = number of litters per year
+    longevity    = maximum lifespan
+    ref_lifehistory    = the source from where we got life history data
+    mating_system      = primary mating system recorded, either monogamous, polygynous, or promiscuous
+    ref_mating_system  = the source from where we got mating system data
+    paternal_care      = whether paternal care is present or absent
+    ref_paternal_care  = the source from where we got paternal care data
 
 We obtained phylogenetic tree from http://vertlife.org/phylosubsets. The phylogenetic tree is called '571mammals.nex'. 
 
