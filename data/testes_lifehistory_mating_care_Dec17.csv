@@ -1,0 +1,683 @@
+X,order,family,common_name,Binomial,testes_g,log.testes.,ref_testes,BM_g,log.bm.,ref_bm,litter_size,litter_year,longevity,ref_lifehistory,mating_system,ref_mating_system,paternal_care,ref_paternal_care
+1,Rodentia,Muridae,Papuan Abeomelomys,Abeomelomys_sevia,0.854,-0.069,Breed 2000,52,1.716,Breed 2000,1,NA,NA,Capellini 2015,NA,,NA,
+2,Chiroptera,Pteropodidae,Golden-capped Fruit Bat,Acerodon_jubatus,3.2509,0.512,Pitnick 2006,518,2.714,Pitnick 2006,1,1,NA,Capellini 2015,NA,,NA,NA
+3,Carnivora,Felidae,Cheetah,Acinonyx_jubatus,10.9901,1.041,Iossa 2008,43652,4.64,Iossa 2008,3.28,0.65,20.5,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+4,Rodentia,Muridae,Northeast African Spiny Mouse,Acomys_cahirinus,0.224,-0.291,Breed 2000,27,1.878,Breed 2000,2.43,7.6,5.9,Capellini 2015,promiscuous,Sinervo 2020,no,Heldstab 2019; Lukas 2019
+5,Rodentia,Muridae,Northeast African Spiny Mouse,Acomys_cahirinus,0.5117,-0.291,Ramm 2005,76,1.878,Ramm 2005,2.43,7.6,5.9,Capellini 2015,promiscuous,Sinervo 2020,no,Heldstab 2019; Lukas 2019
+6,Diprotodontia,Acrobatidae,Feather-tailed Glider,Acrobates_pygmaeus,0.1778,-0.75,Birkhead 1998,12,1.09,Birkhead 1998,2.8,2,8.8,Capellini 2015,promiscuous,Pantheria,no,Lukas 2019
+7,Artiodactyla,Bovidae,Addax,Addax_nasomaculatus,43.1519,1.635,Anderson 2004,84918,4.929,Anderson 2004,1,0.99,28,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+8,Artiodactyla,Bovidae,Impala,Aepyceros_melampus,28.9068,1.461,Anderson 2004,57544,4.76,Anderson 2004,0.98,0.95,25.6,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019; Lukas 2019
+9,Artiodactyla,Bovidae,Impala,Aepyceros_melampus,120,1.461,Gage 2003,62500,4.76,Gage 2003,0.98,0.95,25.6,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019; Lukas 2019
+10,Diprotodontia,Potoroidae,Rufous Rat-kangaroo,Aepyprymnus_rufescens,4.6774,0.67,Birkhead 1998,2399,3.38,Birkhead 1998,1.03,3,12.8,Capellini 2015,NA,,NA,NA
+11,Rodentia,Muridae,Red Veld Aethomys,Aethomys_chrysophilus,0.862,-0.064,Breed 2000,85,1.929,Breed 2000,3.09,NA,0.75,Capellini 2015; Myrhvold et al 2015,monogamous,Lukas 2012; Lukas 2013,NA,
+12,Rodentia,Muridae,Hinde's Aethomys,Aethomys_hindei,2.768,NA,Breed 2000,143,NA,Breed 2000,2.05,NA,1.75,Capellini 2015; Myrhvold et al 2015,NA,NA,NA,
+13,Rodentia,Muridae,Tete Veld Aethomys,Aethomys_ineptus,0.72,-0.143,Breed 2000,140,2.146,Breed 2000,3.345,2,0.75,Capellini 2015; Chimimba & Linzey 2008; Myrhvold et al 2015,NA,,NA,
+14,Rodentia,Muridae,Namaqua Micaelamys,Aethomys_namaquensis,1.4757,0.169,Breed 2000,72,1.857,Breed 2000,3.49,2,4.7,Capellini 2015,NA,,no,Lukas 2019
+15,Carnivora,Ursidae,Giant Panda,Ailuropoda_melanoleuca,306.9022,2.487,Iossa 2008,117761,5.071,Iossa 2008,1.62,0.7,36.8,Capellini 2015,promiscuous,Iossa 2008,no,Heldstab 2019
+16,Rodentia,Cricetidae,Molina's Akodont,Akodon_molinae,0.4457,-0.351,Ramm 2005,41,1.618,Ramm 2005,3.77,3.9,NA,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+17,Artiodactyla,Bovidae,Hartebeest,Alcelaphus_buselaphus,107,2.029,Gage 2003,132000,5.204,Gage 2003,1,1.065,22.5,Capellini 2015; Myrhvold et al 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+18,Artiodactyla,Bovidae,Hartebeest,Alcelaphus_buselaphus,106.9055,2.029,Anderson 2004,159956,5.204,Anderson 2004,1,1.065,22.5,Capellini 2015; Myrhvold et al 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+19,Artiodactyla,Cervidae,Eurasian Elk,Alces_alces,106,2.025,Ginsberg 1990; Gage 2003,789000,5.897,Ginsberg 1990; Gage 2003,1.25,1.7,27,Capellini 2015,polygynous,Ginsberg 1990; Pantheria; Lukas 2012; Lukas 2013,no,Heldstab 2019; Lukas 2019
+20,Primates,Cercopithecidae,Allen's Swamp Monkey,Allenopithecus_nigroviridis,16.9434,1.229,Harcourt 1995,5000,3.699,Harcourt 1995,1.01,NA,27,Capellini 2015,NA,,NA,NA
+21,Primates,Atelidae,Mantled Howler,Alouatta_palliata,26.9153,1.43,Hayward 2011,7311,3.864,Hayward 2011,1.02,0.6,25,Capellini 2015,promiscuous,Kenagy 1986; Harcourt 1995,yes,Heldstab 2019
+22,Rodentia,Sciuridae,White-tailed Antelope Squirrel,Ammospermophilus_leucurus,2.138,0.33,Hayward 2011,111.1,1.994,Hayward 2011,8,1.25,11.2,Capellini 2015,promiscuous,Waterman 2007; Sinervo 2020,no,Heldstab 2019
+23,Artiodactyla,Bovidae,Barbary Sheep,Ammotragus_lervia,18.8365,1.275,Anderson 2004,68077,4.833,Anderson 2004,1.22,2,21.7,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+24,Rodentia,Muridae,Uneven-toothed Rat,Anisomys_imitator,4.167,0.62,Ramm 2007,508,2.706,Ramm 2007,NA,NA,NA,Capellini 2015,NA,,NA,
+25,Chiroptera,Phyllostomidae,Handley's Tailless Bat,Anoura_cultrata,0.0991,-1.004,Pitnick 2006,17,1.233,Pitnick 2006,1.22,NA,NA,Capellini 2015,NA,,NA,NA
+26,Chiroptera,Phyllostomidae,Geoffroy's Tailless Bat,Anoura_geoffroyi,0.05,-1.301,Pitnick 2006,15,1.179,Pitnick 2006,0.99,1,10,Capellini 2015,NA,,NA,NA
+27,Dasyuromorphia,Dasyuridae,Yellow-footed Antechinus,Antechinus_flavipes,0.1641,-0.785,Birkhead 1998,50,1.697,Birkhead 1998,8.54,1,3.9,Capellini 2015,promiscuous,Rose 1997; Pantheria,NA,NA
+28,Dasyuromorphia,Dasyuridae,Brown Antechinus,Antechinus_stuartii,0.3499,-0.456,Hayward 2011,39,1.591,Hayward 2011,6.89,1,5.4,Capellini 2015,promiscuous,Pantheria; Rose 1997,no,Heldstab 2019; Lukas 2019
+29,Dasyuromorphia,Dasyuridae,Dusky Antechinus,Antechinus_swainsonii,0.3622,-0.441,Birkhead 1998,105,2.02,Birkhead 1998,8.24,1,3.3,Capellini 2015,promiscuous,Pantheria; Rose 1997,no,Lukas 2019
+30,Artiodactyla,Bovidae,Springbok,Antidorcas_marsupialis,70.9578,1.851,Anderson 2004,40458,4.607,Anderson 2004,1,1,10,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+31,Artiodactyla,Antilocapridae,Pronghorn,Antilocapra_americana,76.0326,1.881,Ginsberg 1990,61660,4.79,Ginsberg 1990,1.93,1,15.5,Capellini 2015,promiscuous,Soulsbury 2010; Ginsberg 1990; Lukas 2013; Lukas 2012,no,Heldstab 2019; Lukas 2019
+32,Chiroptera,Vespertilionidae,Pallid Bat,Antrozous_pallidus,0.1698,-0.77,Ramm 2007,22,1.346,Ramm 2007,1.78,NA,14.8,Capellini 2015,NA,,no,Lukas 2019
+33,Chiroptera,Vespertilionidae,Pallid Bat,Antrozous_pallidus,0.1812,-0.77,Gage 2003,23,1.346,Gage 2003,1.78,NA,14.8,Capellini 2015,NA,,no,Lukas 2019
+34,Primates,Aotidae,Three-striped Night Monkey,Aotus_trivirgatus,1.2,0.079,Hayward 2011,1021,3.009,Hayward 2011,1.06,1.34,30.1,Capellini 2015; Myrhvold 2015,monogamous; polygynous,Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012,yes,Heldstab 2019
+35,Rodentia,Muridae,Striped Field Mouse,Apodemus_agrarius,0.9931,-0.003,Hayward 2011,22,1.338,Hayward 2011,5.64,3.5,4,Capellini 2015,promiscuous,Soulsbury 2010; Sinervo 2020,NA,
+36,Rodentia,Muridae,Striped Field Mouse,Apodemus_agrarius,1.232,-0.003,Breed 2000,35,1.338,Breed 2000,5.64,3.5,4,Capellini 2015,promiscuous,Soulsbury 2010; Sinervo 2020,NA,
+37,Rodentia,Muridae,Striped Field Mouse,Apodemus_agrarius,0.994,-0.003,Hayward 2011; Gage 2003; Soulsbury 2010,21.8,1.338,Hayward 2011; Gage 2003; Soulsbury 2010,5.64,3.5,4,Capellini 2015,promiscuous,Soulsbury 2010; Sinervo 2020,NA,
+38,Rodentia,Muridae,Small Japanese Field Mouse,Apodemus_argenteus,0.651,-0.207,Hayward 2011,21,1.322,Hayward 2011,4.12,3.8,5,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,NA,
+39,Rodentia,Muridae,Yellow-necked Field Mouse,Apodemus_flavicollis,0.891,-0.05,Hayward 2011; Breed 2000; Gage 2003: Soulsbury 2010,29.1,1.464,Hayward 2011; Breed 2000; Gage 2003: Soulsbury 2010,4.94,3,4.5,Capellini 2015,promiscuous,Soulsbury 2010; Sinervo 2020,NA,
+40,Rodentia,Muridae,Taiwan Field Mouse,Apodemus_semotus,1.378,0.139,Breed 2000,28,1.447,Breed 2000,3.56,3.8,4.4,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+41,Rodentia,Muridae,Large Japanese Field Mouse,Apodemus_speciosus,1.233,0.091,Breed 2000,46,1.663,Breed 2000,4.47,NA,5.3,Capellini 2015,promiscuous,Sinervo 2020,NA,
+42,Rodentia,Muridae,Long-tailed Field Mouse,Apodemus_sylvaticus,0.788,-0.103,Hayward 2011; Breed 2000; Gage 2003: Soulsbury 2010,23.1,1.364,Hayward 2011; Breed 2000; Gage 2003: Soulsbury 2010,5.16,3.75,6.3,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007; Sinervo 2020,no,Lukas 2019
+43,Rodentia,Muridae,Herb Field Mouse,Apodemus_uralensis,0.326,-0.487,Hayward 2011; Soulsbury 2010,19.2,1.283,Hayward 2011; Soulsbury 2010,5.72,3.8,4.4,Capellini 2015; Myrhvold et al 2015,promiscuous,Soulsbury 2010; Sinervo 2020,NA,
+44,Carnivora,Otariidae,Australasian Fur Seal,Arctocephalus_forsteri,28.9734,1.462,Fitzpatrick 2012,99770,4.999,Fitzpatrick 2012,1,1,15,Capellini 2015,polygynous,Pantheria,no,Lukas 2019
+45,Carnivora,Otariidae,Brown Fur Seal,Arctocephalus_pusillus,44.157,1.645,Fitzpatrick 2012,125026,5.097,Fitzpatrick 2012,1,1,32.1,Capellini 2015,polygynous,Pantheria,no,Heldstab 2019; Lukas 2019
+46,Carnivora,Otariidae,Subantarctic Fur Seal,Arctocephalus_tropicalis,28.9734,1.462,Fitzpatrick 2012,96605,4.985,Fitzpatrick 2012,1.4,1,23,Capellini 2015,polygynous,Pantheria,no,Heldstab 2019; Lukas 2019
+47,Chiroptera,Phyllostomidae,Tree Bat,Ardops_nichollsi,0.0991,-1.004,Pitnick 2006,17,1.228,Pitnick 2006,0.99,2,NA,Capellini 2015,NA,,NA,NA
+48,Chiroptera,Phyllostomidae,Jamaican Fruit-eating Bat,Artibeus_jamaicensis,0.0511,-1.292,Pitnick 2006,40,1.602,Pitnick 2006,1,2,19.2,Capellini 2015,polygynous,Hosken 2001; Soulsbury 2010,NA,NA
+49,Chiroptera,Phyllostomidae,Great Fruit-eating Bat,Artibeus_lituratus,0.2291,-0.64,Pitnick 2006,79,1.898,Pitnick 2006,1,2,10.45,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+50,Rodentia,Cricetidae,Eurasian Water Vole,Arvicola_amphibius,2.1184,0.326,Hayward 2011,270,2.432,Hayward 2011,4.76,3.5,5,Capellini 2015,NA,,no,Heldstab 2019
+51,Erinaceomorpha,Erinaceidae,Four-toed Hedgehog,Atelerix_albiventris,2.3388,0.369,Anderson 2004,520,2.716,Anderson 2004,3.98,1,11.4,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+52,Primates,Atelidae,Black-headed Spider Monkey,Ateles_fusciceps,9.0991,0.959,Moller 1988,4864,3.687,Moller 1988,1.01,0.5,46,Capellini 2015,promiscuous,Moller 1988,yes,Heldstab 2019
+53,Primates,Atelidae,Geoffroy's Spider Monkey,Ateles_geoffroyi,13.3968,1.127,Hayward 2011,7943,3.9,Hayward 2011,1.01,0.32,48,Capellini 2015,promiscuous,Pantheria; Kenagy 1986; Moller 1988; Harcourt 1995,yes,Heldstab 2019
+54,Rodentia,Sciuridae,Barbary Ground Squirrel,Atlantoxerus_getulus,6.46,NA,NA,221.1,NA,NA,2.9,1,5,van der Marel 2020,promiscuous,"van der Marel, pers. comm.",no,"van der Marel, pers. comm."
+55,Primates,Indridae,Eastern Woolly Lemur,Avahi_laniger,2.0893,0.32,Harcourt 1995,1300,3.114,Harcourt 1995,1.01,1,NA,Capellini 2015,monogamous,Pantheria; Lukas 2013; Lukas 2012; Harcourt 1995,no,Heldstab 2019; Lukas 2019
+56,Artiodactyla,Cervidae,Chital,Axis_axis,13.4586,1.129,Anderson 2004,54325,4.735,Anderson 2004,1.01,1,20.8,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+57,Artiodactyla,Cervidae,Hog Deer,Axis_porcinus,49.4311,1.694,Anderson 2004,51523,4.712,Anderson 2004,1,1,22.9,Capellini 2015,polygynous,Anderson 2004; Pantheria; Lukas 2012; Lukas 2013,no,Heldstab 2019
+58,Cetacea,Balaenidae,Bowhead,Balaena_mysticetus,162929.6033,5.212,Macleod 2010,51050500,7.708,Macleod 2010,1,0.41,211,Capellini 2015,NA,,NA,NA
+59,Cetacea,Balaenopteridae,Common Minke Whale,Balaenoptera_acutorostrata,8790.2252,3.944,Dines 2015,11994993,7.079,Dines 2015,1,1,50,Capellini 2015,promiscuous,Skaugh 2008,NA,NA
+60,Cetacea,Balaenopteridae,Sei Whale,Balaenoptera_borealis,16405.8977,4.215,Macleod 2010,17988709,7.255,Macleod 2010,1.02,0.41,74,Capellini 2015,NA,,NA,NA
+61,Cetacea,Balaenopteridae,Bryde's Whale,Balaenoptera_edeni,19998.6187,4.301,Macleod 2010,17988709,7.255,Macleod 2010,0.97,0.5,72,Capellini 2015,NA,,NA,NA
+62,Cetacea,Balaenopteridae,Blue Whale,Balaenoptera_musculus,69984.1996,4.845,Macleod 2010,106905488,8.029,Macleod 2010,1,0.45,110,Capellini 2015,NA,,NA,NA
+63,Cetacea,Balaenopteridae,Fin Whale,Balaenoptera_physalus,1648.1624,3.217,Hayward 2011,38106582,7.581,Hayward 2011,1.01,0.37,116,Capellini 2015,NA,,NA,NA
+64,Rodentia,Muridae,Lesser Bandicoot Rat,Bandicota_bengalensis,2.121,0.327,Breed 2000,289,2.461,Breed 2000,7.29,5.9,NA,Capellini 2015,NA,,NA,
+65,Rodentia,Muridae,Greater Bandicoot Rat,Bandicota_indica,2.035,0.309,Hayward 2011; Breed 2000,613,2.787,Hayward 2011; Breed 2000,6.12,5.1228,4.2,Myrhvold 2015,NA,,NA,
+66,Rodentia,Muridae,Savile's Bandicoot Rat,Bandicota_savilei,1.263,0.101,Breed 2000,274,2.438,Breed 2000,NA,NA,NA,NA,NA,,NA,
+67,Rodentia,Bathyergidae,Cape Dune Mole-rat,Bathyergus_suillus,2.2029,0.343,Ramm 2005,750,2.875,Ramm 2005,2.89,1.5,1.5,Capellini 2015; Myrhvold 2015,NA,,no,Heldstab 2019
+68,Rodentia,Muridae,Mindanao Batomys,Batomys_salomonseni,1.556,0.192,Breed 2000,194,2.288,Breed 2000,NA,NA,NA,NA,NA,,NA,
+69,Cetacea,Ziphiidae,Baird's Beaked Whale,Berardius_bairdii,10000,4,Macleod 2010,11376273,7.056,Macleod 2010,0.98,0.33,84,Capellini 2015,NA,,NA,NA
+70,Rodentia,Muridae,Bower's Berylmys,Berylmys_bowersi,14.431,1.159,Breed 2000,431,2.634,Breed 2000,3.88,NA,2.9,Capellini 2015,NA,,NA,
+71,Diprotodontia,Potoroidae,Eastern Bettong,Bettongia_gaimardi,5.7412,0.759,Rose 1997,1683,3.226,Rose 1997,1,3.25,11.8,Capellini 2015,NA,,NA,NA
+72,Diprotodontia,Potoroidae,Woylie,Bettongia_penicillata,1.6672,0.222,Birkhead 1998,873,2.941,Birkhead 1998,1,3,18.8,Capellini 2015,NA,,NA,NA
+73,Artiodactyla,Bovidae,European Bison,Bison_bonasus,509.3309,2.707,Ginsberg 1990,674528,5.829,Ginsberg 1990,1,1,27,Capellini 2015,promiscuous,Ginsberg 1990,NA,NA
+74,Artiodactyla,Bovidae,Aurochs,Bos_taurus,681,2.297,Gage 2003,630400,5.954,Gage 2003,1,1,20,Capellini 2015,polygynous,Anderson 2004; Lazo 1995; Bailey 2003,no,Heldstab 2019
+75,Artiodactyla,Bovidae,Aurochs,Bos_taurus,198.1527,2.297,Anderson 2004,899498,5.954,Anderson 2004,1,1,20,Capellini 2015,polygynous,Anderson 2004; Lazo 1995; Bailey 2003,no,Heldstab 2019
+76,Chiroptera,Phyllostomidae,Antillean Fruit-eating Bat,Brachyphylla_cavernarum,0.064,-1.194,Pitnick 2006,40,1.603,Pitnick 2006,1,1.5,NA,Capellini 2015,NA,,NA,NA
+77,Artiodactyla,Bovidae,Takin,Budorcas_taxicolor,93.3254,1.97,Anderson 2004,250035,5.398,Anderson 2004,1.22,1,21.9,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+78,Rodentia,Muridae,Mindanao Bullimus,Bullimus_bagobus,4.08,0.611,Breed 2000,380,2.58,Breed 2000,NA,NA,NA,NA,NA,,NA,
+79,Rodentia,Muridae,Andrew's Bunomys,Bunomys_andrewsi,0.4074,-0.39,Breed 2000,137,2.137,Breed 2000,NA,NA,NA,NA,NA,,NA,NA
+80,Rodentia,Muridae,Common Bunomys,Bunomys_chrysocomus,3.523,0.547,Breed 2000,117,2.068,Breed 2000,NA,NA,NA,NA,NA,,NA,
+81,Rodentia,Muridae,Northeastern Peninsula Bunomys,Bunomys_fratrorum,0.407,NA,Breed 2000,137,NA,Breed 2000,NA,NA,NA,NA,NA,NA,NA,
+82,Diprotodontia,Burramyidae,Mountain Pygmy Possum,Burramys_parvus,0.0372,-1.429,Birkhead 1998,39,1.591,Birkhead 1998,3.6,1,12,Capellini 2015,NA,,NA,NA
+83,Primates,Pitheciidae,Bald Uacari,Cacajao_calvus,5.7943,0.763,Harcourt 1995,3451,3.538,Harcourt 1995,1.01,0.5,35.8,Capellini 2015,promiscuous,Harcourt 1995,no,Heldstab 2019
+84,Primates,Cebidae,White-headed Marmoset,Callithrix_geoffroyi,0.5495,-0.26,Anderson 2004,380,2.58,Anderson 2004,2,2,17.6,Capellini 2015; Myrhvold 2015,monogamous; polygynous,Lukas 2013; Lukas 2012,NA,NA
+85,Primates,Cebidae,Common Marmoset,Callithrix_jacchus,1.3,0.114,Hayward 2011; Gage 2003,320,2.505,Hayward 2011; Gage 2003,2.31,2,22.8,Capellini 2015,monogamous,Kenagy 1986; Lukas 2013; Lukas 2012; Lupold 2014,yes,LH19; Held19
+86,Carnivora,Otariidae,Northern Fur Seal,Callorhinus_ursinus,63.6,1.803,Hayward 2011,29000,4.462,Hayward 2011,1.04,0.5,30,Capellini 2015,polygynous,Ferguson 2004,no,Heldstab 2019; Lukas 2019
+87,Rodentia,Sciuridae,Golden-mantled Ground Squirrel,Callospermophilus_lateralis,3.2509,0.512,Hayward 2011,187,2.273,Hayward 2011,NA,NA,NA,NA,promiscuous,Kenagy 1986; Waterman 2007,NA,NA
+88,Rodentia,Sciuridae,Cascade golden-mantled ground squirrel,Callospermophilus_saturatus,2.3014,0.362,Hayward 2011,227,2.356,Hayward 2011,NA,NA,NA,NA,NA,,NA,NA
+89,Rodentia,Cricetidae,Drylands Laucha,Calomys_musculinus,0.1977,-0.704,Ramm 2005,35,1.549,Ramm 2005,6.27,NA,1.583333333,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+90,Artiodactyla,Camelidae,One-humped Camel,Camelus_dromedarius,121.6186,2.085,Anderson 2004,799834,5.903,Anderson 2004,0.98,1,40,Capellini 2015,polygynous,Anderson 2004; Nowak 1983,no,Heldstab 2019
+91,Carnivora,Canidae,Golden Jackal,Canis_aureus,13.3045,1.124,Iossa 2008,10000,4,Iossa 2008,3.74,1,18.8,Capellini 2015,monogamous; polygynous,Iossa 2008; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004,yes,Heldstab 2019
+92,Carnivora,Canidae,Coyote,Canis_latrans,15.4,1.188,Soulsbury 2010,10600,4.025,Soulsbury 2010,5.72,1,21.8,Capellini 2015,monogamous,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004,yes,LH19; Held19
+93,Carnivora,Canidae,Wolf,Canis_lupus,27.3527,1.437,Iossa 2008,32810,4.516,Iossa 2008,4.98,2,29.5,Capellini 2015,monogamous; polygynous,Iossa 2008; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004,yes,Heldstab 2019; Lukas 2019
+94,Cetacea,Neobalaenidae,Pygmy Right Whale,Caperea_marginata,1901.0783,3.279,Macleod 2010,2897344,6.462,Macleod 2010,0.98,NA,NA,Capellini 2015,NA,,NA,NA
+95,Artiodactyla,Bovidae,Markhor,Capra_falconeri,20.9411,1.321,Anderson 2004,38019,4.58,Anderson 2004,1.73,NA,19.1,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+96,Artiodactyla,Bovidae,Alpine Ibex,Capra_ibex,38.3707,1.584,Anderson 2004,74989,4.875,Anderson 2004,1.11,0.75,22.3,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+97,Artiodactyla,Cervidae,European Roe,Capreolus_capreolus,45,1.653,Hayward 2011; Soulsbury 2010,20500,4.31,Hayward 2011; Soulsbury 2010,1.79,1,17.5,Capellini 2015,polygynous,Soulsbury 2010; Kenagy 1986; Pantheria,no,Heldstab 2019; Lukas 2019
+98,Artiodactyla,Bovidae,Japanese Serow,Capricornis_crispus,63.9735,1.806,Ginsberg 1990,119950,5.079,Ginsberg 1990,1,1,24,Capellini 2015,promiscuous,Ginsberg 1990; Lukas 2013,NA,NA
+99,Chiroptera,Megadermatidae,Heart-nosed Bat,Cardioderma_cor,0.04,-1.398,Ramm 2007,29,1.462,Ramm 2007,1,2,NA,Capellini 2015,monogamous; polygynous,Hosken 2001; Pitnick 2006; Pantheria; Lukas 2013,NA,NA
+100,Chiroptera,Phyllostomidae,Seba's Short-tailed Bat,Carollia_perspicillata,0.125,-0.903,Pitnick 2006,18,1.267,Pitnick 2006,1,2,17,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006; Pantheria,NA,NA
+101,Rodentia,Castoridae,American Beaver,Castor_canadensis,9.3,0.968,Hayward 2011,19055,4.28,AWD,3.6,1,23.4,Capellini 2015,monogamous,Soulsbury 2010; Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012,yes,Heldstab 2019
+102,Rodentia,Castoridae,Eurasian Beaver,Castor_fiber,17.4181,1.241,Hayward 2011,18197,4.26,Hayward 2011,2.95,1,35,Capellini 2015,monogamous; polygynous,Lukas 2013; Lukas 2012; Waterman 2007,NA,NA
+103,Rodentia,Caviidae,Brazilian Guinea Pig,Cavia_aperea,3.73,0.572,Soulsbury 2010,567,2.754,Soulsbury 2010,2.14,5,6,Capellini 2015,polygynous,Soulsbury 2010; Waterman 2007; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+104,Rodentia,Caviidae,Domesticated Guinea Pig,Cavia_porcellus,4.1,0.613,Hayward 2011; Gage 2003,813,2.91,Hayward 2011; Gage 2003,3.45,5,14.8,Capellini 2015,polygynous,Sinervo 2020,no,Lukas 2019
+105,Primates,Cebidae,Pygmy Marmoset,Cebuella_pygmaea,0.3304,-0.481,Harcourt 1995,130,2.114,Harcourt 1995,1.93,1.56,18.6,Capellini 2015; Myrhvold 2015,monogamous,Pantheria; Lukas 2012; Lukas 2013,yes,Heldstab 2019
+106,Chiroptera,Phyllostomidae,Wrinkle-faced Bat,Centurio_senex,0.08,-1.097,Pitnick 2006,23,1.36,Pitnick 2006,0.99,NA,NA,Capellini 2015,NA,,NA,NA
+107,Artiodactyla,Bovidae,Yellow-backed Duiker,Cephalophus_silvicultor,33.266,1.522,Anderson 2004,76560,4.884,Anderson 2004,1,1,22.5,Capellini 2015,polygynous,Anderson 2004; Pantheria; Lukas 2012; Lukas 2013,no,Heldstab 2019
+108,Cetacea,Delphinidae,Commerson's Dolphin,Cephalorhynchus_commersonii,1218.9896,3.086,Macleod 2010,77983,4.892,Macleod 2010,0.98,NA,18,Capellini 2015,NA,,NA,NA
+109,Cetacea,Delphinidae,Haviside's Dolphin,Cephalorhynchus_heavisidii,534.5644,2.728,Dines 2015,74473,4.872,Dines 2015,0.97,NA,NA,Capellini 2015,NA,,NA,NA
+110,Cetacea,Delphinidae,Hector's Dolphin,Cephalorhynchus_hectori,887.156,2.948,Macleod 2010,41115,4.614,Macleod 2010,1,0.42,20,Capellini 2015,NA,,NA,NA
+111,Diprotodontia,Burramyidae,Southwestern Pygmy Possum,Cercartetus_concinnus,0.0619,-1.208,Birkhead 1998,14,1.155,Birkhead 1998,4.6,1,8,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+112,Diprotodontia,Burramyidae,Eastern Pygmy Possum,Cercartetus_nanus,0.067,-1.174,Birkhead 1998,19,1.29,Birkhead 1998,3.96,2,10.3,Capellini 2015,NA,,NA,NA
+113,Primates,Cercopithecidae,Sooty Mangabey,Cercocebus_atys,25.1189,1.4,Harcourt 1995,8690,3.939,Harcourt 1995,1.01,1,26.8,Capellini 2015; Myrhvold 2015,promiscuous,Lukas 2013; Harcourt 1995,no,Heldstab 2019; Lukas 2019
+114,Primates,Cercopithecidae,Collared Mangabey,Cercocebus_torquatus,25.1189,1.4,Hayward 2011,8690,3.939,Hayward 2011,1.01,0.95,46,Capellini 2015; Myrhvold 2015,NA,,no,Lukas 2019
+115,Primates,Cercopithecidae,Red-tailed Monkey,Cercopithecus_ascanius,2.9992,0.477,Harcourt 1995,5358,3.729,Harcourt 1995,1.01,0.52,31.2,Capellini 2015; Myrhvold 2015,promiscuous,Harcourt 1995,no,Heldstab 2019; Lukas 2019
+116,Artiodactyla,Cervidae,White-lipped Deer,Cervus_albirostris,116.4126,2.066,Anderson 2004,215774,5.334,Anderson 2004,1,1,18,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+117,Artiodactyla,Cervidae,Red Deer (see comments,Cervus_elaphus,218,1.848,Gage 2003; Soulsbury 2010,122000,5.505,Gage 2003; Soulsbury 2010,1.09,0.91,31.5,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986,no,Heldstab 2019; Lukas 2019
+118,Artiodactyla,Cervidae,Red Deer (see comments,Cervus_elaphus,70.4693,1.848,Anderson 2004,240867,5.505,Capellini 2015,1.09,0.91,31.5,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986,no,Heldstab 2019; Lukas 2019
+119,Chiroptera,Molossidae,Little Free-tailed Bat,Chaerephon_pumilus,0.038,-1.42,Pitnick 2006,11,1.033,Pitnick 2006,1,3,5,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+120,Rodentia,Heteromyidae,Long-tailed Pocket Mouse,Chaetodipus_formosus,0.2099,-0.678,Hayward 2011,20,1.294,Hayward 2011,5.28,1,7.1,Capellini 2015,promiscuous,Waterman 2007,NA,NA
+121,Chiroptera,Vespertilionidae,Gould's Wattled Bat,Chalinolobus_gouldii,0.0145,-2,Ramm 2007; Gage 2003,14,1.13,Ramm 2007; Gage 2003,1.41,1,7.6,Capellini 2015; Myrhvold et al 2015,NA,,no,Lukas 2019
+122,Primates,Cheirogaleidae,Greater Dwarf Lemur,Cheirogaleus_major,2.3014,0.362,Harcourt 1995,340,2.531,Harcourt 1995,2.26,NA,15,Capellini 2015,polygynous,Pantheria; Lukas 2013; Lukas 2012,NA,NA
+123,Rodentia,Chinchillidae,Long-tailed Chinchilla,Chinchilla_lanigera,5.2,0.716,Hayward 2011,422,2.626,Hayward 2011,1.87,2,17.2,Capellini 2015,NA,,no,Heldstab 2019
+124,Rodentia,Muridae,Indomalayan Pencil-tailed Tree Mouse,Chiropodomys_gliroides,0.38,-0.42,Breed 2000,22,1.342,Breed 2000,1.65,NA,3.6,Capellini 2015,NA,,NA,
+125,Rodentia,Muridae,Lesser Chiruromys,Chiruromys_vates,1.744,0.242,Breed 2000,48,1.681,Breed 2000,1.07,NA,NA,Capellini 2015,NA,,NA,
+126,Primates,Cercopithecidae,Grivet,Chlorocebus_aethiops,13,1.314,Gage 2003,4950,3.723,Gage 2003,1,1,31.6,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988; Harcourt 1995; Lupold 2018,no,Heldstab 2019; Lukas 2019
+127,Primates,Cercopithecidae,Grivet,Chlorocebus_aethiops,20.6063,1.314,Hayward 2011,5284,3.723,Hayward 2011,1,1,31.6,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988; Harcourt 1995; Lupold 2018,no,Heldstab 2019; Lukas 2019
+128,Chiroptera,Phyllostomidae,Woolly False Vampire Bat,Chrotopterus_auritus,0.182,-0.74,Pitnick 2006,92,1.964,Pitnick 2006,0.99,1,NA,Capellini 2015,monogamous,Hosken 2001; Pitnick 2006; Lukas 2013,NA,NA
+129,Carnivora,Canidae,Maned Wolf,Chrysocyon_brachyurus,12.6765,1.103,Iossa 2008,31477,4.498,Iossa 2008,2,NA,16.8,Capellini 2015,monogamous,Iossa 2008; Pantheria; Lukas 2013,yes,Heldstab 2019
+130,Rodentia,Erethizontidae,Brazilian Porcupine,Coendou_prehensilis,2.4491,0.389,Anderson 2004,3027,3.481,Anderson 2004,0.98,1.11,26.6,Capellini 2015; Myrhvold 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,NA,NA
+131,Chiroptera,Emballonuridae,African Sheath-tailed Bat,Coleura_afra,0.03,-1.523,Pitnick 2006,10,1,Pitnick 2006,1,1.5,NA,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+132,Primates,Cercopithecidae,Mantled Guereza,Colobus_guereza,2.9785,0.474,Harcourt 1995,10399,4.017,Harcourt 1995,1,0.59,35,Capellini 2015,promiscuous,Harcourt 1995,no,Heldstab 2019; Lukas 2019
+133,Primates,Cercopithecidae,King Colobus,Colobus_polykomos,13.7088,1.137,Hayward 2011,9840,3.993,Hayward 2011,1,0.55,33.9,Capellini 2015,promiscuous,Kenagy 1986; Harcourt 1995,no,Heldstab 2019
+134,Rodentia,Muridae,Brush-tailed Conilurus,Conilurus_penicillatus,4.388,0.642,Ramm 2007; Breed 2000,184,2.265,Ramm 2007; Breed 2000,2,NA,5,Capellini 2015,NA,,NA,
+135,Artiodactyla,Bovidae,Black Wildebeest,Connochaetes_gnou,137.0882,2.137,Ginsberg 1990,136144,5.134,Ginsberg 1990,1,NA,21.8,Capellini 2015,promiscuous,Ginsberg 1990,NA,NA
+136,Artiodactyla,Bovidae,Blue Wildebeest,Connochaetes_taurinus,306,2.486,Ginsberg 1990,227000,5.356,Ginsberg 1990,0.98,1,24.3,Capellini 2015,promiscuous,Ginsberg 1990,no,Heldstab 2019; Lukas 2019
+137,Chiroptera,Vespertilionidae,Rafinesque's Big-eared Bat,Corynorhinus_rafinesquii,0.377,-0.42,Gage 2003; Ramm 2007,9,0.959,Gage 2003; Ramm 2007,1,1,10.1,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,
+138,Soricomorpha,Soricidae,Greater White-toothed Shrew,Crocidura_russula,0.04,-1.398,Soulsbury 2010,14.2,1.152,Soulsbury 2010,4.04,3.5,4,Capellini 2015,monogamous,Soulsbury 2010,no,Lukas 2019
+139,Soricomorpha,Soricidae,Lesser White-toothed Shrew,Crocidura_suaveolens,0.1,-1,Hayward 2011,7,0.875,Hayward 2011,3.49,3.5,4,Capellini 2015,NA,,NA,NA
+140,Carnivora,Hyaenidae,Spotted Hyena,Crocuta_crocuta,9.85,0.993,Soulsbury 2010,45000,4.653,Soulsbury 2010,1.91,1,41.1,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+141,Rodentia,Bathyergidae,Southern African Mole-rat,Cryptomys_hottentotus,0.58,-0.237,Soulsbury 2010,104,2.017,Soulsbury 2010,2.48,2,11,Capellini 2015,monogamous,Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012,NA,
+142,Carnivora,Eupleridae,Fossa,Cryptoprocta_ferox,11.1429,1.047,Anderson 2004,10691,4.029,Anderson 2004,2.98,1,23.1,Capellini 2015,promiscuous,Ferguson 2004; Iossa 2008,no,Heldstab 2019
+143,Rodentia,Ctenomyidae,Los Talas Tuco-tuco,Ctenomys_talarum,0.3,-0.5,Hayward 2011; Soulsbury 2010,136,2.127,Hayward 2011; Soulsbury 2010,4.34,1.5,3,Capellini 2015,polygynous,Soulsbury 2010; Waterman 2007; Sinervo 2020,no,Heldstab 2019
+144,Carnivora,Canidae,Dhole,Cuon_alpinus,6.3533,0.803,Anderson 2004,17865,4.252,Anderson 2004,4.3,1,21.8,Capellini 2015,monogamous; polygynous,Lukas 2013; Lukas 2012,yes,Heldstab 2019; Lukas 2019
+145,Carnivora,Herpestidae,Yellow Mongoose,Cynictis_penicillata,1.98,0.297,Soulsbury 2010,900,2.954,Soulsbury 2010,2.15,2,15.2,Capellini 2015,polygynous,Iossa 2008; Soulsbury 2010; Lukas 2013; Lukas 2012,yes,LH19; Held19
+146,Chiroptera,Molossidae,Search Results,Cynomops_abrasus,0.1849,-0.733,Pitnick 2006,8,0.903,Pitnick 2006,0.98,NA,NA,Capellini 2015,NA,,NA,NA
+147,Rodentia,Sciuridae,Black-tailed Prairie Dog,Cynomys_ludovicianus,4,0.602,Soulsbury 2010,1050,3.021,Soulsbury 2010,4.43,1,11,Capellini 2015,polygynous,Soulsbury 2010; Waterman 2007; Sinervo 2020,no,Heldstab 2019; Lukas 2019
+148,Chiroptera,Pteropodidae,Lesser Short-nosed Fruit Bat,Cynopterus_brachyotis,0.1199,-0.921,Ramm 2007,31,1.498,Ramm 2007,0.99,2,10.1,Capellini 2015,NA,,NA,NA
+149,Chiroptera,Pteropodidae,Greater Short-nosed Fruit Bat,Cynopterus_sphinx,0.1799,-0.745,Ramm 2007,37,1.57,Ramm 2007,1.5,2,10,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+150,Carnivora,Phocidae,Hooded Seal,Cystophora_cristata,108.1434,2.034,Fitzpatrick 2012,256448,5.409,Fitzpatrick 2012,1,1,35,Capellini 2015,monogamous,Lukas 2012; Ferguson 2004,no,Lukas 2019
+151,Diprotodontia,Petauridae,Striped Possum,Dactylopsila_trivirgata,0.25,-0.602,Birkhead 1998,467,2.669,Birkhead 1998,1.54,1.1,9.6,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+152,Artiodactyla,Cervidae,Fallow Deer,Dama_dama,39.9945,1.602,Anderson 2004,59566,4.775,Anderson 2004,1,1,25,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+153,Artiodactyla,Cervidae,Fallow Deer,Dama_dama,133,1.602,Gage 2003,63700,4.775,Gage 2003,1,1,25,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+154,Artiodactyla,Bovidae,Bontebok (see comments,Damaliscus_pygargus,160,2.204,Ginsberg 1990,72500,4.86,Ginsberg 1990,1.41,1.1,23,Capellini 2015; Myrhvold et al 2015,promiscuous,Ginsberg 1990,NA,
+155,Dasyuromorphia,Dasyuridae,Little Red Kaluta,Dasykaluta_rosamondae,0.1259,-0.9,Birkhead 1998,35,1.548,Birkhead 1998,6.64,1,3,Capellini 2015,NA,,NA,NA
+156,Rodentia,Muridae,Common Dasymys,Dasymys_incomtus,3.048,0.484,Hayward 2011,242,2.384,Hayward 2011,2.67,NA,1,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+157,Dasyuromorphia,Dasyuridae,Kowari,Dasyuroides_byrnei,1.3804,0.14,Birkhead 1998,124,2.092,Birkhead 1998,5.14,2,8,Capellini 2015,NA,,NA,NA
+158,Dasyuromorphia,Dasyuridae,Northern Quoll,Dasyurus_hallucatus,1.349,0.13,Birkhead 1998,940,2.973,Birkhead 1998,6.39,1,5.9,Capellini 2015,NA,,no,Lukas 2019
+159,Dasyuromorphia,Dasyuridae,Eastern Quoll,Dasyurus_viverrinus,2.355,0.372,Birkhead 1998,1524,3.183,Birkhead 1998,4.7,1,6.8,Capellini 2015,NA,,no,Lukas 2019
+160,Cetacea,Monodontidae,Beluga,Delphinapterus_leucas,1663.4127,3.221,Dines 2015,1253141,6.098,Dines 2015,1.02,0.41,40,Capellini 2015,NA,,NA,NA
+161,Cetacea,Delphinidae,Long-beaked Common Dolphin,Delphinus_capensis,6412.0958,3.807,Dines 2015,127057,5.104,Dines 2015,0.99,0.42,20,Myrhvold 2015,NA,,NA,NA
+162,Cetacea,Delphinidae,Short-beaked Common Dolphin,Delphinus_delphis,1610.6456,3.207,Hayward 2011,83946,4.924,Hayward 2011,0.98,0.42,20,Capellini 2015,NA,,NA,NA
+163,Chiroptera,Phyllostomidae,Pygmy Fruit-eating Bat,Dermanura_phaeotis,0.0511,-1.292,Pitnick 2006,12,1.079,Pitnick 2006,0.99,2,NA,Capellini 2015,NA,,NA,NA
+164,Chiroptera,Phyllostomidae,Common Vampire Bat,Desmodus_rotundus,0.083,-1.081,Pitnick 2006,34,1.528,Pitnick 2006,1,1.26,29.2,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+165,Rodentia,Cricetidae,Nearctic Collared Lemming,Dicrostonyx_groenlandicus,0.138,-0.86,Hayward 2011,62,1.792,Hayward 2011,3.78,2,3.3,Capellini 2015,NA,,no,Lukas 2019
+166,Didelphimorphia,Didelphidae,White-eared Opossum,Didelphis_albiventris,1.762,0.246,Birkhead 1998,1291,3.111,Birkhead 1998,6.9,1.5,1.7,Capellini 2015,NA,,NA,NA
+167,Didelphimorphia,Didelphidae,Virginia Opossum,Didelphis_virginiana,2.9992,0.477,Anderson 2004,3750,3.574,Anderson 2004,8.62,2,6.6,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,no,Lukas 2019
+168,Rodentia,Heteromyidae,Merriam's Kangaroo Rat,Dipodomys_merriami,0.4498,-0.347,Hayward 2011,39,1.587,Hayward 2011,2.39,1.75,9.7,Capellini 2015,promiscuous,Waterman 2007,no,Heldstab 2019
+169,Rodentia,Heteromyidae,Chisel-toothed Kangaroo Rat,Dipodomys_microps,0.3999,-0.398,Hayward 2011,62,1.789,Hayward 2011,2.37,1,3.658333333,Capellini 2015; Myrhvold 2015,NA,,no,Heldstab 2019
+170,Rodentia,Heteromyidae,Ord's Kangaroo Rat,Dipodomys_ordii,0.5297,-0.276,Hayward 2011,56,1.751,Hayward 2011,2.95,2,9.9,Capellini 2015,NA,,no,Heldstab 2019
+171,Rodentia,Heteromyidae,Panamint Kangaroo Rat,Dipodomys_panamintinus,0.52,-0.284,Hayward 2011,76,1.883,Hayward 2011,3.78,1,4.533333333,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+172,Chiroptera,Phyllostomidae,Honduran White Bat,Ectophylla_alba,0.0791,-1.102,Pitnick 2006,5,0.74,Pitnick 2006,0.99,2,NA,Capellini 2015,polygynous,Hosken 2001,NA,NA
+173,Chiroptera,Pteropodidae,African Straw-colored Fruit Bat,Eidolon_helvum,2.8314,0.452,Ramm 2007,259,2.413,Ramm 2007,1.08,1,21.8325,Capellini 2015,promiscuous,Hosken 2001,NA,NA
+174,Artiodactyla,Cervidae,Pere David's Deer,Elaphurus_davidianus,57.4116,1.759,Anderson 2004,213796,5.33,Anderson 2004,1.22,1,27.5,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+175,Proboscidea,Elephantidae,Asian Elephant,Elephas_maximus,4000,3.458,Gage 2003,4545000,6.658,Gage 2003,1.41,0.23,78,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990; Rasmussen 1998; Poole1989,no,Heldstab 2019
+176,Proboscidea,Elephantidae,Asian Elephant,Elephas_maximus,2870.7806,3.458,Anderson 2004,4549881,6.658,Anderson 2004,1.41,0.23,78,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990; Rasmussen 1998; Poole 1989,no,Heldstab 2019
+177,Chiroptera,Pteropodidae,Lesser Dawn Bat,Eonycteris_spelaea,0.3999,-0.398,Ramm 2007,62,1.792,Ramm 2007,1,2,5,Capellini 2015,polygynous,Hosken 2001; Lukas 2013,NA,NA
+178,Chiroptera,Pteropodidae,Peters's Epauletted Fruit Bat,Epomophorus_crypturus,0.8995,-0.046,Pitnick 2006,80,1.903,Pitnick 2006,0.99,1.5,7.8,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+179,Chiroptera,Pteropodidae,Franquet's Epauletted Fruit<b> </b>Bat,Epomops_franqueti,0.2992,-0.524,Pitnick 2006,160,2.204,Pitnick 2006,1,2,3.158333333,Capellini 2015; Myrhvold 2015,polygynous,Hosken 2001,NA,NA
+180,Chiroptera,Vespertilionidae,Argentinian Brown Bat,Eptesicus_furinalis,0.06,-1.222,Ramm 2007,8,0.877,Ramm 2007,1.86,2,NA,Capellini 2015,NA,,NA,NA
+181,Perissodactyla,Equidae,Ass,Equus_africanus,202.3019,2.306,Anderson 2004,289734,5.462,Anderson 2004,1,1,47,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+182,Perissodactyla,Equidae,Horse,Equus_caballus,339.6253,2.531,Anderson 2004,250035,5.398,Anderson 2004,1,1,62,Capellini 2015,promiscuous,Linklater 1999; Anderson 2004; Ginsberg 1990,no,Heldstab 2019; Lukas 2019
+183,Perissodactyla,Equidae,Horse,Equus_caballus,416,2.531,Gage 2003,450000,5.398,Gage 2003,1,1,62,Capellini 2015,promiscuous,Linklater 1999; Anderson 2004; Ginsberg 1990,no,Heldstab 2019; Lukas 2019
+184,Perissodactyla,Equidae,Grevy's Zebra,Equus_grevyi,1150,3.061,Ginsberg 1990,386000,5.587,Ginsberg 1990,1,0.5,31,Capellini 2015,promiscuous,Ginsberg 1990,NA,
+185,Perissodactyla,Equidae,Kiang,Equus_kiang,162.181,2.21,Anderson 2004,349945,5.544,Anderson 2004,1,0.5,30.1,Myrhvold 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,NA,NA
+186,Perissodactyla,Equidae,Burchell's Zebra,Equus_quagga,301.9952,2.48,Ginsberg 1990,238232,5.377,Ginsberg 1990,1,0.64,40,Capellini 2015,polygynous,Pantheria; Lukas 2012; Lukas 2013,no,Lukas 2019
+187,Perissodactyla,Equidae,Mountain Zebra,Equus_zebra,139.9587,2.146,Anderson 2004,343558,5.536,Anderson 2004,1,0.35,33.2,Capellini 2015,polygynous,Anderson 2004; Lukas 2013; Lukas 2012; Ginsberg 1990,no,Heldstab 2019; Lukas 2019
+188,Carnivora,Phocidae,Bearded Seal,Erignathus_barbatus,128.5287,2.109,Fitzpatrick 2012,269774,5.431,Fitzpatrick 2012,1,1,31.4525,Capellini 2015,promiscuous,Ferguson 2004,no,Heldstab 2019
+189,Erinaceomorpha,Erinaceidae,West European Hedgehog,Erinaceus_europaeus,2.31,0.494,Gage 2003,665,2.845,Gage 2003,4.64,1.5,14,Capellini 2015,promiscuous,Anderson 2004; Soulsbury 2010,no,Heldstab 2019
+190,Erinaceomorpha,Erinaceidae,West European Hedgehog,Erinaceus_europaeus,3.1189,0.494,Anderson 2004,700,2.845,Anderson 2004,4.64,1.5,14,Capellini 2015,promiscuous,Anderson 2004; Soulsbury 2010,no,Heldstab 2019
+191,Primates,Cercopithecidae,Patas Monkey,Erythrocebus_patas,7.2,0.857,Ramm 2007,10000,4,Ramm 2007,1.01,0.97,28.3,Capellini 2015,promiscuous,Moller 1988; Harcourt 1995,no,Heldstab 2019; Lukas 2019
+192,Cetacea,Eschrichtiidae,Gray Whale,Eschrichtius_robustus,67452.8028,4.829,Macleod 2010,25003454,7.398,Macleod 2010,1,0.5,77,Capellini 2015,NA,,NA,NA
+193,Cetacea,Balaenidae,North Pacific Right Whale,Eubalaena_japonica,972747.2238,5.988,Dines 2015,78523563,7.895,Dines 2015,1,0.29,67,Myrhvold 2015,NA,,NA,NA
+194,Chiroptera,Vespertilionidae,Spotted Bat,Euderma_maculatum,0.0661,-1.18,Pitnick 2006,15,1.176,Pitnick 2006,1,NA,NA,Capellini 2015,NA,,NA,NA
+195,Artiodactyla,Bovidae,Red-fronted Gazelle,Eudorcas_rufifrons,7.9068,0.898,Anderson 2004,26792,4.428,Anderson 2004,1,1.5,14.5,Capellini 2015; Myrhvold 2015,promiscuous,Anderson 2004,NA,NA
+196,Primates,Lemuridae,Brown Lemur,Eulemur_fulvus,7.7804,0.891,Soulsbury 2010,2500,3.398,Soulsbury 2010,1.1,2,37,Capellini 2015,polygynous,Soulsbury 2010; Ostner 1999,no,Heldstab 2019; Lukas 2019
+197,Primates,Lemuridae,Black Lemur,Eulemur_macaco,16.6341,1.221,Harcourt 1995,2500,3.398,Harcourt 1995,1.04,1,36.2,Capellini 2015,promiscuous,Harcourt 1995,no,Heldstab 2019; Lukas 2019
+198,Carnivora,Otariidae,Steller Sea Lion,Eumetopias_jubatus,177.8279,2.25,Ramm 2007,968278,5.986,Ramm 2007,0.96,1,32.8,Capellini 2015,polygynous,Ferguson 2004,no,Heldstab 2019; Lukas 2019
+199,Carnivora,Felidae,Domestic Cat,Felis_catus,3.61,0.558,Soulsbury 2010,4770,3.679,Soulsbury 2010,4,1.5,34,Capellini 2015,polygynous,Iossa 2008; Soulsbury 2010,no,Lukas 2019
+200,Carnivora,Felidae,Jungle Cat,Felis_chaus,4.6238,0.665,Iossa 2008,8072,3.907,Iossa 2008,2.94,2,20,Capellini 2015,NA,,no,Heldstab 2019
+201,Carnivora,Felidae,Black-footed Cat,Felis_nigripes,2.1135,0.325,Iossa 2008,1982,3.297,Iossa 2008,1.78,4,15.6,Capellini 2015,polygynous,Iossa 2008,yes,Heldstab 2019
+202,Carnivora,Felidae,Wildcat,Felis_silvestris,2.7416,0.438,Anderson 2004,2742,3.438,Anderson 2004,3.59,2,28,Capellini 2015,promiscuous,Anderson 2004; Iossa 2008; Ferguson 2004,no,Heldstab 2019
+203,Cetacea,Delphinidae,Pygmy Killer Whale,Feresa_attenuata,753.3556,2.877,Dines 2015,226986,5.356,Dines 2015,1,NA,21,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+204,Rodentia,Sciuridae,Indian Palm Squirrel,Funambulus_palmarum,2.26,0.354,Hayward 2011,144,2.157,Hayward 2011,2.62,NA,5.5,Capellini 2015; Myrhvold et al 2015,NA,,NA,NA
+205,Primates,Galagidae,Senegal Bushbaby,Galago_senegalensis,1.6596,0.22,Anderson 2004,210,2.322,Anderson 2004,1.5,2,18.833,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+206,Primates,Galagidae,Prince Demidoff's bushbaby,Galagoides_demidovii,0.9795,-0.009,Anderson 2004,81,1.908,Anderson 2004,NA,NA,NA,NA,promiscuous,Anderson 2004,NA,NA
+207,Carnivora,Eupleridae,Ring-tailed Mongoose,Galidia_elegans,1.6943,0.229,Iossa 2008,993,2.997,Iossa 2008,1,1,26,Capellini 2015,monogamous; polygynous,Iossa 2008; Pantheria; Lukas 2013; Lukas 2012,yes,Heldstab 2019
+208,Artiodactyla,Bovidae,Cuvier's Gazelle,Gazella_cuvieri,39.355,1.595,Anderson 2004,26485,4.423,Anderson 2004,1.46,NA,17.9,Capellini 2015,polygynous,Anderson 2004; Alados 1994,NA,NA
+209,Artiodactyla,Bovidae,Dorcas Gazelle,Gazella_dorcas,31.4775,1.498,Anderson 2004,14622,4.165,Anderson 2004,1.22,1,23.7,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013; Pantheria,no,Heldstab 2019; Lukas 2019
+210,Artiodactyla,Bovidae,Slender-horned Gazelle,Gazella_leptoceros,6.6527,0.823,Anderson 2004,11508,4.061,Anderson 2004,1,NA,14.6,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+211,Artiodactyla,Bovidae,Goitered Gazelle,Gazella_subgutturosa,8.2414,0.916,Anderson 2004,25003,4.398,Anderson 2004,1.39,1,20,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+212,Carnivora,Viverridae,Common Genet,Genetta_genetta,0.9594,-0.018,Iossa 2008,1888,3.276,Iossa 2008,2.29,2,34,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004; Lukas 2013; Lukas 2012,no,Heldstab 2019
+213,Rodentia,Muridae,Cape Gerbil,Gerbilliscus_afra,7.7446,0.889,Hayward 2011,92,1.964,Hayward 2011,3.92,6.5,5.7,Capellini 2015,NA,,NA,NA
+214,Rodentia,Muridae,Highveld Gerbil,Gerbilliscus_brantsii,5.3088,0.725,Hayward 2011,94,1.973,Hayward 2011,2.74,4,0.75,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+215,Artiodactyla,Giraffidae,Giraffe,Giraffa_camelopardalis,230.1442,2.362,Anderson 2004,897429,5.953,Anderson 2004,1.29,1,39.5,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019; Lukas 2019
+216,Artiodactyla,Giraffidae,Giraffe,Giraffa_camelopardalis,1074,2.362,Gage 2003,1201000,5.953,Gage 2003,1.29,1,39.5,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019; Lukas 2019
+217,Cetacea,Delphinidae,Short-finned Pilot Whale,Globicephala_macrorhynchus,14387.9858,4.158,Dines 2015,3597493,6.556,Dines 2015,0.97,0.24,63,Capellini 2015,NA,,NA,NA
+218,Cetacea,Delphinidae,Long-finned Pilot Whale,Globicephala_melas,5000.3453,3.699,Hayward 2011,1945360,6.289,Hayward 2011,1,0.2,60,Capellini 2015,NA,,NA,NA
+219,Chiroptera,Phyllostomidae,Gray's Long-tongued Bat,Glossophaga_leachii,0.029,-1.538,Pitnick 2006,8,0.924,Pitnick 2006,0.98,2,10.4875,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+220,Chiroptera,Phyllostomidae,Western Long-tongued Bat,Glossophaga_morenoi,0.01,-2,Hosken 2001,8,0.924,Hosken 2001,1,NA,NA,Capellini 2015,NA,,NA,NA
+221,Primates,Hominidae,Eastern Gorilla,Gorilla_beringei,35.9749,1.556,Soulsbury 2010,199986,5.301,Soulsbury 2010,1,0.3,50.45,Myrhvold 2015,promiscuous,Soulsbury 2010; Lukas 2013,yes,Heldstab 2019
+222,Primates,Hominidae,Western Gorilla,Gorilla_gorilla,23.1739,1.365,Hayward 2011,133968,5.127,Hayward 2011,1.05,0.26,55.4,Capellini 2015,polygynous,Pantheria; Kenagy 1986; Moller 1988; Harcourt 1995,yes,Heldstab 2019
+223,Primates,Hominidae,Western Gorilla,Gorilla_gorilla,29.6,1.365,Gage 2003,169000,5.127,Gage 2003,1.05,0.26,55.4,Capellini 2015,polygynous,Pantheria; Kenagy 1986; Moller 1988; Harcourt 1995,yes,Heldstab 2019
+224,Rodentia,Muridae,Macmillan's Grammomys,Grammomys_macmillani,0.662,-0.179,Breed 2000,40,1.602,Breed 2000,NA,NA,NA,NA,NA,,NA,
+225,Cetacea,Delphinidae,Risso's Dolphin,Grampus_griseus,12705.7411,4.104,Dines 2015,500035,5.699,Dines 2015,0.97,0.416666667,42.5,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+226,Carnivora,Mustelidae,Wolverine,Gulo_gulo,17,1.23,Soulsbury 2010,14500,4.161,Soulsbury 2010,2.84,0.5,19.5,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004,no,Heldstab 2019
+227,Diprotodontia,Petauridae,Leadebeater's Possum,Gymnobelideus_leadbeateri,0.1119,-0.951,Birkhead 1998,116,2.063,Birkhead 1998,1.54,2,14.1,Capellini 2015,polygynous,Lukas 2012; Lukas 2013; Rose 1997,NA,NA
+228,Carnivora,Phocidae,Gray Seal,Halichoerus_grypus,159.9558,2.204,Fitzpatrick 2012,250611,5.399,Fitzpatrick 2012,0.96,0.93,46.6725,Capellini 2015,polygynous,Lukas 2012; Ferguson 2004; Pantheria,no,Heldstab 2019; Lukas 2019
+229,Chiroptera,Pteropodidae,Philippine Pygmy Fruit Bat,Haplonycteris_fischeri,0.8091,-0.092,Pitnick 2006,18,1.255,Pitnick 2006,1,1,10,Capellini 2015,NA,,NA,NA
+230,Carnivora,Herpestidae,Common Dwarf Mongoose,Helogale_parvula,0.45,-0.347,Anderson 2004; Soulsbury 2010,455,2.658,Anderson 2004; Soulsbury 2010,3.49,2.25,18,Capellini 2015,promiscuous,Soulsbury 2010,yes,LH19; Held19
+231,Artiodactyla,Bovidae,Himalayan Tahr,Hemitragus_jemlahicus,26.7301,1.427,Anderson 2004,76033,4.881,Anderson 2004,1.01,1,21.8,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+232,Carnivora,Felidae,Jaguarundi,Herpailurus_yagouaroundi,3.3037,0.519,Iossa 2008,5902,3.771,Iossa 2008,NA,NA,NA,NA,polygynous,Iossa 2008,NA,NA
+233,Carnivora,Herpestidae,Small Asian Mongoose,Herpestes_javanicus,3.9174,0.593,Iossa 2008,693,2.841,Iossa 2008,2.21,2,10,Capellini 2015,promiscuous,Iossa 2008,no,Heldstab 2019
+234,Hyracoidea,Procaviidae,Yellow-spotted Rock Hyrax,Heterohyrax_brucei,13.0017,1.114,Hayward 2011,1500,3.176,Hayward 2011,1.89,1,14,Capellini 2015,polygynous,Pantheria,NA,NA
+235,Artiodactyla,Hippopotamidae,Common Hippopotamus,Hippopotamus_amphibius,650,2.813,Ginsberg 1990,1600000,6.204,Ginsberg 1990,1,1,61.2,Capellini 2015,polygynous,Pantheria; Lukas 2012; Lukas 2013,no,Heldstab 2019; Lukas 2019
+236,Chiroptera,Hipposideridae,Cantor's Leaf-nosed Bat,Hipposideros_galeritus,0.2999,-0.523,Ramm 2007,7,0.813,Ramm 2007,0.99,1,NA,Capellini 2015,monogamous; polygynous,Hosken 2001; Pitnick 2006; Lukas 2013,NA,NA
+237,Chiroptera,Hipposideridae,Schneider's Leaf-nosed Bat,Hipposideros_speoris,0.04,-1.398,Ramm 2007,10,1,Ramm 2007,0.99,1,NA,Capellini 2015,NA,,NA,NA
+238,Primates,Hominidae,Human,Homo_sapiens,50.2343,1.701,Anderson 2004,63533,4.803,Anderson 2004,1,0.485,122.5,Capellini 2015; Myrhvold et al 2015,polygynous,Anderson 2004; Kenagy 1986; Moller 1988; Harcourt 1995,NA,
+239,Primates,Hominidae,Human,Homo_sapiens,40.5,1.701,Gage 2003,65650,4.803,Gage 2003,1,0.485,122.5,Capellini 2015; Myrhvold et al 2015,polygynous,Anderson 2004; Kenagy 1986; Moller 1988; Harcourt 1995,NA,
+240,Carnivora,Hyaenidae,Striped Hyena,Hyaena_hyaena,7.7804,0.891,Iossa 2008,33497,4.525,Iossa 2008,2.44,1.36,25,Capellini 2015; Myrhvold 2015,promiscuous,Iossa 2008; Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+241,Rodentia,Caviidae,Capybara,Hydrochoerus_hydrochaeris,40.8319,1.611,Anderson 2004,58884,4.77,Anderson 2004,3.49,1,15.1,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+242,Rodentia,Muridae,Common Water Rat,Hydromys_chrysogaster,11.765,1.071,Ramm 2007; Breed 2000,745,2.872,Ramm 2007; Breed 2000,3.51,2.5,7.3,Capellini 2015,NA,,NA,
+243,Primates,Hylobatidae,Agile Gibbon,Hylobates_agilis,6.3241,0.801,Harcourt 1995,5998,3.778,Harcourt 1995,1.02,0.475,49,Capellini 2015; Myrhvold 2015,monogamous,Lukas 2013; Lukas 2012; Harcourt 1995,NA,NA
+244,Primates,Hylobatidae,Lar Gibbon,Hylobates_lar,5.5,0.74,Hayward 2011,5500,3.74,Hayward 2011,1.01,0.45,56,Capellini 2015,monogamous,Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012; Moller 1988; Harcourt 1995; Lupold 2014,yes,Heldstab 2019
+245,Primates,Hylobatidae,Silvery Javan Gibbon,Hylobates_moloch,5.7016,0.756,Hayward 2011,5610,3.749,Hayward 2011,1,0.42,45,Capellini 2015,monogamous; polygynous,Kenagy 1986; Lukas 2013; Lukas 2012; Moller 1988; Harcourt 1995,NA,NA
+246,Artiodactyla,Suidae,Giant Forest Hog,Hylochoerus_meinertzhageni,500.0345,2.699,Ginsberg 1990,201837,5.305,Ginsberg 1990,4,1.1,18,Capellini 2015; Myrhvold 2015,promiscuous,Ginsberg 1990; Lukas 2013,NA,NA
+247,Rodentia,Muridae,Eastern Hyomys,Hyomys_goliath,3.751,0.574,Hayward 2011; Breed 2000,1000,3,Hayward 2011; Breed 2000,1,NA,0.42,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+248,Cetacea,Ziphiidae,Northern Bottlenose Whale,Hyperoodon_ampullatus,1196.7405,3.078,Macleod 2010,6998420,6.845,Macleod 2010,1,0.7,37,Capellini 2015,NA,,NA,NA
+249,Chiroptera,Pteropodidae,Hammer-headed Fruit Bat,Hypsignathus_monstrosus,0.2399,-0.62,Ramm 2007,354,2.549,Ramm 2007,1.4,2,12.225,Capellini 2015; Myrhvold 2015,polygynous,Hosken 2001,NA,NA
+250,Rodentia,Hystricidae,Cape Porcupine,Hystrix_africaeaustralis,6.6527,0.823,Ramm 2005,11803,4.072,Ramm 2005,1.51,1.5,23.1,Capellini 2015,monogamous; polygynous,Lukas 2013; Lukas 2012; Waterman 2007,NA,NA
+251,Cetacea,Iniidae,Amazon River Dolphin,Inia_geoffrensis,1445.4398,3.16,Hayward 2011,121899,5.086,Hayward 2011,1,0.666666667,31.3,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+252,Peramelemorphia,Peramelidae,Northern Brown Bandicoot,Isoodon_macrourus,2.3605,0.373,Hayward 2011,1276,3.106,Hayward 2011,3.13,2.66,6.8,Capellini 2015,polygynous,Nowak 1983,NA,NA
+253,Peramelemorphia,Peramelidae,Southern Brown Bandicoot,Isoodon_obesulus,1.6982,0.23,Hayward 2011,1057,3.024,Hayward 2011,2.33,2.2,6.5,Capellini 2015,polygynous,Rose 1997; Lukas 2013,NA,NA
+254,Artiodactyla,Bovidae,Waterbuck,Kobus_ellipsiprymnus,73.6207,1.867,Anderson 2004,202302,5.306,Anderson 2004,1,1.1,30,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+255,Artiodactyla,Bovidae,Kob,Kobus_kob,41.6869,1.62,Anderson 2004,145881,5.164,Anderson 2004,1,1.3,21.92,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+256,Artiodactyla,Bovidae,Lechwe,Kobus_leche,67.9204,1.832,Anderson 2004,108893,5.037,Anderson 2004,1,1,25.4,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+257,Artiodactyla,Bovidae,Nile Lechwe,Kobus_megaceros,51.9996,1.716,Anderson 2004,103514,5.015,Anderson 2004,1,1,21.1,Myrhvold 2015,promiscuous,Anderson 2004,NA,NA
+258,Cetacea,Physeteridae,Pygmy Sperm Whale,Kogia_breviceps,10495.4243,4.021,Dines 2015,453942,5.657,Dines 2015,0.97,1,17,Capellini 2015,NA,,NA,NA
+259,Cetacea,Physeteridae,Dwarf Sperm Whale,Kogia_sima,4920.3954,3.692,Dines 2015,302691,5.481,Dines 2015,1,0.5,NA,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+260,Cetacea,Delphinidae,Atlantic White-sided Dolphin,Lagenorhynchus_acutus,331.8945,2.521,Macleod 2010,199986,5.301,Macleod 2010,1.22,0.41,27,Capellini 2015,NA,,NA,NA
+261,Cetacea,Delphinidae,Pacific White-sided Dolphin,Lagenorhynchus_obliquidens,1116.8632,3.048,Dines 2015,198153,5.297,Dines 2015,1,0.212765957,46,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+262,Cetacea,Delphinidae,Dusky Dolphin,Lagenorhynchus_obscurus,2673.0064,3.427,Macleod 2010,79983,4.903,Macleod 2010,1,0.42,35,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+263,Primates,Atelidae,Brown Woolly Monkey,Lagothrix_lagotricha,11.1944,1.049,Hayward 2011,5224,3.718,Hayward 2011,1.01,0.5,32,Capellini 2015,promiscuous,Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012; Harcourt 1995,no,Heldstab 2019; Lukas 2019
+264,Diprotodontia,Vombatidae,Southern Hairy-nosed Wombat,Lasiorhinus_latifrons,16.1436,1.208,Anderson 2004,25527,4.407,Anderson 2004,1,1,29.9,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+265,Chiroptera,Vespertilionidae,Southern Yellow Bat,Lasiurus_ega,0.02,-1.699,Ramm 2007,12,1.077,Ramm 2007,2.14,1,NA,Capellini 2015,NA,,NA,NA
+266,Chiroptera,Vespertilionidae,Seminole Bat,Lasiurus_seminolus,0.013,-1.886,Pitnick 2006,9,0.968,Pitnick 2006,2.68,1,2.575,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+267,Rodentia,Muridae,Forrest's Leggadina,Leggadina_forresti,0.545,-0.264,Ramm 2007; Breed 2000,30,1.477,Ramm 2007; Breed 2000,3.5,NA,0.25,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+268,Primates,Cebidae,Black-mantled Tamarin,Leontocebus_nigricollis,3.8019,0.58,Harcourt 1995,470,2.672,Harcourt 1995,1.82,2.9,20.2,Capellini 2015; Myrhvold 2015,promiscuous,Lukas 2012; Lukas 2013; Harcourt 1995; Moller 1988,yes,Heldstab 2019
+269,Primates,Cebidae,Golden Lion Tamarin,Leontopithecus_rosalia,0.4797,-0.319,Anderson 2004,520,2.716,Anderson 2004,1.94,1.75,31.6,Capellini 2015,monogamous,Lukas 2013; Lukas 2012; Harcourt 1995,yes,Heldstab 2019; Lukas 2019
+270,Carnivora,Felidae,Colocolo,Leopardus_colocolo,3.0832,0.489,Iossa 2008,3350,3.525,Iossa 2008,2.5,NA,19.6,Capellini 2015,polygynous,Iossa 2008,NA,NA
+271,Carnivora,Felidae,Geoffroy's Cat,Leopardus_geoffroyi,6.0534,0.782,Iossa 2008,4797,3.681,Iossa 2008,2.04,1.33,23,Capellini 2015,polygynous,Iossa 2008,NA,NA
+272,Carnivora,Felidae,Ocelot,Leopardus_pardalis,35.2371,1.547,Iossa 2008,14289,4.155,Iossa 2008,1.66,1,28.2,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+273,Carnivora,Felidae,Oncilla,Leopardus_tigrinus,4.6238,0.665,Iossa 2008,2999,3.477,Iossa 2008,1.5,NA,21.9,Capellini 2015,polygynous,Iossa 2008; Lukas 2013,NA,NA
+274,Carnivora,Felidae,Margay,Leopardus_wiedii,6.8234,0.834,Iossa 2008,3396,3.531,Iossa 2008,1.5,NA,24,Capellini 2015,polygynous,Iossa 2008,NA,NA
+275,Rodentia,Muridae,Indomalayan Leopoldamys,Leopoldamys_sabanus,9.035,0.956,Breed 2000,373,2.572,Breed 2000,3.33,NA,2,Capellini 2015,NA,,NA,
+276,Rodentia,Muridae,Greater Stick-nest Rat,Leporillus_conditor,4,0.602,Ramm 2007; Breed 2000,187,2.272,Ramm 2007; Breed 2000,2.95,NA,5.3,Capellini 2015,NA,,NA,
+277,Rodentia,Muridae,Elegant Leptomys,Leptomys_elegans,1.24,0.093,Ramm 2007; Breed 2000,69,1.839,Ramm 2007; Breed 2000,1.88,NA,NA,Capellini 2015,NA,,NA,
+278,Chiroptera,Phyllostomidae,Curacaoan Long-nosed Bat,Leptonycteris_curasoae,0.263,-0.58,Pitnick 2006,29,1.462,Pitnick 2006,0.99,1,10.1,Capellini 2015,NA,,NA,NA
+279,Lagomorpha,Leporidae,Snowshoe Hare,Lepus_americanus,11.8,1.072,Soulsbury 2010,1300,3.114,Soulsbury 2010,3.54,2.5,8,Capellini 2015,promiscuous,Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+280,Lagomorpha,Leporidae,Mountain Hare,Lepus_timidus,16.6725,1.222,Hayward 2011,2636,3.421,Hayward 2011,3.16,3,18,Capellini 2015,NA,,no,Heldstab 2019
+281,Cetacea,Iniidae,Baiji,Lipotes_vexillifer,59.9791,1.778,Dines 2015,125026,5.097,Dines 2015,1,0.5,24,Capellini 2015,NA,,NA,NA
+282,Cetacea,Delphinidae,Northern Right Whale Dolphin,Lissodelphis_borealis,1545.2544,3.189,Dines 2015,113501,5.055,Dines 2015,NA,0.5,21.58333333,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+283,Carnivora,Mustelidae,North American River Otter,Lontra_canadensis,17.9887,1.255,Iossa 2008,6194,3.792,Iossa 2008,2.67,0.94,23,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019
+284,Primates,Cercopithecidae,Black Crested Mangabey,Lophocebus_aterrimus,13.7721,1.139,Harcourt 1995,10000,4,Harcourt 1995,1,0.4,26.8,Myrhvold 2015,promiscuous,Lukas 2013; Harcourt 1995,NA,NA
+285,Chiroptera,Phyllostomidae,Carriker's Round-eared Bat,Lophostoma_carrikeri,0.4093,-0.388,Pitnick 2006,23,1.362,Pitnick 2006,NA,2,NA,Capellini 2015,NA,,NA,NA
+286,Rodentia,Muridae,Ethiopian Buff-spotted Brush-furred Rat,Lophuromys_flavopunctatus,1.138,0.056,Breed 2000,60,1.778,Breed 2000,2.3,NA,0.75,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+287,Rodentia,Muridae,Long-footed Tree Mouse,Lorentzimys_nouhuysi,0.357,-0.447,Hayward 2011; Breed 200,16,1.204,Hayward 2011; Breed 200,2.75,NA,NA,Capellini 2015,NA,,NA,
+288,Primates,Lorisidae,Red Slender Loris,Loris_tardigradus,2.0417,0.31,Hayward 2011,277,2.442,Hayward 2011,1.44,1.5,19.3,Capellini 2015,promiscuous,Gupta 2007 (and therein),no,Heldstab 2019; Lukas 2019
+289,Proboscidea,Elephantidae,African Bush Elephant,Loxodonta_africana,4530,3.486,Gage 2003,4365000,6.702,Gage 2003,0.84,0.21,80,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990; Rasmussen 1998,no,Heldstab 2019; Lukas 2019
+290,Proboscidea,Elephantidae,African Bush Elephant,Loxodonta_africana,3061.9634,3.486,Anderson 2004,5035006,6.702,Anderson 2004,0.84,0.21,80,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990; Rasmussen 1998,no,Heldstab 2019; Lukas 2019
+291,Carnivora,Mustelidae,European Otter,Lutra_lutra,4.0458,0.607,Anderson 2004,7816,3.893,Anderson 2004,2.01,1,22,Capellini 2015,polygynous,Anderson 2004; Iossa 2008,no,Heldstab 2019
+292,Carnivora,Canidae,South American Gray Fox,Lycalopex_griseus,11.1944,1.049,Iossa 2008,2500,3.398,Iossa 2008,4.2,NA,10.9,Capellini 2015,monogamous; polygynous,Iossa 2008,NA,NA
+293,Carnivora,Canidae,African wild dog,Lycaon_pictus,38.2825,1.583,Iossa 2008,31477,4.498,Iossa 2008,8.1,0.93,17,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012,yes,Heldstab 2019; Lukas 2019
+294,Carnivora,Felidae,Eurasian Lynx,Lynx_lynx,7.1945,0.857,Iossa 2008,19588,4.292,Iossa 2008,2.3,1,26.8,Capellini 2015,promiscuous,Iossa 2008,no,Heldstab 2019
+295,Carnivora,Felidae,Bobcat,Lynx_rufus,5.0816,0.706,Iossa 2008,11995,4.079,Iossa 2008,2.76,0.94,32.3,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019
+296,Primates,Cercopithecidae,Stump-tailed Macaque,Macaca_arctoides,48.15,1.683,Hayward 2011; Gage 2003,10510,4.022,Hayward 2011; Gage 2003,1.01,0.61,30,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988,no,Heldstab 2019; Lukas 2019
+297,Primates,Cercopithecidae,Crab-eating Macaque,Macaca_fascicularis,35.2,1.547,Anderson 2004; Gage 2003,4420,3.653,Anderson 2004; Gage 2003,1,1,39,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Moller 1988,no,Heldstab 2019; Lukas 2019
+298,Primates,Cercopithecidae,Crab-eating Macaque,Macaca_fascicularis,35.2,1.547,Anderson 2004; Gage 2003; Soulsbury 2010,4400,3.653,Anderson 2004: Soulsbury 2010,1,1,39,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Moller 1988,no,Heldstab 2019; Lukas 2019
+299,Primates,Cercopithecidae,Japanese Macaque,Macaca_fuscata,70,1.845,Soulsbury 2010,12300,4.09,Soulsbury 2010,1.02,1,38.5,Capellini 2015,promiscuous,Soulsbury 2010; Moller 1988,no,Heldstab 2019; Lukas 2019
+300,Primates,Cercopithecidae,Rhesus Monkey,Macaca_mulatta,46.2,1.69,Gage 2003,9200,4.049,Gage 2003,1.01,1,40,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988; Harcourt 1995; Lupold 2014,yes,Heldstab 2019
+301,Primates,Cercopithecidae,Rhesus Monkey,Macaca_mulatta,48.9779,1.69,Anderson 2004,11194,4.049,Anderson 2004,1.01,1,40,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988; Harcourt 1995; Lupold 2014,yes,Heldstab 2019
+302,Primates,Cercopithecidae,Southern Pig-tailed Macaque,Macaca_nemestrina,66.7,1.824,Hayward 2011,9980,3.999,Hayward 2011,1.01,0.85,37.6,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988; Lupold 2014,no,Heldstab 2019; Lukas 2019
+303,Primates,Cercopithecidae,Bonnet Macaque,Macaca_radiata,57.544,1.76,Hayward 2011,8395,3.924,Hayward 2011,1.01,1,30,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988,yes,Heldstab 2019
+304,Chiroptera,Megadermatidae,Australian False Vampire Bat,Macroderma_gigas,0.1679,-0.775,Pitnick 2006,108,2.033,Pitnick 2006,1,1,22.6,Capellini 2015,NA,,NA,NA
+305,Chiroptera,Pteropodidae,Dagger-toothed Long-nosed Fruit Bat,Macroglossus_minimus,0.14,-0.854,Ramm 2007,15,1.18,Ramm 2007,0.99,3,7.316666667,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+306,Chiroptera,Pteropodidae,Greater Long-nosed Fruit Bat,Macroglossus_sobrinus,0.16,-0.796,Ramm 2007,23,1.362,Ramm 2007,1,NA,5,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+307,Diprotodontia,Macropodidae,Agile Wallaby,Macropus_agilis,25.6448,1.409,Birkhead 1998,11402,4.057,Birkhead 1998,1.01,1.8,16.9,Capellini 2015,promiscuous,Rose 1997; Pantheria,NA,NA
+308,Diprotodontia,Macropodidae,Tammar Wallaby,Macropus_eugenii,61.9441,1.792,Birkhead 1998,5848,3.767,Birkhead 1998,1.01,1,15.1,Capellini 2015,promiscuous,Rose 1997; Pantheria,NA,NA
+309,Diprotodontia,Macropodidae,Western Grey Kangaroo,Macropus_fuliginosus,51.6416,1.713,Birkhead 1998,34119,4.533,Birkhead 1998,1,1,23.2,Capellini 2015,promiscuous,Rose 1997; Pantheria,NA,NA
+310,Diprotodontia,Macropodidae,Eastern Grey Kangaroo,Macropus_giganteus,41.9759,1.623,Birkhead 1998,40738,4.61,Birkhead 1998,1,1,25,Capellini 2015,promiscuous,Pantheria; Rose 1997,no,Lukas 2019
+311,Diprotodontia,Macropodidae,Wallaroo,Macropus_robustus,39.9945,1.602,Rose 1997,29992,4.477,Rose 1997,1,0.723287671,24,Capellini 2015,promiscuous,Rose 1997; Pantheria,NA,NA
+312,Diprotodontia,Macropodidae,Red-necked Wallaby,Macropus_rufogriseus,54.5758,1.737,Birkhead 1998,18493,4.267,Birkhead 1998,1.01,1,19,Capellini 2015,promiscuous,Rose 1997; Pantheria,NA,NA
+313,Diprotodontia,Macropodidae,Red Kangaroo,Macropus_rufus,38.1944,1.582,Birkhead 1998,39811,4.6,Birkhead 1998,1,1.36,30,Capellini 2015; Myrhvold 2015,promiscuous,Pantheria,NA,NA
+314,Chiroptera,Phyllostomidae,Waterhouse's Leaf-nosed Bat,Macrotus_waterhousii,0.037,-1.432,Pitnick 2006,16,1.204,Pitnick 2006,0.98,NA,10.41666667,Capellini 2015,NA,,NA,NA
+315,Artiodactyla,Bovidae,Guenther's Dikdik,Madoqua_guentheri,3.1477,0.498,Anderson 2004,3251,3.512,Anderson 2004,0.98,2,17.5,Capellini 2015,monogamous,Anderson 2004; Lukas 2013,NA,NA
+316,Artiodactyla,Bovidae,Kirk's Dikdik,Madoqua_kirkii,8.3946,0.924,Hayward 2011,5000,3.699,Hayward 2011,0.98,2,17.3,Capellini 2015,monogamous; polygynous,Soulsbury 2010; Pantheria; Kenagy 1986; Lukas 2013; Lukas 2012,no,Heldstab 2019; Lukas 2019
+317,Rodentia,Muridae,Rothschild's Mallomys,Mallomys_rothschildi,14.35,1.157,Hayward 2011; Breed 200,1087,3.036,Hayward 2011; Breed 200,1.02,NA,NA,Capellini 2015,NA,,NA,
+318,Rodentia,Muridae,Highland Mammelomys,Mammelomys_lanosus,3.004,0.478,Breed 2000,123,2.09,Breed 2000,2.68,NA,NA,Capellini 2015,NA,,NA,
+319,Primates,Cercopithecidae,Drill,Mandrillus_leucophaeus,27.2898,1.436,Anderson 2004,28510,4.455,Anderson 2004,1.01,0.5,39,Capellini 2015,promiscuous,Anderson 2004,no,Lukas 2019
+320,Primates,Cercopithecidae,Mandrill,Mandrillus_sphinx,68.0769,1.833,Harcourt 1995,34995,4.544,Harcourt 1995,1.02,0.83,46.33,Capellini 2015,polygynous,Harcourt 1995,no,Lukas 2019
+321,Rodentia,Sciuridae,Woodchuck,Marmota_monax,7.4,0.869,Hayward 2011,2350,3.62,Hayward 2011,4.1,1,14,Capellini 2015,promiscuous,Kenagy 1986; Waterman 2007,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+322,Carnivora,Mustelidae,Fisher,Martes_pennanti,8.2414,0.916,Hayward 2011,5297,3.724,Hayward 2011,3.02,1,14.3,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+323,Rodentia,Muridae,Broad-toothed Mastacomys,Mastacomys_fuscus,3.725,0.571,Ramm 2007; Breed 2000,117,2.068,Ramm 2007; Breed 2000,1.41,NA,NA,Capellini 2015,NA,,NA,
+324,Rodentia,Muridae,Southern African Mastomys,Mastomys_coucha,0.741,-0.13,Breed 2000,70,1.845,Breed 2000,7.96,3.56,2.91,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+325,Rodentia,Muridae,Natal Mastomys,Mastomys_natalensis,0.972,0.204,Hayward 2011; Breed 2000; Soulsbury 2011,59,1.91,Hayward 2011; Breed 2000; Soulsbury 2011,9.23,2,2.74,Capellini 2015; Myrhvold et al 2015,promiscuous,Soulsbury 2010,NA,
+326,Rodentia,Muridae,Bartels's Javan Maxomys,Maxomys_bartelsii,4.205,0.624,Breed 2000,93,1.968,Breed 2000,NA,NA,NA,Capellini 2015,NA,,NA,
+327,Rodentia,Muridae,Indomalayan Maxomys,Maxomys_surifer,3.328,0.522,Breed 2000,155,2.19,Breed 2000,3.54,NA,NA,Capellini 2015,NA,,NA,
+328,Rodentia,Muridae,Whitehead's Sundaic Maxomys,Maxomys_whiteheadi,0.952,-0.021,Breed 2000,64,1.806,Breed 2000,3,NA,1.5,Myrhvold 2015,NA,,NA,
+329,Chiroptera,Megadermatidae,Greater False Vampire Bat,Megaderma_lyra,0.08,-1.097,Ramm 2007,64,1.806,Ramm 2007,1,1,14,Capellini 2015,NA,,no,Lukas 2019
+330,Chiroptera,Megadermatidae,Lesser False Vampire Bat,Megaderma_spasma,0.113,-0.947,Pitnick 2006,23,1.354,Pitnick 2006,1.41,1,14,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+331,Cetacea,Balaenopteridae,Humpback Whale,Megaptera_novaeangliae,1729,3.091,Gage 2003,32658500,7.502,Gage 2003,1,0.37,95,Capellini 2015,promiscuous,Pantheria,NA,
+332,Cetacea,Balaenopteridae,Humpback Whale,Megaptera_novaeangliae,1233.1048,3.091,Hayward 2011,31768741,7.502,Hayward 2011,1,0.37,95,Capellini 2015,promiscuous,Pantheria,NA,
+333,Carnivora,Mustelidae,European Badger,Meles_meles,14.4,1.158,Hayward 2011; Gage 2000; Soulsbury 2010,14515,4.162,Hayward 2011; Gage 2000; Soulsbury 2010,3.11,0.75,18.6,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Kenagy 1986,no,Heldstab 2019; Lukas 2019
+334,Carnivora,Mustelidae,Honey Badger,Mellivora_capensis,53.9511,1.732,Iossa 2008,9705,3.987,Iossa 2008,2.35,2,31.3,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Lukas 2019
+335,Rodentia,Muridae,Grassland Melomys,Melomys_burtoni,1.91,0.281,Breed 2000,78,1.892,Breed 2000,2.5,NA,NA,Capellini 2015,NA,,NA,
+336,Rodentia,Muridae,Fawn-footed Melomys,Melomys_cervinipes,2.782,0.444,Breed 2000,139,2.143,Breed 2000,2.2,1.3,NA,Capellini 2015,NA,,NA,
+337,Rodentia,Muridae,White-bellied Melomys,Melomys_leucogaster,1.102,0.042,Breed 2000,104,2.017,Breed 2000,2.15,NA,NA,Capellini 2015,NA,,NA,
+338,Rodentia,Muridae,Black-tailed Melomys,Melomys_rufescens,1.342,0.128,Ramm 2007,68,1.833,Ramm 2007,2.17,NA,NA,Capellini 2015,NA,,NA,
+339,Carnivora,Mephitidae,Striped Skunk,Mephitis_mephitis,5.0466,0.703,Iossa 2008,5047,3.703,Iossa 2008,5.7,2,13.9,Capellini 2015,polygynous,Iossa 2008; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+340,Rodentia,Muridae,Black-footed Mesembriomys,Mesembriomys_gouldii,5.498,0.74,Ramm 2007,545,2.736,Ramm 2007,1.87,4,7.8,Capellini 2015,NA,,NA,
+341,Rodentia,Muridae,Golden-backed Mesembriomys,Mesembriomys_macrurus,8.28,0.918,Breed 2000,341,2.533,Breed 2000,2,NA,7.1,Capellini 2015,NA,,NA,
+342,Rodentia,Cricetidae,Golden Hamster,Mesocricetus_auratus,3.17,0.501,Hayward 2011,108,2.033,Hayward 2011,8.79,4,3,Capellini 2015,NA,,no,Lukas 2019
+343,Cetacea,Ziphiidae,Hubbs' Beaked Whale,Mesoplodon_carlhubbsi,500.0345,2.699,Dines 2015,1499685,6.176,Dines 2015,0.97,NA,NA,Capellini 2015,NA,,NA,NA
+344,Cetacea,Ziphiidae,Gervais' Beaked Whale,Mesoplodon_europaeus,319.8895,2.505,Dines 2015,1199499,6.079,Dines 2015,NA,NA,48,Capellini 2015,NA,,NA,NA
+345,Cetacea,Ziphiidae,Ginkgo-toothed Beaked Whale,Mesoplodon_ginkgodens,279.8981,2.447,Dines 2015,1199499,6.079,Dines 2015,NA,NA,NA,Capellini 2015,NA,,NA,NA
+346,Cetacea,Ziphiidae,True's Beaked Whale,Mesoplodon_mirus,327.3407,2.515,Dines 2015,1020939,6.009,Dines 2015,0.97,NA,NA,Capellini 2015,NA,,NA,NA
+347,Cetacea,Ziphiidae,Perrin's beaked whale,Mesoplodon_perrini,199.9862,2.301,Dines 2015,1199499,6.079,Dines 2015,NA,NA,NA,NA,NA,,NA,NA
+348,Primates,Cebidae,Silvery Marmoset,Mico_argentatus,1.8281,0.262,Harcourt 1995,360,2.556,Harcourt 1995,1.84,2.31,16.8,Capellini 2015; Myrhvold 2015,monogamous,Lukas 2012; Lukas 2013,yes,Heldstab 2019
+349,Primates,Cheirogaleidae,Gray Mouse Lemur,Microcebus_murinus,1.83,0.262,Soulsbury 2010,71.66,1.855,Soulsbury 2010,2,1,18.2,Capellini 2015,promiscuous,Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+350,Rodentia,Muridae,Harvest Mouse,Micromys_minutus,0.15,-0.75,Breed 2000,10,0.892,Breed 2000,4.92,2.5,5,Capellini 2015,NA,,no,Heldstab 2019
+351,Rodentia,Muridae,Harvest Mouse,Micromys_minutus,0.178,-0.75,Hayward 2011; Gage 2003,7.8,0.892,Hayward 2011; Gage 2003,4.92,2.5,5,Capellini 2015,NA,,no,Heldstab 2019
+352,Chiroptera,Pteropodidae,Peters's Lesser Epauletted Fruit Bat,Micropteropus_pusillus,0.1199,-0.921,Ramm 2007,32,1.511,Ramm 2007,0.99,2,4.575,Capellini 2015; Myrhvold 2015,polygynous,Hosken 2001,NA,NA
+353,Rodentia,Cricetidae,Field Vole,Microtus_agrestis,0.804,-0.095,Hayward 2011; Gage 2003,46.4,1.667,Hayward 2011; Gage 2003,4.65,3.5,4.8,Capellini 2015,NA,,no,Lukas 2019
+354,Rodentia,Cricetidae,Common Vole,Microtus_arvalis,0.4236,-0.373,Hayward 2011,29,1.455,Hayward 2011,4.99,6,4.8,Capellini 2015,NA,,no,Heldstab 2019; Lukas 2019
+355,Rodentia,Cricetidae,California Vole,Microtus_californicus,0.2698,-0.569,Hayward 2011,66,1.818,Hayward 2011,4.41,5,2.083333333,Capellini 2015; Myrhvold 2015,polygynous,Lukas 2012; Waterman 2007; Pantheria,yes,Heldstab 2019
+356,Rodentia,Cricetidae,Montane Vole,Microtus_montanus,0.3802,-0.42,Ramm 2007,43,1.633,Ramm 2007,5.54,4.76,NA,Capellini 2015,promiscuous,Lukas 2012; Waterman 2007; Pantheria,no,Heldstab 2019
+357,Rodentia,Cricetidae,Prairie Vole,Microtus_ochrogaster,0.879,-0.056,Soulsbury 2010,38,1.58,Soulsbury 2010,3.87,4.07,5.3,Capellini 2015,monogamous; polygynous,Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012,yes,Heldstab 2019; Lukas 2019
+358,Rodentia,Cricetidae,Root Vole,Microtus_oeconomus,0.42,-0.378,Hayward 2011; Soulsbury 2010,35,1.542,Hayward 2011; Soulsbury 2010,5.62,3.5,1.8,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007; Sinervo 2020,NA,
+359,Rodentia,Cricetidae,Meadow Vole,Microtus_pennsylvanicus,1.17,0.068,Soulsbury 2010,54.6,1.737,Soulsbury 2010,5.16,2.7,1.333333333,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+360,Rodentia,Cricetidae,Woodland Vole,Microtus_pinetorum,0.07,-1.155,Ramm 2007,20,1.303,Ramm 2007,2.47,2.5,3.8,Capellini 2015,promiscuous,Waterman 2007; Lukas 2012; Lukas 2013,yes,Heldstab 2019
+361,Rodentia,Cricetidae,Common Pine Vole,Microtus_subterraneus,0.2371,-0.625,Hayward 2011,17,1.233,Hayward 2011,2.46,5.5,2.833333333,Capellini 2015,NA,,NA,NA
+362,Rodentia,Muridae,Common Metad,Millardia_meltada,1.078,0.033,Breed 2000,72,1.857,Breed 2000,5.72,6.89,NA,Capellini 2015,NA,,NA,
+363,Chiroptera,Vespertilionidae,Little Long-fingered Bat,Miniopterus_australis,0.04,-1.398,Pitnick 2006,7,0.875,Pitnick 2006,0.99,1,5.5,Capellini 2015; Myrhvold 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+364,Chiroptera,Vespertilionidae,least long-fingered bat,Miniopterus_minor,0.05,-1.301,Pitnick 2006,7,0.875,Pitnick 2006,NA,NA,NA,NA,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+365,Chiroptera,Vespertilionidae,Schreibers's Long-fingered Bat,Miniopterus_schreibersii,0.08,-1.097,Pitnick 2006,13,1.114,Pitnick 2006,0.99,1,14,Capellini 2015,NA,,NA,NA
+366,Primates,Cercopithecidae,Angolan Talapoin,Miopithecus_talapoin,5.2,0.716,Harcourt 1995,1250,3.097,Harcourt 1995,1.01,1,30.9,Capellini 2015,promiscuous,Harcourt 1995,no,Heldstab 2019
+367,Didelphimorphia,Didelphidae,Gray Short-tailed Opossum,Monodelphis_domestica,0.5702,-0.244,Birkhead 1998,110,2.041,Birkhead 1998,7.29,4,6,Capellini 2015,NA,,NA,NA
+368,Cetacea,Monodontidae,Narwhal,Monodon_monoceros,1207.8138,3.082,Dines 2015,2133045,6.329,Dines 2015,1,0.41,50,Capellini 2015,NA,,NA,NA
+369,Chiroptera,Phyllostomidae,Insular Single-leaf Bat,Monophyllus_plethodon,0.042,-1.377,Pitnick 2006,15,1.19,Pitnick 2006,0.99,NA,NA,Capellini 2015,NA,,NA,NA
+370,Chiroptera,Molossidae,Angolan Free-tailed Bat,Mops_condylurus,0.1199,-0.921,Pitnick 2006,40,1.602,Pitnick 2006,1,2,NA,Capellini 2015,NA,,NA,NA
+371,Chiroptera,Molossidae,Southern Free-tailed Bat,Mormopterus_planiceps,0.0899,-1.046,Ramm 2007,10,0.978,Ramm 2007,0.99,1,6.491666667,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+372,Carnivora,Herpestidae,Banded Mongoose,Mungos_mungo,1.762,0.246,Anderson 2004,150,2.176,Anderson 2004,2.68,2.5,17.4,Capellini 2015,promiscuous,Anderson 2004; Ferguson 2004,yes,Heldstab 2019; Lukas 2019
+373,Artiodactyla,Cervidae,Red Muntjac,Muntiacus_muntjak,6.5013,0.813,Anderson 2004,17498,4.243,Anderson 2004,1,1.5145,18.8,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,no,Heldstab 2019
+374,Rodentia,Muridae,Ryukyu Mouse,Mus_caroli,0.108,-0.967,Hayward 2011; Breed 2000,15,1.176,Hayward 2011; Breed 2000,5.805,4.57,4,Myrhvold 2015,NA,,NA,
+375,Rodentia,Muridae,Southern African Pygmy Mouse,Mus_minutoides,0.068,-1.167,Hayward 2011; Breed 2000,8,0.903,Hayward 2011; Breed 2000,4.18,4,4.3,Capellini 2015,monogamous,Lukas 2012; Sinervo 2020,NA,
+376,Rodentia,Muridae,House Mouse,Mus_musculus,0.119,-0.924,Hayward 2011; Breed 2000; Gage 2003: Soulsbury 2010,15,1.185,Hayward 2011; Breed 2000; Gage 2003: Soulsbury 2010,5.54,4.5,6,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+377,Rodentia,Muridae,House Mouse,Mus_musculus,0.159,-0.924,Soulsbury 2010,22,1.185,Soulsbury 2010,5.54,4.5,6,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+378,Rodentia,Muridae,House Mouse,Mus_musculus,0.144,-0.924,Soulsbury 2010,21,1.185,Soulsbury 2010,5.54,4.5,6,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+379,Rodentia,Muridae,House Mouse,Mus_musculus,0.126,-0.924,Soulsbury 2010,19.4,1.185,Soulsbury 2010,5.54,4.5,6,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+380,Rodentia,Muridae,House Mouse,Mus_musculus,0.116,-0.924,Soulsbury 2010,15.9,1.185,Soulsbury 2010,5.54,4.5,6,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+381,Rodentia,Muridae,House Mouse,Mus_musculus,0.112,-0.924,Soulsbury 2010,18.2,1.185,Soulsbury 2010,5.54,4.5,6,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+382,Rodentia,Muridae,House Mouse,Mus_musculus,0.123,-0.924,Soulsbury 2010,16,1.185,Soulsbury 2010,5.54,4.5,6,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+383,Rodentia,Muridae,House Mouse,Mus_musculus,0.122,-0.924,Soulsbury 2010,15,1.185,Soulsbury 2010,5.54,4.5,6,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+384,Carnivora,Mustelidae,Ermine,Mustela_erminea,2.64,0.422,Hayward 2011; Soulsbury 2010,324,2.511,Hayward 2011; Soulsbury 2010,6.74,1,12.5,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+385,Carnivora,Mustelidae,Steppe Polecat,Mustela_eversmanii,3.0549,0.485,Iossa 2008,2051,3.312,Iossa 2008,7.82,1,9.1,Capellini 2015,promiscuous,Iossa 2008,NA,NA
+386,Carnivora,Mustelidae,Long-tailed Weasel,Mustela_frenata,1.8793,0.274,Iossa 2008,287,2.458,Iossa 2008,6.5,1,8.8,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+387,Carnivora,Mustelidae,Black-footed Ferret,Mustela_nigripes,2.9717,0.473,Iossa 2008,1021,3.009,Iossa 2008,3.36,1,12,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019
+388,Carnivora,Mustelidae,Least Weasel,Mustela_nivalis,0.4198,-0.377,Hayward 2011,116,2.064,Hayward 2011,5.07,1,10,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019
+389,Carnivora,Mustelidae,European Polecat,Mustela_putorius,3.281,0.516,Hayward 2011,1047,3.02,Hayward 2011,8.48,1,14,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019
+390,Carnivora,Mustelidae,Siberian Weasel,Mustela_sibirica,1.6596,0.22,Iossa 2008,417,2.62,Iossa 2008,6.48,NA,8.8,Capellini 2015,polygynous,Iossa 2008,no,Heldstab 2019
+391,Rodentia,Cricetidae,Bank Vole,Myodes_glareolus,0.646,-0.19,Hayward 2011; Gage 2003,22,1.338,Hayward 2011,4.31,3.5,4.917,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007,no,Heldstab 2019; Lukas 2019
+392,Rodentia,Cricetidae,Gray Red-backed Vole,Myodes_rufocanus,0.161,-0.793,Soulsbury 2010,39,1.591,Soulsbury 2010,5.01,3,3.325,Capellini 2015; Myrhvold et al 2015,promiscuous,Soulsbury 2010; Lukas 2013,no,Heldstab 2019
+393,Chiroptera,Vespertilionidae,Large-footed Myotis,Myotis_adversus,0.1429,-0.845,Pitnick 2006,10,1,Pitnick 2006,1,2.5,NA,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+394,Chiroptera,Vespertilionidae,Silver-tipped Myotis,Myotis_albescens,0.3681,-0.434,Pitnick 2006,5,0.74,Pitnick 2006,0.98,2.5,NA,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+395,Chiroptera,Vespertilionidae,Rufous Myotis,Myotis_bocagii,0.08,-1.097,Pitnick 2006,8,0.903,Pitnick 2006,0.99,NA,NA,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+396,Chiroptera,Vespertilionidae,Long-eared Myotis,Myotis_evotis,0.1919,-0.717,Pitnick 2006,7,0.833,Pitnick 2006,0.98,1,22,Capellini 2015,NA,,NA,NA
+397,Chiroptera,Vespertilionidae,Little Brown Myotis,Myotis_lucifugus,0.0541,-1.301,Ramm 2007; Gage 2003,6.8,0.854,Ramm 2007; Gage 2003,1,1,34,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006; McCracken 2000,NA,
+398,Chiroptera,Vespertilionidae,Black Myotis,Myotis_nigricans,0.026,-1.585,Pitnick 2006,4,0.602,Pitnick 2006,1,2.75,7,Myrhvold 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+399,Artiodactyla,Bovidae,Himalayan Goral,Naemorhedus_goral,36.4754,1.562,Anderson 2004,27479,4.439,Anderson 2004,1,1,17.6,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013; Pantheria,NA,NA
+400,Artiodactyla,Bovidae,Dama Gazelle,Nanger_dama,15.7398,1.197,Anderson 2004,44463,4.648,Anderson 2004,1,1.56,19.3,Capellini 2015; Myrhvold 2015,NA,,no,Heldstab 2019
+401,Primates,Cercopithecidae,Proboscis Monkey,Nasalis_larvatus,14.6893,1.167,Hayward 2011,21677,4.336,Hayward 2011,1.02,0.67,25.1,Capellini 2015,promiscuous,Kenagy 1986; Harcourt 1995,no,Heldstab 2019; Lukas 2019
+402,Carnivora,Procyonidae,South American Coati,Nasua_nasua,5.1761,0.714,Iossa 2008,5636,3.751,Iossa 2008,3.69,1,23.7,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+403,Carnivora,Felidae,Clouded Leopard,Neofelis_nebulosa,30.1995,1.48,Anderson 2004,25003,4.398,Anderson 2004,2.25,NA,19.8,Capellini 2015,promiscuous,Ferguson 2004,yes,Heldstab 2019
+404,Soricomorpha,Soricidae,Eurasian Water Shrew,Neomys_fodiens,0.2099,-0.678,Hayward 2011,20,1.301,Hayward 2011,6.39,2,3.1,Capellini 2015,NA,,no,Heldstab 2019
+405,Cetacea,Phocoenidae,Finless Porpoise,Neophocaena_phocaenoides,1770.109,3.248,Macleod 2010,71779,4.856,Macleod 2010,0.97,0.5,33,Capellini 2015,NA,,NA,NA
+406,Chiroptera,Vespertilionidae,Banana Pipistrelle,Neoromicia_nana,0.031,-1.509,Pitnick 2006,3,0.544,Pitnick 2006,1.86,1.5,NA,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+407,Rodentia,Cricetidae,Southern Plains Woodrat,Neotoma_micropus,2.5,0.398,Soulsbury 2010,265,2.423,Soulsbury 2010,2.5,2,3.33,Capellini 2015,promiscuous,Soulsbury 2010,NA,
+408,Carnivora,Mustelidae,American Mink,Neovison_vison,4.9545,0.695,Soulsbury 2010,1710,3.233,Soulsbury 2010,4.5,1,11.4,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+409,Artiodactyla,Bovidae,Suni,Nesotragus_moschatus,58.8844,1.77,Anderson 2004,6501,3.813,Anderson 2004,1,1.697674419,14,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,NA,NA
+410,Rodentia,Muridae,Sundaic Arboreal<b> </b>Niviventer,Niviventer_cremoriventer,1.222,0.087,Breed 2000,75,1.875,Breed 2000,3.7,NA,0.83,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+411,Rodentia,Muridae,Soft-furred Taiwan Niviventer,Niviventer_culturatus,1.876,0.273,Breed 2000,103,2.013,Breed 2000,NA,NA,NA,Capellini 2015,NA,,NA,
+412,Chiroptera,Noctilionidae,Lesser Bulldog Bat,Noctilio_albiventris,0.064,-1.194,Pitnick 2006,31,1.494,Pitnick 2006,0.99,1,11.8,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+413,Chiroptera,Noctilionidae,Greater Bulldog Bat,Noctilio_leporinus,0.177,-0.752,Pitnick 2006,65,1.812,Pitnick 2006,1,1,11.8,Myrhvold 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+414,Rodentia,Muridae,Spinifex Hopping Mouse,Notomys_alexis,0.041,-1.301,Breed 2000,30,1.531,Breed 2000,4.01,3.73,6.4,Capellini 2015; Myrhvold et al 2015,monogamous,Lukas 2012; Sinervo 2020,yes,Held19; Sin20
+415,Rodentia,Muridae,Spinifex Hopping Mouse,Notomys_alexis,0.05,-1.301,Hayward 2011; Gage 2003,34,1.531,Hayward 2011; Gage 2003,4.01,3.73,6.4,Capellini 2015; Myrhvold et al 2015,monogamous,Lukas 2012; Sinervo 2020,yes,Held19; Sin20
+416,Rodentia,Muridae,Fawn Hopping Mouse,Notomys_cervinus,0.224,-0.703,Breed 2000,37,1.519,Breed 2000,2.95,NA,0.42,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,NA,
+417,Rodentia,Muridae,Fawn Hopping Mouse,Notomys_cervinus,0.198,-0.703,Hayward 2011; Gage 2003,33,1.519,Hayward 2011; Gage 2003,2.95,NA,0.42,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,NA,
+418,Rodentia,Muridae,Dusky Hopping Mouse,Notomys_fuscus,0.068,-1.174,Hayward 2011; Breed 2000; Gage 2003,45,1.643,Hayward 2011; Breed 2000; Gage 2003,3.07,3.3,2.91,Capellini 2015; Myrhvold et al 2015,monogamous,Sinervo 2020,NA,
+419,Rodentia,Muridae,Mitchell's Hopping Mouse,Notomys_mitchellii,0.075,-1.208,Hayward 2011,45,1.591,Hayward 2011,3.28,3.53,5.3,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,NA,
+420,Rodentia,Muridae,Mitchell's Hopping Mouse,Notomys_mitchellii,0.062,-1.208,Hayward 2011; Gage 2003,39,1.591,Hayward 2011; Gage 2003,3.28,3.53,5.3,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,NA,
+421,Chiroptera,Vespertilionidae,Noctule,Nyctalus_noctula,0.2698,-0.569,Ramm 2007,29,1.455,Ramm 2007,1.33,1,12,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+422,Carnivora,Canidae,Raccoon dog,Nyctereutes_procyonoides,9.1833,0.963,Iossa 2008,3467,3.54,Iossa 2008,6.36,1,16.6,Capellini 2015,monogamous; polygynous,Iossa 2008; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004,yes,Heldstab 2019
+423,Primates,Lorisidae,Bengal Slow Loris,Nycticebus_coucang,1.1995,0.079,Anderson 2004,1057,3.024,Anderson 2004,1.12,1,26.5,Capellini 2015,promiscuous,Anderson 2004,yes,Heldstab 2019
+424,Chiroptera,Vespertilionidae,Lesser Long-eared Bat,Nyctophilus_geoffroyi,0.03,-1.523,Ramm 2007,6,0.806,Ramm 2007,NA,NA,5.908333333,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+425,Chiroptera,Vespertilionidae,Gould's Long-eared Bat,Nyctophilus_gouldi,0.1099,-0.959,Ramm 2007,8,0.903,Ramm 2007,1.54,NA,1,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+426,Chiroptera,Vespertilionidae,Greater Long-eared Bat,Nyctophilus_timoriensis,0.03,NA,Gage 2003,13.5,NA,Gage 2003,2,NA,NA,Capellini 2015,NA,NA,NA,
+427,Lagomorpha,Ochotonidae,Plateau Pika,Ochotona_curzoniae,1.62,0.21,Soulsbury 2010,147.5,2.169,Soulsbury 2010,4.39,3.5,2.5,Capellini 2015; Myrhvold et al 2015,polygynous,Soulsbury 2010,no,Lukas 2019
+428,Carnivora,Odobenidae,Walrus,Odobenus_rosmarus,496.5923,2.696,Fitzpatrick 2012,862979,5.936,Fitzpatrick 2012,1.22,0.5,40,Capellini 2015,polygynous,Ferguson 2004,no,Heldstab 2019; Lukas 2019
+429,Artiodactyla,Cervidae,Mule Deer,Odocoileus_hemionus,86.896,1.939,Hayward 2011,112202,5.05,Hayward 2011,1.61,0.97,22,Capellini 2015,monogamous,Kenagy 1986,no,Heldstab 2019
+430,Artiodactyla,Cervidae,White-tailed Deer,Odocoileus_virginianus,76,1.932,Gage 2003,71000,4.651,Gage 2003,1.57,1,23,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986,no,Heldstab 2019; Lukas 2019
+431,Artiodactyla,Cervidae,White-tailed Deer,Odocoileus_virginianus,85.5067,1.932,Hayward 2011,44771,4.651,Hayward 2011,1.57,1,23,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986,no,Heldstab 2019; Lukas 2019
+432,Artiodactyla,Giraffidae,Okapi,Okapia_johnstoni,71.7794,1.856,Anderson 2004,250035,5.398,Anderson 2004,0.98,1,33.5,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,NA,NA
+433,Rodentia,Cricetidae,Common Muskrat,Ondatra_zibethicus,5.06,0.704,Hayward 2011; Gage 2003,1295,3.112,Hayward 2011; Gage 2003,6.55,2.43,10,Capellini 2015,polygynous,Sinervo 2020,yes,Held19; Sin20
+434,Rodentia,Cricetidae,Southern Grasshopper Mouse,Onychomys_torridus,1.4791,0.17,Hayward 2011,20,1.307,Hayward 2011,3.3,2.5,4.6,Capellini 2015,NA,,no,Heldstab 2019; Lukas 2019
+435,Cetacea,Delphinidae,Killer Whale,Orcinus_orca,10303.8612,4.013,Macleod 2010,7362071,6.867,Macleod 2010,1,0.21,100,Capellini 2015,promiscuous,Pilot 2009,NA,NA
+436,Monotremata,Ornithorhynchidae,Platypus,Ornithorhynchus_anatinus,16.9824,1.23,Birkhead 1998,1500,3.176,Birkhead 1998,2,1,22.6,Capellini 2015,NA,,NA,NA
+437,Lagomorpha,Leporidae,European Rabbit,Oryctolagus_cuniculus,6.06,0.741,Gage 2003,2880,3.279,Gage 2003,5.24,4.5,18,Capellini 2015,promiscuous,Anderson 2004; Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+438,Lagomorpha,Leporidae,European Rabbit,Oryctolagus_cuniculus,6.06,0.741,Soulsbury 2010,2888,3.279,Soulsbury 2010,5.24,4.5,18,Capellini 2015,promiscuous,Anderson 2004; Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+439,Lagomorpha,Leporidae,European Rabbit,Oryctolagus_cuniculus,5.5081,0.741,Anderson 2004,1901,3.279,Anderson 2004,5.24,4.5,18,Capellini 2015,promiscuous,Anderson 2004; Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+440,Artiodactyla,Bovidae,Scimitar-horned Oryx,Oryx_dammah,53.4564,1.728,Anderson 2004,129122,5.111,Anderson 2004,1,1.89,27.5,Capellini 2015; Myrhvold 2015,promiscuous,Anderson 2004,NA,NA
+441,Artiodactyla,Bovidae,Gemsbok,Oryx_gazella,37.9315,1.579,Anderson 2004,141906,5.152,Anderson 2004,1,1.33,23.8,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013; Pantheria,no,Heldstab 2019
+442,Rodentia,Cricetidae,Marsh Oryzomys,Oryzomys_palustris,0.4,-0.398,Hayward 2011; Gage 2003,56,1.748,Hayward 2011; Gage 2003,4.08,5.5,2.375,Capellini 2015,NA,,no,Heldstab 2019
+443,Carnivora,Otariidae,South American sea lion,Otaria_bryonia,69.5024,1.842,Fitzpatrick 2012,299916,5.477,Fitzpatrick 2012,NA,NA,NA,NA,polygynous,Pantheria,no,Lukas 2019
+444,Carnivora,Felidae,Pallas's cat,Otocolobus_manul,2.1979,0.342,Iossa 2008,5470,3.738,Iossa 2008,NA,NA,NA,NA,polygynous,Iossa 2008,NA,NA
+445,Chiroptera,Molossidae,Large-eared Giant Mastiff Bat,Otomops_martiensseni,0.1698,-0.77,Pitnick 2006,36,1.556,Pitnick 2006,0.99,1,NA,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+446,Rodentia,Sciuridae,California ground squirrel,Otospermophilus_beecheyi,9.05,0.957,Hayward 2011; Soulsbury 2010,840,2.924,Hayward 2011; Soulsbury 2010,6.71,1,5,Capellini 2015,polygynous,Soulsbury 2010; Waterman 2007,no,Heldstab 2019; Lukas 2019
+447,Artiodactyla,Bovidae,Red Sheep,Ovis_aries,318.8,2.504,Hayward 2011; Gage 2003; Soulsbury 2010,35000,4.544,Hayward 2011; Gage 2003; Soulsbury 2010,1.19,1,22.8,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986,no,Lukas 2019
+448,Artiodactyla,Bovidae,Bighorn Sheep,Ovis_canadensis,338.0648,2.529,Anderson 2004,119124,5.076,Anderson 2004,1.16,1,24,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Lukas 2019
+449,Artiodactyla,Bovidae,Snow Sheep,Ovis_nivicola,81.0961,1.909,Anderson 2004,76033,4.881,Anderson 2004,1,1,20.6,Capellini 2015; Myrhvold 2015,promiscuous,Anderson 2004,NA,NA
+450,Carnivora,Phocidae,Harp seal,Pagophilus_groenlandicus,127.9381,2.107,Fitzpatrick 2012,102565,5.011,Fitzpatrick 2012,1,1,42,Capellini 2015,promiscuous,Ferguson 2004,no,Heldstab 2019
+451,Primates,Hominidae,Bonobo,Pan_paniscus,250,2.398,Soulsbury 2010,45000,4.653,Soulsbury 2010,1.01,0.22,55,Capellini 2015,promiscuous,Soulsbury 2010; Moller 1988,yes,Heldstab 2019
+452,Primates,Hominidae,Common Chimpanzee,Pan_troglodytes,118.8,2.075,Hayward 2011; Gage 2003,44340,4.647,Hayward 2011; Gage 2003,1.05,0.2,60.5,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Moller 1988; Harcourt 1995; Pantheria,yes,Heldstab 2019
+453,Carnivora,Felidae,Lion,Panthera_leo,55,1.74,Soulsbury 2010,188000,5.274,Soulsbury 2010,2.75,0.66,30,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+454,Carnivora,Felidae,Jaguar,Panthera_onca,85.31,1.931,Anderson 2004,77983,4.892,Anderson 2004,1.96,0.5,28,Capellini 2015,promiscuous,Ferguson 2004; Iossa 2008,no,Heldstab 2019; Lukas 2019
+455,Carnivora,Felidae,Tiger,Panthera_tigris,24.3781,1.387,Anderson 2004,340408,5.532,Anderson 2004,2.6,1,26.3,Capellini 2015,promiscuous,Ferguson 2004,no,Heldstab 2019; Lukas 2019
+456,Carnivora,Felidae,Snow leopard,Panthera_uncia,12.5314,1.098,Iossa 2008,50003,4.699,Iossa 2008,2.12,1,21.2,Capellini 2015,promiscuous,Iossa 2008,no,Heldstab 2019
+457,Primates,Cercopithecidae,Olive Baboon,Papio_anubis,93.5,1.971,Ramm 2007; Gage 2003,26400,4.422,Ramm 2007; Gage 2003,1.01,0.8,25.2,Capellini 2015; Myrhvold et al 2015,promiscuous,Lupold 2014,yes,Heldstab 2019
+458,Primates,Cercopithecidae,Yellow Baboon,Papio_cynocephalus,76.6,1.716,Gage 2003,28610,5.386,Gage 2003,1.01,0.805,45,Capellini 2015; Myrhvold et al 2015,promiscuous,Soulsbury 2010; Moller 1988; Harcourt 1995,yes,Heldstab 2019
+459,Primates,Cercopithecidae,Yellow Baboon,Papio_cynocephalus,52,1.716,Soulsbury 2010,243200,5.386,Soulsbury 2010,1.01,0.805,45,Capellini 2015; Myrhvold et al 2015,promiscuous,Soulsbury 2010; Moller 1988; Harcourt 1995,yes,Heldstab 2019
+460,Primates,Cercopithecidae,Hamadryas Baboon,Papio_hamadryas,72.277,1.859,Hayward 2011,24210,4.384,Hayward 2011,1.01,0.8,45,Capellini 2015,polygynous,Kenagy 1986; Harcourt 1995,yes,Heldstab 2019
+461,Primates,Cercopithecidae,Guinea Baboon,Papio_papio,88.9201,1.949,Harcourt 1995,31989,4.505,Harcourt 1995,1.01,0.81,40,Capellini 2015; Myrhvold 2015,NA,,no,Lukas 2019
+462,Primates,Cercopithecidae,Chacma Baboon,Papio_ursinus,71.9449,1.857,Harcourt 1995,31769,4.502,Harcourt 1995,1.01,0.8,45,Capellini 2015; Myrhvold 2015,NA,,yes,Heldstab 2019
+463,Rodentia,Muridae,Common Lowland Paramelomys,Paramelomys_platyops,1.6711,0.223,Ramm 2007,90,1.954,Ramm 2007,1.94,NA,NA,Capellini 2015,NA,,NA,NA
+464,Rodentia,Muridae,Mountain Paramelomys,Paramelomys_rubex,1.8707,0.272,Breed 2000,50,1.699,Breed 2000,2,NA,NA,Capellini 2015,NA,,NA,NA
+465,Chiroptera,Vespertilionidae,western pipistrelle,Parastrellus_hesperus,0.05,-1.301,Ramm 2007,3,0.544,Ramm 2007,NA,NA,NA,NA,NA,,NA,NA
+466,Rodentia,Muridae,Giant Sulawesi Rat,Paruromys_dominator,1.601,0.204,Breed 2000,342,2.534,Breed 2000,NA,NA,NA,Capellini 2015,NA,,NA,
+467,Artiodactyla,Tayassuidae,Collared Peccary,Pecari_tajacu,11,1.053,Hayward 2011; Gage 2003,12300,4.09,Hayward 2011; Gage 2003,1.56,2,31.5,Capellini 2015,promiscuous,Ginsberg 1990; Lewis 2022,no,Heldstab 2019
+468,Rodentia,Pedetidae,South African Spring Hare,Pedetes_capensis,18.239,1.261,Ramm 2005,3228,3.509,Ramm 2005,0.98,3.6,20,Capellini 2015,monogamous,Lukas 2012,NA,NA
+469,Cetacea,Delphinidae,Melon-headed Whale,Peponocephala_electra,1794.7336,3.254,Macleod 2010,206063,5.314,Macleod 2010,1,NA,47,Myrhvold 2015,NA,,NA,NA
+470,Peramelemorphia,Peramelidae,Long-nosed Bandicoot,Perameles_nasuta,3.9994,0.602,Rose 1997,1000,3,Rose 1997,2.43,2.92,5.6,Capellini 2015; Myrhvold 2015,promiscuous,Rose 1997; Lee 1985,NA,NA
+471,Rodentia,Heteromyidae,Little Pocket Mouse,Perognathus_longimembris,0.07,-1.155,Hayward 2011,8,0.892,Hayward 2011,4.45,1,8.333333333,Capellini 2015,NA,,NA,NA
+472,Rodentia,Heteromyidae,Great Basin Pocket Mouse,Perognathus_parvus,0.1799,-0.745,Hayward 2011,19,1.274,Hayward 2011,4.86,2,5.8,Capellini 2015,NA,,NA,NA
+473,Rodentia,Cricetidae,California Deermouse,Peromyscus_californicus,0.0096,-2.018,Soulsbury 2010,52.3,1.719,Nelson 1995; Soulsbury 2010,1.94,4.37,5.5,Capellini 2015,monogamous,Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012; Sinervo 2020,yes,LH19; Held19; Sin20
+474,Rodentia,Cricetidae,White-footed Deermouse,Peromyscus_leucopus,0.46,-0.337,Soulsbury 2010,22.2,1.346,Soulsbury 2010,4.27,4.5,7.9,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+475,Rodentia,Cricetidae,Search Results,Peromyscus_maniculatus,0.393,-0.406,Hayward 2011; Gage 2003; Soulsbury 2010,19.5,1.29,Hayward 2011; Gage 2003; Soulsbury 2010,4.76,2.6,8.333,Capellini 2015,promiscuous,Soulsbury 2010; Kenagy 1986; Waterman 2007; Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+476,Rodentia,Sciuridae,Red Giant Flying Squirrel,Petaurista_petaurista,7,NA,personal squirrel database,1260,NA,personal squirrel database,1.04,NA,16,Capellini 2015,NA,NA,NA,
+477,Diprotodontia,Pseudocheiridae,Greater Glider,Petauroides_volans,1.5812,0.199,Hayward 2011,1247,3.096,Hayward 2011,1,1,15,Capellini 2015,polygynous,Pantheria; Lukas 2012; Lukas 2013; Rose 1997,NA,NA
+478,Diprotodontia,Petauridae,Sugar Glider,Petaurus_breviceps,0.2,-0.699,Birkhead 1998,119,2.076,Birkhead 1998,1.82,1.3,17.8,Capellini 2015,polygynous,Pantheria; Lukas 2012; Lukas 2013; Rose 1997,NA,NA
+479,Diprotodontia,Petauridae,Squirrel Glider,Petaurus_norfolcensis,0.1622,-0.79,Birkhead 1998,180,2.255,Birkhead 1998,1.64,1.56,14.8,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+480,Artiodactyla,Suidae,Desert Warthog,Phacochoerus_aethiopicus,92.8966,1.968,Anderson 2004,72946,4.863,Anderson 2004,3.2,1.5,18.8,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990; Somers 1995,no,Lukas 2019
+481,Diprotodontia,Phascolarctidae,Koala,Phascolarctos_cinereus,14.9624,1.175,Anderson 2004,4721,3.674,Anderson 2004,1.01,1,22.1,Capellini 2015,promiscuous,Anderson 2004; Pantheria,NA,NA
+482,Didelphimorphia,Didelphidae,Gray Four-eyed Opossum,Philander_opossum,1.4997,0.176,Rose 1997,381,2.581,Rose 1997,4.75,3,4.4,Capellini 2015,NA,,no,Heldstab 2019
+483,Carnivora,Phocidae,Harbor Seal,Phoca_vitulina,95.0605,1.978,Fitzpatrick 2012,74989,4.875,Fitzpatrick 2012,1,1,47.6,Capellini 2015,promiscuous,Ferguson 2004,no,Lukas 2019
+484,Carnivora,Otariidae,New Zealand Sealion,Phocarctos_hookeri,66.2217,1.821,Fitzpatrick 2012,223872,5.35,Fitzpatrick 2012,1,1,23,Capellini 2015,polygynous,Pantheria,no,Lukas 2019
+485,Cetacea,Phocoenidae,Harbor Porpoise,Phocoena_phocoena,2317.3946,3.365,Hayward 2011,57943,4.763,Hayward 2011,0.98,0.87,20.4,Capellini 2015,NA,,NA,NA
+486,Cetacea,Phocoenidae,Vaquita,Phocoena_sinus,1116.8632,3.048,Macleod 2010,38815,4.589,Macleod 2010,0.97,0.5,NA,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+487,Cetacea,Phocoenidae,Burmeister's Porpoise,Phocoena_spinipinnis,492.0395,2.692,Macleod 2010,61094,4.786,Macleod 2010,0.97,NA,NA,Capellini 2015,NA,,NA,NA
+488,Cetacea,Phocoenidae,Dall's Porpoise,Phocoenoides_dalli,381.9443,2.582,Macleod 2010,145211,5.162,Macleod 2010,0.98,0.33,22,Capellini 2015,NA,,NA,NA
+489,Rodentia,Cricetidae,Striped Desert Hamster,Phodopus_sungorus,0.93,-0.032,Hayward 2011; Gage 2003,42.4,1.627,Hayward 2011; Gage 2003,5.48,3,3.9,Capellini 2015,promiscuous,Sinervo 2020,no,Lukas 2019; Sinervo 2020
+490,Chiroptera,Phyllostomidae,Pale Spear-nosed Bat,Phyllostomus_discolor,0.6486,-0.188,Pitnick 2006,45,1.652,Pitnick 2006,0.99,NA,9,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006,NA,NA
+491,Chiroptera,Phyllostomidae,Greater Spear-nosed Bat,Phyllostomus_hastatus,0.3083,-0.511,Pitnick 2006,92,1.963,Pitnick 2006,0.99,1,18,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006,no,Lukas 2019
+492,Cetacea,Physeteridae,Sperm Whale,Physeter_macrocephalus,12022.6443,4.08,Macleod 2010,37068072,7.569,Macleod 2010,0.99,0.25,77,Capellini 2015,NA,,NA,NA
+493,Chiroptera,Vespertilionidae,Kuhl's Pipistrelle,Pipistrellus_kuhlii,0.05,-1.301,Ramm 2007,6,0.765,Ramm 2007,1.21,1,8,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+494,Chiroptera,Vespertilionidae,Common Pipistrelle,Pipistrellus_pipistrellus,0.1099,-0.959,Ramm 2007,5,0.729,Ramm 2007,1.37,1,16.7,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+495,Chiroptera,Vespertilionidae,Rusty Pipistrelle,Pipistrellus_rusticus,0.16,-0.796,Ramm 2007,4,0.602,Ramm 2007,1.96,1,NA,Capellini 2015,NA,,NA,NA
+496,Chiroptera,Vespertilionidae,Eastern Pipistrelle,Pipistrellus_subflavus,0.03,-1.523,Ramm 2007,6,0.747,Ramm 2007,1.96,1,15,Capellini 2015,NA,,NA,
+497,Chiroptera,Vespertilionidae,Least Pipistrelle,Pipistrellus_tenuis,0.03,-1.523,Ramm 2007,4,0.556,Ramm 2007,1.92,3,NA,Capellini 2015,NA,,NA,NA
+498,Primates,Pitheciidae,White-faced Saki,Pithecia_pithecia,0.9204,-0.036,Harcourt 1995,1600,3.204,Harcourt 1995,1.01,0.995,36,Capellini 2015; Myrhvold 2015,promiscuous,Pantheria; Moller 1988; Lukas 2013; Lukas 2012,yes,Heldstab 2019
+499,Cetacea,Platanistidae,Ganges River Dolphin,Platanista_gangetica,1109.1748,3.045,Dines 2015,90991,4.959,Dines 2015,0.97,NA,28,Capellini 2015,NA,,NA,NA
+500,Chiroptera,Vespertilionidae,Brown Long-eared Bat,Plecotus_auritus,0.0899,-1.046,Ramm 2007,8,0.89,Ramm 2007,1.22,1,30,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+501,Rodentia,Muridae,Loria's Pogonomys,Pogonomys_loriae,3.474,0.54,Breed 2000,105,2.021,Breed 2000,2.68,NA,NA,Capellini 2015,NA,,NA,
+502,Rodentia,Muridae,Chestnut Pogonomys,Pogonomys_macrourus,2.462,0.391,Breed 2000,49,1.69,Breed 2000,2.81,NA,3.1,Capellini 2015,NA,,NA,
+503,Primates,Hominidae,Bornean Orangutan,Pongo_pygmaeus,35.3,1.548,Anderson 2004,74640,5,Anderson 2004; Gage 2003,1.07,0.22,60,Capellini 2015,promiscuous,Anderson 2004; Kenagy 1986; Moller 1988,no,Heldstab 2019; Lukas 2019
+504,Cetacea,Iniidae,Franciscana,Pontoporia_blainvillei,19.9986,1.301,Dines 2015,41495,4.618,Dines 2015,1,0.5,16,Capellini 2015,NA,,NA,NA
+505,Diprotodontia,Potoroidae,Long-nosed Potoroo,Potorous_tridactylus,4.3752,0.641,Birkhead 1998,1279,3.107,Birkhead 1998,1,2,14.5,Capellini 2015,promiscuous,Pantheria,NA,NA
+506,Rodentia,Muridae,Jackson's Praomys,Praomys_jacksoni,0.888,-0.052,Breed 2000,40,1.602,Breed 2000,3.67,4,5.18,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+507,Primates,Cercopithecidae,Maroon Leaf-Monkey,Presbytis_rubicunda,3.5975,0.556,Hayward 2011,6194,3.792,Hayward 2011,1.01,NA,7.316666667,Capellini 2015; Myrhvold 2015,polygynous,Pantheria,NA,NA
+508,Carnivora,Felidae,Fishing Cat,Prionailurus_viverrinus,15.7036,1.196,Anderson 2004,11508,4.061,Anderson 2004,2,NA,17.2,Capellini 2015,promiscuous,Ferguson 2004; Iossa 2008,NA,NA
+509,Hyracoidea,Procaviidae,Rock Hyrax,Procavia_capensis,17.2187,1.236,Anderson 2004,2023,3.306,Anderson 2004,2.5,1,14.8,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,no,Heldstab 2019
+510,Carnivora,Procyonidae,Raccoon,Procyon_lotor,13.72,1.137,Soulsbury 2010,5130,3.71,Soulsbury 2010,3.06,1,21,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004,no,Heldstab 2019
+511,Carnivora,Hyaenidae,Aardwolf,Proteles_cristata,10.0693,1.003,Iossa 2008,11298,4.053,Iossa 2008,2.64,1,25,Capellini 2015; AWD,monogamous; polygynous,Iossa 2008; Lukas 2013; Lukas 2012,no,Heldstab 2019; Lukas 2019
+512,Carnivora,Canidae,Culpeo,Pseudalopex_culpaeus,18.7932,1.274,Iossa 2008,9057,3.957,Iossa 2008,4.88,1,13.1,Capellini 2015,monogamous,Iossa 2008,no,Heldstab 2019
+513,Dasyuromorphia,Dasyuridae,Fat-tailed False Antechinus,Pseudantechinus_macdonnellensis,0.1099,-0.959,Birkhead 1998,27,1.433,Birkhead 1998,5.88,1,7,Capellini 2015,NA,,NA,NA
+514,Diprotodontia,Pseudocheiridae,Common Ringtail,Pseudocheirus_peregrinus,5.42,0.734,Birkhead 1998,684,2.835,Birkhead 1998,1.89,1.5,10.1,Capellini 2015,polygynous,Pantheria; Lukas 2012; Lukas 2013; Rose 1997,NA,NA
+515,Diprotodontia,Pseudocheiridae,Green Ringtail,Pseudochirops_archeri,1.2503,0.097,Birkhead 1998,478,2.679,Birkhead 1998,1.03,1.1,NA,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+516,Rodentia,Muridae,Shaw Mayer's Shrew Mouse,Pseudohydromys_ellermani,0.5395,-0.268,Breed 2000,18,1.255,Breed 2000,NA,NA,NA,Capellini 2015,NA,,NA,NA
+517,Rodentia,Muridae,Silky Pseudomys,Pseudomys_apodemoides,0.141,-0.851,Breed 2000,25,1.491,Breed 2000,4.9,3,NA,Capellini 2015,promiscuous,Sinervo 2020,NA,
+518,Rodentia,Muridae,Silky Pseudomys,Pseudomys_apodemoides,0.141,-0.851,Hayward 2011; Gage 2003,31,1.491,Hayward 2011; Gage 2003,4.9,3,NA,Capellini 2015,promiscuous,Sinervo 2020,NA,
+519,Rodentia,Muridae,Plains Pseudomys,Pseudomys_australis,2.242,0.351,Hayward 2011,59,1.771,Hayward 2011,3,NA,7.9,Capellini 2015,promiscuous,Sinervo 2020,no,Heldstab 2019
+520,Rodentia,Muridae,Delicate Pseudomys,Pseudomys_delicatulus,0.043,-1.367,Hayward 2011,8,0.903,Hayward 2011; Breed 2000; Gage 2003,3.19,NA,4.16,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+521,Rodentia,Muridae,Desert Pseudomys,Pseudomys_desertor,0.558,-0.253,Hayward 2011; Breed 2000,39,1.591,Hayward 2011; Breed 2000,3,3.91,1,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,no,Sinervo 2020
+522,Rodentia,Muridae,Smoky Pseudomys,Pseudomys_fumeus,2.426,0.385,Ramm 2007; Breed 2000,71,1.851,Ramm 2007; Breed 2000,3.5,1.5,6.5,Capellini 2015,NA,,NA,
+523,Rodentia,Muridae,Eastern Chestnut Pseudomys,Pseudomys_gracilicaudatus,1.084,0.035,Hayward 2011; Breed 2000; Gage 2003,105,2.021,Hayward 2011; Breed 2000; Gage 2003,2.91,NA,NA,Capellini 2015,NA,,NA,
+524,Rodentia,Muridae,Sandy Inland Pseudomys,Pseudomys_hermannsburgensis,0.14,-0.788,Breed 2000,15,1.255,Breed 2000,2,NA,0.92,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,NA,
+525,Rodentia,Muridae,Sandy Inland Pseudomys,Pseudomys_hermannsburgensis,0.163,-0.788,Hayward 2011; Gage 2003,18,1.255,Hayward 2011; Gage 2003,2,NA,0.92,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,NA,
+526,Rodentia,Muridae,Western Chestnut Pseudomys,Pseudomys_nanus,1.9,0.273,Breed 2000,74,1.892,Breed 2000,3,NA,NA,Capellini 2015,NA,,NA,
+527,Rodentia,Muridae,Western Chestnut Pseudomys,Pseudomys_nanus,1.874,0.273,Hayward 2011; Gage 2003,78,1.892,Hayward 2011; Gage 2003,3,NA,NA,Capellini 2015,NA,,NA,
+528,Rodentia,Muridae,New Holland Pseudomys,Pseudomys_novaehollandiae,0.071,-1.149,Hayward 2011; Breed 2000; Gage 2003,19,1.279,Hayward 2011; Breed 2000; Gage 2003,4.43,4,4,Capellini 2015; Myrhvold et al 2015,promiscuous,Sinervo 2020,NA,
+529,Rodentia,Muridae,Pilliga Pseudomys,Pseudomys_pilligaensis,0.052,-1.284,Breed 2000,11,1.041,Breed 2000,3,NA,1.5,Capellini 2015; Myrhvold et al 2015,NA,,NA,
+530,Rodentia,Muridae,Heath Pseudomys,Pseudomys_shortridgei,0.345,-0.462,Hayward 2011,78,1.892,Hayward 2011,3,1,6,Capellini 2015,promiscuous,Sinervo 2020,no,Sinervo 2020
+531,Cetacea,Delphinidae,False Killer Whale,Pseudorca_crassidens,14791.0839,4.17,Dines 2015,1361445,6.134,Dines 2015,0.97,0.14,62.5,Capellini 2015,NA,,NA,NA
+532,Chiroptera,Mormoopidae,Davy's Naked-backed Bat,Pteronotus_davyi,0.1742,-0.759,Pitnick 2006,9,0.964,Pitnick 2006,0.99,1,NA,Capellini 2015,NA,,NA,NA
+533,Chiroptera,Pteropodidae,Black Flying Fox,Pteropus_alecto,5.1,0.407,Gage 2003,800,2.903,Gage 2003,1,1,19.7,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+534,Chiroptera,Pteropodidae,Black Flying Fox,Pteropus_alecto,2.5527,0.407,Ramm 2007,800,2.903,Ramm 2007,1,1,19.7,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+535,Chiroptera,Pteropodidae,Indian Flying Fox,Pteropus_giganteus,2.1979,0.342,Anderson 2004,1449,3.161,Anderson 2004,0.99,1,40,Capellini 2015,promiscuous,Anderson 2004; Hosken 2001,NA,NA
+536,Chiroptera,Pteropodidae,Gray-headed Flying Fox,Pteropus_poliocephalus,6.75,0.829,Ramm 2007,677,2.925,Ramm 2007,1,1,23.6,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006; McCracken 2000,NA,NA
+537,Chiroptera,Pteropodidae,Little Red Flying Fox,Pteropus_scapulatus,5.3,0.423,Gage 2003,400,2.69,Gage 2003,1,NA,15.8,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+538,Chiroptera,Pteropodidae,Little Red Flying Fox,Pteropus_scapulatus,2.6485,0.423,Ramm 2007,490,2.69,Ramm 2007,1,NA,15.8,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+539,Chiroptera,Pteropodidae,Pacific Flying Fox,Pteropus_tonganus,3.8019,0.58,Hayward 2011,1026,3.011,Hayward 2011,1,NA,7.066666667,Capellini 2015; Myrhvold 2015,polygynous,Hosken 2001,NA,NA
+540,Carnivora,Felidae,Cougar,Puma_concolor,14.8936,1.173,Soulsbury 2010,44978,4.653,Soulsbury 2010,2.76,0.75,23.8,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+541,Carnivora,Phocidae,Ringed Seal,Pusa_hispida,47.5335,1.677,Fitzpatrick 2012,69024,4.839,Fitzpatrick 2012,1,0.8,46,Capellini 2015,polygynous,Smith 1981,no,Heldstab 2019
+542,Primates,Cercopithecidae,Red-shanked Douc Langur,Pygathrix_nemaeus,8.3946,0.924,Anderson 2004,18578,4.269,Anderson 2004,1.01,1.005,26,Capellini 2015; Myrhvold 2015,promiscuous,Anderson 2004,no,Heldstab 2019; Lukas 2019
+543,Artiodactyla,Cervidae,Reindeer,Rangifer_tarandus,132,1.678,Gage 2003,145000,5.043,Gage 2003,2,0.91,21.8,Capellini 2015,promiscuous,Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+544,Artiodactyla,Cervidae,Reindeer,Rangifer_tarandus,47.6,1.678,Anderson 2004; Soulsbury 2010,110500,5.043,Anderson 2004; Soulsbury 2010,2,0.91,21.8,Capellini 2015,promiscuous,Soulsbury 2010,no,Heldstab 2019; Lukas 2019
+545,Rodentia,Muridae,Ricefield Rat,Rattus_argentiventer,3.051,0.484,Breed 2000,217,2.336,Breed 2000,9.85,4.29,4.2,Myrhvold 2015,promiscuous,Sinervo 2020,NA,NA
+546,Rodentia,Muridae,Australian Dusky Rat,Rattus_colletti,1.938,0.287,Ramm 2007; Breed 2000,154,2.188,Ramm 2007; Breed 2000,5.995,4,1.5,Myrhvold 2015,NA,,NA,NA
+547,Rodentia,Muridae,Pacific Rat,Rattus_exulans,1.249,0.415,Breed 2000,49,1.778,Breed 2000,3.7,3.9,1.125,Capellini 2015,promiscuous,Sinervo 2020,NA,NA
+548,Rodentia,Muridae,Pacific Rat,Rattus_exulans,2.6,0.415,Hayward 2011; Gage 2003,60,1.778,Hayward 2011; Gage 2003,3.7,3.9,1.125,Capellini 2015,promiscuous,Sinervo 2020,NA,NA
+549,Rodentia,Muridae,Australian Bush Rat,Rattus_fuscipes,4.262,0.63,Ramm 2007; Breed 2000,110,2.041,Ramm 2007; Breed 2000,4.58,3.3,5.3,Capellini 2015,promiscuous,Waterman 2007; Sinervo 2020,no,Heldstab 2019
+550,Rodentia,Muridae,Hoffmann's rat,Rattus_hoffmanni,2.3605,0.373,Breed 2000,140,2.146,Breed 2000,NA,NA,NA,NA,NA,,NA,NA
+551,Rodentia,Muridae,Cape York Rat,Rattus_leucopus,4.149,0.618,Breed 2000,170,2.23,Breed 2000,3.45,NA,NA,Capellini 2015,NA,,NA,NA
+552,Rodentia,Muridae,Losea Rat,Rattus_losea,2.175,0.337,Breed 2000,110,2.041,Breed 2000,NA,NA,NA,Capellini 2015,NA,,NA,NA
+553,Rodentia,Muridae,Australian Swamp Rat,Rattus_lutreolus,4.434,0.647,Ramm 2007; Breed 2000,163,2.212,Ramm 2007; Breed 2000,4.45,2.4,4.4,Capellini 2015,promiscuous,Waterman 2007; Sinervo 2020,no,Heldstab 2019
+554,Rodentia,Muridae,Eastern New Guinea Mountain Rat,Rattus_niobe,1.893,0.277,Ramm 2007; Breed 2000,49,1.69,Ramm 2007; Breed 2000,2.15,NA,NA,Capellini 2015,NA,,NA,NA
+555,Rodentia,Muridae,Brown Rat,Rattus_norvegicus,4,0.58,Gage 2003,500,2.748,Gage 2003,8.99,3.5,3.8,Capellini 2015,promiscuous,Anderson 2004; Sinervo 2020,no,Heldstab 2019; Lukas 2019
+556,Rodentia,Muridae,Brown Rat,Rattus_norvegicus,3.8019,0.58,Anderson 2004,560,2.748,Anderson 2004,8.99,3.5,3.8,Capellini 2015,promiscuous,Anderson 2004; Sinervo 2020,no,Heldstab 2019; Lukas 2019
+557,Rodentia,Muridae,Roof Rat,Rattus_rattus,3.467,0.857,Breed 2000,134,2.21,Breed 2000,5.88,3.75,4.2,Capellini 2015,NA,,no,Heldstab 2019
+558,Rodentia,Muridae,Roof Rat,Rattus_rattus,7.2,0.857,Hayward 2011,169,2.21,Hayward 2011,5.88,3.75,4.2,Capellini 2015,NA,,no,Heldstab 2019
+559,Rodentia,Muridae,Canefield Rat,Rattus_sordidus,3.522,0.547,Breed 2000,158,2.199,Breed 2000,5.99,4,NA,Myrhvold 2015,NA,,NA,NA
+560,Rodentia,Muridae,Stein's New Guinea Rat,Rattus_steini,1.109,0.045,Ramm 2007; Breed 2000,93,1.968,Ramm 2007; Breed 2000,3.65,NA,NA,Myrhvold 2015,NA,,NA,NA
+561,Rodentia,Muridae,Malaysian Field Rat,Rattus_tiomanicus,3.473,0.541,Breed 2000,89,1.949,Breed 2000,3.87,4.28,4.2,Myrhvold 2015,NA,,NA,NA
+562,Rodentia,Muridae,Australian Pale Field Rat,Rattus_tunneyi,4.865,0.687,Ramm 2007; Breed 2000,243,2.386,Ramm 2007; Breed 2000,5.34,NA,1,Myrhvold 2015,NA,,NA,NA
+563,Rodentia,Muridae,Australian Long-haired Rat,Rattus_villosissimus,2.15,0.332,Ramm 2007; Breed 2000,207,2.316,Ramm 2007; Breed 2000,5.995,4,NA,Myrhvold 2015,NA,,NA,NA
+564,Rodentia,Muridae,Xeric Four-striped Grass Rat,Rhabdomys_pumilio,0.909,-0.041,Breed 2000,55,1.74,Breed 2000,5.28,7,4.5,Capellini 2015,polygynous,Sinervo 2020,no,Heldstab 2019; Lukas 2019; Sinervo 2020
+565,Chiroptera,Rhinolophidae,Geoffroy's horseshoe bat,Rhinolophus_clivosus,0.1799,-0.745,Ramm 2007,14,1.149,Ramm 2007,NA,NA,NA,NA,NA,,NA,NA
+566,Chiroptera,Rhinolophidae,Lesser Horseshoe Bat,Rhinolophus_hipposideros,0.02,-1.699,Ramm 2007,4,0.64,Ramm 2007,1,1,29.4,Capellini 2015,NA,,NA,NA
+567,Chiroptera,Rhinolophidae,Smaller Horseshoe Bat,Rhinolophus_megaphyllus,0.1199,-0.921,Ramm 2007,10,0.978,Ramm 2007,1,1,7.5,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+568,Chiroptera,Hipposideridae,Orange Leaf-nosed Bat,Rhinonicteris_aurantia,0.012,-1.921,Pitnick 2006,10,0.991,Pitnick 2006,1,1,NA,Capellini 2015,NA,,NA,NA
+569,Chiroptera,Rhinopomatidae,Lesser Mouse-tailed Bat,Rhinopoma_hardwickii,0.13,-0.886,Ramm 2007,19,1.279,Ramm 2007,0.99,1,NA,Capellini 2015,NA,,NA,NA
+570,Chiroptera,Rhinopomatidae,Greater Mouse-tailed Bat,Rhinopoma_microphyllum,0.6295,-0.201,Ramm 2007,32,1.507,Ramm 2007,1,1,NA,Capellini 2015,NA,,NA,NA
+571,Chiroptera,Vespertilionidae,Black-winged Little Yellow Bat,Rhogeessa_tumida,0.0769,-1.114,Pitnick 2006,5,0.708,Pitnick 2006,1.4,NA,NA,Capellini 2015,NA,,NA,NA
+572,Chiroptera,Emballonuridae,Proboscis Bat,Rhynchonycteris_naso,0.01,-2,Ramm 2007,4,0.627,Ramm 2007,0.99,2,NA,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+573,Chiroptera,Pteropodidae,Egyptian Rousette,Rousettus_aegyptiacus,1.7498,0.243,Ramm 2007,151,2.18,Ramm 2007,1.07,2,25,Capellini 2015,NA,,NA,NA
+574,Chiroptera,Pteropodidae,Geoffroy's Rousette,Rousettus_amplexicaudatus,0.3698,-0.432,Ramm 2007,83,1.921,Ramm 2007,0.99,2,7.983333333,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+575,Chiroptera,Pteropodidae,Long-haired Rousette,Rousettus_lanosus,1.9011,0.279,Anderson 2004,100,2,Anderson 2004,NA,2,18.7,Capellini 2015; Myrhvold 2015,promiscuous,Anderson 2004,NA,NA
+576,Artiodactyla,Cervidae,Javan Rusa,Rusa_timorensis,27.4157,1.438,Anderson 2004,74989,4.875,Anderson 2004,1,1,20,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+577,Artiodactyla,Cervidae,Sambar,Rusa_unicolor,77.4462,1.889,Anderson 2004,200909,5.303,Anderson 2004,1,1,26.4,Capellini 2015,polygynous,Anderson 2004; Lukas 2013,NA,NA
+578,Chiroptera,Emballonuridae,Yellow-bellied Pouched Bat,Saccolaimus_flaviventris,0.5754,-0.24,Pitnick 2006,100,2,Pitnick 2006,NA,2,NA,Capellini 2015,monogamous,Hosken 2001; Pitnick 2006,NA,NA
+579,Chiroptera,Emballonuridae,Greater Sac-winged Bat,Saccopteryx_bilineata,0.011,-1.959,Pitnick 2006,7,0.869,Pitnick 2006,0.99,1,6,Capellini 2015,polygynous,Hosken 2001; Pitnick 2006; Soulsbury 2010; Pantheria,NA,NA
+580,Chiroptera,Emballonuridae,Lesser Sac-winged Bat,Saccopteryx_leptura,0.025,-1.602,Pitnick 2006,4,0.613,Pitnick 2006,NA,NA,NA,Capellini 2015,monogamous; polygynous,Pitnick 2006; Pantheria,NA,NA
+581,Primates,Cebidae,Red-handed Tamarin,Saguinus_midas,1.8281,0.262,Harcourt 1995,570,2.756,Harcourt 1995,2.02,1.36,21,Capellini 2015,promiscuous,Pantheria; Lukas 2012; Lukas 2013,NA,NA
+582,Primates,Cebidae,Cottontop Tamarin,Saguinus_oedipus,1.4791,0.17,Hayward 2011,501,2.7,Hayward 2011,1.9,1,26.2,Capellini 2015,monogamous,Kenagy 1986; Lukas 2013; Lukas 2012,yes,Heldstab 2019; Lukas 2019
+583,Primates,Cebidae,Common Squirrel Monkey,Saimiri_sciureus,3.2,0.505,Anderson 2004; Gage 2003,780,2.879,Anderson 2004; Gage 2003,1,1.33,30.2,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988; Harcourt 1995; Lupold 2018,yes,Heldstab 2019
+584,Primates,Cebidae,Tufted Capuchin,Sapajus_apella,9.1,0.959,Ramm 2007; Gage 2003,2600,3.415,Ramm 2007; Gage 2003,1.05,0.55,46,Capellini 2015,promiscuous,Moller 1988; Harcourt 1995; Lupold 2014,yes,Heldstab 2019
+585,Dasyuromorphia,Dasyuridae,Tasmanian Devil,Sarcophilus_harrisii,5.2,0.716,Anderson 2004,6237,3.795,Anderson 2004,2.88,1,13,Capellini 2015,promiscuous,Anderson 2004; Lukas 2012; Lukas 2013; Gooley 2018,NA,NA
+586,Soricomorpha,Talpidae,Eastern Mole,Scalopus_aquaticus,2.1979,0.342,Hayward 2011,125,2.097,Hayward 2011,3.89,1,6.2,Capellini 2015,NA,,NA,NA
+587,Primates,Galagidae,Bioko Allen's Bushbaby,Sciurocheirus_alleni,1.6218,0.21,Anderson 2004,314,2.497,Anderson 2004,1.29,1,12,Capellini 2015,promiscuous,Anderson 2004,NA,NA
+588,Rodentia,Sciuridae,Caucasian Squirrel,Sciurus_anomalus,1.38,NA,personal squirrel database,240,NA,personal squirrel database,4,NA,5.7,Myrhvold 2015,NA,NA,NA,NA
+589,Rodentia,Sciuridae,Eastern Gray Squirrel,Sciurus_carolinensis,5.18,0.714,Hayward 2011,536,2.719,Hayward 2011,2.98,2,24,Capellini 2015,promiscuous,Kenagy 1986; Waterman 2007; Sinervo 2020,no,Heldstab 2019; Lukas 2019
+590,Rodentia,Sciuridae,Eastern Fox Squirrel,Sciurus_niger,6.9,NA,personal squirrel database,836,NA,personal squirrel database,2.71,1.64,16,Capellini 2015,promiscuous,Sinervo 2020,no,Heldstab 2019
+591,Rodentia,Sciuridae,Eurasian Red Squirrel,Sciurus_vulgaris,2.81,0.449,Hayward 2011,350,2.544,Hayward 2011,4.5,2,14.8,Capellini 2015,promiscuous,Waterman 2007; Sinervo 2020,no,Heldstab 2019
+592,Chiroptera,Vespertilionidae,Reunion House Bat,Scotophilus_borbonicus,0.14,-0.854,Ramm 2007,22,1.342,Ramm 2007,2,1,NA,Capellini 2015,NA,,NA,NA
+593,Chiroptera,Vespertilionidae,Greater Asiatic Yellow House Bat,Scotophilus_heathii,0.1698,-0.77,Ramm 2007,37,1.574,Ramm 2007,1.92,1,NA,Capellini 2015,polygynous,Hosken 2001,NA,NA
+594,Primates,Cercopithecidae,Northern Plains Gray Langur,Semnopithecus_entellus,11.5,1.047,Soulsbury 2010,19200,4.232,Soulsbury 2010,1.02,0.67,29,Capellini 2015,promiscuous,Anderson 2004; Soulsbury 2010; Harcourt 1995,no,Lukas 2019
+595,Primates,Cercopithecidae,Northern Plains Gray Langur,Semnopithecus_entellus,11.1429,1.047,Anderson 2004,17061,4.232,Anderson 2004,1.02,0.67,29,Capellini 2015,promiscuous,Anderson 2004; Soulsbury 2010; Harcourt 1995,no,Lukas 2019
+596,Rodentia,Cricetidae,Hispid Cotton Rat,Sigmodon_hispidus,1.73,0.238,Hayward 2011; Gage 2003,223,2.348,Hayward 2011; Gage 2003,5.44,2,5.2,Capellini 2015,promiscuous,Sinervo 2020,no,Heldstab 2019
+597,Dasyuromorphia,Dasyuridae,Fat-tailed Dunnart,Sminthopsis_crassicaudata,0.1377,-0.861,Birkhead 1998,15,1.19,Birkhead 1998,6.52,2,5,Capellini 2015,polygynous,Rose 1997; Pantheria,no,Heldstab 2019
+598,Dasyuromorphia,Dasyuridae,Stripe-faced Dunnart,Sminthopsis_macroura,0.2466,-0.608,Birkhead 1998,25,1.405,Birkhead 1998,7,2,4.9,Capellini 2015,NA,,NA,NA
+599,Dasyuromorphia,Dasyuridae,Red-cheeked Dunnart,Sminthopsis_virginiae,0.2518,-0.599,Birkhead 1998,31,1.491,Birkhead 1998,4.11,2.22,5.3,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+600,Soricomorpha,Soricidae,Common Shrew,Sorex_araneus,0.17,-0.553,Soulsbury 2010,11.9,1.124,Soulsbury 2010,6.56,2,3.2,Capellini 2015,promiscuous,Soulsbury 2010,no,Heldstab 2019
+601,Soricomorpha,Soricidae,Common Shrew,Sorex_araneus,0.2799,-0.553,Hayward 2011,13,1.124,Hayward 2011,6.56,2,3.2,Capellini 2015,promiscuous,Soulsbury 2010,no,Heldstab 2019
+602,Soricomorpha,Soricidae,Cinereus Shrew,Sorex_cinereus,0.1,-1,Hayward 2011,5,0.724,Hayward 2011,6.49,2.18,1.917,Capellini 2015,NA,,no,Heldstab 2019
+603,Soricomorpha,Soricidae,Eurasian Pygmy Shrew,Sorex_minutus,0.1,-1,Hayward 2011,5,0.708,Hayward 2011,6.04,1.5,2,Capellini 2015,NA,,NA,NA
+604,Soricomorpha,Soricidae,American Water Shrew,Sorex_palustris,0.15,-0.824,Hayward 2011,18,1.246,Hayward 2011,5.46,2.5,1.5,Capellini 2015,NA,,no,Heldstab 2019
+605,Cetacea,Delphinidae,Tucuxi,Sotalia_fluviatilis,477.5293,2.679,Hayward 2011,32734,4.515,Hayward 2011,0.97,0.4,30.3875,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+606,Cetacea,Delphinidae,Guiana dolphin,Sotalia_guianensis,2269.8649,3.356,Hayward 2011,90782,4.958,Hayward 2011,NA,NA,NA,NA,NA,,NA,NA
+607,Carnivora,Canidae,Bush Dog,Speothos_venaticus,8.2414,0.916,Iossa 2008,7396,3.869,Iossa 2008,3.8,2,14.1,Capellini 2015,monogamous; polygynous,Iossa 2008; Lukas 2013; Lukas 2012,yes,Heldstab 2019; Lukas 2019
+608,Carnivora,Mephitidae,Western Spotted Skunk,Spilogale_gracilis,2.5177,0.401,Iossa 2008,535,2.728,Iossa 2008,5.07,1.425,10.77916667,Myrhvold 2015,promiscuous,Iossa 2008; Ferguson 2004,NA,NA
+609,Carnivora,Mephitidae,Eastern Spotted Skunk,Spilogale_putorius,5.3951,0.732,Iossa 2008,723,2.859,Iossa 2008,5.07,1.5,10.5,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019
+610,Cetacea,Delphinidae,Pantropical Spotted Dolphin,Stenella_attenuata,1028.0163,3.012,Hayward 2011,80538,4.906,Hayward 2011,0.99,0.35,46,Capellini 2015,NA,,NA,NA
+611,Cetacea,Delphinidae,Striped Dolphin,Stenella_coeruleoalba,449.7799,2.653,Dines 2015,155955,5.193,Dines 2015,1.75,0.31,57.5,Capellini 2015,NA,,NA,NA
+612,Cetacea,Delphinidae,Atlantic Spotted Dolphin,Stenella_frontalis,1713.9573,3.234,Dines 2015,142889,5.155,Dines 2015,NA,0.333333333,NA,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+613,Cetacea,Delphinidae,Spinner Dolphin,Stenella_longirostris,1686.553,3.227,Dines 2015,74302,4.871,Dines 2015,0.97,0.33,20,Capellini 2015; Myrhvold 2015,promiscuous,Perrin 2003,NA,NA
+614,Cetacea,Delphinidae,Rough-toothed Dolphin,Steno_bredanensis,2999.1625,3.477,Dines 2015,154882,5.19,Dines 2015,NA,NA,32,Capellini 2015,NA,,NA,NA
+615,Chiroptera,Phyllostomidae,Bidentate Yellow-shouldered Bat,Sturnira_bidens,0.0579,-1.237,Pitnick 2006,17,1.243,Pitnick 2006,0.99,2,NA,Capellini 2015,NA,,NA,NA
+616,Chiroptera,Phyllostomidae,Little Yellow-shouldered Bat,Sturnira_lilium,0.1211,-0.917,Pitnick 2006,20,1.31,Pitnick 2006,0.99,2,12,Capellini 2015,NA,,NA,NA
+617,Rodentia,Muridae,Mueller's Sundamys,Sundamys_muelleri,7.44,0.872,Breed 2000,400,2.602,Breed 2000,3.8,NA,2,Capellini 2015,NA,,NA,NA
+618,Carnivora,Herpestidae,Meerkat,Suricata_suricatta,1.3,0.114,Soulsbury 2010,731,2.864,Soulsbury 2010,3.86,1,20.6,Capellini 2015,monogamous,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012,yes,LH19; Held19
+619,Artiodactyla,Suidae,Wild Boar,Sus_scrofa,36,2.857,Gage 2003,172000,5.29,Gage 2003,4.52,1.5,27,Capellini 2015,polygynous,Soulsbury 2010; Poteaux 2009,no,Heldstab 2019; Lukas 2019
+620,Artiodactyla,Suidae,Wild Boar,Sus_scrofa,719.449,2.857,Anderson 2004,194984,5.29,Anderson 2004,4.52,1.5,27,Capellini 2015,polygynous,Soulsbury 2010; Poteaux 2009,no,Heldstab 2019; Lukas 2019
+621,Artiodactyla,Bovidae,Bush Duiker,Sylvicapra_grimmia,21.2324,1.327,Anderson 2004,18493,4.267,Anderson 2004,0.98,2,15.4,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,no,Heldstab 2019
+622,Lagomorpha,Leporidae,Eastern Cottontail,Sylvilagus_floridanus,16.7109,1.223,Hayward 2011,1143,3.058,Hayward 2011,4.62,4.81,9.8,Capellini 2015,NA,,no,Heldstab 2019
+623,Monotremata,Tachyglossidae,Short-beaked Echidna,Tachyglossus_aculeatus,50.0035,1.699,Birkhead 1998,5000,3.699,Birkhead 1998,1,0.5,50,Capellini 2015,NA,,no,Heldstab 2019
+624,Chiroptera,Molossidae,Egyptian Free-tailed Bat,Tadarida_aegyptiaca,0.07,-1.155,Ramm 2007,16,1.207,Ramm 2007,0.99,1,10,Capellini 2015; Myrhvold 2015,NA,,NA,NA
+625,Chiroptera,Molossidae,Brazilian Free-tailed Bat (known as the Mexican Free-tailed Bat in North America,Tadarida_brasiliensis,0.05,-1.301,Ramm 2007,13,1.107,Ramm 2007,1.11,1,15,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,no,Lukas 2019
+626,Rodentia,Sciuridae,Yellow-pine Chipmunk,Tamias_amoenus,1.22,-0.208,Soulsbury 2010,51,1.629,Soulsbury 2010,4.99,1,5.166666667,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007,no,Heldstab 2019
+627,Rodentia,Sciuridae,Yellow-pine Chipmunk,Tamias_amoenus,0.6194,-0.208,Hayward 2011,43,1.629,Hayward 2011,4.99,1,5.166666667,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007,no,Heldstab 2019
+628,Rodentia,Sciuridae,Least Chipmunk,Tamias_minimus,0.7194,-0.143,Hayward 2011,32,1.502,Hayward 2011,4.95,1,10,Capellini 2015,NA,,NA,NA
+629,Rodentia,Sciuridae,Townsend's Chipmunk,Tamias_townsendii,0.8204,-0.086,Hayward 2011,68,1.833,Hayward 2011,3.75,1,9.3,Capellini 2015,NA,,NA,NA
+630,Rodentia,Sciuridae,Red Squirrel,Tamiasciurus_hudsonicus,2.92,0.465,Soulsbury 2010,186,2.27,Soulsbury 2010,3.93,1.75,12,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007; Sinervo 2020,no,Heldstab 2019
+631,Chiroptera,Emballonuridae,Sharp-nosed Tomb Bat,Taphozous_georgianus,0.04,-1.398,Ramm 2007,30,1.477,Ramm 2007,1,1,5,Capellini 2015,NA,,NA,NA
+632,Chiroptera,Emballonuridae,Long-winged Tomb Bat,Taphozous_longimanus,0.0769,-1.114,Pitnick 2006,36,1.556,Pitnick 2006,0.99,2,NA,Capellini 2015,polygynous,Hosken 2001; Lukas 2013,NA,NA
+633,Diprotodontia,Tarsipedidae,Honey possum,Tarsipes_rostratus,0.3648,-0.438,Birkhead 1998,9,0.949,Birkhead 1998,2.93,3,2,Capellini 2015,NA,,NA,NA
+634,Cetacea,Ziphiidae,Shepherd's Beaked Whale,Tasmacetus_shepherdi,1348.9629,3.13,Dines 2015,2133045,6.329,Dines 2015,NA,NA,NA,Capellini 2015,NA,,NA,NA
+635,Carnivora,Mustelidae,American Badger,Taxidea_taxus,35.5631,1.551,Iossa 2008,7852,3.895,Iossa 2008,2.76,0.74,26,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019
+636,Afrosoricida,Tenrecidae,Tail-less Tenrec,Tenrec_ecaudatus,3.0974,0.491,Anderson 2004,2000,3.301,Anderson 2004,16.89,1,8.7,Capellini 2015,promiscuous,Anderson 2004,yes,Heldstab 2019
+637,Primates,Cercopithecidae,Gelada,Theropithecus_gelada,17.1,1.332,Gage 2003,20400,4.31,Gage 2003,1.01,0.5,36,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988; Harcourt 1995,yes,Heldstab 2019
+638,Primates,Cercopithecidae,Gelada,Theropithecus_gelada,21.4783,1.332,Hayward 2011,20417,4.31,Hayward 2011,1.01,0.5,36,Capellini 2015,promiscuous,Kenagy 1986; Moller 1988; Harcourt 1995,yes,Heldstab 2019
+639,Rodentia,Geomyidae,Botta's Pocket Gopher,Thomomys_bottae,3.5563,0.551,Hayward 2011,190,2.279,Hayward 2011,4.61,2,6.1,Capellini 2015,promiscuous,Kenagy 1986; Waterman 2007,no,Heldstab 2019
+640,Diprotodontia,Macropodidae,Tasmanian Pademelon,Thylogale_billardierii,46.8813,1.671,Rose 1997,7962,3.901,Rose 1997,1,1,10,Capellini 2015,promiscuous,Rose 1997; Pantheria,NA,NA
+641,Rodentia,Muridae,Amami-oshima Island Spiny Rat,Tokudaia_osimensis,0.213,-0.672,Hayward 2011; Breed 2000,89,1.949,Hayward 2011; Breed 2000,NA,NA,NA,Capellini 2015,NA,,NA,NA
+642,Primates,Cercopithecidae,Silvery Lutung,Trachypithecus_cristatus,6.2951,0.799,Hayward 2011,6699,3.826,Hayward 2011,1.01,0.5,31.1,Capellini 2015; Myrhvold 2015,polygynous,Kenagy 1986,no,Heldstab 2019; Lukas 2019
+643,Primates,Cercopithecidae,Francois' Langur,Trachypithecus_francoisi,3.9811,0.6,Anderson 2004,7603,3.881,Anderson 2004,NA,NA,26.3,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,NA,NA
+644,Primates,Cercopithecidae,Dusky Leaf-monkey,Trachypithecus_obscurus,4.7973,0.681,Hayward 2011,7447,3.872,Hayward 2011,1.01,0.5,33.9,Capellini 2015,polygynous,Kenagy 1986,no,Heldstab 2019
+645,Artiodactyla,Bovidae,Nyala,Tragelaphus_angasii,38.2825,1.583,Anderson 2004,93541,4.971,Anderson 2004,1,1.21,18.5,Capellini 2015,promiscuous,Anderson 2004,no,Heldstab 2019
+646,Artiodactyla,Bovidae,Derby Eland,Tragelaphus_derbianus,103.7528,2.016,Anderson 2004,442588,5.646,Anderson 2004,1,1.14,20.3,Capellini 2015; Myrhvold 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013,no,Heldstab 2019
+647,Artiodactyla,Bovidae,Bongo,Tragelaphus_eurycerus,52.8445,1.723,Anderson 2004,195434,5.291,Anderson 2004,1,0.73,21.9,Capellini 2015,polygynous,Anderson 2004; Lukas 2012; Lukas 2013; Pantheria,NA,NA
+648,Artiodactyla,Bovidae,Greater Kudu,Tragelaphus_strepsiceros,92,1.964,Gage 2003,248000,5.285,Gage 2003,1,1,23.5,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+649,Artiodactyla,Bovidae,Greater Kudu,Tragelaphus_strepsiceros,92.045,1.964,Anderson 2004,192752,5.285,Anderson 2004,1,1,23.5,Capellini 2015,promiscuous,Anderson 2004; Ginsberg 1990,no,Heldstab 2019
+650,Sirenia,Trichechidae,West Indian Manatee,Trichechus_manatus,615.1769,2.789,Reynolds 2004,446684,5.65,Reynolds 2004,1.22,0.37,65,Capellini 2015,promiscuous,Reynolds 2004,NA,NA
+651,Diprotodontia,Phalangeridae,Common Brushtail,Trichosurus_vulpecula,3.9994,0.602,Anderson 2004,3648,3.562,Anderson 2004,1.02,1.5,15.9,Capellini 2015,promiscuous,Anderson 2004; Pantheria,NA,NA
+652,Cetacea,Delphinidae,Indo-Pacific Bottlenose Dolphin,Tursiops_aduncus,2051.1622,3.312,Dines 2015,230144,5.362,Dines 2015,1,0.5,35,Myrhvold 2015,promiscuous,Pantheria,NA,NA
+653,Cetacea,Delphinidae,Bottlenose Dolphin,Tursiops_truncatus,1230.2688,3.09,Dines 2015,247172,5.393,Dines 2015,0.98,0.5,51.6,Capellini 2015,promiscuous,Pantheria,no,Lukas 2019
+654,Chiroptera,Vespertilionidae,Lesser Bamboo Bat,Tylonycteris_pachypus,0.07,-1.155,Ramm 2007,4,0.613,Ramm 2007,1.92,1,NA,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+655,Chiroptera,Vespertilionidae,Greater Bamboo Bat,Tylonycteris_robustula,0.1,-1,Ramm 2007,8,0.924,Ramm 2007,2,1,NA,Capellini 2015,promiscuous,Hosken 2001; Pitnick 2006,NA,NA
+656,Rodentia,Muridae,Rudd's Bristle-furred Rat,Uranomys_ruddi,0.348,-0.458,Breed 2000,40,1.602,Breed 2000,4.07,NA,NA,Capellini 2015,NA,,NA,NA
+657,Rodentia,Sciuridae,Belding's Ground Squirrel,Urocitellus_beldingi,3.5,0.544,Soulsbury 2010,370,2.568,Soulsbury 2010,5.71,1,11,Capellini 2015,promiscuous,Soulsbury 2010; Waterman 2007; Sinervo 2020,no,Heldstab 2019; Lukas 2019
+658,Rodentia,Sciuridae,Richardson's ground squirrel,Urocitellus_richardsonii,NA,NA,Anjos 2020,325.1,NA,Capellini 2015,7.59,1,6,Capellini 2015,promiscuous,Michener and Locklear 1990; Hare et al 2004,no,LH19; Held19; Waterman pers. comm.
+659,Carnivora,Canidae,Gray Fox,Urocyon_cinereoargenteus,5.17,0.713,Soulsbury 2010,3700,3.568,Soulsbury 2010,3.71,0.98,16.2,Capellini 2015,monogamous,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004,yes,Held19
+660,Chiroptera,Phyllostomidae,Common Tent-making Bat,Uroderma_bilobatum,0.0979,-1.009,Pitnick 2006,15,1.173,Pitnick 2006,0.99,2,NA,Capellini 2015,polygynous,Hosken 2001; Lukas 2013,NA,NA
+661,Rodentia,Muridae,Black-tailed Uromys,Uromys_anak,11.592,1.064,Breed 2000,879,2.944,Breed 2000,4.3,NA,NA,Capellini 2015,NA,,NA,NA
+662,Rodentia,Muridae,Giant White-tailed Uromys,Uromys_caudimaculatus,7.197,0.857,Hayward 2011; Breed 2000,820,2.914,Hayward 2011; Breed 2000,1.46,NA,NA,Capellini 2015,NA,,NA,NA
+663,Carnivora,Ursidae,American Black Bear,Ursus_americanus,38.9,1.59,Soulsbury 2010,102287,5.01,Soulsbury 2010,2.39,0.38,34,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+664,Carnivora,Ursidae,Brown Bear,Ursus_arctos,153.4,2.186,Soulsbury 2010,312000,5.494,Soulsbury 2010,2.24,0.36,50,Capellini 2015,promiscuous,Iossa 2008; Soulsbury 2010; Pantheria; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+665,Carnivora,Ursidae,Polar Bear,Ursus_maritimus,131.5225,2.119,Iossa 2008,426580,5.63,Iossa 2008,1.66,0.36,45,Capellini 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019; Lukas 2019
+666,Carnivora,Ursidae,Asian Black Bear,Ursus_thibetanus,66.6807,1.824,Iossa 2008,100231,5.001,Iossa 2008,1.5,1.1,39.2,Capellini 2015; Myrhvold 2015,promiscuous,Iossa 2008; Ferguson 2004,no,Heldstab 2019
+667,Chiroptera,Phyllostomidae,Great Stripe-faced Bat,Vampyrodes_caraccioli,0.3319,-0.479,Pitnick 2006,27,1.43,Pitnick 2006,0.98,2,NA,Capellini 2015,polygynous,Hosken 2001; Lukas 2013,NA,NA
+668,Chiroptera,Phyllostomidae,Spectral Bat,Vampyrum_spectrum,0.2028,-0.693,Pitnick 2006,159,2.201,Pitnick 2006,1,NA,6.5,Capellini 2015,monogamous,Hosken 2001; Pitnick 2006; Pantheria; Lukas 2013; Lukas 2012,NA,NA
+669,Primates,Lemuridae,Black-and-white Ruffed Lemur,Varecia_variegata,2.6303,0.42,Anderson 2004,3467,3.54,Anderson 2004,2.16,1,37,Capellini 2015,polygynous,Anderson 2004; Harcourt 1995; Lukas 2012; Lukas 2013,no,Heldstab 2019; Lukas 2019
+670,Diprotodontia,Vombatidae,Common Wombat,Vombatus_ursinus,18.4077,1.265,Birkhead 1998,40087,4.603,Birkhead 1998,1,0.5,30,Capellini 2015,NA,,NA,NA
+671,Carnivora,Canidae,Arctic Fox,Vulpes_lagopus,4.06,0.609,Soulsbury 2010,4800,3.681,Soulsbury 2010,7.65,1,16.3,Capellini 2015,monogamous,Iossa 2008; Soulsbury 2010; Pantheria; Lukas 2013; Lukas 2012; Ferguson 2004,yes,LH19; Held19
+672,Carnivora,Canidae,Red Fox,Vulpes_vulpes,9,0.954,Hayward 2011; Gage 2003,5069,3.705,Hayward 2011; Gage 2003,4.59,0.91,21.3,Capellini 2015,polygynous,Iossa 2008; Soulsbury 2010; Kenagy 1986; Lukas 2013; Lukas 2012; Ferguson 2004,yes,LH19; Held19
+673,Carnivora,Canidae,Red Fox,Vulpes_vulpes,12.36,0.954,Soulsbury 2010,6260,3.705,Soulsbury 2010,4.59,0.91,21.3,Capellini 2015,polygynous,Iossa 2008; Soulsbury 2010; Kenagy 1986; Lukas 2013; Lukas 2012; Ferguson 2004,yes,LH19; Held19
+674,Carnivora,Canidae,Fennec Fox,Vulpes_zerda,5.445,0.736,Iossa 2008,1500,3.176,Iossa 2008,2.36,1,16.3,Capellini 2015,monogamous,Iossa 2008; Pantheria; Ferguson 2004,no,Lukas 2019
+675,Diprotodontia,Macropodidae,Swamp Wallaby,Wallabia_bicolor,14.7571,1.169,Birkhead 1998,31477,4.498,Birkhead 1998,1.04,1.4,19,Capellini 2015,promiscuous,Rose 1997,NA,NA
+676,Rodentia,Muridae,Rock-dwelling Giant Rat,Xenuromys_barbatus,18.94,NA,Breed 2000,950,NA,Breed 2000,1.76,NA,NA,Myrhvold 2015,NA,NA,NA,NA
+677,Rodentia,Sciuridae,Striped Ground Squirrel,Xerus_erythropus,2.2,NA,personal squirrel database,637,NA,personal squirrel database,3.45,NA,10.3,Myrhvold 2015,promiscuous,Sinervo 2020,no,Heldstab 2019
+678,Rodentia,Sciuridae,South African Ground Squirrel,Xerus_inauris,10.3,NA,personal squirrel database,572.6,NA,Capellini 2015,2.06,1,13,Capellini 2015,promiscuous,Sinervo 2020,no,Lukas 2019
+679,Monotremata,Tachyglossidae,Western Long-beaked Echidna,Zaglossus_bruijnii,80.9096,1.908,Birkhead 1998,6902,3.839,Birkhead 1998,1,NA,41.2,Capellini 2015,NA,,NA,NA
+680,Cetacea,Ziphiidae,Cuvier's Beaked Whale,Ziphius_cavirostris,7998.3426,3.903,Macleod 2010,2999163,6.477,Macleod 2010,1,NA,62,Capellini 2015,NA,,NA,NA
+681,Rodentia,Muridae,Common Australian Rock Rat,Zyzomys_argurus,0.434,-0.363,Ramm 2007; Breed 2000,45,1.653,Ramm 2007; Breed 2000,2.76,1.42,4.16,Myrhvold 2015,NA,,NA,NA
+682,Rodentia,Muridae,Kimberley Rock Rat,Zyzomys_woodwardi,1.7298,0.238,Ramm 2007,102,2.009,Ramm 2007,2.23,0.75,NA,Capellini 2015,NA,,NA,NA
