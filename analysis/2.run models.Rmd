@@ -102,7 +102,9 @@ df <- rts_df %>%
 
 ```
 
-# select species trait data
+# get data ready
+
+## select species trait data
 We select species with data for all our predictor variables
 
 ```{r}
@@ -110,6 +112,41 @@ select_df <- na.omit(df)
 n_distinct(select_df$Binomial)
 n_distinct(select_df$order)
 ```
+## summary of traits
+
+```{r}
+glimpse(select_df)
+
+unique(select_df$mating_system)
+matingsystem <- select_df %>%
+  group_by(mating_system) %>%
+  n_distinct()
+
+n.mono <- n_distinct(select_df$Binomial[select_df$mating_system=="monogamous"])
+n.poly <- n_distinct(select_df$Binomial[select_df$mating_system=="polygynous"])
+n.prom <- n_distinct(select_df$Binomial[select_df$mating_system=="promiscuous"])
+n.mono + n.poly + n.prom == n_distinct(select_df$Binomial) # check
+
+# percentage monogamous in our dataset?
+n.mono/n_distinct(select_df$Binomial)*100
+
+```
+
+```{r}
+
+paternalcare <- select_df %>%
+  group_by(paternal_care) %>%
+  n_distinct()
+
+n.without.care <- n_distinct(select_df$Binomial[select_df$paternal_care=="no"])
+n.with.care <- n_distinct(select_df$Binomial[select_df$paternal_care=="yes"])
+n.with.care +n.without.care == n_distinct(select_df$Binomial) # check
+
+# percentage species with care in our dataset?
+n.with.care/n_distinct(select_df$Binomial)*100
+
+```
+
 
 
 ## distribution
