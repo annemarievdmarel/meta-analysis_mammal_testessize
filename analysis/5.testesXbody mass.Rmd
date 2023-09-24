@@ -1,0 +1,2014 @@
+---
+title: "Relative testes size"
+author: "Annemarie van der Marel"
+date: "2022-12-15"
+output: html_document
+---
+
+
+```{r}
+sessionInfo()
+```
+
+remove marine mammals (cetacea & sirenia) and humans, as they are outliers
+
+
+# Load libraries
+```{r setup, include=FALSE}
+# data cleaning
+library(tidyverse) 
+
+#plotting
+library(viridis)
+library(RColorBrewer)
+
+# 
+library(job) # to run models in the background
+library(rethinking) # for CI
+
+# phylogenies
+library(phytools)
+library(ape)
+
+# PGLMMs
+library(brms)
+library(rstan)
+library(rlang)
+library(Rcpp)
+#library("loo")
+
+```
+
+
+# Import  data
+```{r}
+
+# data with Baker 2019 dataset and crossreffed with vertlife
+full_df <- read.csv("../data/testes_lifehistory_mating_care_Dec17.csv") %>%
+  arrange(Binomial)
+
+length(unique(full_df$Binomial)) 
+multiple_entries <- full_df %>% 
+  group_by(Binomial) %>%
+  tally() %>%
+  filter(n>1) # 43 species with > 1 entry
+
+# species for phylogenetic tree
+species631 <- unique(full_df$Binomial)
+#write.csv(species631, "../data/631species.csv")
+
+```
+## remove outliers
+remove marine mammals (cetacea & sirenia) and humans, as they are outliers
+```{r}
+
+unique(full_df$order)
+
+df <- full_df %>%
+  filter(!order %in% c("Cetacea", "Sirenia"), 
+         Binomial!="Homo_sapiens")
+  
+unique(df$order)
+```
+
+
+
+## number of species per trait
+
+dataset to use (excludes marine mammal orders such as Cetacea and Sirenia and humans):
+In total, we have 571 terrestrial mammal species in 17 orders for which we can calculate relative testes size. Of these 571, we have 541 species with litter size data, 460 with litters per year, 469 with longevity, 373 with mating system, and 263 with paternal care data. We have 220 species where we have data for all our predictor variables.
+
+
+```{r species with data}
+all_df <- df
+
+n_distinct(all_df$Binomial) # number of species with testes data
+n_distinct(all_df$order)
+
+n_ls <- all_df %>%
+  filter(!is.na(litter_size)) 
+n_distinct(n_ls$Binomial)
+
+n_ly <- all_df %>%
+  filter(!is.na(litter_year))
+n_distinct(n_ly$Binomial)
+
+n_lg <- all_df %>%
+  filter(!is.na(longevity))
+n_distinct(n_lg$Binomial)
+
+n_ms <- all_df %>%
+  filter(!is.na(mating_system))
+n_distinct(n_ms$Binomial)
+
+n_pc <- all_df %>%
+  filter( paternal_care!="")
+n_distinct(n_pc$Binomial)
+
+n_all <- na.omit(all_df) 
+n_distinct(n_all$Binomial)
+
+```
+
+
+full dataset includng Baker et al 2019 dataset:
+In total, we have 631 species for which we can calculate relative testes size. Of these 631, we have 593 species with litter size data, 504 with litters per year, 517 with longevity, 381 with mating system, and 264 with paternal care data. We have 257 species where we have data for all our predictor variables.
+```{r species with data}
+all_df <- full_df
+
+n_distinct(all_df$Binomial) # number of species with testes data
+
+n_testes <- all_df %>%
+  filter(is.na(testes_g)) 
+
+n_ls <- all_df %>%
+  filter(!is.na(litter_size)) 
+n_distinct(n_ls$Binomial)
+
+n_ly <- all_df %>%
+  filter(!is.na(litter_year))
+n_distinct(n_ly$Binomial)
+
+n_lg <- all_df %>%
+  filter(!is.na(longevity))
+n_distinct(n_lg$Binomial)
+
+n_ms <- all_df %>%
+  filter(!is.na(mating_system))
+n_distinct(n_ms$Binomial)
+
+n_pc <- all_df %>%
+  filter( paternal_care!="")
+n_distinct(n_pc$Binomial)
+
+n_all <- na.omit(all_df) 
+n_distinct(n_all$Binomial)
+
+```
+
+
+
+Small dataset excludng Baker et al 2019 dataset:
+In total, we have 210 species for which we can calculate relative testes size. Of these 210, we have 198 species with litter size data, 147 with litters per year, 170 with longevity, 108 with mating system, and 108 with paternal care data. We only have 8 species (all squirrels) where we have data for all our predictor variables. 
+
+```{r missing species}
+n_testes <- all_df %>%
+  filter(is.na(testes_g)) 
+n_distinct(all_df$Binomial)
+
+n_ls <- all_df %>%
+  filter(is.na(LS)) 
+n_distinct(n_ls$Binomial)
+length(unique(check_df$Binomial))
+
+n_ly <- all_df %>%
+  filter(is.na(LY))
+n_distinct(n_ly$Binomial)
+
+n_lg <- all_df %>%
+  filter(is.na(LG))
+n_distinct(n_lg$Binomial)
+
+n_ms <- all_df %>%
+  filter(is.na(mating_system))
+n_distinct(n_ms$Binomial)
+
+n_pc <- all_df %>%
+  filter( paternal_care=="")
+n_distinct(n_pc$Binomial)
+
+n_all <- na.omit(all_df) 
+n_distinct(n_all)
+n_order <- n_all %>%
+  group_by(order) %>%
+  tally()
+
+
+```
+
+ 
+
+# plot testes ~ bm
+
+```{r set colors by order}
+
+n_distinct(all_df$order)
+
+# 26 qualitatively different colors from Dave Keenan
+colors26 <-  c("#00B7FF", "#004DFF", "#00FFFF", "#826400", "#580041", "#FF00FF", "#00FF00",
+               "#C500FF", "#B4FFD7", "#FFCA00", "#969600", "#B4A2FF", "#C20078", "#0000C1",
+               "#FF8B00", "#FFC8FF", "#666666", "#FF0000", "#CCCCCC", "#009E8F", "#D7A870", 
+               "#8200FF", "#960000", "#BBFF00",  "#006F00", "#1f78b4", "#8E0152") # "#1f78b4", "#8E0152", "#FFFF00", are the extr 2 colors
+
+set.seed(42)
+colorXorder <-  sample(colors26, n_distinct(all_df$order))
+
+```
+
+
+```{r}
+ggplot(all_df, aes(x=log(BM_g), y=log(testes_g))) +
+  geom_point(aes(color=order)) +
+  labs(x="log body mass (g)", y="log testes mass (g)") +
+  theme_classic() +
+  scale_colour_manual(values = colorXorder) 
+
+ggsave("../figures/log_testes_bm.pdf") 
+
+# without legend
+ggplot(all_df, aes(x=log(BM_g), y=log(testes_g))) +
+  geom_point(aes(color=order)) +
+  labs(x="log body mass (g)", y="log testes mass (g)") +
+  theme_classic() +
+  theme(legend.position = "none") +
+  scale_colour_manual(values = colorXorder) 
+
+ggsave("../figures/log_testes_bm_nolegend.pdf") 
+```
+
+How many species by order?
+```{r}
+
+n_order <- all_df %>%
+  group_by(order) %>%
+  tally()
+```
+
+
+
+# Relative testes size: testes mass / body mass
+Following reviewer comment we also perform the models using rts as testes mass divided by body mass following Charlton & Reby 2016. 
+
+
+Kenagy & Trombulak 1986
+Testes mass = 0.035 x body mass^0.72
+The equation is Y=0.035X to the power of 0.72, Where the mass of the testes is Y.  The body mass is X.
+
+The relative testes size is the ratio of observed testes size to the testes size predicted by this equation
+
+from thesis Anjos: 
+Richardson's ground squirrels = 0.61 ± 0.06
+```{r rts function}
+
+check_outliers <- all_df %>%
+  summarize(checkmass= ifelse(testes_g==BM_g, "same", "no"))
+# testes mass incorrect: should be 1.2 instead of 1021; already corrected
+# all_df %>%   filter(Binomial=="Aotus_trivirgatus") 
+# all_df$testes_g[all_df$Binomial=="Aotus_trivirgatus"] <- 1.2
+
+
+# include rts for which we only had relative testes size and not testes_mass
+missingrts <- all_df %>% 
+  filter(is.na(testes_g))
+# rts_df %>%
+#   filter(Binomial=="Ammospermophilus_leucurus")
+# rts_df$rts[rts_df$Binomial=="Ammospermophilus_leucurus"] <- 2.24
+
+all_df %>%
+  filter(Binomial=="Urocitellus_richardsonii")
+all_df$testes_g[all_df$Binomial=="Urocitellus_richardsonii"] <- 1.95
+
+rts_df <- all_df %>%
+  mutate(rts=testes_g/BM_g) %>%
+  dplyr::select(X, order, family, common_name, Binomial, rts, 
+                 testes_g,log.testes., ref_testes, everything())
+
+
+head(rts_df)
+
+
+
+#write.csv(rts_df, "../data/rts_life_mating_care.csv")
+```
+
+
+## Check for outliers in relative testes size data
+```{r}
+
+#rts_df <- read.csv("../data/rts_life_mating_care.csv")
+
+
+
+check_outliers <- rts_df %>%
+  summarize(checkmass= ifelse(testes_g>BM_g, "same", "no"))
+unique(check_outliers$checkmass)
+
+range(rts_df$rts) #order cetacea has very large rts, excluded them from analysis
+median(rts_df$rts)
+mean(rts_df$rts)
+
+ggplot(rts_df, aes(rts)) +
+  geom_histogram() +
+  theme_classic()
+
+# already removed species with incorrectly provided testes mass
+#remove_species <- c("Cynomys_parvidens", "Funisciurus_congicus")
+
+
+
+
+
+```
+
+
+
+
+
+# Collinearity of variables
+Prepare data
+```{r}
+## Collinearity of the explanatory variables ----
+library(psych) #Calls: pairs.panels
+library(car) #Calls: vif
+library(plyr) #Calls: rbind.fill
+#library(usdm)
+
+# global, without relative testes size but with body mass and testes mass
+# Z <- cbind(traits$BM_g,traits$testes_g, traits$LG, traits$LS , traits$LY )
+# colnames(Z) <- c("bm","testes" ,"lg","ls","ly")
+# pairs.panels(Z) # Generate scatterplots with Pearson correlations
+# dfz = data.frame(Z) # Data Frame with predictor variables
+# vif(dfz) # no variable with VIF > 3
+
+# 
+Z <- cbind(rts_df$rts, rts_df$longevity, rts_df$litter_size , rts_df$litter_year ) #, df$paternal_care , df$mating_system
+colnames(Z) <- c("rts", "lg","ls","ly") #, "pc","ms"
+pairs.panels(Z) # Generate scatterplots with Pearson correlations
+dfz = data.frame(Z) # Data Frame with predictor variables
+vif(dfz) # VIF > 3 : no variables
+
+
+# global
+Z <- cbind(rts_df$rts,rts_df$longevity, rts_df$litter_size , rts_df$litter_year,
+           rts_df$paternal_care , rts_df$mating_system ) 
+colnames(Z) <- c("rts", "lg","ls","ly","pc", "mc") #, "pc","ms"
+pairs.panels(Z) # Generate scatterplots with Pearson correlations
+dfz = data.frame(Z) # Data Frame with predictor variables
+vif(dfz) # VIF > 3 : no variables
+
+vif(lm(rts ~ litter_size + litter_year + longevity + mating_system + paternal_care, data=rts_df)) # no problems with collinearity
+
+
+
+```
+No problem with collinearity
+
+# Plots
+
+```{r}
+speciesXorder <- rts_df %>%
+  group_by(order) %>%
+  tally()
+```
+
+
+```{r litter size}
+
+range(rts_df$litter_size, na.rm = T)
+fig.ls <- ggplot(rts_df, aes(x=litter_size, y=rts)) + 
+  geom_point(aes(color=order)) +
+  #geom_smooth( method = "lm") + 
+  theme_classic() +
+  scale_x_continuous(limits = c(0.5,10.0), 
+                     breaks = 0:10) + 
+  labs(x= "litter size", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+  # geom_point(aes(color=order)) +
+  # scale_color_brewer(palette = "Set1")
+
+fig.ls
+```
+
+```{r litters/year}
+range(rts_df$LY, na.rm = T)
+
+fig.ly<- ggplot(rts_df, aes(x=litter_year, y=rts)) + 
+  geom_point(aes(color=order)) +
+  theme_classic() +
+  scale_x_continuous(limits = c(0.0,8.0), 
+                     breaks = 1:8) + 
+  labs(x= "litters per year", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+fig.ly
+```
+
+
+```{r longevity}
+
+range(rts_df$LG, na.rm = T)
+fig.lg<- ggplot(rts_df, aes(x=longevity, y=rts)) + 
+  geom_point(aes(color=order)) +
+  theme_classic() +
+  # scale_x_continuous(limits = c(0.0,8.0), 
+  #                    breaks = 0:8) + 
+  labs(x= "longevity (years)", y = "relative testes size") +
+  scale_colour_manual(values = colorXorder) 
+fig.lg
+```
+
+```{r mating system}
+unique(rts_df$mating_system)
+check <- rts_df %>%
+  filter(mating_system=="monogamous; polygynous")
+#change to most complex one
+rts_df$mating_system[rts_df$mating_system=="monogamous; polygynous"] <- "polygynous"
+
+matingsys <- c("monogamous", "polygynous", "promiscuous")
+
+# switch to raincloud plot
+fig.ms <- rts_df %>%
+  filter(mating_system %in% matingsys) %>%
+  ggplot( aes(x=mating_system, y=rts)) + 
+  geom_boxplot() + 
+  #geom_jitter(aes(color=order))+
+  theme_classic() +
+  labs(x= "mating system", y = "relative testes size")+
+  scale_colour_manual(values = colorXorder) 
+fig.ms
+```
+
+
+```{r paternal care}
+unique(rts_df$paternal_care)
+
+fig.pc<- rts_df %>%
+  filter(!is.na(paternal_care)) %>%
+  ggplot( aes(x=paternal_care, y=rts)) + 
+  geom_boxplot() +
+  #geom_jitter(aes(color=order))+
+  theme_classic() +
+  labs(x= "paternal care", y = "relative testes size")+
+  scale_colour_manual(values = colorXorder) 
+fig.pc
+```
+
+
+
+
+```{r combine}
+# plots
+unique(df$order)
+
+# scale_color_viridis(discrete = TRUE, option = "D")+
+#   scale_fill_viridis(discrete = TRUE) 
+
+
+library(ggpubr) 
+plot.rts<-ggarrange(figA, figB, figC, figD,figE, labels = "auto")
+plot.rts
+ggexport(plot.rts, filename = "plot.rts.pdf")
+```
+
+
+# other rts analyses
+
+```{r}
+# log-transformed body and testes mass
+rts_log <- pruned_df %>%
+  mutate(
+         exp.testes=0.035*log(BM_g)^0.72,
+         rts=log(testes_g)/exp.testes) %>%
+  dplyr::select(order, family, common_name, Binomial, rts, rel_testes_size, 
+                exp.testes, testes_g, source_testes, everything())
+```
+
+
+
+
+
+```{r residuals of linear regression}
+
+
+cor.test(log(rts_df$BM_g), log(rts_df$testes_g), method=c("pearson"))
+
+lm.rts <- lm(log(testes_g) ~ log(BM_g) , data=rts_df)
+summary(lm.rts)
+
+rts_df$rts <- lm.rts$residuals 
+
+ggplot(all_df, aes( y= log(testes_g),x =log(BM_g))) +
+  geom_point() +
+  theme_classic() +
+  geom_smooth(method = "lm") +
+  labs(x="log body mass (g)", y = "log testes mass (g)")
+  
+
+
+
+```
+
+We found a significant linear correlation of log of testes mass against log body mass (R2 = 0.91, p < 0.001). 
+
+-3.1 +- 0.69, F1, 235 = 1156, p < 0.001
+
+
+# MODELS
+
+Here, we perform PGLMMS using the brms package as it can examine correlations between continuous and discrete traits, and can incorporate multiple measurements per species.
+
+
+Stan settings
+```{r}
+mycores <- parallel::detectCores() - 2
+
+options(mc.cores = parallel::detectCores())
+rstan_options(auto_write = TRUE)
+```
+
+
+# Import data
+```{r}
+head(rts_df)
+# rts_df <- read.csv("../data/rts_life_mating_care.csv") %>%
+#   dplyr::select(-X)
+
+species<- unique(rts_df$Binomial)
+#write.csv(species, "species571.csv")
+
+
+unique(rts_df$mating_system)
+rts_df$mating_system[rts_df$mating_system=="monogamous; polygynous"] <- "polygynous"
+unique(rts_df$order)
+
+df <- rts_df %>%
+  select(order, family, common_name, Binomial, 
+         rts, 
+         litter_size, litter_year, longevity, 
+         mating_system, paternal_care) %>%
+  mutate(females_mate_multiply = if_else(mating_system=="monogamous", "no",
+                                         if_else(mating_system=="polygynous", "no","yes")))
+
+
+
+```
+
+# get data ready
+
+## select species trait data
+We select species with data for all our predictor variables
+
+```{r}
+select_df <- na.omit(df) 
+n_distinct(select_df$Binomial)
+n_distinct(select_df$order)
+```
+## summary of traits
+
+```{r}
+glimpse(select_df)
+
+unique(select_df$mating_system)
+matingsystem <- select_df %>%
+  group_by(mating_system) %>%
+  n_distinct()
+
+n.mono <- n_distinct(select_df$Binomial[select_df$mating_system=="monogamous"])
+n.poly <- n_distinct(select_df$Binomial[select_df$mating_system=="polygynous"])
+n.prom <- n_distinct(select_df$Binomial[select_df$mating_system=="promiscuous"])
+n.mono + n.poly + n.prom == n_distinct(select_df$Binomial) # check
+
+# percentage monogamous in our dataset?
+n.mono/n_distinct(select_df$Binomial)*100
+
+```
+
+```{r}
+
+paternalcare <- select_df %>%
+  group_by(paternal_care) %>%
+  n_distinct()
+
+n.without.care <- n_distinct(select_df$Binomial[select_df$paternal_care=="no"])
+n.with.care <- n_distinct(select_df$Binomial[select_df$paternal_care=="yes"])
+n.with.care +n.without.care == n_distinct(select_df$Binomial) # check
+
+# percentage species with care in our dataset?
+n.with.care/n_distinct(select_df$Binomial)*100
+
+```
+
+
+
+## distribution
+
+```{r}
+ggplot(df, aes(rts)) +
+  geom_histogram()
+
+# shapiro test p >0.05, data normally distributed
+#ggqqplot(rts_df, "rts")
+shapiro.test(df$rts)
+
+
+m <- lm(rts ~ litter_size, data = rts_df)
+summary(m)
+d <- data.frame(residuals = residuals(m),         # Residuals
+                std_residuals = rstudent(m), # Studentized Residuals
+                fitted = fitted(m),          # Fitted values
+                cooks = cooks.distance(m))   # Cook's D
+d <- mutate(d, observation = 1:nrow(d))           # Observation number
+
+# histogram of residuals
+ggplot(data = d, aes(x = std_residuals)) +
+  geom_histogram(bins = 10)
+
+# Check for Normality: QQ Normality plot of residuals
+ggplot(data = d, aes(sample = std_residuals)) +
+  stat_qq() +
+  stat_qq_line()
+
+# Check heteroscedasticity or constant variance
+ggplot(d, aes(x = fitted, y = std_residuals)) +
+  geom_point() +
+  geom_hline(yintercept = 0)
+
+# Cook's D
+ggplot(d, aes(x = observation, y = cooks)) +
+  geom_point() +
+  geom_hline(yintercept = 1, linetype = "dotted") +
+  geom_hline(yintercept = 4/nrow(d), linetype = "dashed")
+# outliers
+d_outliers <- filter(d, cooks > 4/nrow(d))  # observation 86
+#rts_df[59,]
+rts_df[550,] # Sorex_araneus largest Cook's distance
+
+#d_outliers # no outliers when log-transformed; 2,31,33,34
+
+
+# distribution
+fitdistrplus::plotdist(df$rts)
+fitdistrplus::descdist(df$rts, discrete = FALSE)
+fit.gamma <- fitdistrplus::fitdist(df$rts, 'gamma')
+plot(fit.gamma)
+fit.gamma$aic
+fit.weibull <- fitdistrplus::fitdist(df$rts, "weibull")
+plot(fit.weibull)
+fit.weibull$aic
+fit.norm <- fitdistrplus::fitdist(df$rts, "norm")
+plot(fit.norm)
+fit.norm$aic
+fit.lnorm <- fitdistrplus::fitdist(df$rts, "lnorm")
+plot(fit.lnorm)
+fit.lnorm$aic
+
+# (gamlss)
+library(gamlss)
+fit <- fitDist(df$rts, k = 2, type = "realline", trace = FALSE, try.gamlss = TRUE)
+summary(fit)
+fit$fits  # best fit: c("SHASHo", "Sinh-Arcsinh")  
+fit$failed
+
+
+range(df$rts)
+# brms
+# fitting a brms model with a Gaussian likelihood
+job::job({
+model_normal <- brm(rts ~ 1, family = gaussian(), data = df)
+
+# fitting a brms model with a gamma
+#model_gamma <- brm(rts ~ 1, family = Gamma(), data = df)
+
+# fitting a brms model with a skew normal likelihood
+model_skew <- brm(rts ~ 1, family = skew_normal(), data = df)
+
+# fitting a brms model with a log normal likelihood
+model_lnorm <- brm(rts ~ 1, family = lognormal(), data = df)
+
+# fitting a brms model with a weibull likelihood
+model_weib <- brm(rts ~ 1, family = weibull(), data = df)
+})
+
+# posterior predictive checking
+pp_check(model_normal, ndraws = 1e2)  #normal best fitting
+#pp_check(model_gamma, ndraws = 1e2)
+pp_check(model_skew, ndraws = 1e2)
+pp_check(model_lnorm, ndraws = 1e2) 
+pp_check(model_weib, ndraws = 1e2) 
+```
+
+
+
+# Import phylogenetic tree
+
+-	a mammalian phylogenetic tree
+o	Upham et al. 2019 https://doi.org/10.1371/journal.pbio.3000494 
+o	http://vertlife.org/phylosubsets/ website to select species or taxonomic groups or complete tree 
+tree-pruner-812b7edc-05f3-4f07-9665-eb3a3cd861e0 for complete 571 species
+
+
+```{r}
+# Upham et al. 2019
+#mammaltree <- read.nexus("./data/output.nex")
+trees <- ape::read.nexus("../data/571mammals.nex")
+```
+
+
+# Mating system interaction model
+We hypothesized that the relationship between testes size and female reproductive output would differ between mammal species exhibiting different mating systems.  Specifically, in species where females mate with multiple males per breeding attempt, we predicted larger testes size with smaller litter sizes and fewer total annual offspring, because smaller litter sizes represent more intense competition due to fewer potential offspring available to be sired. In species where females mate with a single male per breeding attempt, we predicted larger testes with larger litter sizes and greater numbers of total annual offspring, due to lesser competition with other males, but an increased need to fertilize eggs.
+
+female reproductive investment = litter size * litters/year 
+
+
+### set up model
+
+standardize values
+```{r}
+st<-  select_df %>% 
+  mutate(across(c("litter_size", "litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(st)
+```
+
+```{r}
+# duplicate species list for mixed-effects model
+st$phylo<- st$Binomial
+```
+
+
+filter species with trait data from phylogeny
+```{r}
+TipsWant <- unique(st$Binomial) # 224 species that have all trait data
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWant))
+}
+#sort(pruned.tree[[1]]$tip.label)
+```
+
+
+Covariance matrix
+```{r}
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+```
+
+
+Get prior 
+https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations
+http://www.stat.columbia.edu/~gelman/research/published/entropy-19-00555-v2.pdf
+https://discourse.mc-stan.org/t/help-understanding-and-setting-informative-priors-in-brms/9574/12
+sample_prior = "only" and then creating prior predictive plots via pp_check.
+```{r}
+prior.interaction<- brms::get_prior(rts ~ litter_size * litter_year * mating_system +
+                                  longevity + paternal_care +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data = st, 
+          data2 = list(A = A[[1]]),
+          family = gaussian())
+prior.interaction
+
+```
+
+### model
+
+model convergence diagnositcs:
+"We may also investigate convergence numerically by means of the
+scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et al. 2019), which should be close to one (i.e., R < b 1.05), 
+and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
+```{r}
+
+job::job({
+m.int <- brm(rts ~ litter_size * litter_year * mating_system +
+              longevity + paternal_care +
+              (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
+  data = st, 
+  family = gaussian(), 
+  data2 = list(A = A[[1]]),
+  prior = prior.interaction, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+})
+
+# check summary, plot for diagnostics --> all good
+#rhat(global)
+#neff_ratio(global)
+pairs(m.int)
+summary(m.int, waic = TRUE)
+#head(predict(global)) # predict responses based on the fitted model
+
+# investigate model fit
+pp_check(m.int) 
+plot(m.int, ask=FALSE)
+
+loo(m.int) #, moment_match = TRUE
+loo.interaction <- loo(m.int)$estimate[3]
+
+# extract samples
+inter.samples<- posterior_samples(m.int)
+inter.draws <- as_draws(m.int)
+inter.looic <- loo(m.int)$estimate[3]
+#inter.loo <- rbind(1, inter.looic)
+#inter.loo <- loo(m.int, save_psis = TRUE)
+#inter.looic <- loo(m.int)[["looic"]] -> deprecated
+
+#loo
+# print(inter.loo)
+# plot(inter.loo)
+# if (any(pareto_k_values(inter.loo) > 0.7)) {
+#   inter.loo1 <- loo(m.int, save_psis = TRUE, k_threshold = 0.7)#, moment_match = T
+# }
+# print(inter.loo1)
+# 
+# loo_compare(loo, inter.loo)
+
+```
+
+
+
+
+### loop for all 100 trees
+
+```{r}
+start.time <- Sys.time()
+
+#job::job({
+i=1
+list <- c(1:100)
+
+# make empty data frame to put data in
+## loo
+inter.looic <- data.frame(runby=character(),
+                          looic=numeric())
+## posterior samples
+  samples <-  colnames(inter.samples) 
+  inter.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samples)))
+  colnames(inter.samples1) <- samples # assign column names
+
+for(i in 1:100){
+  runby <- list[i]
+  print(runby)
+
+  pruned.tree <- drop.tip(trees[[runby]], setdiff(trees[[runby]]$tip.label, TipsWant))
+  A <- vcv.phylo(pruned.tree)
+
+  
+  interactioni <- brm(rts ~ litter_size * litter_year * mating_system +
+              longevity + paternal_care +
+              (1|gr(Binomial, cov = A)) + (1|phylo), 
+  data = st, 
+  family = gaussian(), 
+  data2 = list(A = A),
+  prior = prior.interaction, 
+  chains = 4, cores = mycores, 
+  iter = 5000, warmup = 3000,  
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  )
+
+  # model fit
+  #inter.looi <- loo(interactioni)[["looic"]]
+  looic <- loo(interactioni)$estimate[3]
+  pool <- cbind.data.frame(runby, 
+                           looic)
+  inter.looic <-rbind(inter.looic, pool )
+  write.csv(inter.looic,"../results/tXbm.loo.interaction.looped..csv" )
+  #save(inter.looi, file="loo.interaction.looped.robj")
+  
+  # extract samples
+  inter.samplesi<- posterior_samples(interactioni)
+  post.inter.looped<- rbind(inter.samples1, inter.samplesi)
+  save(post.inter.looped, file="../results/tXbm.post.interaction.looped_run1-100.robj")
+  
+  # # have to combine lists
+  # inter.drawsi <- as_draws(interactioni)
+  # post.inter.draw.looped<- rbind(sample.draws, inter.drawsi)
+  # save(post.inter.draw.looped, file="post.inter.draw.looped_run1-100.robj")
+}
+#})
+end.time <- Sys.time()
+
+#Time to run:
+end.time - start.time
+  
+nrow(post.inter.looped)/2000 # check all 100 models added 
+
+#save(interactioni, file="interactionmodel.looped.robj")
+```
+### results
+
+```{r}
+load("../results/tXbm.post.interaction.looped_run1-100.robj")
+```
+
+```{r}
+round(mean(inter.looic$looic),1)
+round(HPDI(inter.looic$looic, prob=0.95),1)
+```
+
+
+
+
+### Interaction model values
+```{r}
+intercept <- c(round(mean(post.inter.looped$b_Intercept),2))
+```
+
+**Table 2**: Full summary of the factors affecting relative testes size in terrrestrial mammals (interaction model). All estimates are on the log-odds scale and summarized by the mean and 95% credible
+interval (“lwr95CI” - “upr95CI”) of the posterior distribution.
+```{r table s4}
+#load("../results/post.inter.looped.robj")
+
+table2<- data.frame(
+  Parameter = c("Intercept", 
+                "Litter size", 
+                "Litters per year", 
+                "Mating system (polygynous)",
+                "Mating system (promiscuous)",
+                "Longevity", 
+                "Paternal care present",
+                "Litter size:litters/year",
+                "Litter size:polygynous mating system",
+                "Litter size:promiscuous mating system",
+                "Litters/year:polygynous mating system",
+                "Litters/year:promiscuous mating system",
+                "Litter size:litters/year:polygynous mating system",
+                "Litter size:litters/year:promiscuous mating system",
+                "Phylo SD", 
+                "Species SD"), 
+                Mean = 
+                  c(round(mean(post.inter.looped$b_Intercept),2), 
+                    round(mean(post.inter.looped$b_litter_size),2), 
+                    round(mean(post.inter.looped$b_litter_year),2), 
+                    round(mean(post.inter.looped$b_mating_systempolygynous),2), 
+                    round(mean(post.inter.looped$b_mating_systempromiscuous),2), 
+                    round(mean(post.inter.looped$b_longevity),2),
+                    round(mean(post.inter.looped$b_paternal_careyes),2),
+                    round(mean(post.inter.looped$`b_litter_size:litter_year`),2),
+                    round(mean(post.inter.looped$`b_litter_size:mating_systempolygynous`),2),
+                    round(mean(post.inter.looped$`b_litter_size:mating_systempromiscuous`),2),
+                    round(mean(post.inter.looped$`b_litter_year:mating_systempolygynous`),2),
+                    round(mean(post.inter.looped$`b_litter_year:mating_systempromiscuous`),2),
+                    round(mean(post.inter.looped$`b_litter_size:litter_year:mating_systempolygynous`),2),
+                    round(mean(post.inter.looped$`b_litter_size:litter_year:mating_systempromiscuous`),2),
+                    round(mean(post.inter.looped$sd_phylo__Intercept),2),
+                    round(mean(post.inter.looped$sd_Binomial__Intercept),2)), 
+                
+                lwr95CI = 
+                  c(round(HPDI(post.inter.looped$b_Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_litter_size, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_litter_year, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_mating_systempolygynous, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_mating_systempromiscuous, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_longevity, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$b_paternal_careyes, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:mating_systempolygynous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:mating_systempromiscuous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_year:mating_systempolygynous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_year:mating_systempromiscuous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year:mating_systempolygynous`, prob=0.95)[1],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year:mating_systempromiscuous`, prob=0.95)[1],2),
+                    
+                    round(HPDI(post.inter.looped$sd_phylo__Intercept, prob=0.95)[1],2), 
+                    round(HPDI(post.inter.looped$sd_Binomial__Intercept, prob=0.95)[1],2)), 
+                    
+                upr95CI = 
+                  c(round(HPDI(post.inter.looped$b_Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_litter_size, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_litter_year, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_mating_systempolygynous, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_mating_systempromiscuous, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_longevity, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$b_paternal_careyes, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:mating_systempolygynous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:mating_systempromiscuous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_year:mating_systempolygynous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_year:mating_systempromiscuous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year:mating_systempolygynous`, prob=0.95)[2],2),
+                    round(HPDI(post.inter.looped$`b_litter_size:litter_year:mating_systempromiscuous`, prob=0.95)[2],2),
+                    
+                    round(HPDI(post.inter.looped$sd_phylo__Intercept, prob=0.95)[2],2), 
+                    round(HPDI(post.inter.looped$sd_Binomial__Intercept, prob=0.95)[2],2)))
+                    
+kable(table2)
+
+write.csv(table2, "../results/TxBM.interaction.model.summary.csv")
+```
+
+
+
+
+
+
+
+
+
+
+# NOT RUN with testes/BM
+
+# intercept only model
+
+
+### set up model species with trait data
+standardize values
+```{r}
+st<-  select_df %>% 
+  mutate(across(c("litter_size", "litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(st)
+```
+
+```{r}
+# duplicate species list for mixed-effects model
+st$phylo<- st$Binomial
+```
+
+
+filter species with trait data from phylogeny
+```{r}
+TipsWant <- unique(select_df$Binomial) # 224 species that have all trait data
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWant))
+}
+#sort(pruned.tree[[1]]$tip.label)
+```
+
+
+Covariance matrix
+```{r}
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+```
+
+
+
+### set up model all species
+filter species with trait data from phylogeny
+```{r}
+
+# 571 species that have all trait data
+TipsWantAll <- unique(df$Binomial) 
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWantAll))
+}
+#sort(pruned.tree[[1]]$tip.label)
+```
+
+
+Covariance matrix
+```{r}
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+```
+
+standardize values
+```{r}
+st_intercept<-  df %>% 
+  mutate(across(c("litter_size", "litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(st_intercept)
+```
+
+```{r}
+# duplicate species list for mixed-effects model
+st_intercept$phylo<- st_intercept$Binomial
+```
+
+###Get prior 
+https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations
+http://www.stat.columbia.edu/~gelman/research/published/entropy-19-00555-v2.pdf
+https://discourse.mc-stan.org/t/help-understanding-and-setting-informative-priors-in-brms/9574/12
+sample_prior = "only" and then creating prior predictive plots via pp_check.
+```{r}
+prior.intercept<- brms::get_prior(rts ~ 1 +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data =  st, #st_intercept, 
+          data2 = list(A = A[[1]]),
+          family = lognormal())
+prior.intercept
+
+```
+
+### model
+
+model convergence diagnositcs:
+"We may also investigate convergence numerically by means of the
+scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et al. 2019), which should be close to one (i.e., R < b 1.05), 
+and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
+```{r}
+
+job::job({
+m.intercept <- brm(rts ~ 1 +
+              (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
+  data = st, #st_intercept, 
+  family = normal(), 
+  data2 = list(A = A[[1]]),
+  prior = prior.intercept, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+})
+
+# check summary, plot for diagnostics --> all good
+#rhat(global)
+#neff_ratio(global)
+pairs(m.intercept)
+summary(m.intercept, waic = TRUE)
+#head(predict(global)) # predict responses based on the fitted model
+
+# investigate model fit
+loo(m.intercept) #, moment_match = TRUE
+pp_check(m.intercept) 
+plot(m.intercept, ask=FALSE)
+
+
+# extract samples
+intercept.samples<- posterior_samples(m.intercept)
+intercept.draws <- as_draws(m.intercept)
+intercept.loo <- loo(m.intercept)$estimate[3]
+
+```
+
+
+
+### loop for all 100 trees
+
+```{r}
+
+
+i=1
+list <- c(1:100)
+
+## loo
+  intercept.looic  <- data.frame(runby=character(),
+                                 looic=numeric())
+## posterior samples
+  samplesi <-  colnames(intercept.samples) 
+  intercept.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samplesi)))
+  colnames(intercept.samples1) <- samplesi # assign column names
+
+
+for(i in 1:100){
+  runby <- list[i]
+  print(runby)
+
+  pruned.tree <- drop.tip(trees[[runby]], 
+                          setdiff(trees[[runby]]$tip.label, TipsWant)) # TipsWantAll
+  A <- vcv.phylo(pruned.tree)
+
+  
+  m.intercepti <- brm(rts ~ 1 +
+              (1|gr(Binomial, cov = A)) + (1|phylo), 
+  data = st, #st_intercept, 
+  family = lognormal(), 
+  data2 = list(A = A),
+  prior = prior.intercept, 
+  chains = 4, cores = mycores, 
+  iter = 5000, warmup = 3000,  
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  )
+
+  # model fit
+  looic <- loo(m.intercepti)$estimate[3]
+  pool <- cbind.data.frame(runby, 
+                           looic)
+  intercept.looic <-rbind(intercept.looic , pool )
+  write.csv(intercept.looic,"../results/loo.intercept.looped.csv" )
+  
+  # extract samples
+  intercept.samplesi<- posterior_samples(m.intercepti)
+  post.intercept.looped<- rbind(intercept.samples1, intercept.samplesi)
+  save(post.intercept.looped, file="../results/post.intercept.looped_run1-100.robj")
+  
+  # extract samples
+  # intercept.samplesi<- posterior_samples(m.intercepti)
+  # intercept.post.looped<- rbind(intercept.samples, intercept.samplesi)
+  # save( intercept.post.looped, file=" intercept.post.looped.robj")
+  # 
+  # intercept.drawsi <- as_draws(m.intercepti)
+  # intercept.post.draw.looped<- rbind(intercept.draws, intercept.drawsi)
+  # save(intercept.post.draw.looped, file="intercept.post.draw.looped.robj")
+}
+
+  
+
+
+#save(interactioni, file="interactionmodel.looped.robj")
+```
+
+
+
+
+
+
+# mating system 
+## global model
+
+### set up model
+filter species with trait data from phylogeny
+```{r}
+TipsWant <- unique(select_df$Binomial) # 220 species that have all trait data
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWant))
+}
+#sort(pruned.tree[[1]]$tip.label)
+```
+
+
+Covariance matrix
+```{r}
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+```
+
+standardize values
+```{r}
+st<-  select_df %>% 
+  mutate(across(c("litter_size", "litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(st)
+```
+
+```{r}
+# duplicate species list for mixed-effects model
+st$phylo<- st$Binomial
+```
+
+Get prior 
+https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations
+http://www.stat.columbia.edu/~gelman/research/published/entropy-19-00555-v2.pdf
+https://discourse.mc-stan.org/t/help-understanding-and-setting-informative-priors-in-brms/9574/12
+sample_prior = "only" and then creating prior predictive plots via pp_check.
+```{r}
+prior.global <- brms::get_prior(rts ~ litter_size + litter_year + longevity +
+               mating_system + paternal_care +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data = st, 
+          data2 = list(A = A[[1]]),
+          family = lognormal())
+prior.global
+
+prior <- brms::get_prior(rts ~ 1 +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data = st, 
+          data2 = list(A = A[[1]]),
+            
+          family = gaussian())
+
+```
+
+### model
+
+model convergence diagnositcs:
+"We may also investigate convergence numerically by means of the
+scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et al. 2019), which should be close to one (i.e., R < b 1.05), 
+and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
+```{r}
+
+job::job({
+global <- brm(rts ~ litter_size + litter_year + longevity +
+                     mating_system + paternal_care +
+                     (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A[[1]]),
+  prior = prior.global, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+})
+
+# check summary, plot for diagnostics --> all good
+#rhat(global)
+#neff_ratio(global)
+pairs(global)
+summary(global, waic = TRUE)
+#head(predict(global)) # predict responses based on the fitted model
+
+# investigate model fit
+loo(global) #, moment_match = TRUE
+pp_check(global) 
+plot(global, ask=FALSE)
+
+
+# extract samples
+global.samples<- posterior_samples(global)
+global.draws <- as_draws(global)
+
+
+
+
+```
+
+
+
+### loop for all 100 trees
+
+```{r}
+
+#job::job({
+i=1
+list <- c(1:100)
+
+# make empty data frame to put data in
+## loo
+global.looic  <- data.frame(runby=character(),
+                            looic=numeric())
+## posterior samples
+  samplesg <-  colnames(global.samples) 
+  global.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samplesg)))
+  colnames(global.samples1) <- samplesg # assign column names
+
+
+for(i in 1:100){
+  runby <- list[i]
+  print(runby)
+
+  pruned.tree <- drop.tip(trees[[runby]], setdiff(trees[[runby]]$tip.label, TipsWant))
+  A <- vcv.phylo(pruned.tree)
+
+  
+  globali <- brm(rts ~ litter_size + litter_year + longevity +
+                     mating_system + paternal_care +
+                     (1|gr(Binomial, cov = A)) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A),
+  prior = prior.global, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, 
+                 max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+
+  # model fit
+  looic <- loo(globali)$estimate[3]
+  pool <- cbind.data.frame(runby, 
+                           looic)
+  global.looic <-rbind(global.looic , pool )
+  write.csv(global.looic,"../results/loo.global.looped.csv" )
+  
+  # extract samples
+  global.samplesi<- posterior_samples(globali)
+  post.global.looped<- rbind(global.samples1, global.samplesi)
+  save(post.global.looped, file="../results/post.global.looped_run1-100.robj")
+  
+  
+  # global.samplesi<- posterior_samples(globali)
+  # post.global.looped<- rbind(global.samples, global.samplesi)
+  # save(post.global.looped, file="post.global.looped.robj")
+  #
+  # global.drawsi <- as_draws(globali)
+  # post.global.draw.looped<- rbind(global.draws, global.drawsi)
+  # save(post.global.draw.looped, file="post.global.draw.looped.robj")
+}
+
+
+  
+nrow(post.global.looped)/4000 # check all 100 models added 
+
+```
+We received for some of the runs the warning:
+Warning: Bulk Effective Samples Size (ESS) is too low, indicating posterior means and medians may be unreliable.
+Running the chains for more iterations may help. See
+https://mc-stan.org/misc/warnings.html#bulk-essWarning -> model on tree 1 seemed to be doing fine. 
+
+Also some runs had some obersvations with pareto_k > 0.7. It is recommended to set 'moment_match = TRUE' in order to perform moment matching for problematic observations.
+
+
+## global model within species variability
+
+add variability of the independent variables (predictor) within species
+We only have repeated measures of testes mass and body mass of 23 species, so we will get rts data for 23 species.  
+
+```{r}
+# get mean of repeated measures 
+st_mean<-st
+
+st_mean$mean_rts <- 
+  with(st, sapply(split(rts, Binomial), mean)[Binomial])
+
+head(st_mean)
+
+## add variability of the independent variables (predictor) within species
+# as only rts change within species, we only have to add rts
+st_mean$within_rts <- st_mean$rts - st_mean$mean_rts
+```
+
+```{r}
+
+#filter species with trait data from phylogeny
+
+TipsWant <- unique(st_mean$Binomial) # 220 species that have all trait data
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWant))
+}
+#sort(pruned.tree[[1]]$tip.label)
+
+
+
+
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+
+
+# set prior
+prior.within =  brms::get_prior(mean_rts ~ within_rts + 
+                                  litter_size + litter_year + longevity +
+               mating_system + paternal_care +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data = st_mean, 
+          data2 = list(A = A[[1]]),
+          family = lognormal())
+
+
+
+job::job({
+global_within_sp <- brm(mean_rts ~ within_rts + 
+                        litter_size + litter_year + longevity +
+                        mating_system + paternal_care +
+                        (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
+  data = st_mean, 
+  family = lognormal(), 
+  data2 = list(A = A[[1]]),
+  prior = prior.within, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+})
+
+# check summary, plot for diagnostics --> all good
+#rhat(global)
+#neff_ratio(global)
+pairs(global_within_sp)
+summary(global_within_sp, waic = TRUE)
+#head(predict(global)) # predict responses based on the fitted model
+
+# investigate model fit
+loo(global_within_sp) #, moment_match = TRUE
+pp_check(global_within_sp) 
+plot(global_within_sp, ask=FALSE)
+
+
+# extract samples
+global_within_sp.samples<- posterior_samples(global_within_sp)
+global_within_sp.draws <- as_draws(global_within_sp)
+
+```
+no model convergence. It took very long to run. We will not run this on the 99 other phylogenetic trees. 
+
+
+## exclude potential outlier
+
+Rerun interaction model without potential outlier Tenrec_ecaudatus with litter size of 16 offspring. 
+
+
+#### set up model
+
+standardize values and exclude potential outlier
+```{r}
+st<-  select_df %>% 
+  filter(Binomial!="Tenrec_ecaudatus") %>%
+  mutate(across(c("litter_size", "litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(st)
+```
+
+```{r}
+# duplicate species list for mixed-effects model
+st$phylo<- st$Binomial
+```
+
+
+filter species with trait data from phylogeny
+```{r}
+TipsWant <- unique(st$Binomial) # 223 species that have all trait data
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWant))
+}
+#sort(pruned.tree[[1]]$tip.label)
+```
+
+
+Covariance matrix
+```{r}
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+```
+
+
+Get prior 
+https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations
+http://www.stat.columbia.edu/~gelman/research/published/entropy-19-00555-v2.pdf
+https://discourse.mc-stan.org/t/help-understanding-and-setting-informative-priors-in-brms/9574/12
+sample_prior = "only" and then creating prior predictive plots via pp_check.
+```{r}
+prior.interaction<- brms::get_prior(rts ~ litter_size * litter_year * mating_system +
+                                  longevity + paternal_care +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data = st, 
+          data2 = list(A = A[[1]]),
+          family = lognormal())
+prior.interaction
+
+```
+
+#### model
+
+model convergence diagnositcs:
+"We may also investigate convergence numerically by means of the
+scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et al. 2019), which should be close to one (i.e., R < b 1.05), 
+and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
+```{r}
+
+job::job({
+m.int <- brm(rts ~ litter_size * litter_year * mating_system +
+              longevity + paternal_care +
+              (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A[[1]]),
+  prior = prior.interaction, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+})
+
+# check summary, plot for diagnostics --> all good
+#rhat(global)
+#neff_ratio(global)
+pairs(m.int)
+summary(m.int, waic = TRUE)
+#head(predict(global)) # predict responses based on the fitted model
+
+# investigate model fit
+pp_check(m.int) 
+plot(m.int, ask=FALSE)
+
+loo(m.int) #, moment_match = TRUE
+loo.interaction <- loo(m.int)$estimate[3]
+
+# extract samples
+inter.samples<- posterior_samples(m.int)
+inter.draws <- as_draws(m.int)
+inter.looic <- loo(m.int)$estimate[3]
+#inter.loo <- rbind(1, inter.looic)
+#inter.loo <- loo(m.int, save_psis = TRUE)
+#inter.looic <- loo(m.int)[["looic"]] -> deprecated
+
+#loo
+# print(inter.loo)
+# plot(inter.loo)
+# if (any(pareto_k_values(inter.loo) > 0.7)) {
+#   inter.loo1 <- loo(m.int, save_psis = TRUE, k_threshold = 0.7)#, moment_match = T
+# }
+# print(inter.loo1)
+# 
+# loo_compare(loo, inter.loo)
+
+```
+
+
+
+
+#### loop for all 100 trees
+
+```{r}
+start.time <- Sys.time()
+
+#job::job({
+i=1
+list <- c(1:100)
+
+# make empty data frame to put data in
+## loo
+inter.looic_tenrec <- data.frame(runby=character(),
+                          looic=numeric())
+## posterior samples
+  samples <-  colnames(inter.samples) 
+  inter.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samples)))
+  colnames(inter.samples1) <- samples # assign column names
+
+for(i in 1:100){
+  runby <- list[i]
+  print(runby)
+
+  pruned.tree <- drop.tip(trees[[runby]], setdiff(trees[[runby]]$tip.label, TipsWant))
+  A <- vcv.phylo(pruned.tree)
+
+  
+  interactioni <- brm(rts ~ litter_size * litter_year * mating_system +
+              longevity + paternal_care +
+              (1|gr(Binomial, cov = A)) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A),
+  prior = prior.interaction, 
+  chains = 4, cores = mycores, 
+  iter = 5000, warmup = 3000,  
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  )
+
+  # model fit
+  #inter.looi <- loo(interactioni)[["looic"]]
+  looic <- loo(interactioni)$estimate[3]
+  pool <- cbind.data.frame(runby, 
+                           looic)
+  inter.looic_tenrec <-rbind(inter.looic, pool )
+  write.csv(inter.looic_tenrec,"../results/loo.interaction.looped-tenrec.csv" )
+  #save(inter.looi, file="loo.interaction.looped.robj")
+  
+  # extract samples
+  inter.samplesi<- posterior_samples(interactioni)
+  post.inter.looped_tenrec<- rbind(inter.samples1, inter.samplesi)
+  save(post.inter.looped_tenrec, file="../results/post.interaction.looped-tenrec.robj")
+  
+  # # have to combine lists
+  # inter.drawsi <- as_draws(interactioni)
+  # post.inter.draw.looped<- rbind(sample.draws, inter.drawsi)
+  # save(post.inter.draw.looped, file="post.inter.draw.looped_run1-100.robj")
+}
+#})
+end.time <- Sys.time()
+
+#Time to run:
+end.time - start.time
+  
+
+```
+
+
+#  females multiple mate
+## global model
+
+### set up model
+filter species with trait data from phylogeny
+```{r}
+TipsWant <- unique(select_df$Binomial) # 220 species that have all trait data
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWant))
+}
+#sort(pruned.tree[[1]]$tip.label)
+```
+
+
+Covariance matrix
+```{r}
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+```
+
+standardize values
+```{r}
+st<-  select_df %>% 
+  mutate(across(c("litter_size", "litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(st)
+```
+
+```{r}
+# duplicate species list for mixed-effects model
+st$phylo<- st$Binomial
+```
+
+Get prior 
+https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations
+http://www.stat.columbia.edu/~gelman/research/published/entropy-19-00555-v2.pdf
+https://discourse.mc-stan.org/t/help-understanding-and-setting-informative-priors-in-brms/9574/12
+sample_prior = "only" and then creating prior predictive plots via pp_check.
+```{r}
+prior.global.fmm <- brms::get_prior(rts ~ litter_size + litter_year + longevity +
+               females_mate_multiply + paternal_care +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data = st, 
+          data2 = list(A = A[[1]]),
+          family = lognormal())
+
+
+```
+
+### model
+
+model convergence diagnositcs:
+"We may also investigate convergence numerically by means of the
+scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et al. 2019), which should be close to one (i.e., R < b 1.05), 
+and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
+```{r}
+
+job::job({
+global.fmm <- brm(rts ~ litter_size + litter_year + longevity +
+                     females_mate_multiply + paternal_care +
+                     (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A[[1]]),
+  prior = prior.global.fmm, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+})
+
+# check summary, plot for diagnostics --> all good
+#rhat(global)
+#neff_ratio(global)
+pairs(global.fmm )
+summary(global.fmm , waic = TRUE)
+#head(predict(global)) # predict responses based on the fitted model
+
+# investigate model fit
+loo(global.fmm ) #, moment_match = TRUE
+pp_check(global.fmm ) 
+plot(global.fmm , ask=FALSE)
+
+
+# extract samples
+fmm.global.samples<- posterior_samples(global.fmm)
+fmm.global.draws <- as_draws(global.fmm)
+
+
+
+
+```
+
+
+
+### loop for all 100 trees
+
+```{r}
+
+#job::job({
+i=1
+list <- c(1:100)
+
+# make empty data frame to put data in
+## loo
+fmm.global.looic  <- data.frame(runby=character(),
+                            looic=numeric())
+## posterior samples
+  samplesgfmm <-  colnames(fmm.global.samples) 
+  fmm.global.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samplesgfmm)))
+  colnames(fmm.global.samples1) <- samplesgfmm # assign column names
+
+
+for(i in 1:100){
+  runby <- list[i]
+  print(runby)
+
+  pruned.tree <- drop.tip(trees[[runby]], setdiff(trees[[runby]]$tip.label, TipsWant))
+  A <- vcv.phylo(pruned.tree)
+
+  
+  fmm.globali <- brm(rts ~ litter_size + litter_year + longevity +
+                     females_mate_multiply + paternal_care +
+                     (1|gr(Binomial, cov = A)) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A),
+  prior = prior.global.fmm, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, 
+                 max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+
+  # model fit
+  looic <- loo(fmm.globali)$estimate[3]
+  pool <- cbind.data.frame(runby, 
+                           looic)
+  fmm.global.looic <-rbind(fmm.global.looic , pool )
+  write.csv(fmm.global.looic,"../results/loo.fmm.global.looped.csv" )
+  
+  # extract samples
+  fmm.global.samplesi<- posterior_samples(fmm.globali)
+  post.fmm.global.looped<- rbind(fmm.global.samples1, fmm.global.samplesi)
+  save(post.fmm.global.looped, file="../results/post.fmm.global.looped.robj")
+  
+}
+
+
+
+```
+
+
+
+## interaction model
+We hypothesized that the relationship between testes size and female reproductive output would differ between mammal species exhibiting different mating systems.  Specifically, in species where females mate with multiple males per breeding attempt, we predicted larger testes size with smaller litter sizes and fewer total annual offspring, because smaller litter sizes represent more intense competition due to fewer potential offspring available to be sired. In species where females mate with a single male per breeding attempt, we predicted larger testes with larger litter sizes and greater numbers of total annual offspring, due to lesser competition with other males, but an increased need to fertilize eggs.
+
+female reproductive investment = litter size * litters/year 
+
+
+### set up model
+
+standardize values
+```{r}
+st<-  select_df %>% 
+  mutate(across(c("litter_size", "litter_year", "longevity"), scale)) # standardize values
+#st$Binomial
+head(st)
+```
+
+```{r}
+# duplicate species list for mixed-effects model
+st$phylo<- st$Binomial
+```
+
+
+filter species with trait data from phylogeny
+```{r}
+TipsWant <- unique(st$Binomial) # 224 species that have all trait data
+
+pruned.tree <- list() 
+for(i in 1:100){
+  pruned.tree[[i]]<- drop.tip(trees[[i]], setdiff(trees[[i]]$tip.label, TipsWant))
+}
+#sort(pruned.tree[[1]]$tip.label)
+```
+
+
+Covariance matrix
+```{r}
+# convert to covariance matrix (see https://cran.r-project.org/web/packages/brms/vignettes/brms_phylogenetics.html)
+A<- list() 
+for(i in 1:100){
+  A[[i]]<- vcv.phylo(pruned.tree[[i]])
+}
+```
+
+
+Get prior 
+https://github.com/stan-dev/stan/wiki/Prior-Choice-Recommendations
+http://www.stat.columbia.edu/~gelman/research/published/entropy-19-00555-v2.pdf
+https://discourse.mc-stan.org/t/help-understanding-and-setting-informative-priors-in-brms/9574/12
+sample_prior = "only" and then creating prior predictive plots via pp_check.
+```{r}
+prior.interaction.fmm<- brms::get_prior(rts ~ litter_size * litter_year * 
+                                      females_mate_multiply +
+                                  longevity + paternal_care +
+            (1|gr(Binomial, cov = A[[1]])) +  (1|phylo), 
+          data = st, 
+          data2 = list(A = A[[1]]),
+          family = lognormal())
+prior.interaction.fmm
+
+```
+
+### model
+
+model convergence diagnositcs:
+"We may also investigate convergence numerically by means of the
+scale reduction factor Rb (Gelman and Rubin 1992; Gelman et al. 2013; Vehtari et al. 2019), which should be close to one (i.e., R < b 1.05), 
+and the effective sample size, which should be as large as possible but at least 400 to merely ensure reliable convergence diagnostics " Burkner (2021)
+```{r}
+
+job::job({
+m.int.fmm <- brm(rts ~ litter_size * litter_year * females_mate_multiply +
+              longevity + paternal_care +
+              (1|gr(Binomial, cov = A[[1]])) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A[[1]]),
+  prior = prior.interaction.fmm, #c(prior(student_t(3, 0, 2.5))) 
+  chains = 4, cores = mycores, # sample_prior = TRUE / "only"
+  iter = 5000, warmup = 3000,  # iter = 10000, warmup = 1500,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  #, save_pars = save_pars(all = TRUE)
+  )
+})
+
+# check summary, plot for diagnostics --> all good
+#rhat(global)
+#neff_ratio(global)
+pairs(m.int.fmm)
+summary(m.int.fmm, waic = TRUE)
+#head(predict(global)) # predict responses based on the fitted model
+
+# investigate model fit
+pp_check(m.int.fmm) 
+plot(m.int.fmm, ask=FALSE)
+
+loo(m.int.fmm) #, moment_match = TRUE
+loo.interaction.fmm <- loo(m.int.fmm)$estimate[3]
+
+# extract samples
+inter.fmm.samples<- posterior_samples(m.int.fmm)
+inter.fmm.draws <- as_draws(m.int.fmm)
+inter.fmm.looic <- loo(m.int.fmm)$estimate[3]
+
+
+```
+
+
+
+
+### loop for all 100 trees
+
+```{r}
+start.time <- Sys.time()
+
+#job::job({
+i=1
+list <- c(1:100)
+
+# make empty data frame to put data in
+## loo
+inter.looic.fmm <- data.frame(runby=character(),
+                          looic=numeric())
+## posterior samples
+  samples.fmm <-  colnames(inter.fmm.samples) 
+  inter.fmm.samples1 <- data.frame(matrix(nrow = 0, ncol = length(samples.fmm)))
+  colnames(inter.fmm.samples1) <- samples.fmm # assign column names
+
+for(i in 1:100){
+  runby <- list[i]
+  print(runby)
+
+  pruned.tree <- drop.tip(trees[[runby]], setdiff(trees[[runby]]$tip.label, TipsWant))
+  A <- vcv.phylo(pruned.tree)
+
+  
+  fmm.interactioni <- brm(rts ~ litter_size * litter_year * female_mate_multiply +
+              longevity + paternal_care +
+              (1|gr(Binomial, cov = A)) + (1|phylo), 
+  data = st, 
+  family = lognormal(), 
+  data2 = list(A = A),
+  prior = prior.interaction.fmm, 
+  chains = 4, cores = mycores, 
+  iter = 5000, warmup = 3000,  
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+  )
+
+  # model fit
+  #inter.looi <- loo(interactioni)[["looic"]]
+  looic <- loo(fmm.interactioni)$estimate[3]
+  pool <- cbind.data.frame(runby, 
+                           looic)
+  inter.looic.fmm <-rbind(inter.looic.fmm, pool )
+  write.csv(inter.looic.fmm,"../results/loo.fmm.interaction.looped.csv" )
+  
+  # extract samples
+  inter.fmm.samplesi<- posterior_samples(fmm.interactioni)
+  post.fmm.inter.looped<- rbind(inter.fmm.samples1, inter.fmm.samplesi)
+  save(post.fmm.inter.looped, file="../results/post.fmm.interaction.looped.robj")
+  
+  # # have to combine lists
+  # inter.drawsi <- as_draws(interactioni)
+  # post.inter.draw.looped<- rbind(sample.draws, inter.drawsi)
+  # save(post.inter.draw.looped, file="post.inter.draw.looped_run1-100.robj")
+}
+#})
+end.time <- Sys.time()
+
+#Time to run:
+end.time - start.time
+  
+
+
+
+```
+
+
+
+
+
+
+
