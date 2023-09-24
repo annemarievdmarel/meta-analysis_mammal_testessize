@@ -39,6 +39,7 @@ We also included the complete dataset ("testes_lifehistory_mating_care_Dec17.csv
 
 # License and citation
 
+DOI: 10.5281/zenodo.7853370 
 
 # info of our R session
 R version 4.2.2 (2022-10-31 ucrt)
