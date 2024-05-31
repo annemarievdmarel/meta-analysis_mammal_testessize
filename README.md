@@ -1,6 +1,6 @@
 # meta-analysis_mammal_testessize
 
-We provide the code and data to perform the analyses in the manuscript discussing the association between male (relative testes size) and female (litter size, litters per year) reproductive investment dependent on differing mating systems and care systems in terrestrial mammals. We were invited to write this manuscript for a special issue (details follow). 
+We provide the code and data to perform the analyses in the manuscript discussing the association between male (relative testes size) and female (litter size, litters per year) reproductive investment dependent on differing mating systems and care systems in terrestrial mammals. We were invited to write this manuscript for a special issue in Journal of Zoology. 
 
 Annemarie van der Marel(a,b), Miyako H. Warrington(b), Jane M. Waterman(b,c) 
 
@@ -39,7 +39,8 @@ We also included the complete dataset ("testes_lifehistory_mating_care_Dec17.csv
 
 # License and citation
 
-DOI: 10.5281/zenodo.7853370 
+DOI code and data: 10.5281/zenodo.7853370 
+Manuscript: van der Marel A, Warrington MH, Waterman JM. 2023. Size is not everything: Nuanced effects of female multiple mating and annual litter number on testes size in terrestrial mammals. Journal of Zoology 322(2):101-112. https://doi.org/10.1111/jzo.13132
 
 # info of our R session
 R version 4.2.2 (2022-10-31 ucrt)
